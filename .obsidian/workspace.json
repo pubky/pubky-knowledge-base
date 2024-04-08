@@ -4,32 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "81d7607fbea3710b",
+        "id": "7d1f92f7f9f039d2",
         "type": "tabs",
         "children": [
           {
-            "id": "4470ec2996d558af",
+            "id": "2eac11a4f2c0514b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Readme.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "626670314dbc1934",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "710f6f03c10423fe",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -99,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Readme.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -160,11 +138,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4470ec2996d558af",
+  "active": "2eac11a4f2c0514b",
   "lastOpenFiles": [
+    "Readme.md",
     "pubky-social/pubky-social.md",
     "pubky-core/pubky-core.md",
-    "Readme.md",
     "pubky-social",
     "pubky-core",
     "Welcome.md",
