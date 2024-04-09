@@ -2,7 +2,9 @@
 
 ## Add Knowledge
 
-The top directory of this repo `/` is an Obsidian Vault. Just add Pubky knowledge to it.
+The root directory is an Obsidian Vault. Just add Pubky knowledge to it!
+
+The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.
 
 ## Build static Quartz site
 
