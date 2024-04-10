@@ -1,17 +1,21 @@
 This note explores the motivation behind Pkarr, addressing the challenges of distributed semantics, databases, and discovery.
 
-## Distributed Semantics
+In pursuit of a sovereign, distributed, and open web, we identify three challenges:
 
-Pkarr aims to develop interoperable semantics for verifiable metadata about public keys, forming a digital identity with reputation, social graph, credentials, and more.
+1. **Distributed Semantics** `Everything expressed as keys and metadata`
+   Developing interoperable semantics for verifiable metadata about a set of public-keys that form a digital identity, complete with reputation, social graph, credentials, and more.
 
-## Distributed Databases
+2. **Distributed Database(s)** `Anyone can host the data`
+   Verifiable data alone is insufficient; a host-agnostic database is essential for an open web, as opposed to walled gardens.
 
-The system supports a host-agnostic database essential for an open web, moving away from walled gardens.
+3. **Distributed Discovery** `Where is the data?`
+   But before that, you need to efficiently and consistently discover the multiple hosts for a given data-set.
 
-## Distributed Discovery
+Addressing Distributed Discovery first makes the most sense for several reasons:
 
-Addressing distributed discovery first helps solve the most pressing issues and provides a foundation for solving the others.
+- The difficulty of these three challenges inversely correlates with their order.
+- The marginal utility of solving these challenges positively correlates with their order.
 
-## Leveraging Pkarr
+  In existing and emerging open social network protocols, users do tolerate limited interoperability between clients, second-class identifiers controlled by hosting or domain servers, inefficient or non-existent conflict-free replication between data stores, and the absence of local-first or offline support. However, their most common complaints involve unavailability, censorship, deplatforming, and difficulty in securely managing keys.
 
-Pkarr addresses unavailability, [[[[censorship]] ]], deplatforming, and key management with minimal effort, leveraging existing technologies like [[Mainline DHT]] and web servers.
+- Distributed Discovery offers the greatest assured leverage by abstracting over current and emerging solutions for (1) and (2) as they compete, complement, and develop independently, all while maintaining the same long lasting identifier, so you don't have to start from scratch or be locked in.

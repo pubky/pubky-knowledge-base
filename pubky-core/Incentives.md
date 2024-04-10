@@ -1,6 +1,6 @@
 ## Pubky Incentives
 
-For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience:
+This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience:
 
 - Data storage fees pay stores for availability and throughput.
 
