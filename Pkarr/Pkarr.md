@@ -10,7 +10,7 @@ The core idea is to streamline the process of publishing and resolving resource 
 - **Sovereignty**: Public keys can be used as domains, enabling users to maintain control over their digital identities.
 - **Accessibility**: The system is designed to be accessible to anyone capable of maintaining a private key.
 - **Scalability and Resilience**: Designed with scalability and resilience in mind, using the [[Mainline DHT]] for storing ephemeral data, and employing caching strategies to minimize [[DHT]] traffic.
-- **Compatibility with Existing Applications**: Supports existing applications through [[DNS]] over [[HTTPS]] (DoH) queries to Pkarr servers, ensuring broad compatibility.
+- **Compatibility with Existing Applications**: Supports existing applications through [[DNS]] over [[HTTPS]] ([[DoH]]) queries to Pkarr servers, ensuring broad compatibility.
 
 ## How It Works
 
@@ -19,26 +19,8 @@ The core idea is to streamline the process of publishing and resolving resource 
 3. **Fallback for Existing Applications**: Applications unaware of Pkarr can make normal [[DNS]] Queries over [[HTTPS]] (DoH) to Pkarr servers, ensuring accessibility.
 4. **Caching and Republishing**: Both clients and Pkarr servers cache records extensively to improve scalability. The [[DHT]] drops records after a few hours, necessitating periodic republishing to keep records alive.
 
+For more technical details on Pkarr's architecture and how it works, refer to the [[Architecture]] note.
+
 ## Getting Started
 
 [To start using Pkarr](Getting%20Started%20with%20Pkarr.md), you can visit the [web app demo](https://app.pkarr.org) or explore the Rust examples provided in [Pkarr repository](https://github.com/Nuhvi/pkarr/).
-
-### Publishing Resource Records
-
-To publish resource records for your key, you need to sign a small encoded [[DNS]] packet (<= 1000 bytes) and publish it on the [[DHT]]. This can be done through a relay if necessary.
-
-### Resolving Resource Records
-
-To resolve some key's resources, applications can query the [[DHT]] directly or through a relay. They will then verify the signature themselves.
-
-### [[DNS]] Queries Over [[HTTPS]]
-
-Existing applications unaware of Pkarr can make normal [[DNS]] Queries over [[HTTPS]] ([[DoH]]) to Pkarr servers.
-
-### Caching and Scalability
-
-Clients and Pkarr servers cache records extensively to minimize [[DHT]] traffic and improve scalability. The [[DHT]] drops records after a few hours, so it's important to republish records periodically.
-
-## Next Steps
-
-For more technical details on Pkarr's architecture and how it works, refer to the [[Architecture]] note.
