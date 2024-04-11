@@ -12,8 +12,8 @@ Pubky-app's initial focus is building a decentralized social media protocol. Key
 
 - [[Search]]ing profiles and posts
 
-- Notification delivery through [Application](pubky-core/Applications) Backends
+- Notification delivery through [Application](Applications.md) Backends
 
-- Distributed moderation through [user blocking](concepts/Web%20of%20Trust.md)
+- Distributed moderation through [user blocking](Web%20of%20Trust.md)
 
 The goal is to recreate core social features without dependence on any centralized company or platform.

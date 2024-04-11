@@ -10,7 +10,7 @@ Pubky is built on a few core concepts:
 
 - **[[Search]]** - Services that index aggregated data and enable full text/attribute searches.
 
-- **[Application Backends](/pubky-core/Applications.md)** - Backend services that integrate feeds, search, and user interfaces/configurations.
+- **[Application Backends](Applications.md)** - Backend services that integrate feeds, search, and user interfaces/configurations.
 
 - **[[Pkarr]]** - Self-issued public keys that function as sovereign, publicly addressable domains are used to resolve the previous components.
 

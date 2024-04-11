@@ -10,7 +10,7 @@ Application Backends power features by integrating aggregated data:
 
 - Communities facilitate moderation and discovery around shared interests.
 
-- [Payments](/technologies/Paykit.md) handle microtransactions like tipping within a peer-to-peer economy.
+- [Payments](Paykit.md) handle microtransactions like tipping within a peer-to-peer economy.
 
 - Identity services provide single sign-on through self-sovereign credentials.
 

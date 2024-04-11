@@ -21,7 +21,7 @@ The core idea is to streamline the process of publishing and resolving resource 
 
 ## Getting Started
 
-[To start using Pkarr](/pkarr/Getting%20Started%20with%20Pkarr.md), you can visit the [web app demo](https://app.pkarr.org) or explore the Rust examples provided in [Pkarr repository](https://github.com/Nuhvi/pkarr/).
+[To start using Pkarr](Getting%20Started%20with%20Pkarr.md), you can visit the [web app demo](https://app.pkarr.org) or explore the Rust examples provided in [Pkarr repository](https://github.com/Nuhvi/pkarr/).
 
 ### Publishing Resource Records
 
