@@ -1,6 +1,6 @@
 ## Pubky Protocols
 
-Pubky is defined by several open protocols that enable independent implementations:
+his note is indicative and highly creative. We have not yet explored much about the open protocols that enable independent implementations:
 
 **Pubky Data** - Definition of normalized data schemas for user profiles, content types, relationships etc. Allows unified querying across services.
 
@@ -8,7 +8,7 @@ Pubky is defined by several open protocols that enable independent implementatio
 
 **Pubky Search** - Format for full-text search indices and queries across aggregated Pubky Data. Enables cross-platform discovery.
 
-**Pubky Payments** - Decentralized and interoperable payment protocol for microtransactions like tips, subscriptions and purchasing goods/services.
+**[Pubky Payments](Technologies/Paykit.md)** - Decentralized and interoperable payment protocol for microtransactions like tips, subscriptions and purchasing goods/services.
 
 **Pubky Identity** - Self-sovereign digital credentials for authentication without centralized authorities like usernames/passwords.
 

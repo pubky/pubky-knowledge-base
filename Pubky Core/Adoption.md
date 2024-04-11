@@ -1,6 +1,6 @@
 ## Pubky Adoption
 
-Realizing the full potential of Pubky relies on network effects through mainstream user onboarding:
+This note is indicative and creative. There is no set on stone plans for realizing adoption, these are just ideas. Realizing the full potential of Pubky relies on network effects through mainstream user onboarding:
 
 - Legacy centralized imports ease migration paths for established communities and profiles.
 
@@ -18,4 +18,4 @@ Realizing the full potential of Pubky relies on network effects through mainstre
 
 - Documentation, scholarships and bounties lower the skill floor for contributing back to protocols.
 
-The goal is surfacing the empowering aspects of decentralization to everyone.
+Overall, Pubky relies on being ready and available at the right time and right place. Most likely users will only discover Pubky during a [[censorship]] attack.
