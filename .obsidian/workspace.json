@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/Web of Trust.md",
+                "file": "TLDR.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "concepts/Web of Trust.md",
+                "file": "TLDR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "concepts/Web of Trust.md",
+                "file": "TLDR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "concepts/Web of Trust.md"
+                "file": "TLDR.md"
               }
             }
           }
@@ -147,28 +147,27 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "75a1317f66991245",
+  "active": "8fd5812ca70f0ab7",
   "lastOpenFiles": [
     "quartz/public/404.html",
-    "quartz/public/static/og-image.png",
-    "quartz/public/static/icon.png",
-    "quartz/public/static/contentIndex.json",
-    "quartz/public/static",
-    "quartz/public/index.xml",
-    "quartz/public/sitemap.xml",
-    "quartz/public/tags/index.html",
-    "quartz/public/tags",
-    "quartz/public/technologies/index.html",
-    "quartz/public/technologies/Paykit.html",
-    "quartz/public/technologies/Mainline-DHT.html",
-    "quartz/public/technologies/HTTPS.html",
+    "quartz/public/quartz/quartz/plugins/transformers/toc.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/syntax.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/oxhugofm.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/ofm.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/links.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/linebreaks.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/latex.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/lastmod.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/index.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/gfm.ts",
     "quartz/public/quartz/quartz/static/og-image.png",
     "quartz/public/quartz/quartz/static/icon.png",
+    "quartz/public/static/og-image.png",
+    "quartz/public/static/icon.png",
+    "concepts/Web of Trust.md",
     "pubky-app.md",
     "pubky.app.md",
     "Pubky.app.md",
-    "concepts/Web of Trust.md",
-    "concepts/Web of Trust.md",
     "concepts/Credible Exit.md",
     "concepts/Censorship.md",
     "pkarr/Why Pkarr.md",

@@ -1,7 +1,7 @@
 ## ELI5: Pubky Explained for Children
 
-Pubky is like a school where instead of one principal running the whole school, different teachers run classrooms by their own.
+Like a kite, [data](pubky-core/Data%20Stores.md) is in the cloud, but you hold its string.
 
-The "teachers" ([[data stores]]) host all the students' school work. The "janitors" ([[aggregators]]) help move the work between classrooms so everyone can see it.
+Your friends can find your messages by finding your kite in the sky ([[Pkarr]] in the [[DHT]]) and following the string down to the message board you are currently posting on.
 
-The "lunch lady" ([[feeds]]) puts together trays of work for everyone to look at during recess. And the "librarian" ([[search]]) helps you find specific things across the student's works.
+You can move your kite (your [data](pubky-core/Data%20Stores.md)) anywhere and your friends will still be able to find it as long as you are holding the string of the kite ([[Pkarr]] private key).
