@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TLDR.md",
+                "file": "Pubky App.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TLDR.md",
+                "file": "Pubky App.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TLDR.md",
+                "file": "Pubky App.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TLDR.md"
+                "file": "Pubky App.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "8fd5812ca70f0ab7",
   "lastOpenFiles": [
+    "TLDR.md",
     "quartz/public/404.html",
     "quartz/public/static/og-image.png",
     "quartz/public/static/icon.png",
@@ -161,12 +162,10 @@
     "quartz/public/index.html",
     "quartz/public/Technologies/index.html",
     "quartz/public/Technologies/Paykit.html",
-    "quartz/public/Technologies/Mainline-DHT.html",
     "quartz/public/quartz/quartz/static/og-image.png",
     "quartz/public/quartz/quartz/static/icon.png",
     "index.md",
     "Pubky App.md",
-    "TLDR.md",
     "Concepts/Web of Trust.md",
     "pubky.app.md",
     "Pubky.app.md",
