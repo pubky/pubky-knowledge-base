@@ -1,6 +1,6 @@
 ## Public-Key Addressable Resource Records
 
-Pkarr is a revolutionary system that bridges the gap between the Domain Name System ([[DNS]]) and peer-to-peer overlay networks. It allows self-issued public keys to function as sovereign, publicly addressable domains. This means that anyone with a private key can have a domain that is accessible to everyone.
+[Pkarr](https://pkarr.org) is a revolutionary system that bridges the gap between the Domain Name System ([[DNS]]) and peer-to-peer overlay networks. It allows self-issued public keys to function as sovereign, publicly addressable domains. This means that anyone with a private key can have a domain that is accessible to everyone.
 
 The core idea is to streamline the process of publishing and resolving resource records for keys, leveraging the Distributed Hash Table ([[DHT]]) for efficient and scalable data distribution.
 
@@ -19,8 +19,8 @@ The core idea is to streamline the process of publishing and resolving resource 
 3. **Fallback for Existing Applications**: Applications unaware of Pkarr can make normal [[DNS]] Queries over [[HTTPS]] (DoH) to Pkarr servers, ensuring accessibility.
 4. **Caching and Republishing**: Both clients and Pkarr servers cache records extensively to improve scalability. The [[DHT]] drops records after a few hours, necessitating periodic republishing to keep records alive.
 
-For more technical details on Pkarr's architecture and how it works, refer to the [[Architecture]] note.
+For more technical details on Pkarr's architecture and how it works, refer to the [[4.Architecture]] note.
 
 ## Getting Started
 
-[To start using Pkarr](Getting%20Started%20with%20Pkarr.md), you can visit the [web app demo](https://app.pkarr.org) or explore the Rust examples provided in [Pkarr repository](https://github.com/Nuhvi/pkarr/).
+[To start using Pkarr](2.Getting%20Started%20with%20Pkarr.md), you can visit the [web app demo](https://app.pkarr.org) or explore the Rust examples provided in [Pkarr repository](https://github.com/Nuhvi/pkarr/).
