@@ -1,6 +1,6 @@
 # Posts
 
-In Pubkey App, a **post** is a message that a user publishes on the platform. Posts are the core content and they can contain a variety of information, including:
+In Pubkey client, a **post** is a message that a user publishes on the platform. Posts are the core content and they can contain a variety of information, including:
 
 1. **Text**: There is not text limitation of plain text, which can include words, phrases, sentences, or even just a single character.
 2. **Media**: Post can include various types of media, such as images and videos.
