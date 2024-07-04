@@ -149,6 +149,7 @@
   },
   "active": "8fd5812ca70f0ab7",
   "lastOpenFiles": [
+    "Readme.md",
     "readme.md",
     "Documents.md",
     "index.md",
@@ -187,7 +188,6 @@
     "Technologies/DoH.md",
     "Technologies/DNS.md",
     "Technologies/DHT.md",
-    "related-tech/Mainline DHT.md",
-    "related-tech/DHT.md"
+    "related-tech/Mainline DHT.md"
   ]
 }
