@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pubky App.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pubky App.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pubky App.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pubky App.md"
+                "file": "index.md"
               }
             }
           }
@@ -149,6 +149,10 @@
   },
   "active": "8fd5812ca70f0ab7",
   "lastOpenFiles": [
+    "readme.md",
+    "Documents.md",
+    "index.md",
+    "ELI5.md",
     "TLDR.md",
     "quartz/public/404.html",
     "quartz/public/static/og-image.png",
@@ -164,7 +168,6 @@
     "quartz/public/Technologies/Paykit.html",
     "quartz/public/quartz/quartz/static/og-image.png",
     "quartz/public/quartz/quartz/static/icon.png",
-    "index.md",
     "Pubky App.md",
     "Concepts/Web of Trust.md",
     "pubky.app.md",
@@ -185,8 +188,6 @@
     "Technologies/DNS.md",
     "Technologies/DHT.md",
     "related-tech/Mainline DHT.md",
-    "related-tech/DHT.md",
-    "related-tech/DNS.md",
-    "Pkarr/Why Pkarr?.md"
+    "related-tech/DHT.md"
   ]
 }
