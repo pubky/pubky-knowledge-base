@@ -1,0 +1,36 @@
+name: Build and Deploy Quartz Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "21"
+
+      - name: Install dependencies
+        run: |
+          cd quartz
+          npm install
+
+      - name: Build site
+        run: |
+          cd quartz
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: quartz/public
+          ssh-key: ${{ secrets.DEPLOY }}
