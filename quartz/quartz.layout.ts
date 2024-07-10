@@ -8,7 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       Synonym: "https://synonym.to",
-      GitHub: "https://github.com/slashtags/pubky-docs",
+      GitHub: "https://github.com/pubky/pubky-docs",
       "Discord Community": "https://discord.gg/TODO",
     },
   }),

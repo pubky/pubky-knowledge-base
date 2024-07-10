@@ -22,30 +22,32 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Poppins",
+        body: "Lora",
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#ffffff", // White
+          lightgray: "#f2f2f2", // Very light gray
+          gray: "#cccccc", // Light gray
+          darkgray: "#4a4a4a", // Dark gray
+          dark: "#333333", // Almost black
+          secondary: "#3498db", // Bright blue
+          tertiary: "#e74c3c", // Bright red
+          highlight: "rgba(52, 152, 219, 0.15)", // Light blue highlight
+          textHighlight: "#f1c40f88", // Yellow text highlight
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#1e1e1e", // Very dark gray
+          lightgray: "#2c2c2c", // Darker gray
+          gray: "#575757", // Medium gray
+          darkgray: "#d4d4d4", // Light gray
+          dark: "#ecf0f1", // Very light gray
+          secondary: "#2980b9", // Darker blue
+          tertiary: "#c0392b", // Darker red
+          highlight: "rgba(41, 128, 185, 0.15)", // Dark blue highlight
+          textHighlight: "#f39c1288", // Orange text highlight
         },
       },
     },
