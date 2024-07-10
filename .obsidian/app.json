@@ -1,9 +1,0 @@
-{
-  "userIgnoreFilters": [
-    "quartz/",
-    "quartz/node_modules/",
-    "quartz/public/",
-    "quartz/*"
-  ],
-  "alwaysUpdateLinks": true
-}
