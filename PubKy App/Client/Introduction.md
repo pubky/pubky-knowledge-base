@@ -1,6 +1,6 @@
 # Pubky Client
 
-![[pubky-header.png]]
+![pubkey-client](pubky-header.png)
 
 The Pubky client will be available as both a desktop application and a hosted website service (standard website) that allows users to interface with the social media layer of [[PubKy App/Backend/Introduction|Pubky Backend]] using [Synonym](https://synonym.to/) hosted services.
 

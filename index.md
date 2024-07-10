@@ -1,6 +1,6 @@
 # Welcome to the Pubky Knowledge Base
 
-![[pubky_arch.png]]
+![arch](pubky_arch.png)
 
 This is the [[Pubky Core/Introduction|Pubky Core]] and [[PubKy App/Introduction|Pubky App]] knowledge base. Currently these docs are a mix of reality, dreams, visions, technicalities, actuality and plans.
 

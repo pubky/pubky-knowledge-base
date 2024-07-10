@@ -1,6 +1,6 @@
 ## Pubky Core Overview
 
-![[pubky-core.png]]
+![pubky-core](pubky-core.png)
 
 Pubky Core is built on a few core concepts:
 
