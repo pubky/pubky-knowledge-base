@@ -6,3 +6,6 @@
 - [Application](Applications.md) back-ends integrate features without centralized control
 
 The end goal is to give individuals self-sovereign digital identity and true ownership over social profiles/activity without fear of data misuse or account bans by any single entity.
+
+Architecture overview.
+![arch](pubky_arch.png)
