@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "readme.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "readme.md"
               }
             }
           }
@@ -149,12 +149,33 @@
   },
   "active": "8fd5812ca70f0ab7",
   "lastOpenFiles": [
-    "Readme.md",
-    "readme.md",
-    "Documents.md",
     "index.md",
     "ELI5.md",
-    "TLDR.md",
+    "Technologies/Paykit.md",
+    "Technologies/Mainline DHT.md",
+    "Technologies/Key Pair.md",
+    "Technologies/HTTPS.md",
+    "Technologies/DoH.md",
+    "Technologies/DNS.md",
+    "Technologies/DHT.md",
+    "Pubky Core/Introduction.md",
+    "Pubky Core/Data Stores.md",
+    "Pubky Core/Pkarr/4.Architecture.md",
+    "Pubky Core/Pkarr/3.Expectations.md",
+    "Pubky Core/Pkarr/2.Getting Started with Pkarr.md",
+    "Pubky Core/Pkarr/1.Why Pkarr?.md",
+    "Pubky Core/Pkarr/0.Introduction.md",
+    "Pubky Core/notes/3.Protocols.md",
+    "Pubky Core/notes/2.Incentives.md",
+    "Pubky Core/notes/1.Adoption.md",
+    "PubKy App/Introduction.md",
+    "PubKy App/Client/Introduction.md",
+    "PubKy App/Backend/Web Server.md",
+    "PubKy App/Backend/Introduction.md",
+    "PubKy App/Backend/Indexer.md",
+    "PubKy App/Backend/Aggregator.md",
+    "images/obsidian.png",
+    "Concepts/3.Credible Exit.md",
     "quartz/public/404.html",
     "quartz/public/static/og-image.png",
     "quartz/public/static/icon.png",
@@ -168,26 +189,6 @@
     "quartz/public/Technologies/index.html",
     "quartz/public/Technologies/Paykit.html",
     "quartz/public/quartz/quartz/static/og-image.png",
-    "quartz/public/quartz/quartz/static/icon.png",
-    "Pubky App.md",
-    "Concepts/Web of Trust.md",
-    "pubky.app.md",
-    "Pubky.app.md",
-    "Concepts/Credible Exit.md",
-    "Concepts/Censorship.md",
-    "pkarr/Why Pkarr.md",
-    "Pubky Core/Protocols.md",
-    "Pubky Core/Data Stores.md",
-    "Technologies/Paykit.md",
-    "pubky-core/Data.md",
-    "data store.md",
-    "Technologies/Mainline DHT.md",
-    "Pubky Core/Applications.md",
-    "Pubky Core/pubky-core.md",
-    "Technologies/HTTPS.md",
-    "Technologies/DoH.md",
-    "Technologies/DNS.md",
-    "Technologies/DHT.md",
-    "related-tech/Mainline DHT.md"
+    "quartz/public/quartz/quartz/static/icon.png"
   ]
 }

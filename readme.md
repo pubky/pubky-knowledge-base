@@ -9,7 +9,7 @@ The root directory is an [Obsidian Vault](https://help.obsidian.md/Getting+start
 1. Download [Obsidian](https://obsidian.md/) app
 2. Add a new vault selecting the folder path
 
-![[images/obsidian.png]]
+![obsidian](images/obsidian.png)
 ## Build static Quartz site
 
 For those who prefer to render the documentation directly in their browser, a preliminary step is required. To facilitate this, please ensure that [NodeJS](https://nodejs.org/en/download/prebuilt-installer) is installed on your system
@@ -18,4 +18,4 @@ For those who prefer to render the documentation directly in their browser, a pr
 2. Install dependencies with `npm install`
 3. Finally build the site with `npm run docs` and check it out at [localhost:8080](http://localhost:8080/)
 
-![[images/quartz.png]]
+![quartz](images/quartz.png)

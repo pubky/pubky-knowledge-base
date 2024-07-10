@@ -1,4 +1,4 @@
-![[pubky-app.png]]
+![pubkey-app](pubky-app.png)
 
 > Synonym will be initially hosting: [[Data Stores|Data stores]] and [[PubKy App/Introduction|Pubky App]]
 

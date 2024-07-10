@@ -1,6 +1,6 @@
 The Backend is responsible for collecting ([[Aggregator|aggregators]]) and organizing ([[Indexer|indexer]]) data from various sources, known as [[Data Stores|data stores]].
 
-![[images/pubky-backend.png]]
+![backend](images/pubky-backend.png)
 
 Imagine you're trying to find a specific document in a large library. The backend is like a librarian who searches through the shelves, finds the right documents, and prepares them for you to use. This ensures that the data is accurate, up-to-date, and in a format that's easy to work with.
 
