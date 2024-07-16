@@ -10,9 +10,9 @@ Pubky-app's initial focus is building a decentralized social media protocol.
 
 - **Data Ownership**: Users have full autonomy over their data, hosting it on **independent [[Data Stores|data stores]]** that are decentralized and distributed across the network. This approach enables users to maintain **control** and **ownership** of their data, while also ensuring **data sovereignty** and **privacy**. 
 - **Profiles**: The system employs a **decentralized data storage** approach, where **post**, **comment**, and **like** data are stored in association with **user profiles**.
-- [[2.Aggregators|Aggregators]] collecting social graphs
-- [[Feeds]] of followings' activities
-- [[Pubky Core/Search|Searching]] profiles and posts
+- [[Aggregator|Aggregators]] collecting social graphs
+- Feeds of followings' activities
+- [[Search|Searching]] profiles and posts
 - Notification delivery through [[PubKy App/Backend/Introduction|aplication backends]] 
 - Distributed moderation through user blocking
 
