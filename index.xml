@@ -9,62 +9,62 @@
     <title>readme</title>
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
-    <description>:brain: Pubky Knowledge Base Welcome to he Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base Here! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base Here! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is the Pubky Core and Pubky App knowledge base. Currently these docs are a mix of reality, dreams, visions, technicalities, actuality and plans.</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>2.Incentives</title>
-    <link>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</guid>
-    <description>Pubky Incentives This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience: Data storage fees pay stores for availability and throughput.</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>1.Web of Trust</title>
+    <link>https://pubky.synonym.to/Concepts/1.Web-of-Trust</link>
+    <guid>https://pubky.synonym.to/Concepts/1.Web-of-Trust</guid>
+    <description>The “Web of Trust” is a decentralized trust model used in cryptography, particularly in systems like PGP, GnuPG, and other OpenPGP compatible systems, to establish the authenticity ...</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>3.Protocols</title>
-    <link>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</guid>
-    <description>Pubky Protocols This note is indicative and highly creative. We have not yet explored much about the open protocols that enable independent implementations: Pubky Data - Definition of normalized data schemas for user profiles, content types, relationships etc.</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>2.Censorship</title>
+    <link>https://pubky.synonym.to/Concepts/2.Censorship</link>
+    <guid>https://pubky.synonym.to/Concepts/2.Censorship</guid>
+    <description>Censorship in the digital age is a complex and multifaceted issue, affecting how information is shared, accessed, and controlled. It’s not just about blocking content; it’s about the power dynamics at play, the implications for freedom of expression, and the challenges of maintaining privacy and security in an increasingly interconnected world.</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>TLDR</title>
-    <link>https://pubky.synonym.to/TLDR</link>
-    <guid>https://pubky.synonym.to/TLDR</guid>
-    <description>Pubky App is a decentralized alternative to social media platforms like Twitter. It uses a distributed architecture where: Users host their own data on independent data stores Services aggregate data across stores into a unified view Feeds and search present curated views of the aggregated data Application back-ends integrate features without centralized control The end goal is to give individuals self-sovereign digital identity and true ownership over social profiles/activity without fear of data misuse or account bans by any single entity.</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>3.Credible Exit</title>
+    <link>https://pubky.synonym.to/Concepts/3.Credible-Exit</link>
+    <guid>https://pubky.synonym.to/Concepts/3.Credible-Exit</guid>
+    <description>It is a concept that emphasizes the ability for users to leave a platform or service without being locked in, maintaining control over their data and experiences ...</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>DHT</title>
-    <link>https://pubky.synonym.to/Technologies/DHT</link>
-    <guid>https://pubky.synonym.to/Technologies/DHT</guid>
-    <description>Distributed Hash Table - DHT It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>ELI5</title>
+    <link>https://pubky.synonym.to/ELI5</link>
+    <guid>https://pubky.synonym.to/ELI5</guid>
+    <description>ELI5: Pubky Explained for Children Like a kite, data is in the cloud, but you hold its string. Your friends can find your messages by finding your kite in the sky (0.Introduction in the DHT) and following the string down to the message board you are currently posting on.</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>DNS</title>
-    <link>https://pubky.synonym.to/Technologies/DNS</link>
-    <guid>https://pubky.synonym.to/Technologies/DNS</guid>
-    <description>Domain Name System - DNS It translates human-readable domain names (e.g., www.example.com) into IP addresses that computers use to identify each other on the network ...</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>Aggregator</title>
+    <link>https://pubky.synonym.to/PubKy-App/Backend/Aggregator</link>
+    <guid>https://pubky.synonym.to/PubKy-App/Backend/Aggregator</guid>
+    <description>Pubky Aggregators Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as data stores ...</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>DoH</title>
-    <link>https://pubky.synonym.to/Technologies/DoH</link>
-    <guid>https://pubky.synonym.to/Technologies/DoH</guid>
-    <description>DNS over HTTPS - DoH It is a security protocol that encrypts DNS queries and responses, enhancing privacy and security by preventing eavesdropping and tampering ...</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>Indexer</title>
+    <link>https://pubky.synonym.to/PubKy-App/Backend/Indexer</link>
+    <guid>https://pubky.synonym.to/PubKy-App/Backend/Indexer</guid>
+    <description>The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple data stores into a unified view ...</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>HTTPS</title>
-    <link>https://pubky.synonym.to/Technologies/HTTPS</link>
-    <guid>https://pubky.synonym.to/Technologies/HTTPS</guid>
-    <description>Hypertext Transfer Protocol Secure - HTTPS It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy ...</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>Introduction</title>
+    <link>https://pubky.synonym.to/PubKy-App/Backend/Introduction</link>
+    <guid>https://pubky.synonym.to/PubKy-App/Backend/Introduction</guid>
+    <description>The Backend is responsible for collecting (aggregators) and organizing (indexer) data from various sources, known as data stores. Imagine you’re trying to find a specific document in a large library.</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item><item>
-    <title>Key Pair</title>
-    <link>https://pubky.synonym.to/Technologies/Key-Pair</link>
-    <guid>https://pubky.synonym.to/Technologies/Key-Pair</guid>
-    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
-    <pubDate>Thu, 25 Jul 2024 16:03:40 GMT</pubDate>
+    <title>Web Server</title>
+    <link>https://pubky.synonym.to/PubKy-App/Backend/Web-Server</link>
+    <guid>https://pubky.synonym.to/PubKy-App/Backend/Web-Server</guid>
+    <description>The system comprises a suite of backend services that orchestrate the integration of data feeds, search functionality, and user interface configurations ...</description>
+    <pubDate>Thu, 25 Jul 2024 16:08:20 GMT</pubDate>
   </item>
     </channel>
   </rss>
