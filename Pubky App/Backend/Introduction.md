@@ -8,4 +8,4 @@ Imagine you're trying to find a specific document in a large library. The backen
 
 - [[Aggregator|Aggregators]] execute a **data retrieval protocol** to obtain data from **data storage**, initiating a process that retrieves and collects data from various sources.
 - [[Indexer|Indexers]] receive aggregated data from the **Aggregators** and initiate a rigorous **data normalization** process, transforming and converting the data into a standardized format to ensure consistency and accuracy.
-- [[Web Server|Web servers]] provide the requested data to [[PubKy App/Client/Introduction|Pubky client]]
+- [[Web Server|Web servers]] provide the requested data to [[Pubky App/Client/Introduction|Pubky client]]
