@@ -2,7 +2,7 @@
 
 Welcome to the Pubky Knowledge base - we are excited to have you here.
 
-### 🔗 [Access the Pubky Knowledge Base Here!](https://vigilant-adventure-y6k6ere.pages.github.io/)
+### 🔗 [Access the Pubky Knowledge Base: notes.pubky,app!](https://notes.pubky.app)
 
 > **The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.**
 
