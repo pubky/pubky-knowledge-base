@@ -1,4 +1,4 @@
-[[PubKy App/Introduction|Pubky App]] is a decentralized alternative to social media platforms like Twitter. It uses a distributed architecture where:
+[[Pubky App/Introduction|Pubky App]] is a decentralized alternative to social media platforms like Twitter. It uses a distributed architecture where:
 
 - Users host their own data on independent [[Data Stores|data stores]]
 - Services [aggregate](Aggregator.md) data across stores into a unified view

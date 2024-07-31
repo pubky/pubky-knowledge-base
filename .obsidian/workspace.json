@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "App Architectures/2. Client - Homeserver.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eaab76dfc5b558e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "App Architectures/4. Custom Backend.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "App Architectures/4. Custom Backend.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "readme.md",
+                "file": "App Architectures/4. Custom Backend.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "readme.md"
+                "file": "App Architectures/4. Custom Backend.md"
               }
             }
           }
@@ -147,8 +160,24 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "8fd5812ca70f0ab7",
+  "active": "eaab76dfc5b558e5",
   "lastOpenFiles": [
+    "Pubky App/Introduction.md",
+    "App Architectures/4. Custom Backend.md",
+    "Pubky Core/Introduction.md",
+    "App Architectures/1. Introduction.md",
+    "Pubky Applications.md",
+    "App Architectures/5. Complex - Custom Aggregator.md",
+    "App Architectures/2. Client - Homeserver.md",
+    "App Architectures/3. Global Aggregators.md",
+    "Pubky Core.md",
+    "images/complex_custom_aggregator.png",
+    "images/global_aggregator.png",
+    "images/global-aggregator.png",
+    "images/custom_backend.png",
+    "images/client-homeserver.png",
+    "images/custom-backend.png",
+    "readme.md",
     "index.md",
     "ELI5.md",
     "Technologies/Paykit.md",
@@ -158,7 +187,6 @@
     "Technologies/DoH.md",
     "Technologies/DNS.md",
     "Technologies/DHT.md",
-    "Pubky Core/Introduction.md",
     "Pubky Core/Data Stores.md",
     "Pubky Core/Pkarr/4.Architecture.md",
     "Pubky Core/Pkarr/3.Expectations.md",
@@ -166,16 +194,7 @@
     "Pubky Core/Pkarr/1.Why Pkarr?.md",
     "Pubky Core/Pkarr/0.Introduction.md",
     "Pubky Core/notes/3.Protocols.md",
-    "Pubky Core/notes/2.Incentives.md",
-    "Pubky Core/notes/1.Adoption.md",
-    "PubKy App/Introduction.md",
-    "PubKy App/Client/Introduction.md",
-    "PubKy App/Backend/Web Server.md",
-    "PubKy App/Backend/Introduction.md",
-    "PubKy App/Backend/Indexer.md",
-    "PubKy App/Backend/Aggregator.md",
     "images/obsidian.png",
-    "Concepts/3.Credible Exit.md",
     "quartz/public/404.html",
     "quartz/public/static/og-image.png",
     "quartz/public/static/icon.png",
@@ -188,7 +207,6 @@
     "quartz/public/index.html",
     "quartz/public/Technologies/index.html",
     "quartz/public/Technologies/Paykit.html",
-    "quartz/public/quartz/quartz/static/og-image.png",
-    "quartz/public/quartz/quartz/static/icon.png"
+    "quartz/public/quartz/quartz/static/og-image.png"
   ]
 }

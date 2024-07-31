@@ -2,9 +2,9 @@
 
 ![pubkey-client](../../images/pubky-header.png)
 
-The Pubky client will be available as both a desktop application and a hosted website service (standard website) that allows users to interface with the social media layer of [[PubKy App/Backend/Introduction|Pubky Backend]] using [Synonym](https://synonym.to/) hosted services.
+The Pubky client will be available as both a desktop application and a hosted website service (standard website) that allows users to interface with the social media layer of [[Pubky App/Backend/Introduction|Pubky Backend]] using [Synonym](https://synonym.to/) hosted services.
 
-Using the library analogy again, the Pubky Client is like a personalized research assistant who takes the prepared documents from the librarian ([[PubKy App/Backend/Introduction|backend]]) and creates a customized report just for you. This report is designed to be easy to read and understand, with all the relevant information presented in a clear and concise manner.
+Using the library analogy again, the Pubky Client is like a personalized research assistant who takes the prepared documents from the librarian ([[Pubky App/Backend/Introduction|backend]]) and creates a customized report just for you. This report is designed to be easy to read and understand, with all the relevant information presented in a clear and concise manner.
 
 - Users are able to take control of the data and exit the Synonym hosted services and run their own without hampering discoverability ([[3.Credible Exit|credible exit]]).
 
