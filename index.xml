@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
     <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base Here! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is the Pubky Core and Pubky App knowledge base. Currently these docs are a mix of reality, dreams, visions, technicalities, actuality and plans.</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
+  </item><item>
+    <title>1. Introduction</title>
+    <link>https://pubky.synonym.to/App-Architectures/1.-Introduction</link>
+    <guid>https://pubky.synonym.to/App-Architectures/1.-Introduction</guid>
+    <description>Leveraging the Introduction protocol as the foundational layer, we can envision app a diverse array of client applications with distinct functionalities ...</description>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
+  </item><item>
+    <title>2. Client - Homeserver</title>
+    <link>https://pubky.synonym.to/App-Architectures/2.-Client---Homeserver</link>
+    <guid>https://pubky.synonym.to/App-Architectures/2.-Client---Homeserver</guid>
+    <description> In this architecture, we implement a direct communication model between the client application and the home server. This approach minimizes latency and reduces system complexity by establishing a direct data flow pathway.</description>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
+  </item><item>
+    <title>3. Global Aggregators</title>
+    <link>https://pubky.synonym.to/App-Architectures/3.-Global-Aggregators</link>
+    <guid>https://pubky.synonym.to/App-Architectures/3.-Global-Aggregators</guid>
+    <description>...</description>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
+  </item><item>
+    <title>4. Custom Backend</title>
+    <link>https://pubky.synonym.to/App-Architectures/4.-Custom-Backend</link>
+    <guid>https://pubky.synonym.to/App-Architectures/4.-Custom-Backend</guid>
+    <description>...</description>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
   </item><item>
     <title>1.Web of Trust</title>
     <link>https://pubky.synonym.to/Concepts/1.Web-of-Trust</link>
     <guid>https://pubky.synonym.to/Concepts/1.Web-of-Trust</guid>
     <description>The “Web of Trust” is a decentralized trust model used in cryptography, particularly in systems like PGP, GnuPG, and other OpenPGP compatible systems, to establish the authenticity ...</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
   </item><item>
     <title>2.Censorship</title>
     <link>https://pubky.synonym.to/Concepts/2.Censorship</link>
     <guid>https://pubky.synonym.to/Concepts/2.Censorship</guid>
     <description>Censorship in the digital age is a complex and multifaceted issue, affecting how information is shared, accessed, and controlled. It’s not just about blocking content; it’s about the power dynamics at play, the implications for freedom of expression, and the challenges of maintaining privacy and security in an increasingly interconnected world.</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
   </item><item>
     <title>3.Credible Exit</title>
     <link>https://pubky.synonym.to/Concepts/3.Credible-Exit</link>
     <guid>https://pubky.synonym.to/Concepts/3.Credible-Exit</guid>
     <description>It is a concept that emphasizes the ability for users to leave a platform or service without being locked in, maintaining control over their data and experiences ...</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
   </item><item>
     <title>ELI5</title>
     <link>https://pubky.synonym.to/ELI5</link>
     <guid>https://pubky.synonym.to/ELI5</guid>
     <description>ELI5: Pubky Explained for Children Like a kite, data is in the cloud, but you hold its string. Your friends can find your messages by finding your kite in the sky (0.Introduction in the DHT) and following the string down to the message board you are currently posting on.</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
-  </item><item>
-    <title>Aggregator</title>
-    <link>https://pubky.synonym.to/PubKy-App/Backend/Aggregator</link>
-    <guid>https://pubky.synonym.to/PubKy-App/Backend/Aggregator</guid>
-    <description>Pubky Aggregators Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as data stores ...</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
-  </item><item>
-    <title>Indexer</title>
-    <link>https://pubky.synonym.to/PubKy-App/Backend/Indexer</link>
-    <guid>https://pubky.synonym.to/PubKy-App/Backend/Indexer</guid>
-    <description>The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple data stores into a unified view ...</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
-  </item><item>
-    <title>Introduction</title>
-    <link>https://pubky.synonym.to/PubKy-App/Backend/Introduction</link>
-    <guid>https://pubky.synonym.to/PubKy-App/Backend/Introduction</guid>
-    <description>The Backend is responsible for collecting (aggregators) and organizing (indexer) data from various sources, known as data stores. Imagine you’re trying to find a specific document in a large library.</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
-  </item><item>
-    <title>Web Server</title>
-    <link>https://pubky.synonym.to/PubKy-App/Backend/Web-Server</link>
-    <guid>https://pubky.synonym.to/PubKy-App/Backend/Web-Server</guid>
-    <description>The system comprises a suite of backend services that orchestrate the integration of data feeds, search functionality, and user interface configurations ...</description>
-    <pubDate>Thu, 25 Jul 2024 22:12:45 GMT</pubDate>
+    <pubDate>Wed, 31 Jul 2024 21:00:09 GMT</pubDate>
   </item>
     </channel>
   </rss>
