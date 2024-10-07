@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
     <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base: notes.pubky,app! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>DHT</title>
-    <link>https://pubky.synonym.to/Technologies/DHT</link>
-    <guid>https://pubky.synonym.to/Technologies/DHT</guid>
-    <description>Distributed Hash Table - DHT It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>Introduction</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Introduction</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Introduction</guid>
+    <description>Pubky Core Overview Pubky Core is built on a few core concepts: Data Stores - Decentralized data storage nodes that host user data. Data is encrypted at rest.</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>DNS</title>
-    <link>https://pubky.synonym.to/Technologies/DNS</link>
-    <guid>https://pubky.synonym.to/Technologies/DNS</guid>
-    <description>Domain Name System - DNS It translates human-readable domain names (e.g., www.example.com) into IP addresses that computers use to identify each other on the network ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>0.Introduction</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/0.Introduction</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/0.Introduction</guid>
+    <description>Public-Key Addressable Resource Records Pkarr is a revolutionary system that bridges the gap between the Domain Name System (DNS) and peer-to-peer overlay networks ...</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>DoH</title>
-    <link>https://pubky.synonym.to/Technologies/DoH</link>
-    <guid>https://pubky.synonym.to/Technologies/DoH</guid>
-    <description>DNS over HTTPS - DoH It is a security protocol that encrypts DNS queries and responses, enhancing privacy and security by preventing eavesdropping and tampering ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>1.Why Pkarr?</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/1.Why-Pkarr</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/1.Why-Pkarr</guid>
+    <description>This note explores the motivation behind Pkarr, addressing the challenges of distributed semantics, databases, and discovery. In pursuit of a sovereign, distributed, and open web, we identify three challenges: Distributed Semantics Everything expressed as keys and metadata Developing interoperable semantics for verifiable metadata about a set of public-keys that form a digital identity, complete with reputation, social graph, credentials, and more.</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>HTTPS</title>
-    <link>https://pubky.synonym.to/Technologies/HTTPS</link>
-    <guid>https://pubky.synonym.to/Technologies/HTTPS</guid>
-    <description>Hypertext Transfer Protocol Secure - HTTPS It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>2.Getting Started with Pkarr</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr</guid>
+    <description>This guide will help you understand how to publish and resolve resource records using pkarr. Publishing Resource Records To publish resource records for your key, you need to sign a small encoded DNS packet (⇐ 1000 bytes) and publish it on the DHT.</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>Key Pair</title>
-    <link>https://pubky.synonym.to/Technologies/Key-Pair</link>
-    <guid>https://pubky.synonym.to/Technologies/Key-Pair</guid>
-    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>3.Expectations</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/3.Expectations</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/3.Expectations</guid>
+    <description>Understanding the expectations and limitations of pkarr is crucial for effective use. This note outlines what pkarr is not and what users should expect.</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>Mainline DHT</title>
-    <link>https://pubky.synonym.to/Technologies/Mainline-DHT</link>
-    <guid>https://pubky.synonym.to/Technologies/Mainline-DHT</guid>
-    <description>Mainline DHT is a standard Distributed Hash Table (DHT) implementation widely used in the BitTorrent network, based on the Kademlia protocol. This decentralized system allows for efficient data storage and retrieval across a vast network of nodes, making it highly resilient and scalable.</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>4.Architecture</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/4.Architecture</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/4.Architecture</guid>
+    <description>In-depth look at the architecture of pkarr, including its components and how they interact. Components Client: Applications or users that publish or query resource records.</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>Paykit</title>
-    <link>https://pubky.synonym.to/Technologies/Paykit</link>
-    <guid>https://pubky.synonym.to/Technologies/Paykit</guid>
-    <description>Paykit abstracts and automates any payment method behind a single, static public key. The public key belongs to a Pubky instance and points to a data store containing all supported payment endpoints.</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>1.Adoption</title>
+    <link>https://pubky.synonym.to/Pubky-Core/notes/1.Adoption</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/notes/1.Adoption</guid>
+    <description>Pubky Adoption This note is indicative and creative. There is no set on stone plans for realizing adoption, these are just ideas. Realizing the full potential of Pubky relies on network effects through mainstream user onboarding: Legacy centralized imports ease migration paths for established communities and profiles.</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item><item>
-    <title>Perspectives</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Perspectives</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Perspectives</guid>
-    <description>Perspectives Users can save any custom-filtered view or feed as a “perspective” which is basically a custom template of settings of tags, weights, users, reach, and trends ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:49:29 GMT</pubDate>
+    <title>2.Incentives</title>
+    <link>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</guid>
+    <description>Pubky Incentives This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience: Data storage fees pay stores for availability and throughput.</description>
+    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
   </item>
     </channel>
   </rss>
