@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
     <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base: notes.pubky,app! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
+  </item><item>
+    <title>4.Architecture</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/4.Architecture</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/4.Architecture</guid>
+    <description>In-depth look at the architecture of pkarr, including its components and how they interact. Components Client: Applications or users that publish or query resource records.</description>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
+  </item><item>
+    <title>1.Adoption</title>
+    <link>https://pubky.synonym.to/Pubky-Core/notes/1.Adoption</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/notes/1.Adoption</guid>
+    <description>Pubky Adoption This note is indicative and creative. There is no set on stone plans for realizing adoption, these are just ideas. Realizing the full potential of Pubky relies on network effects through mainstream user onboarding: Legacy centralized imports ease migration paths for established communities and profiles.</description>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item><item>
     <title>2.Incentives</title>
     <link>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</link>
     <guid>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</guid>
     <description>Pubky Incentives This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience: Data storage fees pay stores for availability and throughput.</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item><item>
     <title>3.Protocols</title>
     <link>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</link>
     <guid>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</guid>
     <description>Pubky Protocols This note is indicative and highly creative. We have not yet explored much about the open protocols that enable independent implementations: Pubky Data - Definition of normalized data schemas for user profiles, content types, relationships etc.</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
     <link>https://pubky.synonym.to/TLDR</link>
     <guid>https://pubky.synonym.to/TLDR</guid>
     <description>Pubky App is a decentralized alternative to social media platforms like Twitter. It uses a distributed architecture where: Users host their own data on independent data stores Services aggregate data across stores into a unified view Feeds and search present curated views of the aggregated data Application back-ends integrate features without centralized control The end goal is to give individuals self-sovereign digital identity and true ownership over social profiles/activity without fear of data misuse or account bans by any single entity.</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item><item>
     <title>DHT</title>
     <link>https://pubky.synonym.to/Technologies/DHT</link>
     <guid>https://pubky.synonym.to/Technologies/DHT</guid>
     <description>Distributed Hash Table - DHT It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item><item>
     <title>DNS</title>
     <link>https://pubky.synonym.to/Technologies/DNS</link>
     <guid>https://pubky.synonym.to/Technologies/DNS</guid>
     <description>Domain Name System - DNS It translates human-readable domain names (e.g., www.example.com) into IP addresses that computers use to identify each other on the network ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item><item>
     <title>DoH</title>
     <link>https://pubky.synonym.to/Technologies/DoH</link>
     <guid>https://pubky.synonym.to/Technologies/DoH</guid>
     <description>DNS over HTTPS - DoH It is a security protocol that encrypts DNS queries and responses, enhancing privacy and security by preventing eavesdropping and tampering ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
-  </item><item>
-    <title>HTTPS</title>
-    <link>https://pubky.synonym.to/Technologies/HTTPS</link>
-    <guid>https://pubky.synonym.to/Technologies/HTTPS</guid>
-    <description>Hypertext Transfer Protocol Secure - HTTPS It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
-  </item><item>
-    <title>Key Pair</title>
-    <link>https://pubky.synonym.to/Technologies/Key-Pair</link>
-    <guid>https://pubky.synonym.to/Technologies/Key-Pair</guid>
-    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:48:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
