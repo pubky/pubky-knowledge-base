@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
     <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base: notes.pubky,app! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
-    <description>Welcome to the Pubky Knowledge Base This is the Pubky Core and Pubky App knowledge base. Currently these docs are a mix of reality, dreams, visions, technicalities, actuality and plans.</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>1. Introduction</title>
-    <link>https://pubky.synonym.to/App-Architectures/1.-Introduction</link>
-    <guid>https://pubky.synonym.to/App-Architectures/1.-Introduction</guid>
-    <description>Leveraging the Pubky Core protocol as the foundational layer, we can envision a diverse array of applications with distinct functionalities. While each app can implement its own unique design patterns and user interfaces, they all share a common underlying architecture: interacting with the distributed data stores, colloquially referred to as home servers, through standardized read and write operations.</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>2.Incentives</title>
+    <link>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</guid>
+    <description>Pubky Incentives This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience: Data storage fees pay stores for availability and throughput.</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>2. Client - Homeserver</title>
-    <link>https://pubky.synonym.to/App-Architectures/2.-Client---Homeserver</link>
-    <guid>https://pubky.synonym.to/App-Architectures/2.-Client---Homeserver</guid>
-    <description> In this architecture, we implement a direct communication model between the client application and the home server. This approach minimizes latency and reduces system complexity by establishing a direct data flow pathway.</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>3.Protocols</title>
+    <link>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</guid>
+    <description>Pubky Protocols This note is indicative and highly creative. We have not yet explored much about the open protocols that enable independent implementations: Pubky Data - Definition of normalized data schemas for user profiles, content types, relationships etc.</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>3. Global Aggregators</title>
-    <link>https://pubky.synonym.to/App-Architectures/3.-Global-Aggregators</link>
-    <guid>https://pubky.synonym.to/App-Architectures/3.-Global-Aggregators</guid>
-    <description>...</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>TLDR</title>
+    <link>https://pubky.synonym.to/TLDR</link>
+    <guid>https://pubky.synonym.to/TLDR</guid>
+    <description>Pubky App is a decentralized alternative to social media platforms like Twitter. It uses a distributed architecture where: Users host their own data on independent data stores Services aggregate data across stores into a unified view Feeds and search present curated views of the aggregated data Application back-ends integrate features without centralized control The end goal is to give individuals self-sovereign digital identity and true ownership over social profiles/activity without fear of data misuse or account bans by any single entity.</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>4. Custom Backend</title>
-    <link>https://pubky.synonym.to/App-Architectures/4.-Custom-Backend</link>
-    <guid>https://pubky.synonym.to/App-Architectures/4.-Custom-Backend</guid>
-    <description>...</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>DHT</title>
+    <link>https://pubky.synonym.to/Technologies/DHT</link>
+    <guid>https://pubky.synonym.to/Technologies/DHT</guid>
+    <description>Distributed Hash Table - DHT It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>1.Web of Trust</title>
-    <link>https://pubky.synonym.to/Concepts/1.Web-of-Trust</link>
-    <guid>https://pubky.synonym.to/Concepts/1.Web-of-Trust</guid>
-    <description>The “Web of Trust” is a decentralized trust model used in cryptography, particularly in systems like PGP, GnuPG, and other OpenPGP compatible systems, to establish the authenticity ...</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>DNS</title>
+    <link>https://pubky.synonym.to/Technologies/DNS</link>
+    <guid>https://pubky.synonym.to/Technologies/DNS</guid>
+    <description>Domain Name System - DNS It translates human-readable domain names (e.g., www.example.com) into IP addresses that computers use to identify each other on the network ...</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>2.Censorship</title>
-    <link>https://pubky.synonym.to/Concepts/2.Censorship</link>
-    <guid>https://pubky.synonym.to/Concepts/2.Censorship</guid>
-    <description>Censorship in the digital age is a complex and multifaceted issue, affecting how information is shared, accessed, and controlled. It’s not just about blocking content; it’s about the power dynamics at play, the implications for freedom of expression, and the challenges of maintaining privacy and security in an increasingly interconnected world.</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>DoH</title>
+    <link>https://pubky.synonym.to/Technologies/DoH</link>
+    <guid>https://pubky.synonym.to/Technologies/DoH</guid>
+    <description>DNS over HTTPS - DoH It is a security protocol that encrypts DNS queries and responses, enhancing privacy and security by preventing eavesdropping and tampering ...</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>3.Credible Exit</title>
-    <link>https://pubky.synonym.to/Concepts/3.Credible-Exit</link>
-    <guid>https://pubky.synonym.to/Concepts/3.Credible-Exit</guid>
-    <description>It is a concept that emphasizes the ability for users to leave a platform or service without being locked in, maintaining control over their data and experiences ...</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>HTTPS</title>
+    <link>https://pubky.synonym.to/Technologies/HTTPS</link>
+    <guid>https://pubky.synonym.to/Technologies/HTTPS</guid>
+    <description>Hypertext Transfer Protocol Secure - HTTPS It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy ...</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item><item>
-    <title>ELI5</title>
-    <link>https://pubky.synonym.to/ELI5</link>
-    <guid>https://pubky.synonym.to/ELI5</guid>
-    <description>ELI5: Pubky Explained for Children Like a kite, data is in the cloud, but you hold its string. Your friends can find your messages by finding your kite in the sky (0.Introduction in the DHT) and following the string down to the message board you are currently posting on.</description>
-    <pubDate>Wed, 31 Jul 2024 21:04:05 GMT</pubDate>
+    <title>Key Pair</title>
+    <link>https://pubky.synonym.to/Technologies/Key-Pair</link>
+    <guid>https://pubky.synonym.to/Technologies/Key-Pair</guid>
+    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
+    <pubDate>Mon, 07 Oct 2024 07:40:03 GMT</pubDate>
   </item>
     </channel>
   </rss>
