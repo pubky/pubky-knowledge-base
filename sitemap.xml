@@ -1,133 +1,136 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://pubky.synonym.to/App-Architectures/1.-Introduction</loc>
-    <lastmod>2024-10-08T12:42:20.949Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/App-Architectures/2.-Client---Homeserver</loc>
-    <lastmod>2024-10-08T12:42:20.949Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/App-Architectures/3.-Global-Aggregators</loc>
-    <lastmod>2024-10-08T12:42:20.949Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/App-Architectures/4.-Custom-Backend</loc>
-    <lastmod>2024-10-08T12:42:20.949Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Concepts/Censorship</loc>
-    <lastmod>2024-10-08T12:42:20.949Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Concepts/Credible-Exit</loc>
-    <lastmod>2024-10-08T12:42:20.949Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Concepts/Semantic-Social-Graph</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/ELI5</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Backend/Aggregator</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Backend/Indexer</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Backend/Introduction</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Backend/Web-Server</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Bookmarks</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Layouts</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Notifications</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Perspectives</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Posts</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Profiles</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Search</loc>
-    <lastmod>2024-10-08T12:42:20.950Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Tags</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Features/Trends</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Client/Introduction</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/ELI5</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-App/Introduction</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
+  </url><url>
+    <loc>https://pubky.synonym.to/Pubky-Core/ELI5</loc>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/Homeservers</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/Introduction</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/Pkarr/0.Introduction</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/Pkarr/1.Why-Pkarr</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/Pkarr/3.Expectations</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/Pkarr/4.Architecture</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/notes/1.Adoption</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</loc>
-    <lastmod>2024-10-08T12:42:20.951Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/TLDR</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Technologies/DHT</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Technologies/DNS</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Technologies/DoH</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Technologies/HTTPS</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Technologies/Key-Pair</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Technologies/Mainline-DHT</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/Technologies/Paykit</loc>
-    <lastmod>2024-10-08T12:42:20.952Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.395Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/</loc>
-    <lastmod>2024-10-08T12:42:20.962Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.403Z</lastmod>
   </url><url>
     <loc>https://pubky.synonym.to/readme</loc>
-    <lastmod>2024-10-08T12:42:20.973Z</lastmod>
+    <lastmod>2024-10-08T12:43:13.411Z</lastmod>
   </url></urlset>
