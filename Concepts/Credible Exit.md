@@ -7,6 +7,8 @@ This [substack post](https://subconscious.substack.com/p/credible-exit) by Gordo
 
 Imagine you’ve built a social profile on a platform. Over time, you start noticing that some of your posts are being restricted or your content is no longer being promoted. You don't want to lose everything you've built—your posts, connections, or even your online identity. This is where **Credible Exit** comes into play. It ensures that you can leave a platform without losing what's yours, giving you true control over your online presence.
 
+It is also important for the credible exit to be feasible, as in a measure of cost, meaning the cost of exit should be within the order of magnitude of making an exit economically efficient.
+
 ## Why Credible Exit is Important
 
 Today, most platforms hold your data hostage. They make it difficult to leave, and if you do leave, you often lose all your posts, connections, and your ability to stay visible. This is the result of centralized control—a few big platforms deciding what can be shared and who gets to see it. They can censor you or limit your access without warning.
