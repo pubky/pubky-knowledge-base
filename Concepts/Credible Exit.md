@@ -3,7 +3,7 @@
 
 **Credible Exit** is the ability to leave a platform or service without losing access to your data, identity, or connections, ensuring full user control and portability.
 
-This [substack post](https://subconscious.substack.com/p/credible-exit) by Gordon Brander is a good read as introduction to the topic. 
+This [substack post](https://subconscious.substack.com/p/credible-exit) by Gordon Brander is a good introduction to the topic. 
 
 Imagine you’ve built a social profile on a platform. Over time, you start noticing that some of your posts are being restricted or your content is no longer being promoted. You don't want to lose everything you've built—your posts, connections, or even your online identity. This is where **Credible Exit** comes into play. It ensures that you can leave a platform without losing what's yours, giving you true control over your online presence.
 
