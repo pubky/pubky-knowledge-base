@@ -1,7 +1,7 @@
 
 ## Credible Exit
 
-**Credible Exit** is the ability to leave a platform or service without losing access to your data, identity, or connections, ensuring full user control and portability.
+**Credible Exit** is the ability to leave a platform or service without losing access to your data, identity, or connections, ensuring full user control and portability. It is also important for the credible exit to be feasible, as in a measure of cost, meaning the cost of exit should be within the order of magnitude of making an exit economically efficient. 
 
 This [substack post](https://subconscious.substack.com/p/credible-exit) by Gordon Brander is a good read as introduction to the topic. 
 
