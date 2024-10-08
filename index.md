@@ -6,7 +6,7 @@ This is a knowledge base for the Pubky platform, which includes [[Pubky Core/Int
 
 Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control. 
 
-So far, Pubky does this by combining practical decentralized routing & identity ([[Pubky Core/Pkarr/Introduction|PKARR]]), with simple interoperable hosting ([[Pubky Core/Data Stores|Homeservers]]) that allow for [[Censorship|censorship]] resistance and a [[3.Credible Exit|credible exit]], as well as a publishing application, Pubky App, that facilitates the creation of a [[Concepts/Semantic Social Graph|Semantic Social Graph]], which can be used for filtering, discovery, matching and coordination.
+So far, Pubky does this by combining practical decentralized routing & identity ([[Pubky Core/Pkarr/Introduction|PKARR]]), with simple interoperable hosting ([[Pubky Core/Homeservers|Homeservers]]) that allow for [[Censorship|censorship]] resistance and a [[Credible Exit|credible exit]], as well as a publishing application, Pubky App, that facilitates the creation of a [[Concepts/Semantic Social Graph|Semantic Social Graph]], which can be used for filtering, discovery, matching and coordination.
 
 ## Get Started
 
