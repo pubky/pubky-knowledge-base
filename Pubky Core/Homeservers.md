@@ -1,4 +1,4 @@
-The network is composed of multiple, independent data stores, which provides censorship resistance and ensures that no single entity controls the flow of information. 
+The network is composed of multiple, independent data stores, homeservers, which provide censorship resistance and ensure that no single entity controls the flow of information. 
 
 ### Data Storage and Access
 
