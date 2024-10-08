@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
     <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base: notes.pubky,app! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>Introduction</title>
-    <link>https://pubky.synonym.to/Pubky-Core/Introduction</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/Introduction</guid>
-    <description>Pubky Core Overview Pubky Core is built on a few core concepts: Data Stores - Decentralized data storage nodes that host user data. Data is encrypted at rest.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Paykit</title>
+    <link>https://pubky.synonym.to/Technologies/Paykit</link>
+    <guid>https://pubky.synonym.to/Technologies/Paykit</guid>
+    <description>Paykit abstracts and automates any payment method behind a single, static public key. The public key belongs to a Pubky instance and points to a data store containing all supported payment endpoints.</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>0.Introduction</title>
-    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/0.Introduction</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/0.Introduction</guid>
-    <description>Public-Key Addressable Resource Records Pkarr is a revolutionary system that bridges the gap between the Domain Name System (DNS) and peer-to-peer overlay networks ...</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Layouts</title>
+    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Layouts</link>
+    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Layouts</guid>
+    <description>Layouts Pubky client offers multiple customizable UI layouts for users that prefer different column, grid, and list layouts for their feeds.</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>1.Why Pkarr?</title>
-    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/1.Why-Pkarr</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/1.Why-Pkarr</guid>
-    <description>This note explores the motivation behind Pkarr, addressing the challenges of distributed semantics, databases, and discovery. In pursuit of a sovereign, distributed, and open web, we identify three challenges: Distributed Semantics Everything expressed as keys and metadata Developing interoperable semantics for verifiable metadata about a set of public-keys that form a digital identity, complete with reputation, social graph, credentials, and more.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Notifications</title>
+    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Notifications</link>
+    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Notifications</guid>
+    <description>Notifications Pubky client tracks various event or activities the user may be interested in, and provides relevant notifications for interactions and other relevant activity ...</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>2.Getting Started with Pkarr</title>
-    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr</guid>
-    <description>This guide will help you understand how to publish and resolve resource records using pkarr. Publishing Resource Records To publish resource records for your key, you need to sign a small encoded DNS packet (⇐ 1000 bytes) and publish it on the DHT.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Perspectives</title>
+    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Perspectives</link>
+    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Perspectives</guid>
+    <description>Perspectives Users can save any custom-filtered view or feed as a “perspective” which is basically a custom template of settings of tags, weights, users, reach, and trends ...</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>3.Expectations</title>
-    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/3.Expectations</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/3.Expectations</guid>
-    <description>Understanding the expectations and limitations of pkarr is crucial for effective use. This note outlines what pkarr is not and what users should expect.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Posts</title>
+    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Posts</link>
+    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Posts</guid>
+    <description>Posts In Pubkey client, a post is a message that a user publishes on the platform. Posts are the core content and they can contain a variety of information, including: Text: There is not text limitation of plain text, which can include words, phrases, sentences, or even just a single character.</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>4.Architecture</title>
-    <link>https://pubky.synonym.to/Pubky-Core/Pkarr/4.Architecture</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/Pkarr/4.Architecture</guid>
-    <description>In-depth look at the architecture of pkarr, including its components and how they interact. Components Client: Applications or users that publish or query resource records.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Profiles</title>
+    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Profiles</link>
+    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Profiles</guid>
+    <description>Profiles In Pubky client, a profile refers to a user’s personal page on the app, which displays their information, posts, and other content. A Pubky profile is a unique identity that represents a public-key.</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>1.Adoption</title>
-    <link>https://pubky.synonym.to/Pubky-Core/notes/1.Adoption</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/notes/1.Adoption</guid>
-    <description>Pubky Adoption This note is indicative and creative. There is no set on stone plans for realizing adoption, these are just ideas. Realizing the full potential of Pubky relies on network effects through mainstream user onboarding: Legacy centralized imports ease migration paths for established communities and profiles.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Search</title>
+    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Search</link>
+    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Search</guid>
+    <description>Search While Tags &amp; Filters are the primary sorting tools, the app also provides limited traditional search capabilities.</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item><item>
-    <title>2.Incentives</title>
-    <link>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</link>
-    <guid>https://pubky.synonym.to/Pubky-Core/notes/2.Incentives</guid>
-    <description>Pubky Incentives This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience: Data storage fees pay stores for availability and throughput.</description>
-    <pubDate>Mon, 07 Oct 2024 07:50:10 GMT</pubDate>
+    <title>Tags</title>
+    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Tags</link>
+    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Tags</guid>
+    <description>Tags They are keywords or phrases that are added to a tweet to help users find and engage with the content. Users can publicly assign contextual tags, like hashtags, to any other user or post.</description>
+    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
   </item>
     </channel>
   </rss>
