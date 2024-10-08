@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
     <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base: notes.pubky,app! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Paykit</title>
-    <link>https://pubky.synonym.to/Technologies/Paykit</link>
-    <guid>https://pubky.synonym.to/Technologies/Paykit</guid>
-    <description>Paykit abstracts and automates any payment method behind a single, static public key. The public key belongs to a Pubky instance and points to a data store containing all supported payment endpoints.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>3.Protocols</title>
+    <link>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/notes/3.Protocols</guid>
+    <description>Pubky Protocols This note is indicative and highly creative. We have not yet explored much about the open protocols that enable independent implementations: Pubky Data - Definition of normalized data schemas for user profiles, content types, relationships etc.</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Layouts</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Layouts</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Layouts</guid>
-    <description>Layouts Pubky client offers multiple customizable UI layouts for users that prefer different column, grid, and list layouts for their feeds.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>TLDR</title>
+    <link>https://pubky.synonym.to/TLDR</link>
+    <guid>https://pubky.synonym.to/TLDR</guid>
+    <description>Pubky App - TLDR Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular ...</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Notifications</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Notifications</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Notifications</guid>
-    <description>Notifications Pubky client tracks various event or activities the user may be interested in, and provides relevant notifications for interactions and other relevant activity ...</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>DHT</title>
+    <link>https://pubky.synonym.to/Technologies/DHT</link>
+    <guid>https://pubky.synonym.to/Technologies/DHT</guid>
+    <description>Distributed Hash Table - DHT It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Perspectives</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Perspectives</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Perspectives</guid>
-    <description>Perspectives Users can save any custom-filtered view or feed as a “perspective” which is basically a custom template of settings of tags, weights, users, reach, and trends ...</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>DNS</title>
+    <link>https://pubky.synonym.to/Technologies/DNS</link>
+    <guid>https://pubky.synonym.to/Technologies/DNS</guid>
+    <description>Domain Name System - DNS It translates human-readable domain names (e.g., www.example.com) into IP addresses that computers use to identify each other on the network ...</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Posts</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Posts</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Posts</guid>
-    <description>Posts In Pubkey client, a post is a message that a user publishes on the platform. Posts are the core content and they can contain a variety of information, including: Text: There is not text limitation of plain text, which can include words, phrases, sentences, or even just a single character.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>DoH</title>
+    <link>https://pubky.synonym.to/Technologies/DoH</link>
+    <guid>https://pubky.synonym.to/Technologies/DoH</guid>
+    <description>DNS over HTTPS - DoH It is a security protocol that encrypts DNS queries and responses, enhancing privacy and security by preventing eavesdropping and tampering ...</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Profiles</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Profiles</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Profiles</guid>
-    <description>Profiles In Pubky client, a profile refers to a user’s personal page on the app, which displays their information, posts, and other content. A Pubky profile is a unique identity that represents a public-key.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>HTTPS</title>
+    <link>https://pubky.synonym.to/Technologies/HTTPS</link>
+    <guid>https://pubky.synonym.to/Technologies/HTTPS</guid>
+    <description>Hypertext Transfer Protocol Secure - HTTPS It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy ...</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Search</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Search</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Search</guid>
-    <description>Search While Tags &amp; Filters are the primary sorting tools, the app also provides limited traditional search capabilities.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>Key Pair</title>
+    <link>https://pubky.synonym.to/Technologies/Key-Pair</link>
+    <guid>https://pubky.synonym.to/Technologies/Key-Pair</guid>
+    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item><item>
-    <title>Tags</title>
-    <link>https://pubky.synonym.to/Pubky-App/Client/Features/Tags</link>
-    <guid>https://pubky.synonym.to/Pubky-App/Client/Features/Tags</guid>
-    <description>Tags They are keywords or phrases that are added to a tweet to help users find and engage with the content. Users can publicly assign contextual tags, like hashtags, to any other user or post.</description>
-    <pubDate>Tue, 08 Oct 2024 08:07:23 GMT</pubDate>
+    <title>Mainline DHT</title>
+    <link>https://pubky.synonym.to/Technologies/Mainline-DHT</link>
+    <guid>https://pubky.synonym.to/Technologies/Mainline-DHT</guid>
+    <description>Mainline DHT is a standard Distributed Hash Table (DHT) implementation widely used in the BitTorrent network, based on the Kademlia protocol. This decentralized system allows for efficient data storage and retrieval across a vast network of nodes, making it highly resilient and scalable.</description>
+    <pubDate>Tue, 08 Oct 2024 08:25:36 GMT</pubDate>
   </item>
     </channel>
   </rss>
