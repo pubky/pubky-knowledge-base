@@ -1,24 +1,27 @@
-The network is composed of multiple, independent data stores, homeservers, which provide censorship resistance and ensure that no single entity controls the flow of information. 
+The Pubky network allows multiple, independent data stores, known as "homeservers." This improves censorship-resistance and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden. 
 
-### Data Storage and Access
+Homeservers are meant to represent a primary place to retrieve data from a specific PKARR public key, but the user can redefine the location of their homeserver at will by updating their PKARR in Mainline DHT. 
 
-- **Client-side encryption**: Data at rest is encrypted using users' public keys, ensuring that only the data owner possesses the decryption key and has exclusive access to the encrypted data.
-- **Optional data publication**: Users have the option to publish data publicly, making it accessible to all, or maintain control over access through fine-grained permissions.
+### Public vs Private Data
+
+Current implementations across Pubky currently only support public, unencrypted data use cases. This does not prevent applications from using encrypted data within homeservers, we simply haven't implemented that set of features in any direct way yet. Feel free to contribute!  
 
 ### Data Retrieval and Synchronization
 
 - **API and Pub/Sub access**: Authorized services can access data through a RESTful API or via a publish-subscribe (Pub/Sub) messaging system, enabling efficient and scalable data retrieval.
-- **Merkle tree-based versioning**: The system employs Merkle trees to manage versioning and conflict resolution, ensuring efficient data synchronization and minimizing data inconsistencies.
 
 ### Decentralized Storage Architecture
 
-- **Federated data stores**: Data stores can be operated by individuals, cooperatives, or commercial entities, with the option for anonymous operation, promoting a decentralized and resilient storage ecosystem.
-- **Redundancy through replication**: Data is replicated across multiple data stores to ensure high availability and redundancy, minimizing the risk of data loss or unavailability.
-
-### Incentivizing Data Availability
-
-- **Incentive mechanisms**: The system incorporates [[2.Incentives|incentives]], such as service fees or peer-to-peer micropayments, to encourage data availability and storage providers to maintain high uptime and data accessibility.
+- Homeservers can be operated by individuals, cooperatives, or commercial entities, with the option for anonymous operation, promoting a decentralized and resilient storage ecosystem where users could tune their preferred redundancy while maintaining the benefits of a central homeserver.
+- We do not yet have any mirroring or replication tools available yet. Feel free to build with us!
 
 ### User Data Control and Credible Exit
 
-- **User-centric data control**: Users retain control over their data even in the event of a data store outage or termination, thanks to credible exit options that ensure data portability and availability.
+- The current network is being bootstrapped by Synonym's first homeserver, which supports key accounts as a service, as well as all services required to operate the Pubky App. 
+- While Synonym is currently not charging fees for homeserving, it is totall possible for anyone to run their own homerserver and require service fees or peer-to-peer micropayments, or any other requirement, to improve data redundancy and competition.
+- Synonym does not control who can join or serve data on the network, but in order to truly have a "credible exit" the network will need to mature to have more providers of homeservers and Pubky applications.
+- We will also need to make it as easy as possible for people to host their own homeservers, and to host homerserver clouds.
+- We also need to ensure that applications remain performant & reliable as the network fragments.
+
+### WIP
+- **Merkle tree-based versioning**: Merkle trees to manage versioning and conflict resolution, ensuring efficient data synchronization and minimizing data inconsistencies.
