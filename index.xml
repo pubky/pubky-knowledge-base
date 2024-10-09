@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/readme</link>
     <guid>https://pubky.synonym.to/readme</guid>
     <description>:brain: Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base: notes.pubky,app! The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item><item>
     <title>vision</title>
     <link>https://pubky.synonym.to/vision</link>
     <guid>https://pubky.synonym.to/vision</guid>
     <description>The Vision of Pubky: Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you ...</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
-  </item><item>
-    <title>DHT</title>
-    <link>https://pubky.synonym.to/Technologies/DHT</link>
-    <guid>https://pubky.synonym.to/Technologies/DHT</guid>
-    <description>Distributed Hash Table - DHT It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
-  </item><item>
-    <title>DNS</title>
-    <link>https://pubky.synonym.to/Technologies/DNS</link>
-    <guid>https://pubky.synonym.to/Technologies/DNS</guid>
-    <description>Domain Name System - DNS It translates human-readable domain names (e.g., www.example.com) into IP addresses that computers use to identify each other on the network ...</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item><item>
     <title>DoH</title>
     <link>https://pubky.synonym.to/Technologies/DoH</link>
     <guid>https://pubky.synonym.to/Technologies/DoH</guid>
     <description>DNS over HTTPS - DoH It is a security protocol that encrypts DNS queries and responses, enhancing privacy and security by preventing eavesdropping and tampering ...</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item><item>
     <title>HTTPS</title>
     <link>https://pubky.synonym.to/Technologies/HTTPS</link>
     <guid>https://pubky.synonym.to/Technologies/HTTPS</guid>
     <description>Hypertext Transfer Protocol Secure - HTTPS It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy ...</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item><item>
     <title>Key Pair</title>
     <link>https://pubky.synonym.to/Technologies/Key-Pair</link>
     <guid>https://pubky.synonym.to/Technologies/Key-Pair</guid>
     <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item><item>
     <title>Mainline DHT</title>
     <link>https://pubky.synonym.to/Technologies/Mainline-DHT</link>
     <guid>https://pubky.synonym.to/Technologies/Mainline-DHT</guid>
     <description>Mainline DHT is a standard Distributed Hash Table (DHT) implementation widely used in the BitTorrent network, based on the Kademlia protocol. This decentralized system allows for efficient data storage and retrieval across a vast network of nodes, making it highly resilient and scalable.</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item><item>
     <title>Paykit</title>
     <link>https://pubky.synonym.to/Technologies/Paykit</link>
     <guid>https://pubky.synonym.to/Technologies/Paykit</guid>
     <description>Paykit abstracts and automates any payment method behind a single, static public key. The public key belongs to a Pubky instance and points to a data store containing all supported payment endpoints.</description>
-    <pubDate>Wed, 09 Oct 2024 08:43:59 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
+  </item><item>
+    <title>Homeservers</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Homeservers</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Homeservers</guid>
+    <description>The Pubky network allows multiple, independent data stores, known as “homeservers.” This improves censorship-resistance and prevents any single entity from controlling the ...</description>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
+  </item><item>
+    <title>Introduction</title>
+    <link>https://pubky.synonym.to/Pubky-Core/Introduction</link>
+    <guid>https://pubky.synonym.to/Pubky-Core/Introduction</guid>
+    <description>Pubky Core Overview Pubky Core is built on a few core concepts: Data Stores - Decentralized data storage nodes that host user data. Data is encrypted at rest.</description>
+    <pubDate>Wed, 09 Oct 2024 08:44:27 GMT</pubDate>
   </item>
     </channel>
   </rss>
