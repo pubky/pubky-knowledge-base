@@ -2,7 +2,7 @@ Mainline [[DHT]] is a standard Distributed Hash Table (DHT) implementation widel
 
 ## Key Features
 
-- **Decentralization**: It operates without a central authority, enhancing its resilience against failures and [[2.Censorship|censorship]].
+- **Decentralization**: It operates without a central authority, enhancing its resilience against failures and [[Censorship|censorship]].
 - **Scalability**: It can easily scale to accommodate more data and users by adding more nodes to the network.
 - **Efficiency**: By distributing data across multiple nodes, Mainline DHT provides fast access to data without the need for a central server.
 

@@ -6,7 +6,7 @@ A relevant example of DHT for Pubky is the [[Mainline DHT]] that is used primari
 
 ## Key Features
 
-- **Decentralization**: DHTs operate without a central authority, making them highly resilient to failures and [[2.Censorship|censorship]].
+- **Decentralization**: DHTs operate without a central authority, making them highly resilient to failures and [[Censorship|censorship]].
 
 - **Scalability**: They can easily scale to accommodate more data and users by adding more nodes to the network.
 

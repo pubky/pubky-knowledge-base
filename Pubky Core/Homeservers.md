@@ -14,7 +14,7 @@ Current implementations across Pubky currently only support public, unencrypted 
 
 - Homeservers can be operated by individuals, cooperatives, or commercial entities, with the option for anonymous operation, promoting a decentralized and resilient storage ecosystem where users could tune their preferred redundancy while maintaining the benefits of a central homeserver.
 - We do not yet have any mirroring or replication tools available yet. Feel free to build with us!
-  
+
 ### User Data Control and Credible Exit
 
 - The current network is being bootstrapped by Synonym's first homeserver, which supports key accounts as a service, as well as all services required to operate the Pubky App. 
