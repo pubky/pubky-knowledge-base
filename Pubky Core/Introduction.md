@@ -6,7 +6,7 @@ Pubky Core is built on a few core concepts:
 
 - **[[Homeservers|Homeserver]]** - Decentralized data storage nodes that host user data. Data is encrypted at rest.
 
-- **[[0.Introduction|Pkarr]]** - Self-issued public keys that function as sovereign, publicly addressable domains are used to resolve the previous components.
+- **[[0.Introduction|PKARR]]** - Self-issued public keys that function as sovereign, publicly addressable domains are used to resolve the previous components.
 
 Pubky Core's distributed architecture aims to provide user autonomy through [[Credible Exit|credible exit]] between interchangeable components.
 

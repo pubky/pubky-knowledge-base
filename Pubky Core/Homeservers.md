@@ -1,6 +1,6 @@
 The Pubky network allows multiple, independent data stores, known as "homeservers." This improves [[Censorship|censorship-resistance]] and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden. 
 
-Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|pkarr]] public key, but the user can redefine the location of their homeserver at will by updating their [[0.Introduction|pkarr]] in [[DHT|mainline DHT]]. 
+Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their homeserver at will by updating their [[0.Introduction|PKARR]] in [[DHT|mainline DHT]]. 
 
 ## Public vs Private Data
 

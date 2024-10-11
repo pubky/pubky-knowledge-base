@@ -4,42 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "bde2716aaeca2c3a",
+        "id": "11883abd2160efc0",
         "type": "tabs",
         "children": [
           {
-            "id": "2dc64b1d3735d56d",
+            "id": "2714f48edb8555ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Pubky Core/Pkarr/2.Getting Started with Pkarr.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3593b819d6c78f93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concepts/Credible Exit.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f30e9fecad7dbed7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technologies/DNS.md",
-                "mode": "source",
-                "source": false
+                "file": "images/pubky-arch.png"
               }
             }
           }
@@ -72,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "WIP",
+                "query": "pkarr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pubky Core/Pkarr/2.Getting Started with Pkarr.md",
+                "file": "images/pubky-arch.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pubky Core/Pkarr/2.Getting Started with Pkarr.md",
+                "file": "images/pubky-arch.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pubky Core/Pkarr/2.Getting Started with Pkarr.md"
+                "file": "images/pubky-arch.png"
               }
             }
           }
@@ -171,40 +145,45 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "2dc64b1d3735d56d",
+  "active": "75a1317f66991245",
   "lastOpenFiles": [
-    "quartz/public/static/contentIndex.json",
-    "quartz/public/static",
-    "quartz/public/index.xml",
-    "quartz/public/sitemap.xml",
-    "quartz/public/tags/segwit.html",
-    "quartz/public/tags/privacy.html",
-    "quartz/public/tags/index.html",
-    "quartz/public/tags/Pubky.html",
-    "quartz/public/tags",
-    "quartz/public/readme.html",
-    "quartz/public/index.html",
-    "quartz/public/images/mermaid_charts/semantic_social_graph.svg",
+    "images/pubky-core.png_original",
+    "images/pubky-core.png_exiftool_tmp",
+    "images/pubky-backend.png_exiftool_tmp",
+    "images/pubky-arch.png_original",
+    "images/pubky-arch.png_exiftool_tmp",
+    "images/pubky-app.png_exiftool_tmp",
+    "images/pubky-header.png",
+    "images/pubky-core.png",
+    "images/pubky-backend.png",
+    "images/pubky-arch.png",
+    "images/pubky-app.png",
+    "images/client-homeserver.png",
+    "Technologies/DNS.md",
+    "Concepts/Credible Exit.md",
+    "The vision of Pubky.md",
+    "Pubky App/Introduction.md",
+    "Pubky Core/Introduction.md",
+    "index.md",
+    "Pubky Core/Homeservers.md",
+    "Pubky Core/Pkarr/ELI5.md",
+    "Technologies/DoH.md",
+    "Pubky Core/Pkarr/4.Architecture.md",
+    "Pubky Core/Pkarr/3.Expectations.md",
+    "Pubky Core/Pkarr/1.Why PKARR?.md",
+    "Pubky Core/Pkarr/2.Getting Started with PKARR.md",
+    "Pubky Core/Pkarr/0.Introduction.md",
+    "quartz/public/404.html",
+    "quartz/public/quartz/quartz/plugins/transformers/toc.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/syntax.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/oxhugofm.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/ofm.ts",
     "quartz/public/quartz/quartz/static/og-image.png",
     "quartz/public/quartz/quartz/static/icon.png",
-    "quartz/public/images/quartz.png",
+    "quartz/public/images/mermaid_charts/semantic_social_graph.svg",
     "quartz/public/images/pubky-header.png",
-    "quartz/public/images/pubky-core.png",
-    "quartz/public/images/pubky-backend.png",
-    "quartz/public/images/pubky-arch.png",
-    "quartz/public/images/pubky-app.png",
-    "quartz/public/images/obsidian.png",
-    "Pubky Core/Pkarr/1.Why Pkarr?.md",
-    "Pubky Core/Pkarr/0.Introduction.md",
     "Pubky Core/ELI5.md",
-    "Pubky Core/Homeservers.md",
-    "Pubky Core/Introduction.md",
-    "Technologies/DoH.md",
-    "Technologies/DNS.md",
     "Technologies/DHT.md",
-    "Pubky Core/Pkarr/2.Getting Started with Pkarr.md",
-    "Concepts/Credible Exit.md",
-    "Pubky App/Introduction.md",
     "Pubky App/Backend/Introduction.md",
     "Pubky App/Client/Introduction.md",
     "Pubky App/Backend/Web Server.md",
@@ -213,11 +192,6 @@
     "Pubky App/App Architectures/4. Custom Backend.md",
     "Pubky App/App Architectures/3. Global Aggregators.md",
     "Pubky App/App Architectures/2. Client - Homeserver.md",
-    "Pubky App/App Architectures/1. Introduction.md",
-    "Concepts/What Is a Decentralized Semantic Social Graph?.md",
-    "Concepts/Semantic Social Graph.md",
-    "readme.md",
-    "Concepts/Censorship.md",
-    "Technologies/Paykit.md"
+    "Pubky App/App Architectures/1. Introduction.md"
   ]
 }

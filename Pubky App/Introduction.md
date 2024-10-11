@@ -32,5 +32,5 @@ It is the part of the Pubky App that you interact with directly. It's responsibl
 
 The early versions of Pubky app take some shortcuts over the [[Pubky Core/Introduction|Pubky Core]] design. The MVP app is centralized, therefore we saved time and complexity by aggregating functionality into fewer components. The main two components are the `Homeserver` and the `Indexer`
 
-- The [[Homeservers|homeservers]] fulfils the function of `data stores`, republishing users keys to [[0.Introduction|Pkarr]] and it acts also as an identity-provider (Oauth-like sign-in). Users maintain a trust relationship with the homeserver.
+- The [[Homeservers|homeservers]] fulfils the function of `data stores`, republishing users keys to [[0.Introduction|PKARR]] and it acts also as an identity-provider (Oauth-like sign-in). Users maintain a trust relationship with the homeserver.
 - The `Indexer` fulfils the function of the [[Pubky App/Backend/Introduction|backend]] for the Pubky App. 
