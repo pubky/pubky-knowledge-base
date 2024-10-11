@@ -6,7 +6,7 @@ The Pubky client will be available as both a desktop application and a hosted we
 
 Using the library analogy again, the Pubky Client is like a personalized research assistant who takes the prepared documents from the librarian ([[Pubky App/Backend/Introduction|backend]]) and creates a customized report just for you. This report is designed to be easy to read and understand, with all the relevant information presented in a clear and concise manner.
 
-- Users are able to take control of the data and exit the Synonym hosted services and run their own without hampering discoverability ([[3.Credible Exit|credible exit]]).
+- Users are able to take control of the data and exit the Synonym hosted services and run their own without hampering discoverability ([[Credible Exit|credible exit]]).
 
 - Pubky client uses the open [[Pubky Core/Introduction|Pubky Core]] for nearly all features, allowing users to avoid censorship by choosing self-hosting or alternate hosts without losing followers or integrity. 
 

@@ -1,4 +1,4 @@
-The Backend is responsible for collecting ([[Aggregator|aggregators]]) and organizing ([[Indexer|indexer]]) data from various sources, known as [[Data Stores|data stores]].
+The Backend is responsible for collecting ([[Aggregator|aggregators]]) and organizing ([[Indexer|indexer]]) data from various sources, known as [[Homeservers|homeservers]].
 
 ![backend](../../images/pubky-backend.png)
 

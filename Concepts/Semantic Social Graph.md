@@ -1,5 +1,3 @@
-## Semantic Social Graph
-
 A **Semantic Social Graph** represents relationships between users, content, and interactions, enriched with contextual meaning that enables better filtering, discovery, and coordination.
 
 Imagine being able to not only see what your friends are sharing but also easily find content that matches your interests across a wide network of people you trust.
@@ -24,46 +22,7 @@ In **Pubky**, a decentralized Semantic Social Graph is central to providing a mo
 
 This diagram shows how a Semantic Social Graph works, representing users, content, and tags. Users tag content and peers, which adds context and helps determine how information flows through the network. Relationships are weighted (Pubky weighting features are under development), meaning users can specify trust levels and the strength of connections to further personalize their experience.
 
-```mermaid
-graph LR
-    subgraph Users
-        U1[User A]
-        U2[User B]
-        U3[User C]
-    end
-
-    subgraph Data
-        C1[Post 1]
-        C2[Post 2]
-        C3[File 1]
-    end
-
-    subgraph Tags
-        T1[Tag: Blockchain]
-        T2[Tag: Decentralization]
-        T3[Tag: Privacy]
-    end
-
-    %% Users tag content
-    U1 --|tags with T1|--> C1
-    U1 --|tags with T2|--> C2
-    U2 --|tags with T2|--> C3
-    U3 --|tags with T3|--> C1
-
-    %% Users tag peers
-    U1 --|tags with T2|--> U2
-    U2 --|tags with T1|--> U3
-
-    %% Content linked to tags
-    C1 --|associated with|--> T1
-    C1 --|associated with|--> T3
-    C2 --|associated with|--> T2
-    C3 --|associated with|--> T2
-
-    %% Weighted relationships (represented by edge labels)
-    U1 --|strong connection|--> U2
-    U1 --|moderate connection|--> U3
-```
+![Semantic Social graph](../images/mermaid_charts/semantic_social_graph.svg)
 
 **Tags and Contextual Meaning**: Pubky allows users to add tags to content and connections, giving them the ability to add context to their relationships. This means users can easily categorize and prioritize content based on what matters to them most.
 
@@ -71,7 +30,7 @@ graph LR
 
 - **Decentralized Indexing**: Pubky provides a decentralized approach to indexing, meaning that users aren't reliant on a single entity to determine the importance or visibility of content. Users have the power to decide what they want to see and how they want their views into the social graph to evolve.
 
-(NOTE: During the initial bootstrapping phase of Pubky, the Semantic Social Graph may be limited in decentralization until more builders adopt the system. Synonym is actively developing tools to make it easier to run a Pubky homeserver, or self-host.)
+> _NOTE_: During the initial bootstrapping phase of Pubky, the Semantic Social Graph may be limited in decentralization until more builders adopt the system. Synonym is actively developing tools to make it easier to run a Pubky [[Homeservers|homeserver]], or self-host.
 
 ## Web of Trust
 

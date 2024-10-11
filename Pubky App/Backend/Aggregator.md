@@ -1,6 +1,6 @@
 ## Pubky Aggregators
 
-Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as [[Data Stores|data stores]]. They decide what data to allow in and what to keep out.
+Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as [[Homeservers|homeservers]]. They decide what data to allow in and what to keep out.
 
 When the aggregator receive new events, it evaluates it against its predefined criteria. If the data meets the criteria, the aggregator allows it to pass through, making it available for further processing or storage. However, if the data doesn't meet the criteria, the aggregator blocks it, preventing it from entering the system.
 
@@ -13,4 +13,4 @@ By controlling the flow of information, aggregators play a crucial role in maint
 - **Normalized data schemas**: Standardized data schemas facilitate interoperability between services, making it easier to integrate and exchange data across the network.
 - **Public and niche aggregators**: The network supports both large-scale, public aggregators for discoverability and smaller, niche aggregators that cater to specific communities or use cases.
 - **Core user graph expansion**: The aggregation process starts with a core user graph and expands outward through connections, enabling the network to grow organically and efficiently.
-- [[2.Censorship|Censorship resistance]]: The system's censorship resistance is achieved through a decentralized aggregation architecture, where data aggregation is distributed across a network of **independent, autonomous aggregators**. This design ensures that no single entity or node has control over the aggregation process, making it more resilient to censorship attempts.
+- [[Censorship|Censorship resistance]]: The system's censorship resistance is achieved through a decentralized aggregation architecture, where data aggregation is distributed across a network of **independent, autonomous aggregators**. This design ensures that no single entity or node has control over the aggregation process, making it more resilient to censorship attempts.

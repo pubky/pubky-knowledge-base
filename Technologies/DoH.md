@@ -1,4 +1,4 @@
-# DNS over HTTPS - DoH
+# DNS over HTTPS
 
 It is a security protocol that encrypts [[DNS]] queries and responses, enhancing privacy and security by preventing eavesdropping and tampering. In the context of [[0.Introduction|pkarr]], DoH plays a crucial role in ensuring that [[DNS]] queries made to resolve public-key addresses are secure and cannot be intercepted or manipulated by third parties.
 

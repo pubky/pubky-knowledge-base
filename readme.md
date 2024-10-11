@@ -1,8 +1,8 @@
-# :brain: Pubky Knowledge Base
+# Pubky Knowledge Base
 
 Welcome to the Pubky Knowledge base - we are excited to have you here.
 
-### 🔗 [Access the Pubky Knowledge Base: notes.pubky,app!](https://notes.pubky.app)
+### 🔗 [Access the Pubky Knowledge Base](https://pubky.org/)
 
 > **The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.**
 

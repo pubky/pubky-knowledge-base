@@ -1,6 +1,6 @@
 ![pubkey-app](../images/pubky-app.png)
 
-> Synonym will be initially hosting: [[Data Stores|Data stores]] and [[Pubky App/Introduction|Pubky App]]
+> Synonym will be initially hosting: [[Pubky Core/Homeservers|homeserver]] and [[Pubky App/Introduction|Pubky App]]
 
 ## Overview
 
@@ -8,7 +8,7 @@ Pubky-app's initial focus is building a decentralized social media protocol.
 
 ## Key aspects
 
-- **Data Ownership**: Users have full autonomy over their data, hosting it on **independent [[Data Stores|data stores]]** that are decentralized and distributed across the network. This approach enables users to maintain **control** and **ownership** of their data, while also ensuring **data sovereignty** and **privacy**. 
+- **Data Ownership**: Users have full autonomy over their data, hosting it on **independent [[Pubky Core/Homeservers|homeservers]]** that are decentralized and distributed across the network. This approach enables users to maintain **control** and **ownership** of their data, while also ensuring **data sovereignty** and **privacy**. 
 - **Profiles**: The system employs a **decentralized data storage** approach, where **post**, **comment**, and **like** data are stored in association with **user profiles**.
 - [[Aggregator|Aggregators]] collecting social graphs
 - Feeds of followings' activities
@@ -32,5 +32,5 @@ It is the part of the Pubky App that you interact with directly. It's responsibl
 
 The early versions of Pubky app take some shortcuts over the [[Pubky Core/Introduction|Pubky Core]] design. The MVP app is centralized, therefore we saved time and complexity by aggregating functionality into fewer components. The main two components are the `Homeserver` and the `Indexer`
 
-- The `Homeserver` fulfils the function of [[Data Stores|data stores]], [[0.Introduction|Pkarr]] republishing for users, identity-provider (Oauth-like sign-in). Users maintain a trust relationship with the `Homeserver`.
+- The [[Homeservers|homeservers]] fulfils the function of `data stores`, republishing users keys to [[0.Introduction|Pkarr]] and it acts also as an identity-provider (Oauth-like sign-in). Users maintain a trust relationship with the homeserver.
 - The `Indexer` fulfils the function of the [[Pubky App/Backend/Introduction|backend]] for the Pubky App. 

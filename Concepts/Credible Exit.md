@@ -1,6 +1,3 @@
-
-## Credible Exit
-
 **Credible Exit** is the ability to leave a platform or service without losing access to your data, identity, or connections, ensuring full user control and portability.
 
 This [substack post](https://subconscious.substack.com/p/credible-exit) by Gordon Brander is a good introduction to the topic. 
@@ -15,7 +12,7 @@ Today, most platforms hold your data hostage. They make it difficult to leave, a
 
 Here are some of the best examples of Credible Exit in practice:
 
-- **Domain Name System (DNS)**: DNS is a classic example of a system that allows for a credible exit. If you no longer want your domain hosted with one provider, you can transfer it to another without losing control over your domain name.
+- **Domain Name System (DNS)**: [[DNS]] is a classic example of a system that allows for a credible exit. If you no longer want your domain hosted with one provider, you can transfer it to another without losing control over your domain name.
 - **Email Protocols (IMAP/SMTP)**: Email is another example. Users can change email providers while keeping the same email address, ensuring they don't lose their communication history or contacts.
 - **Bitcoin Wallets**: Bitcoin wallets offer credible exit by allowing users to export private keys and import them into another wallet provider, retaining full control over their funds and transactions.
 
@@ -31,7 +28,7 @@ In **Pubky**, Credible Exit is not just an idea—it's built into the architectu
 
 - **Data Portability**: Pubky’s design ensures that all of your data can be easily exported and imported between servers. This keeps your content intact and visible, regardless of where it’s hosted.
 
-(NOTE: During Pubky's initial bootstrapping phase, credible exit may not be practically possible until more homeserver providers join. Synonym is building tools to make it easy for businesses and users to self-host.)
+> _NOTE_: During Pubky's initial bootstrapping phase, credible exit may not be practically possible until more homeserver providers join. [Synonym](https://synonym.to/) is building tools to make it easy for businesses and users to self-host.
 
 ## Important Aspects of Credible Exit
 

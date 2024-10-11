@@ -1,10 +1,10 @@
-## The Vision of Pubky: Decentralizing Our Future
+# Decentralizing Our Future
 
 Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, who to trust, and where to store your data. This is the vision of **Pubky**: a decentralized, user-first web that breaks the toxic cycle of dependency on **Big Tech**, **Big State**, and **Big Banks**.
 
 **Pubky** is not just a platform—it is an ecosystem designed to provide tools for communication, social coordination, identity management, and, eventually, financial freedom, all in one interconnected framework. Pubky will harness the power of **decentralized identity**, **censorship resistance**, **semantic social graphs**, and **Bitcoin and Lightning Network technology** to create an open web that prioritizes user autonomy.
 
-### Replacing Big Tech: Credible Exit, Censorship Resistance, and User-Controlled Experience
+## Replacing Big Tech: Credible Exit, Censorship Resistance, and User-Controlled Experience
 
 Big Tech platforms like social media giants use algorithms that limit freedom, exploit engagement, and control the flow of information. Pubky proposes a different kind of web—one built on **Semantic Social Graphs** and **self-sovereign identities**. Instead of opaque algorithms deciding what is relevant to you, **Semantic Social Graphs** and **PKARR** give users full control over their digital interactions. This system gives control back to individuals, helping replace our toxic relationship with Big Tech.
 
@@ -16,7 +16,7 @@ Big Tech platforms like social media giants use algorithms that limit freedom, e
 
 - **Homeservers for Decentralized Hosting**: **Homeservers** allow for decentralized data hosting and competitive hosting services by enabling users to migrate away from any server that changes its policies or restricts their content. This means that censorship is anticipated and dealt with, allowing users to keep control over their digital presence.
 
-### Replacing Big State: Self-Sovereign Identity and Peer Regulation
+## Replacing Big State: Self-Sovereign Identity and Peer Regulation
 
 Governments often use centralized systems to control speech, monitor user activity, and dictate identity management. Pubky provides an alternative—a decentralized network that makes censorship impractical and gives users **self-sovereign identity**. With Pubky, **PKARR** (Public Key Addressable Roles and Resources), **Mainline DHT**, and **Semantic Social Graphs** ensure that users are empowered to self-regulate, verify authenticity, and maintain control of their identities without relying on centralized authorities. This means:
 
@@ -28,7 +28,7 @@ Governments often use centralized systems to control speech, monitor user activi
 
 In this way, Pubky replaces the need for a centralized authority (the "Big State") by empowering users to be self-sovereign and enabling communities to regulate themselves. Pubky provides the tools to make censorship difficult and autonomy possible—giving users the power to govern their online interactions and identities independently.
 
-### Replacing Big Banks: Competing with Fiat and Enabling Financial Freedom
+## Replacing Big Banks: Competing with Fiat and Enabling Financial Freedom
 
 Beyond communication and social interaction, Synonym also seeks to empower individuals financially. Our reliance on **Big Banks** and centralized financial systems means losing autonomy over our own wealth. Pubky envisions a future where financial freedom is possible through the use of  **Bitcoin** and the **Lightning Network** to decouple payments from hosted platforms and middlemen.
 
@@ -38,7 +38,7 @@ Beyond communication and social interaction, Synonym also seeks to empower indiv
 
 - Commerce features and tools are planned for future versions of Pubky, with a long term goal of a totally dynamic digital social economy!
 
-### A Future of Freedom and Autonomy
+## A Future of Freedom and Autonomy
 
 Our vision is simple: to build a digital world where individuals are in charge, rather than corporations or governments. By integrating decentralized identities, censorship-resistant technologies, and financial independence, we can replace our toxic dependency on centralized powers with an open, user-controlled web.
 
