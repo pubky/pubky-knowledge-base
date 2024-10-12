@@ -4,13 +4,13 @@
 
 Pubky Core is built on a few core concepts:
 
-- **[[Data Stores|Data Stores]]** - Decentralized data storage nodes that host user data. Data is encrypted at rest.
+- **[[Homeservers|Homeserver]]** - Decentralized data storage nodes that host user data. Data is encrypted at rest.
 
-- **[[0.Introduction|Pkarr]]** - Self-issued public keys that function as sovereign, publicly addressable domains are used to resolve the previous components.
+- **[[0.Introduction|PKARR]]** - Self-issued public keys that function as sovereign, publicly addressable domains are used to resolve the previous components.
 
-Pubky Core's distributed architecture aims to provide user autonomy through [[3.Credible Exit|credible exit]] between interchangeable components.
+Pubky Core's distributed architecture aims to provide user autonomy through [[Credible Exit|credible exit]] between interchangeable components.
 
-- **[[1. Introduction|Pubky App Architectures]]** can be very diverse. From simple web client applications that connect to a single [[2. Client - Homeserver|homeserver]] for data storage and retrieval to [[4. Custom Backend| complex backends]]  that do aggregation and powerful inference over many homeservers creating abstractions such as social media with [[1.Web of Trust|web of trust]].
+- **[[1. Introduction|Pubky App Architectures]]** can be very diverse. From simple web client applications that connect to a single [[2. Client - Homeserver|homeserver]] for data storage and retrieval to [[4. Custom Backend| complex backends]]  that do aggregation and powerful inference over many **[[Homeservers|homeservers]]** creating abstractions such as social media with [[Semantic Social Graph|semantic social graph]].
 
 ## Target Users
 

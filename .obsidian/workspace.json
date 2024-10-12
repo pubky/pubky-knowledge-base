@@ -4,35 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "096ff39c8b3a2932",
+        "id": "11883abd2160efc0",
         "type": "tabs",
         "children": [
           {
-            "id": "8fd5812ca70f0ab7",
+            "id": "2714f48edb8555ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "App Architectures/2. Client - Homeserver.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eaab76dfc5b558e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "App Architectures/4. Custom Backend.md",
-                "mode": "source",
-                "source": false
+                "file": "images/pubky-arch.png"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "pkarr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "App Architectures/4. Custom Backend.md",
+                "file": "images/pubky-arch.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "App Architectures/4. Custom Backend.md",
+                "file": "images/pubky-arch.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "App Architectures/4. Custom Backend.md"
+                "file": "images/pubky-arch.png"
               }
             }
           }
@@ -160,53 +145,53 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "eaab76dfc5b558e5",
+  "active": "75a1317f66991245",
   "lastOpenFiles": [
-    "Pubky App/Introduction.md",
-    "App Architectures/4. Custom Backend.md",
-    "Pubky Core/Introduction.md",
-    "App Architectures/1. Introduction.md",
-    "Pubky Applications.md",
-    "App Architectures/5. Complex - Custom Aggregator.md",
-    "App Architectures/2. Client - Homeserver.md",
-    "App Architectures/3. Global Aggregators.md",
-    "Pubky Core.md",
-    "images/complex_custom_aggregator.png",
-    "images/global_aggregator.png",
-    "images/global-aggregator.png",
-    "images/custom_backend.png",
+    "images/pubky-core.png_original",
+    "images/pubky-core.png_exiftool_tmp",
+    "images/pubky-backend.png_exiftool_tmp",
+    "images/pubky-arch.png_original",
+    "images/pubky-arch.png_exiftool_tmp",
+    "images/pubky-app.png_exiftool_tmp",
+    "images/pubky-header.png",
+    "images/pubky-core.png",
+    "images/pubky-backend.png",
+    "images/pubky-arch.png",
+    "images/pubky-app.png",
     "images/client-homeserver.png",
-    "images/custom-backend.png",
-    "readme.md",
-    "index.md",
-    "ELI5.md",
-    "Technologies/Paykit.md",
-    "Technologies/Mainline DHT.md",
-    "Technologies/Key Pair.md",
-    "Technologies/HTTPS.md",
-    "Technologies/DoH.md",
     "Technologies/DNS.md",
-    "Technologies/DHT.md",
-    "Pubky Core/Data Stores.md",
+    "Concepts/Credible Exit.md",
+    "The vision of Pubky.md",
+    "Pubky App/Introduction.md",
+    "Pubky Core/Introduction.md",
+    "index.md",
+    "Pubky Core/Homeservers.md",
+    "Pubky Core/Pkarr/ELI5.md",
+    "Technologies/DoH.md",
     "Pubky Core/Pkarr/4.Architecture.md",
     "Pubky Core/Pkarr/3.Expectations.md",
-    "Pubky Core/Pkarr/2.Getting Started with Pkarr.md",
-    "Pubky Core/Pkarr/1.Why Pkarr?.md",
+    "Pubky Core/Pkarr/1.Why PKARR?.md",
+    "Pubky Core/Pkarr/2.Getting Started with PKARR.md",
     "Pubky Core/Pkarr/0.Introduction.md",
-    "Pubky Core/notes/3.Protocols.md",
-    "images/obsidian.png",
     "quartz/public/404.html",
-    "quartz/public/static/og-image.png",
-    "quartz/public/static/icon.png",
-    "quartz/public/static/contentIndex.json",
-    "quartz/public/static",
-    "quartz/public/index.xml",
-    "quartz/public/sitemap.xml",
-    "quartz/public/tags/index.html",
-    "quartz/public/tags",
-    "quartz/public/index.html",
-    "quartz/public/Technologies/index.html",
-    "quartz/public/Technologies/Paykit.html",
-    "quartz/public/quartz/quartz/static/og-image.png"
+    "quartz/public/quartz/quartz/plugins/transformers/toc.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/syntax.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/oxhugofm.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/ofm.ts",
+    "quartz/public/quartz/quartz/static/og-image.png",
+    "quartz/public/quartz/quartz/static/icon.png",
+    "quartz/public/images/mermaid_charts/semantic_social_graph.svg",
+    "quartz/public/images/pubky-header.png",
+    "Pubky Core/ELI5.md",
+    "Technologies/DHT.md",
+    "Pubky App/Backend/Introduction.md",
+    "Pubky App/Client/Introduction.md",
+    "Pubky App/Backend/Web Server.md",
+    "Pubky App/Backend/Indexer.md",
+    "Pubky App/Backend/Aggregator.md",
+    "Pubky App/App Architectures/4. Custom Backend.md",
+    "Pubky App/App Architectures/3. Global Aggregators.md",
+    "Pubky App/App Architectures/2. Client - Homeserver.md",
+    "Pubky App/App Architectures/1. Introduction.md"
   ]
 }

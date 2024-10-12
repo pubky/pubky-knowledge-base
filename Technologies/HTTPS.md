@@ -1,4 +1,4 @@
-# Hypertext Transfer Protocol Secure - HTTPS
+# Hypertext Transfer Protocol Secure
 
 It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy. It uses TLS (Transport Layer Security) or SSL (Secure Sockets Layer) for encryption, protecting against eavesdropping and tampering. HTTPS is essential for securely transmitting sensitive data, such as login credentials and financial transactions, ensuring the authenticity of websites and the privacy of user communications.
 
