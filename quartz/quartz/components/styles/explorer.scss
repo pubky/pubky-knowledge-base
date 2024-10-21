@@ -55,8 +55,10 @@ button#explorer {
 
   & ul {
     list-style: none;
-    margin: 0.08rem 0;
+    margin: 0.2rem 0;
     padding: 0;
+    padding-left: 25px;
+    font-size: 17px;
     transition:
       max-height 0.35s ease,
       transform 0.35s ease,

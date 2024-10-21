@@ -8,8 +8,16 @@ import { i18n } from "../i18n"
 import { classNames } from "../util/lang"
 
 const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
-  return (
-    <div class={classNames(displayClass, "darkmode")}>
+  return <></>
+}
+
+Darkmode.beforeDOMLoaded = darkmodeScript
+Darkmode.css = styles
+
+export default (() => Darkmode) satisfies QuartzComponentConstructor
+
+{
+  /** <div class={classNames(displayClass, "darkmode")}>
       <input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex={-1} />
       <label id="toggle-label-light" for="darkmode-toggle" tabIndex={-1}>
         <svg
@@ -44,10 +52,5 @@ const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) 
         </svg>
       </label>
     </div>
-  )
+     */
 }
-
-Darkmode.beforeDOMLoaded = darkmodeScript
-Darkmode.css = styles
-
-export default (() => Darkmode) satisfies QuartzComponentConstructor
