@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       Synonym: "https://synonym.to",
       GitHub: "https://github.com/pubky/pubky-docs",
-      "Discord Community": "https://discord.gg/TODO",
+      "Discord Community": "https://discord.com/invite/DxTBJXvJxn",
     },
   }),
 }

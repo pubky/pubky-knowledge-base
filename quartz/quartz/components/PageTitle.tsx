@@ -7,17 +7,22 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
   return (
-    <h2 class={classNames(displayClass, "page-title")}>
-      <a href={baseDir}>
-        {title === "Pubky Knowledge Base" && (
-          <>
-            Pubky
-            <br />
-            Knowledge Base
-          </>
-        )}
+    <>
+      <a style={{ position: "absolute", top: "-100px" }} href="/">
+        <img src="static/pubky-core-logo.svg" width={209} height={44} />
       </a>
-    </h2>
+      <h2 class={classNames(displayClass, "page-title")}>
+        <a href={baseDir}>
+          {title === "Pubky Knowledge Base" && (
+            <>
+              Pubky
+              <br />
+              Knowledge Base
+            </>
+          )}
+        </a>
+      </h2>
+    </>
   )
 }
 

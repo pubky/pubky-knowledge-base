@@ -101,6 +101,10 @@ a {
   }
 }
 
+#nightIcon {
+  display: none;
+}
+
 .desktop-only {
   display: initial;
   @media all and (max-width: $fullPageWidth) {
@@ -509,7 +513,7 @@ ol.overflow {
     bottom: 0;
     opacity: 1;
     transition: opacity 0.3s ease;
-    background: linear-gradient(transparent 0px, var(--light));
+    background: linear-gradient(transparent 0px, var(--highlight));
   }
 }
 
