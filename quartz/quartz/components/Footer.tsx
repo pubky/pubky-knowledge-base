@@ -16,16 +16,20 @@ export default ((opts?: Options) => {
         <footer class={`${displayClass ?? ""}`}>
           <div
             style={{
-              border: "1px solid white",
+              border: "none",
+              borderTop: "0.1px solid white",
               width: "100%",
               marginTop: "100px",
-              marginBottom: "30px",
+              marginBottom: "35px",
+              opacity: 0.7,
             }}
           />
           <ul>
             {Object.entries(links).map(([text, link]) => (
               <li>
-                <a href={link}>{text}</a>
+                <a style={{ color: "white", fontWeight: 400, fontSize: "17px" }} href={link}>
+                  {text}
+                </a>
               </li>
             ))}
           </ul>

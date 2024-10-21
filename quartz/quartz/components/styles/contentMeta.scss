@@ -1,6 +1,8 @@
 .content-meta {
   margin-top: 0;
-  color: var(--gray);
+  color: var(--darkgray);
+  font-size: 15px;
+  margin-top: 5px;
 
   &[show-comma="true"] {
     > span:not(:last-child) {
