@@ -1,3 +1,7 @@
+---
+title: "Pubky Knowledge Base"
+---
+
 ## Welcome to the Pubky Knowledge Base
 
 This is a knowledge base for the Pubky platform, which includes [[Explore/Pubky Core/Introduction|Pubky Core]], [[0.Introduction|PKARR]] and [[Explore/Pubky App/Introduction|Pubky App]]. These documents are a work in progress, much like Pubky's protocols and applications!
