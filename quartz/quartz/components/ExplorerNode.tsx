@@ -177,31 +177,46 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
     <>
       {node.file ? (
         // Single file node
-        <li key={node.file.slug}>
-          <a href={resolveRelative(fileData.slug!, node.file.slug!)} data-for={node.file.slug}>
-            {node.displayName}
-          </a>
-        </li>
+        <>
+          {node.displayName === "Readme" && (
+            <div
+              style={{
+                border: "none",
+                borderTop: "0.1px solid white",
+                opacity: 0.2,
+                marginBottom: "20px",
+              }}
+            />
+          )}
+          <li key={node.file.slug}>
+            <a href={resolveRelative(fileData.slug!, node.file.slug!)} data-for={node.file.slug}>
+              {node.displayName}
+            </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="5 8 14 8"
+              fill="none"
+              stroke="grey"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="folder-icon-fixed"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </li>
+        </>
       ) : (
         <li>
           {node.name !== "" && (
             // Node with entire folder
             // Render svg button + folder name, then children
-            <div class="folder-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="5 8 14 8"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="folder-icon"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+            <div
+              style={node.displayName === "Explore" ? { marginBottom: "10px" } : {}}
+              class="folder-container"
+            >
               {/* render <a> tag if folderBehavior is "link", otherwise render <button> with collapse click event */}
               <div key={node.name} data-folderpath={folderPath}>
                 {folderBehavior === "link" ? (
@@ -218,10 +233,24 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
                   </button>
                 )}
               </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="5 8 14 8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="folder-icon"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </div>
           )}
           {/* Recursively render children of folder */}
-          <div class={`folder-outer ${node.depth === 0 || isDefaultOpen ? "open" : ""}`}>
+          <div class={`folder-outer ${node.depth <= 1 || isDefaultOpen ? "open" : ""}`}>
             <ul
               // Inline style for left folder paddings
               style={{
