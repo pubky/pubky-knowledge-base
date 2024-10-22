@@ -1,5 +1,5 @@
 
-![Semantic Social graph](../images/mermaid_charts/semantic_social_graph.svg)
+![Semantic Social graph](Explore/images/mermaid_charts/semantic_social_graph.svg)
 
 **Semantic Relationships:** Connections between users and content are tagged with meaningful metadata, capturing the context, relevance, and nature of each relationship.
 **Weighted Connections:** Relationships aren't just binary; they carry weights that represent their strength, trust level, or relevance, enabling more sophisticated interactions.

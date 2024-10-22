@@ -38,7 +38,7 @@ button#explorer {
   grid-template-rows: 1fr;
 }
 
-.folder-outer > ul {
+.folder-outer>ul {
   overflow: hidden;
 }
 
@@ -47,9 +47,9 @@ button#explorer {
   overflow: hidden;
   max-height: none;
   transition: max-height 0.35s ease;
-  margin-top: 1rem;
+  margin-top: 0rem;
 
-  &.collapsed > .overflow::after {
+  &.collapsed>.overflow::after {
     opacity: 0;
   }
 
@@ -57,7 +57,7 @@ button#explorer {
     list-style: none;
     margin: 0.08rem 0;
     padding: 0;
-    padding-left: 25px;
+    padding-left: 0px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -69,7 +69,8 @@ button#explorer {
       max-height 0.35s ease,
       transform 0.35s ease,
       opacity 0.2s ease;
-    & li > a {
+
+    & li>a {
       color: var(--dark);
       opacity: 0.5;
       pointer-events: all;
@@ -80,7 +81,7 @@ button#explorer {
 svg {
   pointer-events: all;
 
-  & > polyline {
+  &>polyline {
     pointer-events: none;
   }
 }
@@ -91,7 +92,7 @@ svg {
   align-items: center;
   user-select: none;
 
-  & div > a {
+  & div>a {
     color: var(--secondary);
     font-family: var(--headerFont);
     font-size: 0.95rem;
@@ -100,11 +101,11 @@ svg {
     display: inline-block;
   }
 
-  & div > a:hover {
+  & div>a:hover {
     color: var(--tertiary);
   }
 
-  & div > button {
+  & div>button {
     color: var(--dark);
     background-color: transparent;
     border: none;
@@ -138,7 +139,7 @@ svg {
   backface-visibility: visible;
 }
 
-li:has(> .folder-outer:not(.open)) > .folder-container > svg {
+li:has(> .folder-outer:not(.open))>.folder-container>svg {
   transform: rotate(-90deg);
 }
 
