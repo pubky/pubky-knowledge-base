@@ -160,8 +160,8 @@
   "lastOpenFiles": [
     "quartz/public/404.html",
     "quartz/public/Explore/images/mermaid_charts/semantic_social_graph.svg",
-    "quartz/public/Explore/images/pubky-header.png",
     "quartz/public/Explore/images/quartz.png",
+    "quartz/public/Explore/images/pubky-header.png",
     "quartz/public/Explore/images/pubky-core.png",
     "quartz/public/Explore/images/pubky-backend.png",
     "quartz/public/Explore/images/pubky-arch.png",
@@ -171,14 +171,15 @@
     "quartz/public/Explore/images/global_aggregator.png",
     "quartz/public/Explore/images/custom_backend.png",
     "quartz/public/Explore/images",
-    "quartz/public/quartz/quartz/plugins/emitters/tagPage.tsx",
-    "quartz/public/quartz/quartz/plugins/emitters/static.ts",
-    "quartz/public/quartz/quartz/plugins/emitters/index.ts",
-    "quartz/public/quartz/quartz/plugins/emitters/helpers.ts",
-    "quartz/public/quartz/quartz/plugins/emitters/folderPage.tsx",
-    "quartz/public/quartz/quartz/plugins/emitters/contentPage.tsx",
-    "quartz/public/quartz/quartz/plugins/emitters/contentIndex.ts",
-    "quartz/public/quartz/quartz/plugins/emitters/componentResources.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/toc.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/syntax.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/oxhugofm.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/ofm.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/links.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/linebreaks.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/latex.ts",
+    "quartz/public/quartz/quartz/plugins/transformers/lastmod.ts",
+    "Readme.md",
     "Explore/Technologies/DNS.md",
     "Explore/Concepts/Credible Exit.md",
     "The vision of Pubky.md",
@@ -202,7 +203,6 @@
     "Explore/Pubky App/Backend/Aggregator.md",
     "Explore/Pubky App/App Architectures/4. Custom Backend.md",
     "Explore/Pubky App/App Architectures/3. Global Aggregators.md",
-    "Explore/Pubky App/App Architectures/2. Client - Homeserver.md",
-    "Explore/Pubky App/App Architectures/1. Introduction.md"
+    "Explore/Pubky App/App Architectures/2. Client - Homeserver.md"
   ]
 }
