@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       Synonym: "https://synonym.to",
-      GitHub: "https://github.com/pubky/pubky-docs",
-      "Discord Community": "https://discord.gg/TODO",
+      GitHub: "https://github.com/pubky/pubky-knowledge-base",
+      "Discord Community": "https://discord.com/invite/DxTBJXvJxn",
     },
   }),
 }
@@ -32,7 +32,7 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    //Component.Backlinks(),
   ],
 }
 

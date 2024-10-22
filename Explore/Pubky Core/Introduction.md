@@ -1,6 +1,6 @@
 ## Pubky Core Overview
 
-![pubky-core](../images/pubky-core.png)
+![pubky-core](Explore/images/pubky-core.png)
 
 Pubky Core is built on a few core concepts:
 
@@ -16,7 +16,7 @@ Pubky Core's distributed architecture aims to provide user autonomy through [[Cr
 
 Pubky Core is made for developers and builders of internet software products. We will actively work to cultivate a community of builders and startups using our tech.
 
-[[Pubky App/Introduction|Pubky App]] is made for anyone interested in social media and online publishing that wants new ways to control their data and more control over which posts they see.
+[[Explore/Pubky App/Introduction|Pubky App]] is made for anyone interested in social media and online publishing that wants new ways to control their data and more control over which posts they see.
 
 ## Why? What is the reward?
 

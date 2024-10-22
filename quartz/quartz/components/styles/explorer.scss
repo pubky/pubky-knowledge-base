@@ -47,7 +47,7 @@ button#explorer {
   overflow: hidden;
   max-height: none;
   transition: max-height 0.35s ease;
-  margin-top: 0.5rem;
+  margin-top: 0rem;
 
   &.collapsed > .overflow::after {
     opacity: 0;
@@ -57,13 +57,22 @@ button#explorer {
     list-style: none;
     margin: 0.08rem 0;
     padding: 0;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
     transition:
       max-height 0.35s ease,
       transform 0.35s ease,
       opacity 0.2s ease;
+
     & li > a {
       color: var(--dark);
-      opacity: 0.75;
+      opacity: 0.5;
       pointer-events: all;
     }
   }
@@ -111,21 +120,32 @@ svg {
     & span {
       font-size: 0.95rem;
       display: inline-block;
+      font-size: 17px;
+      line-height: 22px;
+      letter-spacing: 0.4px;
+      font-weight: 600;
       color: var(--secondary);
-      font-weight: $semiBoldWeight;
       margin: 0;
-      line-height: 1.5rem;
       pointer-events: none;
     }
   }
 }
 
 .folder-icon {
-  margin-right: 5px;
+  margin-left: 0.5rem;
   color: var(--secondary);
   cursor: pointer;
   transition: transform 0.3s ease;
   backface-visibility: visible;
+}
+
+.folder-icon-fixed {
+  margin-left: 0.5rem;
+  color: var(--secondary);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  backface-visibility: visible;
+  transform: rotate(-90deg);
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {

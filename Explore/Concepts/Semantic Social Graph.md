@@ -22,7 +22,7 @@ In **Pubky**, a decentralized Semantic Social Graph is central to providing a mo
 
 This diagram shows how a Semantic Social Graph works, representing users, content, and tags. Users tag content and peers, which adds context and helps determine how information flows through the network. Relationships are weighted (Pubky weighting features are under development), meaning users can specify trust levels and the strength of connections to further personalize their experience.
 
-![Semantic Social graph](../images/mermaid_charts/semantic_social_graph.svg)
+![Semantic Social graph](Explore/images/mermaid_charts/semantic_social_graph.svg)
 
 **Tags and Contextual Meaning**: Pubky allows users to add tags to content and connections, giving them the ability to add context to their relationships. This means users can easily categorize and prioritize content based on what matters to them most.
 

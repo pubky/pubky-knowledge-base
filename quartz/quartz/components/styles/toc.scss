@@ -38,8 +38,11 @@ button#toc {
 
   & ul {
     list-style: none;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     & > li > a {
       color: var(--dark);
       opacity: 0.35;
@@ -47,7 +50,7 @@ button#toc {
         0.5s ease opacity,
         0.3s ease color;
       &.in-view {
-        opacity: 0.75;
+        opacity: 0.5;
       }
     }
   }

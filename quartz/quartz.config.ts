@@ -22,9 +22,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Poppins",
-        body: "Lora",
-        code: "Fira Code",
+        header: "Inter Tight",
+        body: "Inter Tight",
+        code: "Inter Tight",
       },
       colors: {
         lightMode: {
@@ -36,18 +36,18 @@ const config: QuartzConfig = {
           secondary: "#3498db", // Bright blue
           tertiary: "#e74c3c", // Bright red
           highlight: "rgba(52, 152, 219, 0.15)", // Light blue highlight
-          textHighlight: "#f1c40f88", // Yellow text highlight
+          //textHighlight: "#f1c40f88", // Yellow text highlight
         },
         darkMode: {
-          light: "#1e1e1e", // Very dark gray
-          lightgray: "#2c2c2c", // Darker gray
+          light: "#05050A", // Very dark gray
+          lightgray: "#1C1C1D", // Darker gray
           gray: "#575757", // Medium gray
-          darkgray: "#d4d4d4", // Light gray
+          darkgray: "#8e8e93", // Light gray
           dark: "#ecf0f1", // Very light gray
-          secondary: "#2980b9", // Darker blue
-          tertiary: "#c0392b", // Darker red
-          highlight: "rgba(41, 128, 185, 0.15)", // Dark blue highlight
-          textHighlight: "#f39c1288", // Orange text highlight
+          secondary: "#ffffff", // white
+          tertiary: "#ffffffcc", // Darker red
+          highlight: "transparent", // white opacity 0.8
+          //textHighlight: "green", // Orange text highlight
         },
       },
     },
