@@ -8,10 +8,10 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const baseDir = pathToRoot(fileData.slug!)
   return (
     <>
-      <a style={{ position: "absolute", top: "-100px" }} href="/">
-        <img src="static/pubky-core-logo.svg" width={209} height={44} />
+      <a href="/">
+        <img style={{ margin: 0 }} src="static/pubky-core-logo.svg" width={209} height={44} />
       </a>
-      <h2 class={classNames(displayClass, "page-title")}>
+      {/** <h2 class={classNames(displayClass, "page-title")}>
         <a href={baseDir}>
           {title === "Pubky Knowledge Base" && (
             <>
@@ -21,7 +21,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
             </>
           )}
         </a>
-      </h2>
+      </h2> */}
     </>
   )
 }
