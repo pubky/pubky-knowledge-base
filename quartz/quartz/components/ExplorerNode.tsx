@@ -184,11 +184,12 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
                 border: "none",
                 borderTop: "0.1px solid white",
                 opacity: 0.2,
-                marginBottom: "20px",
+                marginTop: "10px",
+                marginBottom: "30px",
               }}
             />
           )}
-          <li key={node.file.slug}>
+          <li style={{ marginBottom: "10px" }} key={node.file.slug}>
             <a href={resolveRelative(fileData.slug!, node.file.slug!)} data-for={node.file.slug}>
               {node.displayName}
             </a>
@@ -213,10 +214,7 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
           {node.name !== "" && (
             // Node with entire folder
             // Render svg button + folder name, then children
-            <div
-              style={node.displayName === "Explore" ? { marginBottom: "10px" } : {}}
-              class="folder-container"
-            >
+            <div style={{ marginBottom: "10px" }} class="folder-container">
               {/* render <a> tag if folderBehavior is "link", otherwise render <button> with collapse click event */}
               <div key={node.name} data-folderpath={folderPath}>
                 {folderBehavior === "link" ? (
