@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/Readme</link>
     <guid>https://pubky.synonym.to/Readme</guid>
     <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
     <link>https://pubky.synonym.to/TLDR</link>
     <guid>https://pubky.synonym.to/TLDR</guid>
     <description>Pubky App Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular social ...</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>The vision of Pubky</title>
     <link>https://pubky.synonym.to/The-vision-of-Pubky</link>
     <guid>https://pubky.synonym.to/The-vision-of-Pubky</guid>
     <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>Pubky Knowledge Base</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>Censorship</title>
     <link>https://pubky.synonym.to/Explore/Concepts/Censorship</link>
     <guid>https://pubky.synonym.to/Explore/Concepts/Censorship</guid>
     <description>Censorship is the suppression or control of speech, communication, or information by a governing body or authority, often resulting in a lack of free expression and limited user ...</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>Credible Exit</title>
     <link>https://pubky.synonym.to/Explore/Concepts/Credible-Exit</link>
     <guid>https://pubky.synonym.to/Explore/Concepts/Credible-Exit</guid>
     <description>Credible Exit is the ability to leave a platform or service without losing access to your data, identity, or connections, ensuring full user control and portability ...</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>Semantic Social Graph</title>
     <link>https://pubky.synonym.to/Explore/Concepts/Semantic-Social-Graph</link>
     <guid>https://pubky.synonym.to/Explore/Concepts/Semantic-Social-Graph</guid>
     <description>A Semantic Social Graph represents relationships between users, content, and interactions, enriched with contextual meaning that enables better filtering, discovery, and coordination ...</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>What Is a Decentralized Semantic Social Graph?</title>
     <link>https://pubky.synonym.to/Explore/Concepts/What-Is-a-Decentralized-Semantic-Social-Graph</link>
     <guid>https://pubky.synonym.to/Explore/Concepts/What-Is-a-Decentralized-Semantic-Social-Graph</guid>
     <description>...</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>1. Introduction</title>
     <link>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/1.-Introduction</link>
     <guid>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/1.-Introduction</guid>
     <description>Leveraging the Pubky Core protocol as the foundational layer, we can envision a diverse array of applications with distinct functionalities. While each app can implement its own unique design patterns and user interfaces, they all share a common underlying architecture: interacting with the distributed data stores, colloquially referred to as homeservers, through standardized read and write operations.</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item><item>
     <title>2. Client - Homeserver</title>
     <link>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/2.-Client---Homeserver</link>
     <guid>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/2.-Client---Homeserver</guid>
     <description> In this architecture, we implement a direct communication model between the client application and the home server. This approach minimizes latency and reduces system complexity by establishing a direct data flow pathway.</description>
-    <pubDate>Wed, 23 Oct 2024 14:02:54 GMT</pubDate>
+    <pubDate>Wed, 23 Oct 2024 15:16:18 GMT</pubDate>
   </item>
     </channel>
   </rss>
