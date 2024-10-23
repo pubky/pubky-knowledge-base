@@ -126,13 +126,15 @@ export class FileNode {
    * @param collapsed default state of folders (collapsed by default or not)
    * @returns array containing folder state for tree
    */
-  getFolderPaths(collapsed: boolean): FolderState[] {
+  getFolderPaths(collapseSubFolders: boolean): FolderState[] {
     const folderPaths: FolderState[] = []
 
     const traverse = (node: FileNode, currentPath: string) => {
       if (!node.file) {
         const folderPath = joinSegments(currentPath, node.name)
         if (folderPath !== "") {
+          // If the folder is at the top level, open it by default
+          const collapsed = node.depth === 1 ? false : collapseSubFolders
           folderPaths.push({ path: folderPath, collapsed })
         }
 
