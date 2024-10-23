@@ -14,6 +14,36 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
+const explorer = Component.Explorer({
+  sortFn: (a, b) => {
+    // Helper function to prioritise "Introduction" and "ELI5"
+    const priority = (name : string) => {
+      if (name === "Introduction") return -2; // Highest priority
+      if (name === "ELI5") return -1;         // Second highest priority
+      return 0;                               // No priority
+    };
+
+    // Check if both are files or directories
+    const aIsFile = typeof a.file !== null;
+    const bIsFile = typeof b.file !== null;
+
+    // Prioritize specific filenames first
+    const aPriority = priority(a.name);
+    const bPriority = priority(b.name);
+
+    // If either has a priority, sort based on that
+    if (aPriority !== bPriority) return aPriority - bPriority;
+
+    // If one is a file and the other is a directory, sort files first
+    if (aIsFile && !bIsFile) return -1; // a is a file, b is a directory
+    if (!aIsFile && bIsFile) return 1;  // a is a directory, b is a file
+
+    // If both are either files or directories, sort alphabetically
+    return a.name.localeCompare(b.name);
+  }
+});
+
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -27,7 +57,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(explorer),
   ],
   right: [
     Component.Graph(),
@@ -44,7 +74,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(explorer),
   ],
   right: [],
 }
