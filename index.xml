@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/Readme</link>
     <guid>https://pubky.synonym.to/Readme</guid>
     <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
     <link>https://pubky.synonym.to/TLDR</link>
     <guid>https://pubky.synonym.to/TLDR</guid>
     <description>Pubky App Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular social ...</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
   </item><item>
     <title>The vision of Pubky</title>
     <link>https://pubky.synonym.to/The-vision-of-Pubky</link>
     <guid>https://pubky.synonym.to/The-vision-of-Pubky</guid>
     <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
   </item><item>
     <title>Pubky Knowledge Base</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
-  </item><item>
-    <title>3. Global Aggregators</title>
-    <link>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/3.-Global-Aggregators</link>
-    <guid>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/3.-Global-Aggregators</guid>
-    <description>...</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
-  </item><item>
-    <title>4. Custom Backend</title>
-    <link>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/4.-Custom-Backend</link>
-    <guid>https://pubky.synonym.to/Explore/Pubky-App/App-Architectures/4.-Custom-Backend</guid>
-    <description>...</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
-  </item><item>
-    <title>Aggregator</title>
-    <link>https://pubky.synonym.to/Explore/Pubky-App/Backend/Aggregator</link>
-    <guid>https://pubky.synonym.to/Explore/Pubky-App/Backend/Aggregator</guid>
-    <description>Pubky Aggregators Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as homeservers ...</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
-  </item><item>
-    <title>Indexer</title>
-    <link>https://pubky.synonym.to/Explore/Pubky-App/Backend/Indexer</link>
-    <guid>https://pubky.synonym.to/Explore/Pubky-App/Backend/Indexer</guid>
-    <description>The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple homeservers into a unified view ...</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
   </item><item>
     <title>Introduction</title>
     <link>https://pubky.synonym.to/Explore/Pubky-App/Backend/Introduction</link>
     <guid>https://pubky.synonym.to/Explore/Pubky-App/Backend/Introduction</guid>
     <description>The Backend is responsible for collecting (aggregators) and organizing (indexer) data from various sources, known as homeservers. Imagine you’re trying to find a specific document in a large library.</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
   </item><item>
     <title>Web Server</title>
     <link>https://pubky.synonym.to/Explore/Pubky-App/Backend/Web-Server</link>
     <guid>https://pubky.synonym.to/Explore/Pubky-App/Backend/Web-Server</guid>
     <description>The system comprises a suite of backend services that orchestrate the integration of data feeds, search functionality, and user interface configurations ...</description>
-    <pubDate>Wed, 23 Oct 2024 18:27:16 GMT</pubDate>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
+  </item><item>
+    <title>Bookmarks</title>
+    <link>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Bookmarks</link>
+    <guid>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Bookmarks</guid>
+    <description>Bookmarks Bookmarks are a feature that allows you to privately save post for later reference. Here are some ways you can use bookmarks: Save for later reading: If you come across a post that you don’t have time to read or engage with immediately, you can bookmark it to read later when you have more time.</description>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
+  </item><item>
+    <title>Layouts</title>
+    <link>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Layouts</link>
+    <guid>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Layouts</guid>
+    <description>Layouts Pubky client offers multiple customizable UI layouts for users that prefer different column, grid, and list layouts for their feeds.</description>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
+  </item><item>
+    <title>Notifications</title>
+    <link>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Notifications</link>
+    <guid>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Notifications</guid>
+    <description>Notifications Pubky client tracks various event or activities the user may be interested in, and provides relevant notifications for interactions and other relevant activity ...</description>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
+  </item><item>
+    <title>Perspectives</title>
+    <link>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Perspectives</link>
+    <guid>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Perspectives</guid>
+    <description>Perspectives Users can save any custom-filtered view or feed as a “perspective” which is basically a custom template of settings of tags, weights, users, reach, and trends ...</description>
+    <pubDate>Fri, 25 Oct 2024 07:55:03 GMT</pubDate>
   </item>
     </channel>
   </rss>
