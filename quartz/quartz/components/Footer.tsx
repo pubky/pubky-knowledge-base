@@ -36,7 +36,7 @@ export default ((opts?: Options) => {
         </footer>
         <div
           style={{
-            backgroundImage: "url('static/bg.png')",
+            backgroundImage: "url('/static/bg.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             pointerEvents: "none",
@@ -52,7 +52,7 @@ export default ((opts?: Options) => {
         />
         <div
           style={{
-            backgroundImage: "url('static/bg-2.png')",
+            backgroundImage: "url('/static/bg-2.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             pointerEvents: "none",
@@ -68,7 +68,7 @@ export default ((opts?: Options) => {
         />
         <div
           style={{
-            backgroundImage: "url('static/bg-3.png')",
+            backgroundImage: "url('/static/bg-3.png')",
             backgroundSize: "cover",
             backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
