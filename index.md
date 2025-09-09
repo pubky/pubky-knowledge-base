@@ -19,3 +19,4 @@ Learn more about the overall vision here: [[The vision of Pubky|The Vision of Pu
 1. [[0.Introduction|Getting Started with PKARR]] - If your main interest is using the most decentralized, key-based identity & routing method, start with PKARR.
 2. [[Explore/Pubky Core/Introduction|Pubky Core - Introduction]] - If you want run your own Homeserver and apply PKARR, check out Pubky Core.
 3. [[Explore/Pubky App/Introduction|Pubky App - Introduction]] - If you want to dig into the application, indexer, etc, start here!
+4. [[FAQ|Frequently Asked Questions (FAQ)]]
