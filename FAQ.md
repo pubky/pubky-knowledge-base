@@ -1,17 +1,5 @@
 # Pubky Core - Frequently Asked Questions
 
-## Table of Contents
-
-- [[#Overview & Philosophy|1. Overview & Philosophy]]
-- [[#Architecture & Resolution (PKARR, PKDNS, DHT)|2. Architecture & Resolution (PKARR, PKDNS, DHT)]]
-- [[#Homeservers & Hosting|3. Homeservers & Hosting]]
-- [[#Identity, Keys & Security|4. Identity, Keys & Security]]
-- [[#Publishing, Privacy & Moderation|5. Publishing, Privacy & Moderation]]
-- [[#Interoperability, Ecosystem & Onboarding|6. Interoperability, Ecosystem & Onboarding]]
-- [[#Operations, Resilience & Scale|7. Operations, Resilience & Scale]]
-
----
-
 ## Overview & Philosophy
 
 **Q1. What is Pubky, and why was it developed?**  
