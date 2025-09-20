@@ -18,7 +18,7 @@ Current implementations across Pubky currently only support public, unencrypted 
 ## User Data Control and Credible Exit
 
 - The current network is being bootstrapped by Synonym's first homeserver, which supports key accounts as a service, as well as all services required to operate the [[Explore/Pubky App/Introduction|pubky App]]. 
-- While Synonym is currently not charging fees for homeserving, it is totall possible for anyone to run their own homerserver and require service fees or peer-to-peer micropayments, or any other requirement, to improve data redundancy and competition.
+- While Synonym is currently not charging fees for homeserving, it is totally possible for anyone to run their own homerserver and require service fees or peer-to-peer micropayments, or any other requirement, to improve data redundancy and competition.
 - Synonym does not control who can join or serve data on the network, but in order to truly have a [[Credible Exit|"credible exit"]] the network will need to mature to have more providers of homeservers and Pubky applications.
 - We will also need to make it as easy as possible for people to host their own homeservers, and to host homerserver clouds.
 - We also need to ensure that applications remain performant & reliable as the network fragments.
