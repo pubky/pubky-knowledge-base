@@ -10,61 +10,61 @@
     <link>https://pubky.synonym.to/FAQ</link>
     <guid>https://pubky.synonym.to/FAQ</guid>
     <description>Pubky Core - Frequently Asked Questions Overview &amp; Philosophy Q1. What is Pubky, and why was it developed? Pubky is a new kind of web built on public key domains instead of usernames or rented accounts.</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item><item>
     <title>Readme</title>
     <link>https://pubky.synonym.to/Readme</link>
     <guid>https://pubky.synonym.to/Readme</guid>
     <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
     <link>https://pubky.synonym.to/TLDR</link>
     <guid>https://pubky.synonym.to/TLDR</guid>
     <description>Pubky App Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular social ...</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item><item>
     <title>The vision of Pubky</title>
     <link>https://pubky.synonym.to/The-vision-of-Pubky</link>
     <guid>https://pubky.synonym.to/The-vision-of-Pubky</guid>
     <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item><item>
     <title>Pubky Knowledge Base</title>
     <link>https://pubky.synonym.to/</link>
     <guid>https://pubky.synonym.to/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
-  </item><item>
-    <title>ELI5</title>
-    <link>https://pubky.synonym.to/Explore/Pubky-Core/Pkarr/ELI5</link>
-    <guid>https://pubky.synonym.to/Explore/Pubky-Core/Pkarr/ELI5</guid>
-    <description>ELI5: PKARR with Mainline DHT Imagine you have a super cool secret club, and everyone in the club needs a way to find each other and communicate without relying on anyone else to organize ...</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
-  </item><item>
-    <title>1.Adoption</title>
-    <link>https://pubky.synonym.to/Explore/Pubky-Core/notes/1.Adoption</link>
-    <guid>https://pubky.synonym.to/Explore/Pubky-Core/notes/1.Adoption</guid>
-    <description>Pubky Adoption This note is indicative and creative. There is no set on stone plans for realizing adoption, these are just ideas. Realizing the full potential of Pubky relies on network effects through mainstream user onboarding: Legacy centralized imports ease migration paths for established communities and profiles.</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item><item>
     <title>2.Incentives</title>
     <link>https://pubky.synonym.to/Explore/Pubky-Core/notes/2.Incentives</link>
     <guid>https://pubky.synonym.to/Explore/Pubky-Core/notes/2.Incentives</guid>
     <description>Pubky Incentives This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience: Data storage fees pay stores for availability and throughput.</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item><item>
     <title>3.Protocols</title>
     <link>https://pubky.synonym.to/Explore/Pubky-Core/notes/3.Protocols</link>
     <guid>https://pubky.synonym.to/Explore/Pubky-Core/notes/3.Protocols</guid>
     <description>Pubky Protocols This note is indicative and highly creative. We have not yet explored much about the open protocols that enable independent implementations: Pubky Data - Definition of normalized data schemas for user profiles, content types, relationships etc.</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item><item>
     <title>DHT</title>
     <link>https://pubky.synonym.to/Explore/Technologies/DHT</link>
     <guid>https://pubky.synonym.to/Explore/Technologies/DHT</guid>
     <description>Distributed Hash Table It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
-    <pubDate>Tue, 09 Sep 2025 09:26:01 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
+  </item><item>
+    <title>DNS</title>
+    <link>https://pubky.synonym.to/Explore/Technologies/DNS</link>
+    <guid>https://pubky.synonym.to/Explore/Technologies/DNS</guid>
+    <description>Domain Name System It translates human-readable domain names (e.g., www.example.com) into IP addresses that computers use to identify each other on the network ...</description>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
+  </item><item>
+    <title>DoH</title>
+    <link>https://pubky.synonym.to/Explore/Technologies/DoH</link>
+    <guid>https://pubky.synonym.to/Explore/Technologies/DoH</guid>
+    <description>DNS over HTTPS It is a security protocol that encrypts DNS queries and responses, enhancing privacy and security by preventing eavesdropping and tampering ...</description>
+    <pubDate>Wed, 29 Oct 2025 07:18:09 GMT</pubDate>
   </item>
     </channel>
   </rss>
