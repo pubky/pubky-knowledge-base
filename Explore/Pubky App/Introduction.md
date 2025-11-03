@@ -13,7 +13,7 @@ Pubky-app's initial focus is building a decentralized social media protocol.
 - [[Aggregator|Aggregators]] collecting social graphs
 - Feeds of followings' activities
 - [[Search|Searching]] profiles and posts
-- Notification delivery through [[Explore/Pubky App/Backend/Introduction|aplication backends]] 
+- Notification delivery through [[Explore/Pubky App/Backend/Introduction|application backends]] 
 - Distributed moderation through user blocking
 
 ## Components
