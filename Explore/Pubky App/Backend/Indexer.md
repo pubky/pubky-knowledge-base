@@ -1,4 +1,6 @@
-The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple [[Homeservers|homeservers]] into a unified view. This enables cross-data store search, queries, and discovery, allowing users to access and analyze data from various sources in a seamless and efficient manner.
+The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple [[Homeservers|homeservers]] into a unified view. This enables cross-data store search, queries, and discovery, allowing users to access and analyze data from various sources in a seamless and efficient manner.
+
+[[Pubky Nexus|Pubky Nexus]] is the production implementation of this indexer architecture, combining sophisticated event processing with Neo4j graph database and Redis caching for high-performance social graph operations.
 
 ### Characteristics
 
