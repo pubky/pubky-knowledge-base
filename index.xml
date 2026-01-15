@@ -2,69 +2,69 @@
 <rss version="2.0">
     <channel>
       <title>Pubky Knowledge Base</title>
-      <link>https://pubky.synonym.to</link>
+      <link>https://docs.pubky.org</link>
       <description>Last 10 notes on Pubky Knowledge Base</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>FAQ</title>
-    <link>https://pubky.synonym.to/FAQ</link>
-    <guid>https://pubky.synonym.to/FAQ</guid>
+    <link>https://docs.pubky.org/FAQ</link>
+    <guid>https://docs.pubky.org/FAQ</guid>
     <description>Pubky Core - Frequently Asked Questions Overview &amp; Philosophy Q1. What is Pubky, and why was it developed? Pubky is a new kind of web built on public key domains instead of usernames or rented accounts.</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
     <title>Readme</title>
-    <link>https://pubky.synonym.to/Readme</link>
-    <guid>https://pubky.synonym.to/Readme</guid>
+    <link>https://docs.pubky.org/Readme</link>
+    <guid>https://docs.pubky.org/Readme</guid>
     <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
-    <link>https://pubky.synonym.to/TLDR</link>
-    <guid>https://pubky.synonym.to/TLDR</guid>
+    <link>https://docs.pubky.org/TLDR</link>
+    <guid>https://docs.pubky.org/TLDR</guid>
     <description>Pubky App Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular social ...</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
     <title>The vision of Pubky</title>
-    <link>https://pubky.synonym.to/The-vision-of-Pubky</link>
-    <guid>https://pubky.synonym.to/The-vision-of-Pubky</guid>
+    <link>https://docs.pubky.org/The-vision-of-Pubky</link>
+    <guid>https://docs.pubky.org/The-vision-of-Pubky</guid>
     <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
     <title>Pubky Knowledge Base</title>
-    <link>https://pubky.synonym.to/</link>
-    <guid>https://pubky.synonym.to/</guid>
+    <link>https://docs.pubky.org/</link>
+    <guid>https://docs.pubky.org/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
-    <title>HTTPS</title>
-    <link>https://pubky.synonym.to/Explore/Technologies/HTTPS</link>
-    <guid>https://pubky.synonym.to/Explore/Technologies/HTTPS</guid>
-    <description>Hypertext Transfer Protocol Secure It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy. It uses TLS (Transport Layer Security) or SSL (Secure Sockets Layer) for encryption, protecting against eavesdropping and tampering.</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <title>4. Custom Backend</title>
+    <link>https://docs.pubky.org/Explore/Pubky-App/App-Architectures/4.-Custom-Backend</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-App/App-Architectures/4.-Custom-Backend</guid>
+    <description>...</description>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
-    <title>Key Pair</title>
-    <link>https://pubky.synonym.to/Explore/Technologies/Key-Pair</link>
-    <guid>https://pubky.synonym.to/Explore/Technologies/Key-Pair</guid>
-    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <title>Aggregator</title>
+    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Aggregator</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Aggregator</guid>
+    <description>Pubky Aggregators Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as homeservers ...</description>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
-    <title>Mainline DHT</title>
-    <link>https://pubky.synonym.to/Explore/Technologies/Mainline-DHT</link>
-    <guid>https://pubky.synonym.to/Explore/Technologies/Mainline-DHT</guid>
-    <description>Mainline DHT is a standard Distributed Hash Table (DHT) implementation widely used in the BitTorrent network, based on the Kademlia protocol. This decentralized system allows for efficient data storage and retrieval across a vast network of nodes, making it highly resilient and scalable.</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <title>Indexer</title>
+    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Indexer</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Indexer</guid>
+    <description>The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple homeservers into a unified view ...</description>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
-    <title>Paykit</title>
-    <link>https://pubky.synonym.to/Explore/Technologies/Paykit</link>
-    <guid>https://pubky.synonym.to/Explore/Technologies/Paykit</guid>
-    <description>Paykit abstracts and automates any payment method behind a single, static public key. The public key belongs to a Pubky instance and points to a homeserver containing all supported payment endpoints.</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <title>Introduction</title>
+    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Introduction</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Introduction</guid>
+    <description>The Backend is responsible for collecting (aggregators) and organizing (indexer) data from various sources, known as homeservers. Imagine you’re trying to find a specific document in a large library.</description>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item><item>
-    <title>Layouts</title>
-    <link>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Layouts</link>
-    <guid>https://pubky.synonym.to/Explore/Pubky-App/Client/Features/Layouts</guid>
-    <description>Layouts Pubky client offers multiple customizable UI layouts for users that prefer different column, grid, and list layouts for their feeds.</description>
-    <pubDate>Mon, 03 Nov 2025 10:23:14 GMT</pubDate>
+    <title>Web Server</title>
+    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Web-Server</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Web-Server</guid>
+    <description>The system comprises a suite of backend services that orchestrate the integration of data feeds, search functionality, and user interface configurations ...</description>
+    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
   </item>
     </channel>
   </rss>
