@@ -6,6 +6,8 @@ When the aggregator receive new events, it evaluates it against its predefined c
 
 By controlling the flow of information, aggregators play a crucial role in maintaining data quality, preventing information overload, and ensuring that only the most valuable and relevant data is used.
 
+[[Pubky Nexus|Pubky Nexus]] implements a production-grade aggregator (the `nexus-watcher` component) that monitors multiple homeservers in real-time, filtering events and updating the social graph continuously.
+
 ### Characteristics
 
 - **Fine-grained access controls**: Users and aggregators have granular control over what data is shared, with whom, and under what conditions, ensuring selective and secure data exchange.
