@@ -10,61 +10,61 @@
     <link>https://docs.pubky.org/FAQ</link>
     <guid>https://docs.pubky.org/FAQ</guid>
     <description>Pubky Core - Frequently Asked Questions Overview &amp; Philosophy Q1. What is Pubky, and why was it developed? Pubky is a new kind of web built on public key domains instead of usernames or rented accounts.</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
     <title>Readme</title>
     <link>https://docs.pubky.org/Readme</link>
     <guid>https://docs.pubky.org/Readme</guid>
     <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
     <link>https://docs.pubky.org/TLDR</link>
     <guid>https://docs.pubky.org/TLDR</guid>
     <description>Pubky App Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular social ...</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
     <title>The vision of Pubky</title>
     <link>https://docs.pubky.org/The-vision-of-Pubky</link>
     <guid>https://docs.pubky.org/The-vision-of-Pubky</guid>
     <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
     <title>Pubky Knowledge Base</title>
     <link>https://docs.pubky.org/</link>
     <guid>https://docs.pubky.org/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
-    <title>4. Custom Backend</title>
-    <link>https://docs.pubky.org/Explore/Pubky-App/App-Architectures/4.-Custom-Backend</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-App/App-Architectures/4.-Custom-Backend</guid>
-    <description>...</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <title>3.Expectations</title>
+    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/3.Expectations</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/3.Expectations</guid>
+    <description>Understanding the expectations and limitations of PKARR is crucial for effective use. This note outlines what PKARR is not and what users should expect.</description>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
-    <title>Aggregator</title>
-    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Aggregator</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Aggregator</guid>
-    <description>Pubky Aggregators Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as homeservers ...</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <title>4.Architecture</title>
+    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/4.Architecture</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/4.Architecture</guid>
+    <description>In-depth look at the architecture of PKARR, including its components and how they interact. Components Client: Applications or users that publish or query resource records.</description>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
-    <title>Indexer</title>
-    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Indexer</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Indexer</guid>
-    <description>The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple homeservers into a unified view ...</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <title>ELI5</title>
+    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/ELI5</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/ELI5</guid>
+    <description>ELI5: PKARR with Mainline DHT Imagine you have a super cool secret club, and everyone in the club needs a way to find each other and communicate without relying on anyone else to organize ...</description>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
-    <title>Introduction</title>
-    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Introduction</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Introduction</guid>
-    <description>The Backend is responsible for collecting (aggregators) and organizing (indexer) data from various sources, known as homeservers. Imagine you’re trying to find a specific document in a large library.</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <title>1.Adoption</title>
+    <link>https://docs.pubky.org/Explore/Pubky-Core/notes/1.Adoption</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-Core/notes/1.Adoption</guid>
+    <description>Pubky Adoption This note is indicative and creative. There is no set on stone plans for realizing adoption, these are just ideas. Realizing the full potential of Pubky relies on network effects through mainstream user onboarding: Legacy centralized imports ease migration paths for established communities and profiles.</description>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item><item>
-    <title>Web Server</title>
-    <link>https://docs.pubky.org/Explore/Pubky-App/Backend/Web-Server</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-App/Backend/Web-Server</guid>
-    <description>The system comprises a suite of backend services that orchestrate the integration of data feeds, search functionality, and user interface configurations ...</description>
-    <pubDate>Thu, 15 Jan 2026 08:22:59 GMT</pubDate>
+    <title>2.Incentives</title>
+    <link>https://docs.pubky.org/Explore/Pubky-Core/notes/2.Incentives</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-Core/notes/2.Incentives</guid>
+    <description>Pubky Incentives This note is indicative and creative. Nothing is planned concretely for Pubky incentives. For the Pubky ecosystem to function at scale, it relies on incentives that encourage participation and uphold the user experience: Data storage fees pay stores for availability and throughput.</description>
+    <pubDate>Mon, 19 Jan 2026 12:06:13 GMT</pubDate>
   </item>
     </channel>
   </rss>
