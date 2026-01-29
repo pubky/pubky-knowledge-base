@@ -1,6 +1,6 @@
 The Pubky network allows multiple, independent data stores, known as "homeservers." This improves [[Censorship|censorship-resistance]] and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden. 
 
-Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their homeserver at will by updating their [[0.Introduction|PKARR]] in [[DHT|mainline DHT]]. 
+Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their homeserver at will by updating their [[0.Introduction|PKARR]] in the [[Mainline DHT]]. 
 
 ## Public vs Private Data
 
@@ -23,6 +23,6 @@ Current implementations across Pubky currently only support public, unencrypted 
 - We will also need to make it as easy as possible for people to host their own homeservers, and to host homerserver clouds.
 - We also need to ensure that applications remain performant & reliable as the network fragments.
 
-## WIP
-- **Merkle tree-based versioning**: Merkle trees to manage versioning and conflict resolution, ensuring efficient data synchronization and minimizing data inconsistencies.
-- **Event Stream**: Fetch homeserver events via publish-subscribe (Pub/Sub) messaging system, enabling efficient and scalable data retrieval.
+## Event Stream
+
+Homeservers expose `/events/` and `/events-stream` endpoints for indexers/aggregators to sync data changes using cursor-based pagination.
