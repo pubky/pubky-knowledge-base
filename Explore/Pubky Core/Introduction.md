@@ -4,7 +4,7 @@
 
 Pubky Core is built on a few core concepts:
 
-- **[[Homeservers|Homeserver]]** - Decentralized data storage nodes that host user data. Data is encrypted at rest.
+- **[[Homeservers|Homeserver]]** - Decentralized data storage nodes that host user data.
 
 - **[[0.Introduction|PKARR]]** - Self-issued public keys that function as sovereign, publicly addressable domains are used to resolve the previous components.
 
