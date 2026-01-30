@@ -15,7 +15,7 @@ Understanding how Pubky differs from other decentralized and federated protocols
 | **Censorship Resistance** | 🟢 High | 🟡 Medium | 🔴 Low | 🟡 Medium | 🟢 High |
 | **Blockchain Requirement** | ❌ No | ❌ No | ❌ No | ✅ Yes (Optimism) | ❌ No |
 | **Transaction Fees** | ❌ None | ❌ None | ❌ None | ✅ Gas fees | ❌ None |
-| **Always-Online Requirement** | ❌ No (homeservers) | 🟡 Partial (relays) | ❌ No (PDSs) | 🟡 Partial (hubs) | ✅ Yes (for hosting) |
+| **Always-Online Requirement** | 🟡 Partial (homeservers) | 🟡 Partial (relays) | ❌ No (PDSs) | 🟡 Partial (hubs) | ✅ Yes (for hosting) |
 | **Mobile-Friendly** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | 🟡 Limited |
 | **Data Portability** | ✅ Full | ✅ Full | 🟡 Partial | 🟡 Partial | ✅ Full |
 | **Maturity** | 🚧 Beta | ✅ Production | ✅ Production | ✅ Production | ✅ Production |
@@ -286,6 +286,7 @@ Ethereum Address → On-chain Registry → Hubs (P2P) → Apps
 - ✅ No blockchain dependency is important
 - ✅ HTTP/REST APIs are preferred
 - ✅ Building social/collaborative applications
+- ✅ Fast-growing ecosystem
 
 **Choose Nostr if:**
 - ✅ Real-time event streaming is core to your app

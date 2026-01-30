@@ -198,10 +198,11 @@ sequenceDiagram
     HS->>HS: Verify signature
     HS->>HS: Store post data
     HS->>App: 200 OK
-    HS->>Nexus: Webhook notification
+    Nexus->>HS: Poll /events endpoint
     Nexus->>HS: Fetch new post
     Nexus->>Nexus: Index post
-    Note over Nexus: Post now in feeds
+    App->>Nexus: GET /v0/stream/posts
+    Nexus->>App: Feed with new post
 ```
 
 ---
@@ -236,8 +237,6 @@ sequenceDiagram
 - Social graph indexing
 - Search and discovery
 - High-performance API
-
-**Technology**: Rust, Neo4j, Redis, PostgreSQL
 
 ### PKDNS
 
@@ -278,20 +277,9 @@ sequenceDiagram
 
 ## Security Model
 
-### Authentication Flow
+### Authentication
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant HS as Homeserver
-    
-    Client->>Client: Generate challenge
-    Client->>Client: Sign with private key
-    Client->>HS: Send pubkey + signature
-    HS->>HS: Verify signature
-    HS->>Client: Return session token
-    Note over Client,HS: Token valid for 24hrs
-```
+See [[Authentication]] for the full authentication flow.
 
 ### Data Integrity
 
