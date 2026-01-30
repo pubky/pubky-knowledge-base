@@ -82,10 +82,13 @@ Yes, for reads. Writes go to a single primary.
 **Q22. Can homeservers sign my data?**  
 No. Signing is done by the client.
 
-**Q23. How to self-host a homeserver?**  
+**Q23. How to self-host a homeserver?**
 Deploy the package/container, configure HTTPS, publish in PKARR.
 
-**Q24. Can Pubky integrate with Tor?**  
+**Q24. What are the storage limits?**
+Synonym's public homeserver currently has: 1GB per user, 10MB per file. These are temporary limits during beta. Self-hosted homeservers can configure their own limits.
+
+**Q25. Can Pubky integrate with Tor?**  
 Yes, via `.onion` endpoints, but it's not yet tested officially.
 
 ---
@@ -210,8 +213,8 @@ Nothing breaks. Your key, data, and graph are yours.
 **Q56. What if my ISP censors my homeserver?**  
 Switch hosts, use Tor/VPN, republish PKARR.
 
-**Q57. How often does PKARR update?**  
-Periodically, every few hours is typical.
+**Q57. How often does PKARR update?**
+Periodically, every few hours is typical. See [republishing research](https://github.com/pubky/pkarr-churn/blob/main/results-node_decay.md) for details.
 
 **Q58. What if I spam the DHT?**  
 You'll be rate-limited. Publish sensibly.

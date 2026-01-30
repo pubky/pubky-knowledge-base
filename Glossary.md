@@ -7,7 +7,7 @@ Quick reference for terms used throughout the Pubky ecosystem.
 ## A
 
 **Aggregator**
-An indexer that collects and organizes data from multiple [[Homeservers]] to enable search, feeds, and discovery features. See [[Explore/Pubky App/Backend/Aggregator|Aggregator]].
+A service that collects and organizes data from multiple [[Homeservers]] to enable search, feeds, and discovery features. See [[Explore/Pubky App/Backend/Aggregator|Aggregator]].
 
 **Authentication**
 The process of proving ownership of a public key through cryptographic signatures, enabling secure access to homeservers without passwords. See [[Authentication|details]].
@@ -45,7 +45,7 @@ A signup verification service for homeservers, providing SMS and Lightning Netwo
 ## I
 
 **Indexer**
-See **Aggregator**. Services that crawl and index data from homeservers to provide search and discovery features.
+See **Aggregator**. A service that crawls and indexes data from homeservers to provide search and discovery features.
 
 ## J
 

@@ -23,7 +23,7 @@ When you access a public key domain (e.g., `pubky://o4dksfbqk85ogzdb5osziw6befig
 ### Data Lifecycle
 - **Publishing**: Users sign DNS packets and publish to DHT (directly or via relay)
 - **Caching**: Clients and relays cache records extensively to minimize DHT traffic
-- **Republishing**: Records expire after a few hours and must be republished by users, friends, or service providers
+- **Republishing**: Records [expire after a few hours](https://github.com/pubky/pkarr-churn/blob/main/results-node_decay.md) and must be republished by users, friends, or service providers
 - **Discovery**: Popular records may be kept alive by DNS servers as they receive queries
 
 ## Technical Implementation
