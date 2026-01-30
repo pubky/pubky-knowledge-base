@@ -8,6 +8,8 @@ Pubky Core is built on a few core concepts:
 
 - **[[0.Introduction|PKARR]]** - Self-issued public keys that function as sovereign, publicly addressable domains are used to resolve the previous components.
 
+- **[[Authentication]]** - Authentication with the [[Homeservers|Homeserver]]. Users grant apps scoped access to their data on the [[Homeservers|Homeserver]].
+
 Pubky Core's distributed architecture aims to provide user autonomy through [[Credible Exit|credible exit]] between interchangeable components.
 
 - **[[1. Introduction|Pubky App Architectures]]** can be very diverse. From simple web client applications that connect to a single [[2. Client - Homeserver|homeserver]] for data storage and retrieval to [[4. Custom Backend| complex backends]]  that do aggregation and powerful inference over many **[[Homeservers|homeservers]]** creating abstractions such as social media with [[Semantic Social Graph|semantic social graph]].
