@@ -116,7 +116,7 @@ Efficient navigation without touching the mouse:
 Verify published data structure:
 - Check if profile exists at expected path
 - Inspect post formatting and metadata
-- Validate [[Explore/Pubky Core/notes/3.Protocols|pubky-app-specs]] compliance
+- Validate [pubky-app-specs](https://github.com/pubky/pubky-app-specs) compliance
 
 ### Debugging
 
