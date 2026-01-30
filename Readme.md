@@ -1,21 +1,110 @@
 # Pubky Knowledge Base
 
-Welcome to the Pubky Knowledge base - we are excited to have you here.
+[![Documentation Status](https://img.shields.io/badge/docs-live-success)](https://pubky.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+Welcome to the Pubky Knowledge base - we are excited to have you here!
 
 ### 🔗 [Access the Pubky Knowledge Base](https://pubky.org/)
 
 > **The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.**
 
-The Knowledge Base is a resource that encompasses our broad vision for Pubky, along with high-level explanations of the architecture for both the Pubky Protocol and the Pubky App, as well as key concepts. Use this as your go-to guide to help you navigate unfamiliar topics and find answers to the most common questions.
+The Knowledge Base is a comprehensive resource that encompasses our vision for Pubky, along with detailed explanations of the architecture for both Pubky Core and Pubky App, as well as key concepts and practical guides.
 
-## 📝 Contributing Knowledge
+## 📚 What's Inside
 
-We kindly ask you to help us improve this documentation for a clearer, more accurate and concise knowledge base. Simply open a PR!
+- **[[Getting Started]]**: Complete onboarding for users and developers
+- **[[Glossary]]**: Quick reference for all Pubky terms
+- **[[Architecture]]**: System architecture and component relationships
+- **[[FAQ]]**: 63+ frequently asked questions
+- **[[Comparisons]]**: How Pubky compares to other protocols
+- **[[Troubleshooting]]**: Common issues and solutions
 
-## 🏗️ Build static Quartz site
+## 📝 Contributing to Documentation
 
-In order to build the static website from this obsidian vault, ensure that [NodeJS](https://nodejs.org/en/download/prebuilt-installer) is installed on your system.
+We kindly ask you to help us improve this documentation for a clearer, more accurate, and concise knowledge base.
 
-1. Enter in the terminal to the project root and access to the `/quartz` directory (`cd quartz`)
-2. Install dependencies with `npm install`
-3. Finally build the site with `npm run docs` and check it out at [localhost:8080](http://localhost:8080/)
+### Quick Fixes
+
+For typos, broken links, or small improvements:
+1. Fork this repository
+2. Make your changes
+3. Submit a pull request
+
+### Larger Contributions
+
+For new pages or significant changes:
+1. Open an issue to discuss your plans first
+2. Follow the [[Contributing]] guide
+3. Test locally before submitting
+
+See our full **[[Contributing|Contributing Guide]]** for detailed instructions.
+
+## 🏗️ Build Static Site Locally
+
+The knowledge base is built using [Quartz](https://quartz.jzhao.xyz/), a static site generator optimized for knowledge bases.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/prebuilt-installer) 18+ installed
+
+### Build Steps
+
+```bash
+# 1. Navigate to quartz directory
+cd quartz
+
+# 2. Install dependencies
+npm install
+
+# 3. Build and serve locally
+npm run docs
+
+# 4. Open browser
+# Visit http://localhost:8080
+```
+
+### Production Build
+
+```bash
+cd quartz
+npm run build
+```
+
+Output will be in `quartz/public/` directory.
+
+## 📁 Repository Structure
+
+```
+pubky-knowledge-base/
+├── index.md                    # Main entry point
+├── Getting Started.md          # Onboarding guide
+├── Glossary.md                 # Term definitions
+├── Architecture.md             # System architecture
+├── FAQ.md                      # Frequently asked questions
+├── Comparisons.md              # Protocol comparisons
+├── Troubleshooting.md          # Common issues
+├── Contributing.md             # Contribution guide
+├── TLDR.md                     # 30-second overview
+├── Explore/                    # Detailed documentation
+│   ├── Concepts/              # Core concepts
+│   ├── Pubky Core/            # Protocol & SDK docs
+│   ├── Pubky App/             # Application docs
+│   └── Technologies/          # Component docs
+└── quartz/                     # Quartz site generator
+```
+
+## 🔗 Related Resources
+
+- **Official Website**: [pubky.org](https://pubky.org/)
+- **Main Repository**: [github.com/pubky/pubky-core](https://github.com/pubky/pubky-core)
+- **Telegram**: [t.me/pubkycore](https://t.me/pubkycore)
+- **Live App**: [pubky.app](https://pubky.app)
+
+## 📜 License
+
+This documentation is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+**For GitHub Contributors**: This README is specifically for the documentation repository. The actual knowledge base lives at [pubky.org](https://pubky.org/).

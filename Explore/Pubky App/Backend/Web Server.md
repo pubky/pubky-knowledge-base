@@ -5,7 +5,14 @@ The system comprises a suite of **backend services** that orchestrate the inte
 - __Feeds__ - Curated views of aggregated data presented to users. Can include timelines, [[Tags|tags]], [[Profiles|profiles]], etc.
 - __Search__ - Services that index aggregated data and enable full text/attribute searches.
 - __Identity__ - It provides single sign-on through self-sovereign credentials. 
-- [Payments](Paykit.md) - It handles microtransactions like tipping within a peer-to-peer economy.
+- **[Payments](Paykit.md)** - Payment discovery and coordination service using Paykit protocol (work in progress). Planned capabilities include:
+  - Public directory API for payment method discovery
+  - Encrypted storage for payment requests and subscriptions
+  - Push notification relay for incoming payment notifications
+  - Receipt storage and verification
+  - Subscription management coordination
+  
+  ⚠️ **Note**: Paykit is not production-ready and subject to significant changes.
 
 ### Architecture
 
