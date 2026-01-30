@@ -9,7 +9,7 @@ By controlling the flow of information, aggregators play a crucial role in maint
 ### Characteristics
 
 - **Fine-grained access controls**: Users and aggregators have granular control over what data is shared, with whom, and under what conditions, ensuring selective and secure data exchange.
-- **Efficient data synchronization**: Merkle trees enable fast and efficient synchronization of incremental changes from data stores, reducing the overhead of data aggregation.
+- **Efficient data synchronization**: Incremental sync via event streams enables fast and efficient synchronization of changes from homeservers, reducing the overhead of data aggregation.
 - **Normalized data schemas**: Standardized data schemas facilitate interoperability between services, making it easier to integrate and exchange data across the network.
 - **Public and niche aggregators**: The network supports both large-scale, public aggregators for discoverability and smaller, niche aggregators that cater to specific communities or use cases.
 - **Core user graph expansion**: The aggregation process starts with a core user graph and expands outward through connections, enabling the network to grow organically and efficiently.
