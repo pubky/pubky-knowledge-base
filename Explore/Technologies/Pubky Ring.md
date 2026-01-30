@@ -248,7 +248,7 @@ Pubky Ring is the **identity foundation** for:
 ### Pubky Core
 - Manages [[Key Pair|Ed25519 identity keys]]
 - Publishes keys via [[Explore/Pubky Core/Pkarr/0.Introduction|PKARR]] to [[Explore/Technologies/Mainline DHT|Mainline DHT]]
-- Stores encrypted data on [[Homeservers|homeservers]]
+- Authorizes apps to store data on [[Homeservers|homeservers]]
 
 ### Pubky App
 - Provides identity for social graph

@@ -275,7 +275,6 @@ For [Synonym](https://synonym.to/) as lead of this project, the goal is to:
 **Active Development:**
 - 🚧 Mobile native bindings (iOS/Android)
 - 🚧 Event streaming enhancements
-- 🚧 Merkle tree versioning
 - 🚧 Replication and mirroring tools
 - 🚧 Privacy features (encrypted data)
 
