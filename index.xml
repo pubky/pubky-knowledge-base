@@ -6,65 +6,65 @@
       <description>Last 10 notes on Pubky Knowledge Base</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>index</title>
+    <link>https://docs.pubky.org/Explore/</link>
+    <guid>https://docs.pubky.org/Explore/</guid>
+    <description>Explore Pubky Core Pubky App Technologies Concepts .</description>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
+  </item><item>
     <title>FAQ</title>
     <link>https://docs.pubky.org/FAQ</link>
     <guid>https://docs.pubky.org/FAQ</guid>
     <description>Pubky Core - Frequently Asked Questions Overview &amp; Philosophy Q1. What is Pubky, and why was it developed? Pubky is a new kind of web built on public key domains instead of usernames or rented accounts.</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
+  </item><item>
+    <title>Getting Started</title>
+    <link>https://docs.pubky.org/Getting-Started</link>
+    <guid>https://docs.pubky.org/Getting-Started</guid>
+    <description>Getting Started with Pubky Welcome to Pubky! This guide will help you get started whether you’re a user looking to try decentralized social media or a developer building on the Pubky ...</description>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
+  </item><item>
+    <title>Glossary</title>
+    <link>https://docs.pubky.org/Glossary</link>
+    <guid>https://docs.pubky.org/Glossary</guid>
+    <description>Glossary Quick reference for terms used throughout the Pubky ecosystem. A Aggregator A service that collects and organizes data from multiple Homeservers to enable search, feeds, and discovery features.</description>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
   </item><item>
     <title>Readme</title>
     <link>https://docs.pubky.org/Readme</link>
     <guid>https://docs.pubky.org/Readme</guid>
-    <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
+    <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here! 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, ...</description>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
     <link>https://docs.pubky.org/TLDR</link>
     <guid>https://docs.pubky.org/TLDR</guid>
-    <description>Pubky App Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular social ...</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
+    <description>Pubky: 30-Second Overview Pubky is a decentralized web protocol that puts you in control of your identity and data. What It Is Your Identity = Your Key: No usernames, no accounts.</description>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
   </item><item>
     <title>The vision of Pubky</title>
     <link>https://docs.pubky.org/The-vision-of-Pubky</link>
     <guid>https://docs.pubky.org/The-vision-of-Pubky</guid>
     <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
+  </item><item>
+    <title>Troubleshooting</title>
+    <link>https://docs.pubky.org/Troubleshooting</link>
+    <guid>https://docs.pubky.org/Troubleshooting</guid>
+    <description>Troubleshooting Guide Common issues and solutions when working with Pubky. PKARR &amp; Discovery Issues PKARR Record Not Resolving Symptom: Public key domain doesn’t resolve, apps can’t find homeserver Common Causes: Record Not Published # Verify record exists on DHT curl &quot;relay.pkarr.org/&lt;your-public-key&gt;&quot; Solution: Ensure you’ve published your PKARR record: await pubky.publishPkarrRecord(); Record Expired (TTL) PKARR records on DHT expire after several hours Solution: Republish regularly (recommended: every 2 hours) // Automatic republishing setInterval(async () =&gt; { await pubky.publishPkarrRecord(); }, 2 * 60 * 60 * 1000); // Every 2 hours DHT Propagation Delay Records take time to propagate (usually &lt; 5 minutes) Solution: Wait a few minutes after publishing, then retry Incorrect Public Key Format Public keys must be z-base-32 encoded Solution: Verify key format matches: z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty Debugging Commands: # Check if PKARR relay has your record curl &quot;relay.pkarr.org/&lt;public-key&gt;&quot; # Check DNS resolution via PKDNS dig @pkdns.pkarr.org &lt;public-key&gt; # Test with Pubky CLI pubky-cli tools verify-pkarr &lt;public-key&gt; Homeserver Connection Issues Can’t Connect to Homeserver Symptom: SDK operations fail, timeout, or refuse connection Common Causes: HTTPS Not Configured Homeservers REQUIRE HTTPS (not HTTP) Solution: Configure TLS certificate: # Using Let&#039;s Encrypt certbot --nginx -d yourdomain.com Firewall Blocking Ports Default ports: 6287 (user API), 6288 (admin API) Solution: Open firewall ports: # UFW example sudo ufw allow 6287/tcp sudo ufw allow 6288/tcp Homeserver Not Running Solution: Verify homeserver is running: # Check process ps aux | grep pubky-homeserver # Check logs journalctl -u pubky-homeserver -f PKDNS Resolution Failure Browser can’t resolve public key domain Solution: Use PKDNS-enabled resolver or DoH: // In browser, use full HTTPS URL const url = `your-homeserver.com/pub/...`; Test Connection: # Direct test curl your-homeserver.com/ # Via public key (requires PKDNS) curl $(pkdns resolve &lt;public-key&gt;)/ SDK Authentication Problems See Authentication for how Pubky authentication works.</description>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
   </item><item>
     <title>Pubky Knowledge Base</title>
     <link>https://docs.pubky.org/</link>
     <guid>https://docs.pubky.org/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
   </item><item>
-    <title>HTTPS</title>
-    <link>https://docs.pubky.org/Explore/Technologies/HTTPS</link>
-    <guid>https://docs.pubky.org/Explore/Technologies/HTTPS</guid>
-    <description>Hypertext Transfer Protocol Secure It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy. It uses TLS (Transport Layer Security) or SSL (Secure Sockets Layer) for encryption, protecting against eavesdropping and tampering.</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
-  </item><item>
-    <title>Key Pair</title>
-    <link>https://docs.pubky.org/Explore/Technologies/Key-Pair</link>
-    <guid>https://docs.pubky.org/Explore/Technologies/Key-Pair</guid>
-    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
-  </item><item>
-    <title>Mainline DHT</title>
-    <link>https://docs.pubky.org/Explore/Technologies/Mainline-DHT</link>
-    <guid>https://docs.pubky.org/Explore/Technologies/Mainline-DHT</guid>
-    <description>Mainline DHT is a standard Distributed Hash Table (DHT) implementation widely used in the BitTorrent network, based on the Kademlia protocol. This decentralized system allows for efficient data storage and retrieval across a vast network of nodes, making it highly resilient and scalable.</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
-  </item><item>
-    <title>Paykit</title>
-    <link>https://docs.pubky.org/Explore/Technologies/Paykit</link>
-    <guid>https://docs.pubky.org/Explore/Technologies/Paykit</guid>
-    <description>Paykit abstracts and automates any payment method behind a single, static public key. The public key belongs to a Pubky instance and points to a homeserver containing all supported payment endpoints.</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
-  </item><item>
-    <title>Search</title>
-    <link>https://docs.pubky.org/Explore/Pubky-App/Client/Features/Search</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-App/Client/Features/Search</guid>
-    <description>Search While Tags &amp; Filters are the primary sorting tools, the app also provides limited traditional search capabilities.</description>
-    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
+    <title>DHT</title>
+    <link>https://docs.pubky.org/Explore/Technologies/DHT</link>
+    <guid>https://docs.pubky.org/Explore/Technologies/DHT</guid>
+    <description>Distributed Hash Table It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data.</description>
+    <pubDate>Fri, 30 Jan 2026 15:08:40 GMT</pubDate>
   </item>
     </channel>
   </rss>

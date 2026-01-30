@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Architecture | Pubky Core</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter Tight&amp;family=Inter Tight:wght@400;700&amp;family=Inter Tight:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="Architecture"/><meta property="og:description" content="Pubky Architecture Overview This page provides a comprehensive overview of the Pubky ecosystem architecture, showing how all components work together to enable decentralized, ..."/><meta property="og:image" content="https://docs.pubky.org/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="./static/favicon.svg"/><meta name="description" content="Pubky Architecture Overview This page provides a comprehensive overview of the Pubky ecosystem architecture, showing how all components work together to enable decentralized, ..."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script></head><body data-slug="Architecture"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><a href="/"><img style="margin:0px;" src="/static/pubky-core-logo.webp" width="209" height="44"/></a><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabindex="0" aria-labelledby="title desc" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><title id="title">Search</title><desc id="desc">Search</desc><path opacity="0.2" d="M9.06213 15.625C12.6865 15.625 15.6246 12.6869 15.6246 9.0625C15.6246 5.43813 12.6865 2.5 9.06213 2.5C5.43777 2.5 2.49963 5.43813 2.49963 9.0625C2.49963 12.6869 5.43777 15.625 9.06213 15.625Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.06213 3.125C5.78294 3.125 3.12463 5.78331 3.12463 9.0625C3.12463 12.3417 5.78294 15 9.06213 15C12.3413 15 14.9996 12.3417 14.9996 9.0625C14.9996 5.78331 12.3413 3.125 9.06213 3.125ZM1.87463 9.0625C1.87463 5.09295 5.09259 1.875 9.06213 1.875C13.0317 1.875 16.2496 5.09295 16.2496 9.0625C16.2496 13.032 13.0317 16.25 9.06213 16.25C5.09259 16.25 1.87463 13.032 1.87463 9.0625Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M13.2603 13.2612C13.5044 13.0171 13.9001 13.0171 14.1442 13.2612L17.9411 17.0581C18.1852 17.3022 18.1852 17.6979 17.9411 17.942C17.6971 18.1861 17.3013 18.1861 17.0572 17.942L13.2603 14.1451C13.0163 13.901 13.0163 13.5053 13.2603 13.2612Z" fill="white"></path></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><div class="explorer desktop-only"><div type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[{&quot;path&quot;:&quot;Explore&quot;,&quot;collapsed&quot;:false},{&quot;path&quot;:&quot;Explore/Concepts&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Pubky-App&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Pubky-App/App-Architectures&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Pubky-App/Backend&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Pubky-App/Client&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Pubky-App/Client/Features&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Pubky-Core&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Pubky-Core/Pkarr&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Technologies&quot;,&quot;collapsed&quot;:true}]"></div><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li style="margin-bottom:10px;"><a href="./Architecture" data-for="Architecture">Architecture</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Comparisons" data-for="Comparisons">Comparisons</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Contributing" data-for="Contributing">Contributing</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore"><button class="folder-button"><span class="folder-title">Explore</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer open"><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore"><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Concepts"><button class="folder-button"><span class="folder-title">Concepts</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Concepts"><li style="margin-bottom:10px;"><a href="./Explore/Concepts/Censorship" data-for="Explore/Concepts/Censorship">Censorship</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Concepts/Credible-Exit" data-for="Explore/Concepts/Credible-Exit">Credible Exit</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Concepts/Semantic-Social-Graph" data-for="Explore/Concepts/Semantic-Social-Graph">Semantic Social Graph</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Pubky-App"><button class="folder-button"><span class="folder-title">Pubky App</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Pubky-App"><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Introduction" data-for="Explore/Pubky-App/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/ELI5" data-for="Explore/Pubky-App/ELI5">ELI5</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Pubky-App/App-Architectures"><button class="folder-button"><span class="folder-title">App Architectures</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Pubky-App/App-Architectures"><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/App-Architectures/1.-Introduction" data-for="Explore/Pubky-App/App-Architectures/1.-Introduction">1. Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/App-Architectures/2.-Client---Homeserver" data-for="Explore/Pubky-App/App-Architectures/2.-Client---Homeserver">2. Client - Homeserver</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/App-Architectures/3.-Global-Aggregators" data-for="Explore/Pubky-App/App-Architectures/3.-Global-Aggregators">3. Global Aggregators</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/App-Architectures/4.-Custom-Backend" data-for="Explore/Pubky-App/App-Architectures/4.-Custom-Backend">4. Custom Backend</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Pubky-App/Backend"><button class="folder-button"><span class="folder-title">Backend</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Pubky-App/Backend"><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Backend/Introduction" data-for="Explore/Pubky-App/Backend/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Backend/Aggregator" data-for="Explore/Pubky-App/Backend/Aggregator">Aggregator</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Backend/Indexer" data-for="Explore/Pubky-App/Backend/Indexer">Indexer</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Backend/Pubky-Nexus" data-for="Explore/Pubky-App/Backend/Pubky-Nexus">Pubky Nexus</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Backend/Web-Server" data-for="Explore/Pubky-App/Backend/Web-Server">Web Server</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Pubky-App/Client"><button class="folder-button"><span class="folder-title">Client</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Pubky-App/Client"><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Introduction" data-for="Explore/Pubky-App/Client/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Pubky-App/Client/Features"><button class="folder-button"><span class="folder-title">Features</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Pubky-App/Client/Features"><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Bookmarks" data-for="Explore/Pubky-App/Client/Features/Bookmarks">Bookmarks</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Layouts" data-for="Explore/Pubky-App/Client/Features/Layouts">Layouts</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Notifications" data-for="Explore/Pubky-App/Client/Features/Notifications">Notifications</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Perspectives" data-for="Explore/Pubky-App/Client/Features/Perspectives">Perspectives</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Posts" data-for="Explore/Pubky-App/Client/Features/Posts">Posts</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Profiles" data-for="Explore/Pubky-App/Client/Features/Profiles">Profiles</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Search" data-for="Explore/Pubky-App/Client/Features/Search">Search</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Tags" data-for="Explore/Pubky-App/Client/Features/Tags">Tags</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-App/Client/Features/Trends" data-for="Explore/Pubky-App/Client/Features/Trends">Trends</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li></ul></div></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Pubky-Core"><button class="folder-button"><span class="folder-title">Pubky Core</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Pubky-Core"><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Introduction" data-for="Explore/Pubky-Core/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/ELI5" data-for="Explore/Pubky-Core/ELI5">ELI5</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/API" data-for="Explore/Pubky-Core/API">API</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Authentication" data-for="Explore/Pubky-Core/Authentication">Authentication</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Homeservers" data-for="Explore/Pubky-Core/Homeservers">Homeservers</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Pubky-Core/Pkarr"><button class="folder-button"><span class="folder-title">Pkarr</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Pubky-Core/Pkarr"><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Pkarr/ELI5" data-for="Explore/Pubky-Core/Pkarr/ELI5">ELI5</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Pkarr/0.Introduction" data-for="Explore/Pubky-Core/Pkarr/0.Introduction">0.Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Pkarr/1.Why-Pkarr" data-for="Explore/Pubky-Core/Pkarr/1.Why-Pkarr">1.Why Pkarr?</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr" data-for="Explore/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr">2.Getting Started with Pkarr</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Pkarr/3.Expectations" data-for="Explore/Pubky-Core/Pkarr/3.Expectations">3.Expectations</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/Pkarr/4.Architecture" data-for="Explore/Pubky-Core/Pkarr/4.Architecture">4.Architecture</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li style="margin-bottom:10px;"><a href="./Explore/Pubky-Core/SDK" data-for="Explore/Pubky-Core/SDK">SDK</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Technologies"><button class="folder-button"><span class="folder-title">Technologies</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Technologies"><li style="margin-bottom:10px;"><a href="./Explore/Technologies/DHT" data-for="Explore/Technologies/DHT">DHT</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/DNS" data-for="Explore/Technologies/DNS">DNS</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/DoH" data-for="Explore/Technologies/DoH">DoH</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Homegate" data-for="Explore/Technologies/Homegate">Homegate</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/HTTPS" data-for="Explore/Technologies/HTTPS">HTTPS</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Jeb---Pubky-AI-Bot" data-for="Explore/Technologies/Jeb---Pubky-AI-Bot">Jeb - Pubky AI Bot</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Key-Pair" data-for="Explore/Technologies/Key-Pair">Key Pair</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Mainline-DHT" data-for="Explore/Technologies/Mainline-DHT">Mainline DHT</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Paykit" data-for="Explore/Technologies/Paykit">Paykit</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/PKDNS" data-for="Explore/Technologies/PKDNS">PKDNS</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Pubky-CLI" data-for="Explore/Technologies/Pubky-CLI">Pubky CLI</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Pubky-Docker" data-for="Explore/Technologies/Pubky-Docker">Pubky Docker</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Pubky-Explorer" data-for="Explore/Technologies/Pubky-Explorer">Pubky Explorer</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Pubky-Noise" data-for="Explore/Technologies/Pubky-Noise">Pubky Noise</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Explore/Technologies/Pubky-Ring" data-for="Explore/Technologies/Pubky-Ring">Pubky Ring</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li></ul></div></li><li style="margin-bottom:10px;"><a href="./FAQ" data-for="FAQ">FAQ</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Getting-Started" data-for="Getting-Started">Getting Started</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Glossary" data-for="Glossary">Glossary</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><div style="border:none;border-top:0.1px solid white;opacity:0.2;margin-top:10px;margin-bottom:30px;"></div><li style="margin-bottom:10px;"><a href="./Readme" data-for="Readme">Readme</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./The-vision-of-Pubky" data-for="The-vision-of-Pubky">The vision of Pubky</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./TLDR" data-for="TLDR">TLDR</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="./Troubleshooting" data-for="Troubleshooting">Troubleshooting</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Architecture</a></div></nav><h1 class="article-title">Architecture</h1><p show-comma="true" class="content-meta"><span>Jan 30, 2026</span><span>5 min read</span></p></div></div><article class="popover-hint"><h1 id="pubky-architecture-overview">Pubky Architecture Overview<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pubky-architecture-overview" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>This page provides a comprehensive overview of the Pubky ecosystem architecture, showing how all components work together to enable decentralized, censorship-resistant applications.</p>
+<hr/>
+<h2 id="system-architecture">System Architecture<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#system-architecture" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code class="mermaid">flowchart TB
+    subgraph Identity[Identity Layer]
+        Ring[Pubky Ring]
+        Keys[Key Pairs]
+    end
+    
+    subgraph Discovery[Discovery Layer]
+        PKARR[PKARR Records]
+        DHT[Mainline DHT]
+        PKDNS[PKDNS Servers]
+    end
+    
+    subgraph Storage[Storage Layer]
+        HS1[Homeserver 1]
+        HS2[Homeserver 2]
+        HSN[Homeserver N]
+    end
+    
+    subgraph Apps[Application Layer]
+        PubkyApp[Pubky App]
+        Nexus[Pubky Nexus]
+        Custom[Custom Apps]
+    end
+    
+    Ring --> Keys
+    Keys --> PKARR
+    PKARR --> DHT
+    PKDNS --> DHT
+    PKARR --> HS1
+    HS1 --> Nexus
+    HS2 --> Nexus
+    Nexus --> PubkyApp
+    Custom --> HS1
+</code></pre>
+<hr/>
+<h2 id="layer-breakdown">Layer Breakdown<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#layer-breakdown" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="identity-layer">Identity Layer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#identity-layer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The foundation of Pubky is cryptographic identity based on <strong><a href="./Explore/Technologies/Key-Pair" class="internal alias" data-slug="Explore/Technologies/Key-Pair">key pairs</a></strong>.</p>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong><a href="./Explore/Technologies/Pubky-Ring" class="internal alias" data-slug="Explore/Technologies/Pubky-Ring">Pubky Ring</a></strong>: Mobile app for secure key management</li>
+<li><strong>Key Pairs</strong>: Ed25519 public/private key pairs</li>
+<li><strong>Recovery Files</strong>: Encrypted backups for key recovery</li>
+</ul>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li>User generates a key pair (public + private key)</li>
+<li>Public key becomes permanent identity (z-base-32 encoded)</li>
+<li>Private key stays secure on device, used for signing</li>
+<li>Recovery file enables backup and cross-device usage</li>
+</ol>
+<p><strong>Key Properties:</strong></p>
+<ul>
+<li>✅ Self-sovereign (no registration with authorities)</li>
+<li>✅ Portable across devices</li>
+<li>✅ Permanent (never changes)</li>
+<li>✅ Cryptographically secure</li>
+</ul>
+<hr/>
+<h3 id="discovery-layer">Discovery Layer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#discovery-layer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The discovery layer enables finding homeservers and resolving identities without central servers.</p>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong><a href="./Explore/Pubky-Core/Pkarr/0.Introduction" class="internal alias" data-slug="Explore/Pubky-Core/Pkarr/0.Introduction">PKARR</a></strong>: Public Key Addressable Resource Records</li>
+<li><strong><a href="./Explore/Technologies/Mainline-DHT" class="internal alias" data-slug="Explore/Technologies/Mainline-DHT">Mainline DHT</a></strong>: Distributed Hash Table (10M+ nodes)</li>
+<li><strong><a href="./Explore/Technologies/PKDNS" class="internal" data-slug="Explore/Technologies/PKDNS">PKDNS</a></strong>: DNS servers for resolving public key domains</li>
+</ul>
+<p><strong>How It Works:</strong></p>
+<pre><code class="mermaid">sequenceDiagram
+    participant User
+    participant Ring as Pubky Ring
+    participant DHT as Mainline DHT
+    participant PKDNS
+    participant HS as Homeserver
+    
+    User->>Ring: Create Identity
+    Ring->>DHT: Publish PKARR Record
+    Note over DHT: Record contains homeserver URL
+    User->>PKDNS: Resolve public key
+    PKDNS->>DHT: Fetch PKARR Record
+    DHT->>PKDNS: Return signed record
+    PKDNS->>User: Return homeserver URL
+    User->>HS: Connect to homeserver
+</code></pre>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Decentralized discovery (no central directory)</li>
+<li>Censorship resistant (15+ years proven infrastructure)</li>
+<li>Self-published (users control their records)</li>
+<li>Updateable (switch homeservers anytime)</li>
+</ul>
+<hr/>
+<h3 id="storage-layer">Storage Layer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#storage-layer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong><a href="./Explore/Pubky-Core/Homeservers" class="internal" data-slug="Explore/Pubky-Core/Homeservers">Homeservers</a></strong> store user data in a key-value format over HTTP/HTTPS.</p>
+<p><strong>Architecture:</strong></p>
+<pre><code class="mermaid">flowchart LR
+    User1[User 1] --> HS1[Homeserver A]
+    User2[User 2] --> HS1
+    User3[User 3] --> HS2[Homeserver B]
+    User4[User 4] --> HS3[Homeserver C]
+    
+    HS1 --> DB1[(PostgreSQL)]
+    HS2 --> DB2[(LMDB)]
+    HS3 --> DB3[(Files)]
+</code></pre>
+<p><strong>Key Properties:</strong></p>
+<ul>
+<li><strong>User Choice</strong>: Pick any homeserver or run your own</li>
+<li><strong>Data Ownership</strong>: You control your data</li>
+<li><strong>Portability</strong>: Switch homeservers without losing data</li>
+<li><strong>Persistence Backends</strong>: Files, LMDB, PostgreSQL, or SQL</li>
+</ul>
+<p><strong>API Operations:</strong></p>
+<ul>
+<li><code>PUT /pub/app/path</code> - Store data</li>
+<li><code>GET /pub/app/path</code> - Retrieve data</li>
+<li><code>DELETE /pub/app/path</code> - Delete data</li>
+<li><code>LIST /pub/app/</code> - List directory</li>
+</ul>
+<hr/>
+<h3 id="application-layer">Application Layer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#application-layer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Applications consume data from homeservers, either directly or through aggregation services.</p>
+<p><strong>Architecture Patterns:</strong></p>
+<h4 id="1-simple-client-homeserver">1. Simple Client-Homeserver<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-simple-client-homeserver" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<pre><code class="mermaid">flowchart LR
+    Client[Client App] &lt;--> HS[Homeserver]
+</code></pre>
+<p><strong>Use Case</strong>: Personal apps, simple tools, direct data access</p>
+<h4 id="2-global-aggregator">2. Global Aggregator<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-global-aggregator" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<pre><code class="mermaid">flowchart LR
+    HS1[Homeserver 1] --> Agg[Aggregator]
+    HS2[Homeserver 2] --> Agg
+    HS3[Homeserver N] --> Agg
+    Agg --> Client[Client App]
+</code></pre>
+<p><strong>Use Case</strong>: Social feeds, search, discovery (e.g., <a href="./Explore/Pubky-App/Backend/Pubky-Nexus" class="internal alias" data-slug="Explore/Pubky-App/Backend/Pubky-Nexus">Pubky Nexus</a>)</p>
+<h4 id="3-custom-backend">3. Custom Backend<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-custom-backend" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<pre><code class="mermaid">flowchart TB
+    HS[Homeservers] --> Agg[Custom Aggregator]
+    Agg --> ML[ML Inference]
+    Agg --> Search[Search Engine]
+    ML --> API[Custom API]
+    Search --> API
+    API --> Client[Client]
+</code></pre>
+<p><strong>Use Case</strong>: Advanced features, recommendations, specialized processing</p>
+<hr/>
+<h2 id="data-flow-example-publishing-a-post">Data Flow Example: Publishing a Post<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-flow-example-publishing-a-post" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code class="mermaid">sequenceDiagram
+    participant User
+    participant Ring as Pubky Ring
+    participant App as Pubky App
+    participant HS as Homeserver
+    participant Nexus
+    
+    User->>Ring: Authorize App
+    Ring->>App: Grant session token
+    User->>App: Create post
+    App->>HS: PUT /pub/pubky.app/posts/123
+    HS->>HS: Verify signature
+    HS->>HS: Store post data
+    HS->>App: 200 OK
+    Nexus->>HS: Poll /events endpoint
+    Nexus->>HS: Fetch new post
+    Nexus->>Nexus: Index post
+    App->>Nexus: GET /v0/stream/posts
+    Nexus->>App: Feed with new post
+</code></pre>
+<hr/>
+<h2 id="component-responsibilities">Component Responsibilities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#component-responsibilities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="pubky-core">Pubky Core<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pubky-core" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong><a href="./Explore/Pubky-Core/Introduction" class="internal alias" data-slug="Explore/Pubky-Core/Introduction">Pubky Core</a></strong> provides:</p>
+<ul>
+<li>Protocol specification</li>
+<li>Homeserver implementation</li>
+<li>SDK for all platforms</li>
+<li>Authentication system</li>
+<li>API standards</li>
+</ul>
+<p><strong>Repository</strong>: <a href="https://github.com/pubky/pubky-core" class="external">github.com/pubky/pubky-core<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="pubky-ring">Pubky Ring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pubky-ring" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong><a href="./Explore/Technologies/Pubky-Ring" class="internal alias" data-slug="Explore/Technologies/Pubky-Ring">Pubky Ring</a></strong> handles:</p>
+<ul>
+<li>Key generation and storage</li>
+<li>App authorization</li>
+<li>Session management</li>
+<li>Recovery file creation</li>
+</ul>
+<p><strong>Platforms</strong>: iOS, Android (React Native)</p>
+<h3 id="pubky-nexus">Pubky Nexus<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pubky-nexus" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong><a href="./Explore/Pubky-App/Backend/Pubky-Nexus" class="internal alias" data-slug="Explore/Pubky-App/Backend/Pubky-Nexus">Pubky Nexus</a></strong> provides:</p>
+<ul>
+<li>Real-time aggregation</li>
+<li>Social graph indexing</li>
+<li>Search and discovery</li>
+<li>High-performance API</li>
+</ul>
+<h3 id="pkdns">PKDNS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pkdns" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong><a href="./Explore/Technologies/PKDNS" class="internal" data-slug="Explore/Technologies/PKDNS">PKDNS</a></strong> enables:</p>
+<ul>
+<li>Public key domain resolution</li>
+<li>DNS-over-HTTPS support</li>
+<li>Traditional ICANN domain support</li>
+<li>Self-hosted or public instances</li>
+</ul>
+<p><strong>Repository</strong>: <a href="https://github.com/pubky/pkdns" class="external">github.com/pubky/pkdns<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="homegate">Homegate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#homegate" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong><a href="./Explore/Technologies/Homegate" class="internal" data-slug="Explore/Technologies/Homegate">Homegate</a></strong> provides:</p>
+<ul>
+<li>SMS verification</li>
+<li>Lightning payment verification</li>
+<li>Spam prevention</li>
+<li>Privacy-preserving signup</li>
+</ul>
+<p><strong>Repository</strong>: <a href="https://github.com/pubky/homegate" class="external">github.com/pubky/homegate<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="infrastructure-tools">Infrastructure Tools<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#infrastructure-tools" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="development-tools">Development Tools<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#development-tools" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong><a href="./Explore/Technologies/Pubky-Docker" class="internal alias" data-slug="Explore/Technologies/Pubky-Docker">Pubky Docker</a></strong>: Full stack in one command</li>
+<li><strong><a href="./Explore/Technologies/Pubky-CLI" class="internal alias" data-slug="Explore/Technologies/Pubky-CLI">Pubky CLI</a></strong>: Command-line homeserver management</li>
+<li><strong><a href="./Explore/Technologies/Pubky-Explorer" class="internal alias" data-slug="Explore/Technologies/Pubky-Explorer">Pubky Explorer</a></strong>: Web-based data browser</li>
+</ul>
+<h3 id="work-in-progress">Work in Progress<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#work-in-progress" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong><a href="./Explore/Technologies/Paykit" class="internal alias" data-slug="Explore/Technologies/Paykit">Paykit</a></strong>: Payment protocol</li>
+<li><strong><a href="./Explore/Technologies/Pubky-Noise" class="internal alias" data-slug="Explore/Technologies/Pubky-Noise">Pubky Noise</a></strong>: Encrypted communication</li>
+</ul>
+<hr/>
+<h2 id="security-model">Security Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#security-model" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="authentication">Authentication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authentication" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>See <a href="./Explore/Pubky-Core/Authentication" class="internal" data-slug="Explore/Pubky-Core/Authentication">Authentication</a> for the full authentication flow.</p>
+<h3 id="data-integrity">Data Integrity<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-integrity" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>All data operations are signed:</strong></p>
+<ol>
+<li>Client creates data</li>
+<li>Client signs hash with private key</li>
+<li>Homeserver verifies signature</li>
+<li>Data stored with signature</li>
+<li>Anyone can verify authenticity</li>
+</ol>
+<h3 id="trust-model">Trust Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trust-model" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>What you trust:</strong></p>
+<ul>
+<li>✅ Mathematics (cryptography)</li>
+<li>✅ Your own keys</li>
+<li>⚠️ Your homeserver for availability (not integrity)</li>
+</ul>
+<p><strong>What you DON’T trust:</strong></p>
+<ul>
+<li>❌ Central authorities</li>
+<li>❌ DNS registrars</li>
+<li>❌ Server operators to verify data (math does it)</li>
+</ul>
+<hr/>
+<h2 id="scalability-characteristics">Scalability Characteristics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scalability-characteristics" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="horizontal-scaling">Horizontal Scaling<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#horizontal-scaling" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Component</th><th>Scaling Method</th></tr></thead><tbody><tr><td><strong>Homeservers</strong></td><td>Add more servers, users distribute naturally</td></tr><tr><td><strong>PKDNS</strong></td><td>Run multiple instances, cache aggressively</td></tr><tr><td><strong>Nexus</strong></td><td>Shard by user/data type, read replicas</td></tr><tr><td><strong>Mainline DHT</strong></td><td>Already 10M+ nodes, proven at scale</td></tr></tbody></table></div>
+<h3 id="performance-metrics">Performance Metrics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#performance-metrics" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Typical Latencies:</strong></p>
+<ul>
+<li>PKARR lookup (cached): &lt; 100ms</li>
+<li>PKARR lookup (DHT): 500-2000ms</li>
+<li>Homeserver GET: 50-200ms</li>
+<li>Nexus API: 10-50ms (sub-millisecond for cached)</li>
+</ul>
+<hr/>
+<h2 id="comparison-to-other-architectures">Comparison to Other Architectures<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#comparison-to-other-architectures" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="vs-traditional-web-client-server">vs Traditional Web (Client-Server)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vs-traditional-web-client-server" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Aspect</th><th>Traditional</th><th>Pubky</th></tr></thead><tbody><tr><td>Identity</td><td>Username@service</td><td>Public key (permanent)</td></tr><tr><td>Data Storage</td><td>Company servers</td><td>User-chosen homeservers</td></tr><tr><td>Portability</td><td>Locked-in</td><td>Full portability</td></tr><tr><td>Censorship</td><td>Easy</td><td>Very difficult</td></tr></tbody></table></div>
+<h3 id="vs-blockchain">vs Blockchain<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vs-blockchain" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Aspect</th><th>Blockchain</th><th>Pubky</th></tr></thead><tbody><tr><td>Fees</td><td>Transaction fees</td><td>None</td></tr><tr><td>Speed</td><td>Slow (blocks)</td><td>Instant (HTTP)</td></tr><tr><td>Storage</td><td>Expensive</td><td>Cheap (standard hosting)</td></tr><tr><td>Scalability</td><td>Limited</td><td>Web-scale</td></tr></tbody></table></div>
+<h3 id="vs-pure-p2p">vs Pure P2P<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vs-pure-p2p" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Aspect</th><th>Pure P2P</th><th>Pubky</th></tr></thead><tbody><tr><td>Availability</td><td>Must be online</td><td>Homeservers always on</td></tr><tr><td>Mobile-Friendly</td><td>Difficult</td><td>Native support</td></tr><tr><td>Performance</td><td>Variable</td><td>Consistent</td></tr><tr><td>Discovery</td><td>Complex</td><td>DHT + PKDNS</td></tr></tbody></table></div>
+<hr/>
+<h2 id="deployment-patterns">Deployment Patterns<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deployment-patterns" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="personal-use">Personal Use<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#personal-use" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>User Device → Pubky Ring → Personal Homeserver
+</code></pre>
+<p><strong>Best for</strong>: Personal data, backups, full control</p>
+<h3 id="small-team">Small Team<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#small-team" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>Team Members → Shared Homeserver → Team Apps
+</code></pre>
+<p><strong>Best for</strong>: Collaborative projects, startups</p>
+<h3 id="social-application">Social Application<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#social-application" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>Users → Public Homeservers → Nexus Aggregator → Social App
+</code></pre>
+<p><strong>Best for</strong>: Social media, discovery platforms</p>
+<h3 id="enterprise">Enterprise<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#enterprise" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>Users → Enterprise Homeserver + Custom Aggregator + Private Nexus → Internal Apps
+</code></pre>
+<p><strong>Best for</strong>: Organizations with custom requirements</p>
+<hr/>
+<h2 id="see-also">See Also<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#see-also" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong><a href="./Getting-Started" class="internal alias" data-slug="Getting-Started">Getting Started</a></strong>: Get started with Pubky</li>
+<li><strong><a href="./Explore/Pubky-Core/Introduction" class="internal alias" data-slug="Explore/Pubky-Core/Introduction">Pubky Core Overview</a></strong>: Protocol details</li>
+<li><strong><a href="./Explore/Pubky-Core/SDK" class="internal alias" data-slug="Explore/Pubky-Core/SDK">SDK Documentation</a></strong>: Build applications</li>
+<li><strong><a href="./Explore/Pubky-Core/API" class="internal alias" data-slug="Explore/Pubky-Core/API">API Reference</a></strong>: HTTP API specification</li>
+<li><strong><a href="./Comparisons" class="internal" data-slug="Comparisons">Comparisons</a></strong>: How Pubky differs from alternatives</li>
+<li><strong><a href="./FAQ" class="internal" data-slug="FAQ">FAQ</a></strong>: Frequently asked questions</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div style="overflow-y:auto;max-height:40vh;" class="toc desktop-only"><button type="button" id="toc" class><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#pubky-architecture-overview" data-for="pubky-architecture-overview">Pubky Architecture Overview</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#system-architecture" data-for="system-architecture">System Architecture</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#layer-breakdown" data-for="layer-breakdown">Layer Breakdown</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#identity-layer" data-for="identity-layer">Identity Layer</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#discovery-layer" data-for="discovery-layer">Discovery Layer</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#storage-layer" data-for="storage-layer">Storage Layer</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#application-layer" data-for="application-layer">Application Layer</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#data-flow-example-publishing-a-post" data-for="data-flow-example-publishing-a-post">Data Flow Example: Publishing a Post</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#component-responsibilities" data-for="component-responsibilities">Component Responsibilities</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#pubky-core" data-for="pubky-core">Pubky Core</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#pubky-ring" data-for="pubky-ring">Pubky Ring</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#pubky-nexus" data-for="pubky-nexus">Pubky Nexus</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#pkdns" data-for="pkdns">PKDNS</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#homegate" data-for="homegate">Homegate</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#infrastructure-tools" data-for="infrastructure-tools">Infrastructure Tools</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#development-tools" data-for="development-tools">Development Tools</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#work-in-progress" data-for="work-in-progress">Work in Progress</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#security-model" data-for="security-model">Security Model</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#authentication" data-for="authentication">Authentication</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#data-integrity" data-for="data-integrity">Data Integrity</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#trust-model" data-for="trust-model">Trust Model</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#scalability-characteristics" data-for="scalability-characteristics">Scalability Characteristics</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#horizontal-scaling" data-for="horizontal-scaling">Horizontal Scaling</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#performance-metrics" data-for="performance-metrics">Performance Metrics</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#comparison-to-other-architectures" data-for="comparison-to-other-architectures">Comparison to Other Architectures</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#vs-traditional-web-client-server" data-for="vs-traditional-web-client-server">vs Traditional Web (Client-Server)</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#vs-blockchain" data-for="vs-blockchain">vs Blockchain</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#vs-pure-p2p" data-for="vs-pure-p2p">vs Pure P2P</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#deployment-patterns" data-for="deployment-patterns">Deployment Patterns</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#personal-use" data-for="personal-use">Personal Use</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#small-team" data-for="small-team">Small Team</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#social-application" data-for="social-application">Social Application</a></li><li class="depth-2"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#enterprise" data-for="enterprise">Enterprise</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#see-also" data-for="see-also">See Also</a></li></ul></div></div></div></div><footer class><div style="border:none;border-top:0.1px solid white;width:100%;margin-top:100px;margin-bottom:35px;opacity:0.7;"></div><ul><li><a style="color:white;font-weight:400;font-size:17px;" href="https://synonym.to">Synonym</a></li><li><a style="color:white;font-weight:400;font-size:17px;" href="https://github.com/pubky/pubky-knowledge-base">GitHub</a></li><li><a style="color:white;font-weight:400;font-size:17px;" href="https://t.me/pubkychat">Telegram</a></li></ul></footer><div style="background-image:url('/static/bg.png');background-size:cover;background-position:center;pointer-events:none;position:fixed;top:0px;left:0px;right:0px;bottom:0px;width:100%;height:100%;z-index:-1;"></div><div style="background-image:url('/static/bg-2.png');background-size:cover;background-position:center;pointer-events:none;position:fixed;top:0px;left:0px;right:0px;bottom:0px;width:100%;height:100%;z-index:-1;"></div><div style="background-image:url('/static/bg-3.png');background-size:cover;background-position:left;background-repeat:no-repeat;position:fixed;pointer-events:none;right:0px;bottom:0px;width:100%;height:100%;max-height:20%;max-width:20%;z-index:0;"></div></div></body><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="./postscript.js" type="module"></script></html>
