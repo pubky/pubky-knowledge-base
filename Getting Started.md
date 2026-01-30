@@ -278,7 +278,7 @@ A: Yes! Users can choose any public homeserver provider. You can host your own o
 A: Not directly. Pubky uses a different architecture (homeservers + PKARR vs relays/PDSs). See [[Comparisons]] for details.
 
 **Q: How do I handle user authentication?**
-A: The SDK handles it automatically via signature-based auth. No passwords, OAuth, or tokens needed. See [[Explore/Pubky Core/SDK|SDK Authentication]].
+A: The SDK handles it automatically via signature-based auth. No passwords, OAuth, or tokens needed. See [[Authentication]].
 
 **Q: Can I build private apps?**
 A: Currently Pubky is optimized for public data. Private/encrypted features are coming via [[Explore/Technologies/Pubky Noise|Pubky Noise]].

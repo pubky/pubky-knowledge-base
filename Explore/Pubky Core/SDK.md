@@ -251,7 +251,7 @@ let auth_url = client.request_authorization(
 client.set_session_token(token)?;
 ```
 
-See [[API#Authentication]] for complete flow documentation.
+See [[Authentication]] for the full authentication flow.
 
 ## React Native Usage
 

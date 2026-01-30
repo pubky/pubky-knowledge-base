@@ -10,7 +10,7 @@ Quick reference for terms used throughout the Pubky ecosystem.
 An indexer that collects and organizes data from multiple [[Homeservers]] to enable search, feeds, and discovery features. See [[Explore/Pubky App/Backend/Aggregator|Aggregator]].
 
 **Authentication**
-The process of proving ownership of a public key through cryptographic signatures, enabling secure access to homeservers without passwords.
+The process of proving ownership of a public key through cryptographic signatures, enabling secure access to homeservers without passwords. See [[Authentication|details]].
 
 ## C
 

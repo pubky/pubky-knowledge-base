@@ -112,6 +112,8 @@ curl $(pkdns resolve <public-key>)/
 
 ## SDK Authentication Problems
 
+See [[Authentication]] for how Pubky authentication works.
+
 ### "Invalid Signature" or "Authentication Failed"
 
 **Symptom**: SDK operations rejected with authentication errors

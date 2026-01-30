@@ -14,6 +14,8 @@ Homeserver URLs are discovered via [[0.Introduction|PKARR]] records published to
 
 ## Authentication
 
+See [[Authentication]] for conceptual overview.
+
 ### Public Key Authentication
 
 All requests must be authenticated using Ed25519 signatures:
