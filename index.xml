@@ -10,61 +10,61 @@
     <link>https://docs.pubky.org/FAQ</link>
     <guid>https://docs.pubky.org/FAQ</guid>
     <description>Pubky Core - Frequently Asked Questions Overview &amp; Philosophy Q1. What is Pubky, and why was it developed? Pubky is a new kind of web built on public key domains instead of usernames or rented accounts.</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
     <title>Readme</title>
     <link>https://docs.pubky.org/Readme</link>
     <guid>https://docs.pubky.org/Readme</guid>
     <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here. 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
     <title>TLDR</title>
     <link>https://docs.pubky.org/TLDR</link>
     <guid>https://docs.pubky.org/TLDR</guid>
     <description>Pubky App Pubky App is an open-source web application that helps users publish and consume Pubky homeserver data within a user experience that merges the features of popular social ...</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
     <title>The vision of Pubky</title>
     <link>https://docs.pubky.org/The-vision-of-Pubky</link>
     <guid>https://docs.pubky.org/The-vision-of-Pubky</guid>
     <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
     <title>Pubky Knowledge Base</title>
     <link>https://docs.pubky.org/</link>
     <guid>https://docs.pubky.org/</guid>
     <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
-    <title>0.Introduction</title>
-    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/0.Introduction</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/0.Introduction</guid>
-    <description>Public-Key Addressable Resource Records PKARR is a revolutionary system that bridges the gap between the Domain Name System (DNS) and peer-to-peer overlay networks ...</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <title>HTTPS</title>
+    <link>https://docs.pubky.org/Explore/Technologies/HTTPS</link>
+    <guid>https://docs.pubky.org/Explore/Technologies/HTTPS</guid>
+    <description>Hypertext Transfer Protocol Secure It is an extension of HTTP that encrypts communication over a computer network, enhancing security and privacy. It uses TLS (Transport Layer Security) or SSL (Secure Sockets Layer) for encryption, protecting against eavesdropping and tampering.</description>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
-    <title>1.Why Pkarr?</title>
-    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/1.Why-Pkarr</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/1.Why-Pkarr</guid>
-    <description>This note explores the motivation behind PKARR, addressing the challenges of distributed semantics, databases, and discovery. In pursuit of a sovereign, distributed, and open web, we identify three challenges: Distributed Semantics Everything expressed as keys and metadata Developing interoperable semantics for verifiable metadata about a set of public-keys that form a digital identity, complete with reputation, social graph, credentials, and more.</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <title>Key Pair</title>
+    <link>https://docs.pubky.org/Explore/Technologies/Key-Pair</link>
+    <guid>https://docs.pubky.org/Explore/Technologies/Key-Pair</guid>
+    <description>A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate data ...</description>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
-    <title>2.Getting Started with Pkarr</title>
-    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/2.Getting-Started-with-Pkarr</guid>
-    <description>This guide will help you understand how to publish and resolve resource records using PKARR. Publishing Resource Records To publish resource records for your key, you need to sign a small encoded DNS packet (⇐ 1000 bytes) and publish it on the DHT.</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <title>Mainline DHT</title>
+    <link>https://docs.pubky.org/Explore/Technologies/Mainline-DHT</link>
+    <guid>https://docs.pubky.org/Explore/Technologies/Mainline-DHT</guid>
+    <description>Mainline DHT is a standard Distributed Hash Table (DHT) implementation widely used in the BitTorrent network, based on the Kademlia protocol. This decentralized system allows for efficient data storage and retrieval across a vast network of nodes, making it highly resilient and scalable.</description>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
-    <title>3.Expectations</title>
-    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/3.Expectations</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/3.Expectations</guid>
-    <description>Understanding the expectations and limitations of PKARR is crucial for effective use. This note outlines what PKARR is not and what users should expect.</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <title>Paykit</title>
+    <link>https://docs.pubky.org/Explore/Technologies/Paykit</link>
+    <guid>https://docs.pubky.org/Explore/Technologies/Paykit</guid>
+    <description>Paykit abstracts and automates any payment method behind a single, static public key. The public key belongs to a Pubky instance and points to a homeserver containing all supported payment endpoints.</description>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item><item>
-    <title>4.Architecture</title>
-    <link>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/4.Architecture</link>
-    <guid>https://docs.pubky.org/Explore/Pubky-Core/Pkarr/4.Architecture</guid>
-    <description>In-depth look at the architecture of PKARR, including its components and how they interact. Components Client: Applications or users that publish or query PKARR.</description>
-    <pubDate>Fri, 30 Jan 2026 07:46:16 GMT</pubDate>
+    <title>Search</title>
+    <link>https://docs.pubky.org/Explore/Pubky-App/Client/Features/Search</link>
+    <guid>https://docs.pubky.org/Explore/Pubky-App/Client/Features/Search</guid>
+    <description>Search While Tags &amp; Filters are the primary sorting tools, the app also provides limited traditional search capabilities.</description>
+    <pubDate>Fri, 30 Jan 2026 12:54:51 GMT</pubDate>
   </item>
     </channel>
   </rss>
