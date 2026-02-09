@@ -6,7 +6,7 @@
 
 ## Overview
 
-Pubky Core combines a [censorship-resistant public-key-based alternative to DNS](https://pkarr.org) ([[0.Introduction|PKARR]]) with conventional, tried-and-tested web technologies. This keeps users in control of their identities and data while enabling developers to build software with the availability of web apps, without the costs of managing a central database.
+Pubky Core combines a [censorship-resistant public-key-based alternative to DNS](https://github.com/pubky/pkarr) ([[0.Introduction|PKARR]]) with conventional, tried-and-tested web technologies. This keeps users in control of their identities and data while enabling developers to build software with the availability of web apps, without the costs of managing a central database.
 
 **The Core Philosophy:**
 > "The Web, long centralized, must decentralize; Long decentralized, must centralize."

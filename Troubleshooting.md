@@ -15,7 +15,7 @@ Common issues and solutions when working with Pubky.
 1. **Record Not Published**
    ```bash
    # Verify record exists on DHT
-   curl "https://relay.pkarr.org/<your-public-key>"
+   curl "https://pkarr.pubky.org/<your-public-key>"
    ```
    **Solution**: Ensure you've published your PKARR record:
    ```javascript
@@ -44,7 +44,7 @@ Common issues and solutions when working with Pubky.
 
 ```bash
 # Check if PKARR relay has your record
-curl "https://relay.pkarr.org/<public-key>"
+curl "https://pkarr.pubky.org/<public-key>"
 
 # Check DNS resolution via PKDNS
 dig @pkdns.pkarr.org <public-key>
@@ -322,7 +322,7 @@ docker compose logs neo4j
 1. **Use PKARR relay**: Faster than direct DHT:
    ```javascript
    const config = {
-     pkarrRelay: 'https://relay.pkarr.org'
+     pkarrRelay: 'https://pkarr.pubky.org'
    };
    ```
 
@@ -443,7 +443,7 @@ localStorage.setItem('pubky:debug', 'true');
 **Command Line:**
 ```bash
 # Test PKARR
-curl "https://relay.pkarr.org/<public-key>"
+curl "https://pkarr.pubky.org/<public-key>"
 
 # Test homeserver
 curl -v "https://homeserver.com/pub/..."
