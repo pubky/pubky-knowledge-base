@@ -14,7 +14,7 @@ However, this doesn't mean we should accept censorship without a solution. Inste
 
 In **Pubky**, the approach is not to eliminate censorship entirely—because some level of censorship will always exist where there are centralized components—but rather to provide users with a way to **circumvent** it when it happens.
 
-- **Flexible Hosting**: Pubky provides a flexible hosting model using trusted servers known as [[Homeservers|homeservers]]. While these servers may be subject to censorship, Pubky ensures that users have the ability to migrate away from a censoring server whenever needed. Users can move their data, identities, and connections seamlessly, meaning they retain control even in the face of censorship.
+- **Flexible Hosting**: Pubky provides a flexible hosting model using trusted servers known as [[Homeserver|homeservers]]. While these servers may be subject to censorship, Pubky ensures that users have the ability to migrate away from a censoring server whenever needed. Users can move their data, identities, and connections seamlessly, meaning they retain control even in the face of censorship.
 
 - **Decentralized Identity**: In Pubky, user identities are not dependent on any single server. By using **self-issued public keys**, users maintain their identity even if they change hosting providers. This prevents identity loss when moving away from a server that engages in censorship.
 
@@ -23,13 +23,13 @@ In **Pubky**, the approach is not to eliminate censorship entirely—because som
 ## Important Aspects of Censorship Resistance
 
 - **Data Control**: Users should always have access to and control over their data, even if one hosting provider chooses to censor it. Pubky’s approach empowers users by ensuring they are not dependent on any one server.
-- **Migration and Interoperability**: The ability to migrate data, identities, and connections between different [[Homeservers|homeservers]] helps users remain resilient against censorship. Interoperable systems mean that even if one provider blocks content, another can provide access.
+- **Migration and Interoperability**: The ability to migrate data, identities, and connections between different [[Homeserver|homeservers]] helps users remain resilient against censorship. Interoperable systems mean that even if one provider blocks content, another can provide access.
 - **Local Copies and Self-Hosting**: Users can keep local copies of their data, and Pubky encourages self-hosting, giving users more control over what happens to their information and ensuring their content is not subjected to centralized oversight.
 
 ## Challenges and Considerations
 
 - **Legal Compliance**: Censorship is often tied to legal requirements that hosting providers must comply with. Even decentralized systems will face challenges related to legal jurisdictions, and Pubky is designed to navigate but not entirely eliminate these legal issues.
 - **Content Moderation**: Some forms of moderation are necessary—whether it's to filter out spam or harmful content. Pubky facilitates **user-controlled moderation**, where individuals or groups decide what they want to see, rather than a centralized authority imposing a one-size-fits-all policy.
-- **Redundancy Limitations**: While Pubky's redundancy and migration features provide resilience, they depend on the presence of multiple [[Homeservers|homeservers]] options. During the early phases, users may face limited availability of alternative servers.
+- **Redundancy Limitations**: While Pubky's redundancy and migration features provide resilience, they depend on the presence of multiple [[Homeserver|homeservers]] options. During the early phases, users may face limited availability of alternative servers.
 
 Censorship on the web is inevitable, but that doesn't mean users have to be powerless. With Pubky, you have the ability to choose your hosting, migrate your data, and maintain your identity—all key tools for resisting censorship. Pubky's design assumes censorship will happen and provides the mechanisms needed to overcome it. This empowers users with true control, ensuring that no single entity can unilaterally suppress their voice. The future of the web lies in resilient, user-first systems that put individuals back in control of their online presence.

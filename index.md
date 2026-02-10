@@ -10,7 +10,7 @@ This is a knowledge base for the Pubky platform, which includes [[Explore/Pubky 
 
 Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.
 
-So far, Pubky does this by combining practical decentralized routing & identity ([[0.Introduction|PKARR]]), with simple interoperable hosting ([[Homeservers|Homeservers]]) that allow for [[Censorship|censorship]] resistance and a [[Credible Exit|credible exit]], as well as a publishing application, Pubky App, that facilitates the creation of a [[Semantic Social Graph|Semantic Social Graph]], which can be used for filtering, discovery, matching and coordination.
+So far, Pubky does this by combining practical decentralized routing & identity ([[0.Introduction|PKARR]]), with simple interoperable hosting ([[Homeserver|Homeservers]]) that allow for [[Censorship|censorship]] resistance and a [[Credible Exit|credible exit]], as well as a publishing application, Pubky App, that facilitates the creation of a [[Semantic Social Graph|Semantic Social Graph]], which can be used for filtering, discovery, matching and coordination.
 
 Learn more about the overall vision here: [[The vision of Pubky|The Vision of Pubky]]
 
@@ -47,7 +47,7 @@ Learn more about the overall vision here: [[The vision of Pubky|The Vision of Pu
 - [[Explore/Pubky Core/SDK|SDK Documentation]] - Client libraries (Rust, JavaScript, iOS, Android)
 - [[Explore/Pubky Core/API|API Reference]] - RESTful HTTP API specification
 - [[Architecture|Architecture Overview]] - System design and data flow
-- [[Homeservers|Homeserver Documentation]] - Deploy and configure homeservers
+- [[Homeserver|Homeserver Documentation]] - Deploy and configure homeservers
 
 ### Infrastructure
 

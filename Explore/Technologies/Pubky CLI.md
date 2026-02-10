@@ -315,7 +315,7 @@ pubky-cli user signup $HOMESERVER_PK ./recovery
 ## Related Documentation
 
 - [[SDK|Pubky SDK]] - Client libraries for all platforms
-- [[Homeservers|Pubky Homeservers]] - Homeserver deployment and configuration
+- [[Homeserver|Pubky Homeservers]] - Homeserver deployment and configuration
 - [[Pubky Docker|Pubky Docker]] - Full stack Docker environment
 - [[API|Pubky Core API]] - HTTP API specification
 

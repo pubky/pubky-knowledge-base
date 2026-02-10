@@ -1,4 +1,4 @@
-The Backend is responsible for collecting ([[Aggregator|aggregators]]) and organizing ([[Indexer|indexer]]) data from various sources, known as [[Homeservers|homeservers]].
+The Backend is responsible for collecting ([[Aggregator|aggregators]]) and organizing ([[Indexer|indexer]]) data from various sources, known as [[Homeserver|homeservers]].
 
 ![Pubky App backend architecture showing aggregators collecting data from homeservers, indexers normalizing data, and web servers providing API access](Explore/images/pubky-backend.png)
 

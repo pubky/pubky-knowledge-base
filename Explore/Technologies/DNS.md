@@ -94,7 +94,7 @@ Pubky uses DNS technology in innovative ways:
 1. **[[PKDNS]]**: DNS server that resolves public key domains from [[0.Introduction|PKARR]] records
 2. **Hybrid approach**: Supports both traditional ICANN domains and public key domains
 3. **[[DoH]] integration**: Provides encrypted DNS resolution
-4. **Homeserver discovery**: PKARR records contain DNS-like entries pointing to [[Homeservers]]
+4. **Homeserver discovery**: PKARR records contain DNS-like entries pointing to [[Homeserver|homeservers]]
 
 ## See Also
 

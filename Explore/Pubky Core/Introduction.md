@@ -13,7 +13,7 @@ Pubky Core combines a [censorship-resistant public-key-based alternative to DNS]
 
 Pubky Core provides the infrastructure for building truly decentralized applications where:
 - Users control their identities (public keys)
-- Users choose where their data lives ([[Homeservers]])
+- Users choose where their data lives ([[Homeserver]])
 - Applications remain interoperable
 - No single entity can control or censor
 
@@ -47,14 +47,14 @@ Client libraries for developers:
 
 ## Core Concepts
 
-### [[Homeservers|Homeserver]]
+### [[Homeserver|Homeserver]]
 Decentralized data storage nodes that host user data. Each user can choose their homeserver or run their own. Data is stored per public key, and users can migrate between homeservers by updating their [[0.Introduction|PKARR]] record.
 
 ### [[0.Introduction|PKARR]]
 Self-issued public keys that function as sovereign, publicly addressable domains. PKARR records published to the [[Explore/Technologies/Mainline DHT|Mainline DHT]] point to homeserver locations, enabling decentralized discovery.
 
 ### [[Authentication]]
-Users grant apps scoped access to their data on the [[Homeservers|Homeserver]]. Authentication is decentralized - users control their own cryptographic keys with no central identity providers.
+Users grant apps scoped access to their data on the [[Homeserver|Homeserver]]. Authentication is decentralized - users control their own cryptographic keys with no central identity providers.
 
 ### [[Credible Exit]]
 Pubky Core's distributed architecture provides user autonomy through credible exit between interchangeable components. Users can switch homeservers, applications, or identity managers without losing their data or social graph.
@@ -173,7 +173,7 @@ docker build --build-arg TARGETARCH=x86_64 -t pubky:core .
 docker run --network=host -it pubky:core
 ```
 
-See [[Homeservers|Homeserver Documentation]] for configuration and deployment.
+See [[Homeserver|Homeserver Documentation]] for configuration and deployment.
 
 ## Use Cases
 

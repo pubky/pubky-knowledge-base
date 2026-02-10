@@ -4,7 +4,7 @@
 
 ## Overview
 
-Jeb operates as an autonomous agent on the Pubky network, monitoring mentions and providing helpful AI-generated responses. Unlike centralized social media bots that collect user data, Jeb operates transparently on the decentralized Pubky infrastructure, with all interactions stored on [[Homeservers|homeservers]] under user control.
+Jeb operates as an autonomous agent on the Pubky network, monitoring mentions and providing helpful AI-generated responses. Unlike centralized social media bots that collect user data, Jeb operates transparently on the decentralized Pubky infrastructure, with all interactions stored on [[Homeserver|homeservers]] under user control.
 
 ### Key Characteristics
 
@@ -741,6 +741,6 @@ Potential improvements for Jeb:
 - [[Explore/Pubky App/Introduction|Pubky App]] - Social network where Jeb operates
 - [[Pubky Nexus]] - Backend API for mention polling
 - [[Explore/Pubky Core/SDK|Pubky SDK]] - SDK used for posting replies
-- [[Homeservers]] - Where Jeb's posts are stored
+- [[Homeserver]] - Where Jeb's posts are stored
 - [[Explore/Technologies/Pubky Ring|Pubky Ring]] - Identity management (for bot account)
 

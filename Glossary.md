@@ -7,7 +7,7 @@ Quick reference for terms used throughout the Pubky ecosystem.
 ## A
 
 **Aggregator**
-A service that collects and organizes data from multiple [[Homeservers]] to enable search, feeds, and discovery features. See [[Explore/Pubky App/Backend/Aggregator|Aggregator]].
+A service that collects and organizes data from multiple [[Homeserver|homeservers]] to enable search, feeds, and discovery features. See [[Explore/Pubky App/Backend/Aggregator|Aggregator]].
 
 **Authentication**
 The process of proving ownership of a public key through cryptographic signatures, enabling secure access to homeservers without passwords. See [[Authentication|details]].
@@ -18,7 +18,7 @@ The process of proving ownership of a public key through cryptographic signature
 A cryptographically signed token that grants third-party applications limited access to a user's data on their homeserver, similar to OAuth access tokens.
 
 **Censorship Resistance**
-The property of being difficult or impossible to block, censor, or control by any single authority. Pubky achieves this through decentralized [[Mainline DHT]] and distributed [[Homeservers]].
+The property of being difficult or impossible to block, censor, or control by any single authority. Pubky achieves this through decentralized [[Mainline DHT]] and distributed [[Homeserver|homeservers]].
 
 **[[Credible Exit]]**
 The ability to leave a service provider (homeserver, app, etc.) without losing your data, identity, or social connections. A core principle of Pubky's architecture.
@@ -36,7 +36,7 @@ Protocol for encrypting DNS queries using HTTPS, preventing surveillance and tam
 
 ## H
 
-**[[Homeservers|Homeserver]]**
+**[[Homeserver|Homeserver]]**
 A web server that stores user data in a key-value format. Users can run their own or choose any provider. Data is stored per public key and accessed via HTTP/HTTPS.
 
 **[[Homegate]]**

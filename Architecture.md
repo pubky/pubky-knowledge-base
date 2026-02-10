@@ -108,7 +108,7 @@ sequenceDiagram
 
 ### Storage Layer
 
-**[[Homeservers]]** store user data in a key-value format over HTTP/HTTPS.
+**[[Homeserver|Homeservers]]** store user data in a key-value format over HTTP/HTTPS.
 
 **Architecture:**
 

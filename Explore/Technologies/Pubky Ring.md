@@ -28,7 +28,7 @@ Pubky Ring is the key manager and identity application for the Pubky ecosystem. 
 
 ### Cross-Device Sync
 - **Sync across devices**: Keep your identities consistent between phone and tablet
-- **Secure synchronization**: Encrypted sync using [[Homeservers|homeserver]] storage
+- **Secure synchronization**: Encrypted sync using [[Homeserver|homeserver]] storage
 - **Multi-device sessions**: Use the same identity on multiple devices simultaneously
 
 ### Key Derivation Services
@@ -248,7 +248,7 @@ Pubky Ring is the **identity foundation** for:
 ### Pubky Core
 - Manages [[Key Pair|Ed25519 identity keys]]
 - Publishes keys via [[Explore/Pubky Core/Pkarr/0.Introduction|PKARR]] to [[Explore/Technologies/Mainline DHT|Mainline DHT]]
-- Authorizes apps to store data on [[Homeservers|homeservers]]
+- Authorizes apps to store data on [[Homeserver|homeservers]]
 
 ### Pubky App
 - Provides identity for social graph

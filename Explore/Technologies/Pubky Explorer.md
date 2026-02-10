@@ -1,6 +1,6 @@
 # Pubky Explorer
 
-**Pubky Explorer** is a web-based file browser for exploring public data stored on [[Homeservers|Pubky homeservers]]. It provides an intuitive interface for navigating the decentralized file system, previewing files, and sharing direct links to specific content—all without requiring authentication or installation.
+**Pubky Explorer** is a web-based file browser for exploring public data stored on [[Homeserver|Pubky homeservers]]. It provides an intuitive interface for navigating the decentralized file system, previewing files, and sharing direct links to specific content—all without requiring authentication or installation.
 
 **Live Application**: [https://explorer.pubky.app](https://explorer.pubky.app)
 
@@ -343,7 +343,7 @@ Potential improvements for Pubky Explorer:
 
 ## See Also
 
-- [[Homeservers]] - Data storage explained
+- [[Homeserver]] - Data storage explained
 - [[Explore/Pubky Core/SDK|Pubky Core SDK]] - How data access works
 - [[Explore/Pubky Core/API|Pubky Core API]] - Homeserver HTTP API
 - [[0.Introduction|PKARR]] - Public key resolution
