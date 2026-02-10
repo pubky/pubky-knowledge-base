@@ -4,8 +4,6 @@ aliases:
   - "Jeb---Pubky-AI-Bot"
 ---
 
-# Jeb: Pubky AI Bot
-
 **Jeb** is an AI-powered bot for the [[Explore/PubkyApp/Introduction|Pubky]] decentralized social network. Affectionately named "Jeb," this bot automatically responds to mentions with intelligent summaries, fact-checking, and other AI-powered capabilities, demonstrating how AI can enhance decentralized social experiences without compromising user sovereignty.
 
 ## Overview

@@ -2,8 +2,6 @@
 title: "Pubky Core"
 ---
 
-# Pubky Core
-
 - [[Explore/PubkyCore/Introduction|Introduction]]
 - [[Explore/PubkyCore/API|API]]
 - [[Explore/PubkyCore/SDK|SDK]]

@@ -4,8 +4,6 @@ aliases:
   - "Pubky-Docker"
 ---
 
-# Pubky Docker
-
 **Pubky Docker** is a Docker Compose orchestration that provides a one-click local development environment for running the complete Pubky Social (App) stack. It's designed for developers who want to experiment with the full Pubky ecosystem or test components in an isolated environment.
 
 ## Overview
