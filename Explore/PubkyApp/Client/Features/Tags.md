@@ -3,8 +3,6 @@ aliases:
   - "../../../Pubky-App/Client/Features/Tags"
 ---
 
-# Tags
-
 They are keywords or phrases that are added to a tweet to help users find and engage with the content. Users can publicly assign contextual tags, like hashtags, to any other user or post. Tags can be used to filter posts and users. Users can also choose custom weighting of tags when filtering.
 
 **How do tags work?**

@@ -3,8 +3,6 @@ aliases:
   - "../../../Pubky-App/Client/Features/Bookmarks"
 ---
 
-# Bookmarks
-
 Bookmarks are a feature that allows you to privately save post for later reference. Here are some ways you can use bookmarks:
 
 1. **Save for later reading**: If you come across a post that you don't have time to read or engage with immediately, you can bookmark it to read later when you have more time.
