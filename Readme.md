@@ -5,20 +5,11 @@
 
 Welcome to the Pubky Knowledge base - we are excited to have you here!
 
-### 🔗 [Access the Pubky Knowledge Base](https://pubky.org/)
+### 🔗 [Access the Pubky Knowledge Base](https://docs.pubky.org/)
 
 > **The current Knowledge base is a mix of reality, dreams, visions, actuality and plans.**
 
 The Knowledge Base is a comprehensive resource that encompasses our vision for Pubky, along with detailed explanations of the architecture for both Pubky Core and Pubky App, as well as key concepts and practical guides.
-
-## 📚 What's Inside
-
-- **[[GettingStarted|Getting Started]]**: Complete onboarding for users and developers
-- **[[Glossary]]**: Quick reference for all Pubky terms
-- **[[Architecture]]**: System architecture and component relationships
-- **[[FAQ]]**: 63+ frequently asked questions
-- **[[Comparisons]]**: How Pubky compares to other protocols
-- **[[Troubleshooting]]**: Common issues and solutions
 
 ## 📝 Contributing to Documentation
 
@@ -72,27 +63,6 @@ npm run build
 ```
 
 Output will be in `quartz/public/` directory.
-
-## 📁 Repository Structure
-
-```
-pubky-knowledge-base/
-├── index.md                    # Main entry point
-├── Getting Started.md          # Onboarding guide
-├── Glossary.md                 # Term definitions
-├── Architecture.md             # System architecture
-├── FAQ.md                      # Frequently asked questions
-├── Comparisons.md              # Protocol comparisons
-├── Troubleshooting.md          # Common issues
-├── Contributing.md             # Contribution guide
-├── TLDR.md                     # 30-second overview
-├── Explore/                    # Detailed documentation
-│   ├── Concepts/              # Core concepts
-│   ├── PubkyCore/             # Protocol & SDK docs
-│   ├── PubkyApp/              # Application docs
-│   └── Technologies/          # Component docs
-└── quartz/                     # Quartz site generator
-```
 
 ## 🔗 Related Resources
 
