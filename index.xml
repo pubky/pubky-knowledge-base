@@ -6,65 +6,65 @@
       <description>Last 10 notes on Pubky Knowledge Base</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>TLDR</title>
-    <link>https://docs.pubky.org/TLDR</link>
-    <guid>https://docs.pubky.org/TLDR</guid>
-    <description>Pubky: 30-Second Overview Pubky is a decentralized web protocol that puts you in control of your identity and data. What It Is Your Identity = Your Key: No usernames, no accounts.</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
-  </item><item>
-    <title>The Vision of Pubky</title>
-    <link>https://docs.pubky.org/TheVisionOfPubky</link>
-    <guid>https://docs.pubky.org/TheVisionOfPubky</guid>
-    <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
-  </item><item>
-    <title>Troubleshooting</title>
-    <link>https://docs.pubky.org/Troubleshooting</link>
-    <guid>https://docs.pubky.org/Troubleshooting</guid>
-    <description>Troubleshooting Guide Common issues and solutions when working with Pubky. PKARR &amp; Discovery Issues PKARR Record Not Resolving Symptom: Public key domain doesn’t resolve, apps can’t find homeserver Common Causes: Record Not Published # Verify record exists on DHT curl &quot;pkarr.pubky.org/&lt;your-public-key&gt;&quot; Solution: Ensure you’ve published your PKARR record: await pubky.publishPkarrRecord(); Record Expired (TTL) PKARR records on DHT expire after several hours Solution: Republish regularly (recommended: every 2 hours) // Automatic republishing setInterval(async () =&gt; { await pubky.publishPkarrRecord(); }, 2 * 60 * 60 * 1000); // Every 2 hours DHT Propagation Delay Records take time to propagate (usually &lt; 5 minutes) Solution: Wait a few minutes after publishing, then retry Incorrect Public Key Format Public keys must be z-base-32 encoded Solution: Verify key format matches: z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty Debugging Commands: # Check if PKARR relay has your record curl &quot;pkarr.pubky.org/&lt;public-key&gt;&quot; # Check DNS resolution via PKDNS dig @pkdns.pkarr.org &lt;public-key&gt; # Test with Pubky CLI pubky-cli tools verify-pkarr &lt;public-key&gt; Homeserver Connection Issues Can’t Connect to Homeserver Symptom: SDK operations fail, timeout, or refuse connection Common Causes: HTTPS Not Configured Homeservers REQUIRE HTTPS (not HTTP) Solution: Configure TLS certificate: # Using Let&#039;s Encrypt certbot --nginx -d yourdomain.com Firewall Blocking Ports Default ports: 6287 (user API), 6288 (admin API) Solution: Open firewall ports: # UFW example sudo ufw allow 6287/tcp sudo ufw allow 6288/tcp Homeserver Not Running Solution: Verify homeserver is running: # Check process ps aux | grep pubky-homeserver # Check logs journalctl -u pubky-homeserver -f PKDNS Resolution Failure Browser can’t resolve public key domain Solution: Use PKDNS-enabled resolver or DoH: // In browser, use full HTTPS URL const url = `your-homeserver.com/pub/...`; Test Connection: # Direct test curl your-homeserver.com/ # Via public key (requires PKDNS) curl $(pkdns resolve &lt;public-key&gt;)/ SDK Authentication Problems See Authentication for how Pubky authentication works.</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
-  </item><item>
-    <title>Pubky Knowledge Base</title>
-    <link>https://docs.pubky.org/</link>
-    <guid>https://docs.pubky.org/</guid>
-    <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
-  </item><item>
     <title>index</title>
     <link>https://docs.pubky.org/Explore/</link>
     <guid>https://docs.pubky.org/Explore/</guid>
     <description>Explore Pubky Core Pubky App Technologies Concepts .</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
   </item><item>
     <title>FAQ</title>
     <link>https://docs.pubky.org/FAQ</link>
     <guid>https://docs.pubky.org/FAQ</guid>
     <description>Pubky Core - Frequently Asked Questions Overview &amp; Philosophy Q1. What is Pubky, and why was it developed? Pubky is a new kind of web built on public key domains instead of usernames or rented accounts.</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
   </item><item>
     <title>Getting Started</title>
     <link>https://docs.pubky.org/GettingStarted</link>
     <guid>https://docs.pubky.org/GettingStarted</guid>
     <description>Getting Started with Pubky Welcome to Pubky! This guide will help you get started whether you’re a user looking to try decentralized social media or a developer building on the Pubky ...</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
   </item><item>
     <title>Glossary</title>
     <link>https://docs.pubky.org/Glossary</link>
     <guid>https://docs.pubky.org/Glossary</guid>
     <description>Glossary Quick reference for terms used throughout the Pubky ecosystem. A Aggregator A service that collects and organizes data from multiple homeservers to enable search, feeds, and discovery features.</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
   </item><item>
     <title>Readme</title>
     <link>https://docs.pubky.org/Readme</link>
     <guid>https://docs.pubky.org/Readme</guid>
     <description>Pubky Knowledge Base Welcome to the Pubky Knowledge base - we are excited to have you here! 🔗 Access the Pubky Knowledge Base The current Knowledge base is a mix of reality, dreams, ...</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
   </item><item>
-    <title>Homegate</title>
-    <link>https://docs.pubky.org/Explore/Technologies/Homegate</link>
-    <guid>https://docs.pubky.org/Explore/Technologies/Homegate</guid>
-    <description>Homegate: Homeserver Signup Gatekeeping Service Homegate is a backend service that manages and controls signups for Pubky Homeservers. It provides verification mechanisms to prevent spam and abuse while preserving user privacy, implementing both SMS verification and Lightning Network payment verification for homeserver access.</description>
-    <pubDate>Tue, 10 Feb 2026 05:40:59 GMT</pubDate>
+    <title>TLDR</title>
+    <link>https://docs.pubky.org/TLDR</link>
+    <guid>https://docs.pubky.org/TLDR</guid>
+    <description>Pubky: 30-Second Overview Pubky is a decentralized web protocol that puts you in control of your identity and data. What It Is Your Identity = Your Key: No usernames, no accounts.</description>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
+  </item><item>
+    <title>The Vision of Pubky</title>
+    <link>https://docs.pubky.org/TheVisionOfPubky</link>
+    <guid>https://docs.pubky.org/TheVisionOfPubky</guid>
+    <description>Decentralizing Our Future Imagine a future where our online relationships are no longer dictated by corporate giants or state-controlled systems, where you decide how to connect, ...</description>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
+  </item><item>
+    <title>Troubleshooting</title>
+    <link>https://docs.pubky.org/Troubleshooting</link>
+    <guid>https://docs.pubky.org/Troubleshooting</guid>
+    <description>Troubleshooting Guide Common issues and solutions when working with Pubky. PKARR &amp; Discovery Issues PKARR Record Not Resolving Symptom: Public key domain doesn’t resolve, apps can’t find homeserver Common Causes: Record Not Published # Verify record exists on DHT curl &quot;pkarr.pubky.org/&lt;your-public-key&gt;&quot; Solution: Ensure you’ve published your PKARR record: await pubky.publishPkarrRecord(); Record Expired (TTL) PKARR records on DHT expire after several hours Solution: Republish regularly (recommended: every 2 hours) // Automatic republishing setInterval(async () =&gt; { await pubky.publishPkarrRecord(); }, 2 * 60 * 60 * 1000); // Every 2 hours DHT Propagation Delay Records take time to propagate (usually &lt; 5 minutes) Solution: Wait a few minutes after publishing, then retry Incorrect Public Key Format Public keys must be z-base-32 encoded Solution: Verify key format matches: z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty Debugging Commands: # Check if PKARR relay has your record curl &quot;pkarr.pubky.org/&lt;public-key&gt;&quot; # Check DNS resolution via PKDNS dig @pkdns.pkarr.org &lt;public-key&gt; # Test with Pubky CLI pubky-cli tools verify-pkarr &lt;public-key&gt; Homeserver Connection Issues Can’t Connect to Homeserver Symptom: SDK operations fail, timeout, or refuse connection Common Causes: HTTPS Not Configured Homeservers REQUIRE HTTPS (not HTTP) Solution: Configure TLS certificate: # Using Let&#039;s Encrypt certbot --nginx -d yourdomain.com Firewall Blocking Ports Default ports: 6287 (user API), 6288 (admin API) Solution: Open firewall ports: # UFW example sudo ufw allow 6287/tcp sudo ufw allow 6288/tcp Homeserver Not Running Solution: Verify homeserver is running: # Check process ps aux | grep pubky-homeserver # Check logs journalctl -u pubky-homeserver -f PKDNS Resolution Failure Browser can’t resolve public key domain Solution: Use PKDNS-enabled resolver or DoH: // In browser, use full HTTPS URL const url = `your-homeserver.com/pub/...`; Test Connection: # Direct test curl your-homeserver.com/ # Via public key (requires PKDNS) curl $(pkdns resolve &lt;public-key&gt;)/ SDK Authentication Problems See Authentication for how Pubky authentication works.</description>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
+  </item><item>
+    <title>Pubky Knowledge Base</title>
+    <link>https://docs.pubky.org/</link>
+    <guid>https://docs.pubky.org/</guid>
+    <description>Welcome to the Pubky Knowledge Base This is a knowledge base for the Pubky platform, which includes Pubky Core, PKARR and Pubky App. These documents are a work in progress, much like Pubky’s protocols and applications! What is Pubky? Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.</description>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
+  </item><item>
+    <title>Key Pair</title>
+    <link>https://docs.pubky.org/Explore/Technologies/KeyPair</link>
+    <guid>https://docs.pubky.org/Explore/Technologies/KeyPair</guid>
+    <description>Cryptographic Key Pairs A cryptography key pair consists of two related but distinct cryptographic keys: Private Key: A secret key that is used to decrypt, sign, or authenticate ...</description>
+    <pubDate>Tue, 10 Feb 2026 05:49:08 GMT</pubDate>
   </item>
     </channel>
   </rss>
