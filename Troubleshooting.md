@@ -475,5 +475,5 @@ PUBKY_ADMIN_PASSWORD=admin pubky-cli admin info
 - **[[FAQ]]**: Frequently asked questions
 - **[[Explore/Pubky Core/SDK|SDK Documentation]]**: Detailed API docs
 - **[[PKDNS]]**: DNS resolution details
-- **[[Homeservers]]**: Homeserver administration
+- **[[Homeserver]]**: Homeserver administration
 

@@ -4,7 +4,7 @@ Pubky uses decentralized authentication where users control their own cryptograp
 
 - **Authenticator**: Any software or hardware capable of [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) signing, such as [Pubky Ring](https://github.com/pubky/pubky-ring).
 - **Capabilities**: Permissions defining what an app can access (e.g., `/pub/pubky.app/:rw` has read and write permissions for path ``/pub/pubky.app`).
-- **AuthToken**: A signed, time-limited token granting access to the [[Homeservers|Homeserver]]. Created by the Authenticator, processed by the SDK, and verified by the Homeserver.
+- **AuthToken**: A signed, time-limited token granting access to the [[Homeserver|Homeserver]]. Created by the Authenticator, processed by the SDK, and verified by the Homeserver.
 
 ## User Flow with Pubky Ring
 

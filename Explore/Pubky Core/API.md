@@ -1,6 +1,6 @@
 # Pubky Core API Reference
 
-The [[Introduction|Pubky Core]] protocol defines a RESTful HTTP API for storing and retrieving data on [[Homeservers]]. This document describes the complete API specification.
+The [[Introduction|Pubky Core]] protocol defines a RESTful HTTP API for storing and retrieving data on [[Homeserver|homeservers]]. This document describes the complete API specification.
 
 ## Base URL
 
@@ -299,7 +299,7 @@ Get user information.
 }
 ```
 
-See [[Homeservers#Admin API]] for complete admin documentation.
+See [[Homeserver#Admin API]] for complete admin documentation.
 
 ## Metrics Endpoint
 
@@ -434,7 +434,7 @@ async function robustPut(client, path, data) {
 
 - **[[Introduction|Pubky Core Overview]]**: Main documentation
 - **[[SDK|SDK Documentation]]**: Client libraries
-- **[[Homeservers|Homeserver Documentation]]**: Server setup
+- **[[Homeserver|Homeserver Documentation]]**: Server setup
 - **Official Docs**: [pubky.github.io/pubky-core](https://pubky.github.io/pubky-core/)
 - **Repository**: [github.com/pubky/pubky-core](https://github.com/pubky/pubky-core)
 

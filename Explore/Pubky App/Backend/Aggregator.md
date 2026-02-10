@@ -1,6 +1,6 @@
 ## Pubky Aggregators
 
-Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as [[Homeservers|homeservers]]. They decide what data to allow in and what to keep out.
+Aggregators are specialized reducers or gatekeepers that continuously scan and collect data from various sources, such as [[Homeserver|homeservers]]. They decide what data to allow in and what to keep out.
 
 When the aggregator receive new events, it evaluates it against its predefined criteria. If the data meets the criteria, the aggregator allows it to pass through, making it available for further processing or storage. However, if the data doesn't meet the criteria, the aggregator blocks it, preventing it from entering the system.
 

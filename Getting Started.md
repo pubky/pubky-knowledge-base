@@ -239,7 +239,7 @@ const posts = await response.json();
 4. Publish homeserver location to PKARR
 5. Configure rate limiting and moderation
 
-📘 **Guide**: [[Homeservers|Homeserver Documentation]]
+📘 **Guide**: [[Homeserver|Homeserver Documentation]]
 
 **Signup Verification:**
 

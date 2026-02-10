@@ -1,6 +1,6 @@
 # Homegate: Homeserver Signup Gatekeeping Service
 
-**Homegate** is a backend service that manages and controls signups for [[Homeservers|Pubky Homeservers]]. It provides verification mechanisms to prevent spam and abuse while preserving user privacy, implementing both SMS verification and Lightning Network payment verification for homeserver access.
+**Homegate** is a backend service that manages and controls signups for [[Homeserver|Pubky Homeservers]]. It provides verification mechanisms to prevent spam and abuse while preserving user privacy, implementing both SMS verification and Lightning Network payment verification for homeserver access.
 
 ## Overview
 
@@ -372,7 +372,7 @@ If lost:
 
 ## Integration with Homeservers
 
-Homegate is designed to integrate with [[Homeservers|Pubky Homeserver]] signup flows:
+Homegate is designed to integrate with [[Homeserver|Pubky Homeserver]] signup flows:
 
 ### Typical Integration
 
@@ -605,7 +605,7 @@ Potential improvements for Homegate:
 
 ## See Also
 
-- [[Homeservers]] - Pubky homeserver documentation
+- [[Homeserver]] - Pubky homeserver documentation
 - [[Explore/Pubky Core/Introduction|Pubky Core]] - Core protocol and SDK
 - [[FAQ#Q37]] - How users join Pubky App
 - [[Censorship]] - Censorship resistance principles
