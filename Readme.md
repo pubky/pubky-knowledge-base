@@ -13,7 +13,7 @@ The Knowledge Base is a comprehensive resource that encompasses our vision for P
 
 ## 📚 What's Inside
 
-- **[[Getting Started]]**: Complete onboarding for users and developers
+- **[[GettingStarted|Getting Started]]**: Complete onboarding for users and developers
 - **[[Glossary]]**: Quick reference for all Pubky terms
 - **[[Architecture]]**: System architecture and component relationships
 - **[[FAQ]]**: 63+ frequently asked questions
@@ -88,8 +88,8 @@ pubky-knowledge-base/
 ├── TLDR.md                     # 30-second overview
 ├── Explore/                    # Detailed documentation
 │   ├── Concepts/              # Core concepts
-│   ├── Pubky Core/            # Protocol & SDK docs
-│   ├── Pubky App/             # Application docs
+│   ├── PubkyCore/             # Protocol & SDK docs
+│   ├── PubkyApp/              # Application docs
 │   └── Technologies/          # Component docs
 └── quartz/                     # Quartz site generator
 ```

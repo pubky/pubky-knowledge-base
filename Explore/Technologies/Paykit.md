@@ -22,7 +22,7 @@ This enables applications where users pay directly to profiles, offering an intu
    - Public read access for discovery
 
 2. **Interactive Payment Layer** (`paykit-interactive`)
-   - Encrypted channels using **[[Pubky Noise]]** for private negotiation
+   - Encrypted channels using **[[PubkyNoise|Pubky Noise]]** for private negotiation
    - Receipt exchange and payment coordination
    - End-to-end encrypted communication
 
@@ -37,7 +37,7 @@ This enables applications where users pay directly to profiles, offering an intu
 Query any Pubky identity to discover their available payment methods (onchain, Lightning, or custom).
 
 ### Encrypted Payment Negotiation
-Private channels for payment coordination using **[[Pubky Noise]]**, a Noise Protocol (IK pattern) implementation built for the Pubky ecosystem. This avoids revealing payment details publicly.
+Private channels for payment coordination using **[[PubkyNoise|Pubky Noise]]**, a Noise Protocol (IK pattern) implementation built for the Pubky ecosystem. This avoids revealing payment details publicly.
 
 **Pubky Noise** provides:
 - End-to-end encrypted communication channels
@@ -58,7 +58,7 @@ Private channels for payment coordination using **[[Pubky Noise]]**, a Noise Pro
 - X25519 ECDH + HKDF-SHA256 + ChaCha20-Poly1305
 - Prerequisite: Noise endpoint published at `/pub/paykit.app/v0/noise`
 
-See **[[Pubky Noise]]** for details on the encrypted channel implementation.
+See **[[PubkyNoise|Pubky Noise]]** for details on the encrypted channel implementation.
 
 ## Current Implementation Status
 
@@ -79,7 +79,7 @@ See **[[Pubky Noise]]** for details on the encrypted channel implementation.
 ### Testing Integrations
 - **Bitkit iOS**: Protocol testing integration (~80 files)
 - **Bitkit Android**: Protocol testing integration (~97 files)
-- **[[Pubky Ring]]**: Identity and key management integration
+- **[[PubkyRing|Pubky Ring]]**: Identity and key management integration
 
 ## Potential Use Cases (Future)
 
@@ -117,7 +117,7 @@ Pay directly to profiles using Pubky identity without requesting addresses or in
 ### Key Management
 - **Ed25519**: Identity signing and verification
 - **X25519**: Noise Protocol key exchange
-- Derived from same seed via HKDF ([[Pubky Ring]] integration)
+- Derived from same seed via HKDF ([[PubkyRing|Pubky Ring]] integration)
 
 ## Relationship to Pubky Core
 
@@ -138,7 +138,7 @@ Paykit is designed as a **layer 2 protocol** on top of Pubky Core:
 
 ## Related Research
 
-**Atomicity Protocol** - Peer-to-peer mutual credit system research exploring trust-based payment routing using Pubky's [[Semantic Social Graph]]. Designed as settlement infrastructure for credit issuance and transfer across economic scales from peer-to-peer to institutional banking. Currently in research phase.
+**Atomicity Protocol** - Peer-to-peer mutual credit system research exploring trust-based payment routing using Pubky's [[SemanticSocialGraph|Semantic Social Graph]]. Designed as settlement infrastructure for credit issuance and transfer across economic scales from peer-to-peer to institutional banking. Currently in research phase.
 
 ## Resources
 
@@ -147,7 +147,7 @@ Paykit is designed as a **layer 2 protocol** on top of Pubky Core:
 - **Protocol Spec**: [PAYKIT_PROTOCOL_V0.md](https://github.com/BitcoinErrorLog/paykit-rs/blob/main/docs/PAYKIT_PROTOCOL_V0.md) (Draft)
 - **Bitkit iOS (WIP Testing)**: [github.com/BitcoinErrorLog/bitkit-ios](https://github.com/BitcoinErrorLog/bitkit-ios)
 - **Bitkit Android (WIP Testing)**: [github.com/BitcoinErrorLog/bitkit-android](https://github.com/BitcoinErrorLog/bitkit-android)
-- **[[Pubky Ring]] (Identity Manager)**: See dedicated page for identity and key management
+- **[[PubkyRing|Pubky Ring]] (Identity Manager)**: See dedicated page for identity and key management
 
 ---
 

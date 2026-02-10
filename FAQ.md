@@ -21,10 +21,10 @@ Slashtags was a previous Synonym project using Hypercore instead of PKDNS and ho
 Yes. Under the MIT license. [View on GitHub](https://github.com/pubky/)
 
 **Q5. What is Pubky Core?**  
-[[Explore/Pubky Core/Introduction|Pubky Core]] is the foundational infrastructure for Pubky - an open protocol combining censorship-resistant public-key DNS (PKARR) with conventional web technologies. It includes the protocol specification, a production-ready homeserver implementation, and SDKs in multiple languages (Rust, JavaScript, iOS, Android). See the [[Explore/Pubky Core/Introduction|Pubky Core Overview]] for details.
+[[Explore/PubkyCore/Introduction|Pubky Core]] is the foundational infrastructure for Pubky - an open protocol combining censorship-resistant public-key DNS (PKARR) with conventional web technologies. It includes the protocol specification, a production-ready homeserver implementation, and SDKs in multiple languages (Rust, JavaScript, iOS, Android). See the [[Explore/PubkyCore/Introduction|Pubky Core Overview]] for details.
 
 **Q6. How do I start building on Pubky?**  
-Install the [[Explore/Pubky Core/SDK|Pubky SDK]] for your platform (Rust: `cargo add pubky`, JavaScript: `npm install @synonymdev/pubky`), follow the [official documentation](https://pubky.github.io/pubky-core/), and explore the [examples in the repository](https://github.com/pubky/pubky-core/tree/main/examples). The SDK provides client libraries for authentication, data storage, and homeserver interaction.
+Install the [[Explore/PubkyCore/SDK|Pubky SDK]] for your platform (Rust: `cargo add pubky`, JavaScript: `npm install @synonymdev/pubky`), follow the [official documentation](https://pubky.github.io/pubky-core/), and explore the [examples in the repository](https://github.com/pubky/pubky-core/tree/main/examples). The SDK provides client libraries for authentication, data storage, and homeserver interaction.
 
 ---
 
@@ -34,7 +34,7 @@ Install the [[Explore/Pubky Core/SDK|Pubky SDK]] for your platform (Rust: `cargo
 "Public Key Addressable Resource Records" your signed DNS-like records published on the DHT.
 
 **Q8. What is PKDNS?**  
-[[PKDNS]] is a DNS server that resolves public key domains by fetching [[0.Introduction|PKARR]] records from the [[Mainline DHT]]. It enables self-sovereign, censorship-resistant domain names while still supporting traditional ICANN domains. Anyone can run a PKDNS server or use public instances to access the decentralized web. See [[PKDNS]] for setup guides and publishing instructions.
+[[PKDNS]] is a DNS server that resolves public key domains by fetching [[0.Introduction|PKARR]] records from the [[MainlineDHT|Mainline DHT]]. It enables self-sovereign, censorship-resistant domain names while still supporting traditional ICANN domains. Anyone can run a PKDNS server or use public instances to access the decentralized web. See [[PKDNS]] for setup guides and publishing instructions.
 
 **Q9. How does Pubky compare to DNS?**  
 Pubky replaces ICANN with your public key. You publish and resolve records yourself.
@@ -65,13 +65,13 @@ Regular web servers that host your content. Anyone can run one.
 Yes. You'll need port forwarding or tunneling if behind NAT.
 
 **Q17. How can I explore data on a homeserver?**  
-Use [[Pubky Explorer]] ([explorer.pubky.app](https://explorer.pubky.app)), a web-based file browser for public Pubky data. Enter any public key or path (e.g., `pubky://your-key/pub/pubky.app/profile.json`) to browse files and directories stored on homeservers. Features include keyboard navigation, file preview, directory traversal, and shareable URLs.
+Use [[PubkyExplorer|Pubky Explorer]] ([explorer.pubky.app](https://explorer.pubky.app)), a web-based file browser for public Pubky data. Enter any public key or path (e.g., `pubky://your-key/pub/pubky.app/profile.json`) to browse files and directories stored on homeservers. Features include keyboard navigation, file preview, directory traversal, and shareable URLs.
 
 **Q18. How can I run the complete Pubky stack locally for development?**  
-Use [[Pubky Docker]], a Docker Compose orchestration that runs the entire Pubky Social stack with one command. It includes Pkarr relay, homeserver (with PostgreSQL), Pubky Nexus (with Neo4j and Redis), and the Pubky App frontend—all preconfigured and ready to use. Clone the repository, configure `.env` for testnet or mainnet, and run `docker compose up -d`. Perfect for testing integrations, developing custom frontends, or learning how all components interact. See [[Pubky Docker]] for setup instructions.
+Use [[PubkyDocker|Pubky Docker]], a Docker Compose orchestration that runs the entire Pubky Social stack with one command. It includes Pkarr relay, homeserver (with PostgreSQL), Pubky Nexus (with Neo4j and Redis), and the Pubky App frontend—all preconfigured and ready to use. Clone the repository, configure `.env` for testnet or mainnet, and run `docker compose up -d`. Perfect for testing integrations, developing custom frontends, or learning how all components interact. See [[PubkyDocker|Pubky Docker]] for setup instructions.
 
 **Q19. When should I use Pubky Docker vs SDK libraries?**  
-Use the SDK libraries ([@synonymdev/pubky](https://www.npmjs.com/package/@synonymdev/pubky) for JavaScript, [pubky](https://crates.io/crates/pubky) for Rust) when building applications that interact with Pubky. Only use [[Pubky Docker]] if you need to run the full stack locally to experiment with Pubky Nexus, test custom social frontends, debug cross-component issues, or learn the complete architecture. For most app development, the SDK libraries connected to public infrastructure are simpler and faster.
+Use the SDK libraries ([@synonymdev/pubky](https://www.npmjs.com/package/@synonymdev/pubky) for JavaScript, [pubky](https://crates.io/crates/pubky) for Rust) when building applications that interact with Pubky. Only use [[PubkyDocker|Pubky Docker]] if you need to run the full stack locally to experiment with Pubky Nexus, test custom social frontends, debug cross-component issues, or learn the complete architecture. For most app development, the SDK libraries connected to public infrastructure are simpler and faster.
 
 **Q20. How is redundancy handled?**  
 Use mirrors in PKARR. Clients pick healthy ones.
@@ -96,7 +96,7 @@ Yes, via `.onion` endpoints, but it's not yet tested officially.
 ## Identity, Keys & Security
 
 **Q25. How are keys managed?**  
-With [[Pubky Ring]], the identity manager app for Pubky. Pubky Ring is a native mobile app (iOS/Android) that securely manages your pubkys (public keys), handles device sessions, publishes identity via PKARR, and authorizes apps—all without accounts or passwords.
+With [[PubkyRing|Pubky Ring]], the identity manager app for Pubky. Pubky Ring is a native mobile app (iOS/Android) that securely manages your pubkys (public keys), handles device sessions, publishes identity via PKARR, and authorizes apps—all without accounts or passwords.
 
 **Q26. Does Pubky support key rotation?**  
 Not yet standardized, possible manually via PKARR fallback logic.
@@ -121,13 +121,13 @@ Host it on a homeserver and link it in your PKARR.
 Not yet. All current use assumes public content.
 
 **Q32. Where does moderation happen?**  
-At the homeserver and indexer level (e.g., [[Pubky Nexus]]).
+At the homeserver and indexer level (e.g., [[PubkyNexus|Pubky Nexus]]).
 
 **Q33. What is Pubky Nexus?**  
-[[Pubky Nexus]] is the production indexing and aggregation service that powers Pubky App. It transforms data from multiple homeservers into a high-performance social graph API with sub-millisecond response times, enabling features like feeds, search, recommendations, and real-time notifications. [Explore the live API](https://nexus.pubky.app/swagger-ui/).
+[[PubkyNexus|Pubky Nexus]] is the production indexing and aggregation service that powers Pubky App. It transforms data from multiple homeservers into a high-performance social graph API with sub-millisecond response times, enabling features like feeds, search, recommendations, and real-time notifications. [Explore the live API](https://nexus.pubky.app/swagger-ui/).
 
 **Q34. Can I run my own Nexus instance?**  
-Yes! Nexus is open source and can be self-hosted. This allows organizations to run custom instances with their own content filtering policies, moderation rules, and homeserver selections. See the [[Pubky Nexus]] documentation for deployment details.
+Yes! Nexus is open source and can be self-hosted. This allows organizations to run custom instances with their own content filtering policies, moderation rules, and homeserver selections. See the [[PubkyNexus|Pubky Nexus]] documentation for deployment details.
 
 **Q35. How does Pubky resist spam?**  
 Via CAPTCHAs, rate-limits, invites, and graph distance rules.
@@ -177,12 +177,12 @@ Bridges are possible, but not currently in development.
 
 **Q47. Are there mobile apps?**  
 Yes! 
-- **[[Pubky Ring]]**: Native mobile app (iOS/Android) - Your keychain for the Pubky ecosystem. Manages identities, authorizes apps, and handles sessions. Self-custodial with no accounts required.
+- **[[PubkyRing|Pubky Ring]]**: Native mobile app (iOS/Android) - Your keychain for the Pubky ecosystem. Manages identities, authorizes apps, and handles sessions. Self-custodial with no accounts required.
 - **[Pubky.app](https://pubky.app)**: Progressive Web App (PWA) - Social publishing application
 - More apps welcome from the community!
 
 **Q48. What is Pubky Ring?**  
-[[Pubky Ring]] is the key manager app for the Pubky ecosystem. It's a native mobile app (iOS/Android) that securely manages your pubkys (public keys), authorizes applications, manages sessions, and handles key derivation—all self-custodially with no accounts, passwords, or tracking. Think of it as your keychain for decentralized identity.
+[[PubkyRing|Pubky Ring]] is the key manager app for the Pubky ecosystem. It's a native mobile app (iOS/Android) that securely manages your pubkys (public keys), authorizes applications, manages sessions, and handles key derivation—all self-custodially with no accounts, passwords, or tracking. Think of it as your keychain for decentralized identity.
 
 **Q49. How do users join Pubky App?**  
 Homeservers can implement signup verification to prevent spam while preserving privacy. [[Homegate]] is an open-source service that provides two verification methods: SMS codes (rate-limited per phone number) and Lightning Network payments. Homeserver operators can use Homegate, implement custom verification, or allow open signups. See [[Homegate]] for deployment and integration details.
@@ -226,7 +226,7 @@ Yes. Mainline DHT already does, Pubky's usage is lightweight.
 Because relay-only networks don't scale easily without coordination.
 
 **Q61. What about private data in Pubky?**  
-Short-term: [[Pubky Noise]]-based encrypted channels for private peer-to-peer communication.  
+Short-term: [[PubkyNoise|Pubky Noise]]-based encrypted channels for private peer-to-peer communication.  
 Long-term: Cryptree-style systems and further R&D.
 
 **Q62. What is Pubky Noise?**  

@@ -1,6 +1,6 @@
 # Explore
 
-- [[Explore/Pubky Core/Introduction|Pubky Core]]
-- [[Explore/Pubky App/Introduction|Pubky App]]
-- [[Explore/Technologies/Mainline DHT|Technologies]]
-- [[Explore/Concepts/Credible Exit|Concepts]]
+- [[Explore/PubkyCore/Introduction|Pubky Core]]
+- [[Explore/PubkyApp/Introduction|Pubky App]]
+- [[Explore/Technologies/MainlineDHT|Technologies]]
+- [[Explore/Concepts/CredibleExit|Concepts]]

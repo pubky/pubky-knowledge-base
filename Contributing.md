@@ -18,12 +18,12 @@ Help improve this knowledge base:
 ### 2. Code Contributions
 
 Contribute to Pubky projects:
-- **[[Explore/Pubky Core/Introduction|Pubky Core]]**: Protocol and homeserver
-- **[[Explore/Technologies/Pubky Ring|Pubky Ring]]**: Mobile key manager
-- **[[Explore/Pubky App/Introduction|Pubky App]]**: Social application (Franky)
-- **[[Explore/Pubky App/Backend/Pubky Nexus|Pubky Nexus]]**: Indexing service
-- **[[Explore/Technologies/Pubky CLI|Pubky CLI]]**: Command-line tool
-- **[[PKDNS]]**, **[[Homegate]]**, **[[Pubky Docker]]**: Infrastructure tools
+- **[[Explore/PubkyCore/Introduction|Pubky Core]]**: Protocol and homeserver
+- **[[Explore/Technologies/PubkyRing|Pubky Ring]]**: Mobile key manager
+- **[[Explore/PubkyApp/Introduction|Pubky App]]**: Social application (Franky)
+- **[[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]]**: Indexing service
+- **[[Explore/Technologies/PubkyCLI|Pubky CLI]]**: Command-line tool
+- **[[PKDNS]]**, **[[Homegate]]**, **[[PubkyDocker|Pubky Docker]]**: Infrastructure tools
 
 ### 3. Community Support
 
@@ -90,7 +90,7 @@ const example = "like this";
 ```markdown
 <!-- Internal (wiki-link) -->
 [[Pubky Core]]
-[[Explore/Pubky Core/Introduction|Pubky Core Overview]]
+[[Explore/PubkyCore/Introduction|Pubky Core Overview]]
 
 <!-- External -->
 [Official Docs](https://pubky.github.io/pubky-core/)
