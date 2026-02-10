@@ -4,8 +4,6 @@ aliases:
   - "../../Pubky-App/Backend/Pubky-Nexus"
 ---
 
-# Pubky Nexus
-
 **Pubky Nexus** is the production-grade indexing and aggregation service that powers Pubky App's social features. It transforms decentralized data from multiple [[Homeserver|homeservers]] into a high-performance social graph API, enabling real-time social media experiences at scale.
 
 ## Overview

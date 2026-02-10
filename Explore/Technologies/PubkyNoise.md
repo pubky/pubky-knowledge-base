@@ -4,7 +4,7 @@ aliases:
   - "Pubky-Noise"
 ---
 
-# Pubky Noise: Encrypted Communication Protocol (Work in Progress)
+**Encrypted Communication Protocol**
 
 > ⚠️ **NOTE**: Pubky Noise is currently under active development and is **NOT production-ready**. The protocol implementation is subject to changes and improvements.
 

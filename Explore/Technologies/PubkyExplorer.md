@@ -4,8 +4,6 @@ aliases:
   - "Pubky-Explorer"
 ---
 
-# Pubky Explorer
-
 **Pubky Explorer** is a web-based file browser for exploring public data stored on [[Homeserver|Pubky homeservers]]. It provides an intuitive interface for navigating the decentralized file system, previewing files, and sharing direct links to specific content—all without requiring authentication or installation.
 
 **Live Application**: [https://explorer.pubky.app](https://explorer.pubky.app)

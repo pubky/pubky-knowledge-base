@@ -4,8 +4,6 @@ aliases:
   - "Pubky-CLI"
 ---
 
-# Pubky CLI
-
 **Pubky CLI** is a command-line tool for interacting with Pubky homeservers. Built in Rust, it provides both user-facing and administrative capabilities for managing homeservers, testing deployments, and automating workflows.
 
 ## Overview

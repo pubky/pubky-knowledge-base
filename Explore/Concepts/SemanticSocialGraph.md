@@ -4,8 +4,6 @@ aliases:
   - "Semantic-Social-Graph"
 ---
 
-# Semantic Social Graph
-
 ![Diagram showing semantic social graph with tagged relationships, weighted connections, and user-centric personalization](Explore/images/mermaid_charts/semantic_social_graph.svg)
 
 **Semantic Relationships:** Connections between users and content are tagged with meaningful metadata, capturing the context, relevance, and nature of each relationship.

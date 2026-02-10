@@ -2,8 +2,6 @@
 title: "App Architectures"
 ---
 
-# App Architectures
-
 - [[Explore/PubkyApp/AppArchitectures/1.Introduction|Introduction]]
 - [[Explore/PubkyApp/AppArchitectures/2.ClientHomeserver|Client - Homeserver]]
 - [[Explore/PubkyApp/AppArchitectures/3.GlobalAggregators|Global Aggregators]]
