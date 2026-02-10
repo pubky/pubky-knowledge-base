@@ -56,7 +56,7 @@ Traditional DNS has fundamental limitations:
 [[PKDNS]] addresses these limitations by creating a decentralized, censorship-resistant alternative:
 
 - **Self-sovereign domains**: Your public key IS your domain - no registration, no rent
-- **No central authority**: Uses [[Mainline DHT]] instead of ICANN hierarchy
+- **No central authority**: Uses [[MainlineDHT|Mainline DHT]] instead of ICANN hierarchy
 - **Censorship resistant**: Distributed across millions of nodes, impossible to block
 - **True ownership**: You control your identity and domain through cryptographic keys
 - **Privacy**: No centralized entity tracks your DNS queries
@@ -100,6 +100,6 @@ Pubky uses DNS technology in innovative ways:
 
 - **[[PKDNS]]**: Public key DNS implementation
 - **[[0.Introduction|PKARR]]**: Public key addressable resource records
-- **[[Mainline DHT]]**: Distributed hash table powering PKDNS
+- **[[MainlineDHT|Mainline DHT]]**: Distributed hash table powering PKDNS
 - **[[DoH]]**: DNS over HTTPS for encrypted queries
 - **[[HTTPS]]**: Secure HTTP protocol

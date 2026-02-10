@@ -380,7 +380,7 @@ Homegate is designed to integrate with [[Homeserver|Pubky Homeserver]] signup fl
 2. **Homeserver redirects** to Homegate verification flow
 3. **User completes verification** (SMS or Lightning)
 4. **Homegate returns success** to homeserver
-5. **Homeserver creates account** using [[Explore/Pubky Core/SDK|Pubky Core SDK]]
+5. **Homeserver creates account** using [[Explore/PubkyCore/SDK|Pubky Core SDK]]
 
 ### Verification Token Flow
 
@@ -606,7 +606,7 @@ Potential improvements for Homegate:
 ## See Also
 
 - [[Homeserver]] - Pubky homeserver documentation
-- [[Explore/Pubky Core/Introduction|Pubky Core]] - Core protocol and SDK
+- [[Explore/PubkyCore/Introduction|Pubky Core]] - Core protocol and SDK
 - [[FAQ#Q37]] - How users join Pubky App
 - [[Censorship]] - Censorship resistance principles
 

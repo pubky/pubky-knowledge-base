@@ -317,8 +317,8 @@ Ethereum Address → On-chain Registry → Hubs (P2P) → Apps
 ## See Also
 
 - **[[index|Main Documentation]]**: Complete Pubky knowledge base
-- **[[Getting Started]]**: Get started with Pubky
+- **[[GettingStarted|Getting Started]]**: Get started with Pubky
 - **[[FAQ]]**: Frequently asked questions
-- **[[The vision of Pubky|Vision]]**: Why we're building Pubky
-- **[[Explore/Pubky Core/Introduction|Pubky Core]]**: Technical overview
+- **[[TheVisionOfPubky|Vision]]**: Why we're building Pubky
+- **[[Explore/PubkyCore/Introduction|Pubky Core]]**: Technical overview
 

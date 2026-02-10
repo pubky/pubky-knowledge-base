@@ -2,7 +2,7 @@
 
 It is a decentralized key-value store that allows for efficient data retrieval in a distributed system. Unlike traditional databases, DHTs do not rely on a central server to manage data. Instead, they use a hash function to map keys to nodes in the network, enabling data to be stored and retrieved across multiple nodes.
 
-A relevant example of DHT for Pubky is the [[Mainline DHT]] that is used primarily by the BitTorrent Network.
+A relevant example of DHT for Pubky is the [[MainlineDHT|Mainline DHT]] that is used primarily by the BitTorrent Network.
 
 ## Key Features
 

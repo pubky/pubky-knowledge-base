@@ -29,12 +29,12 @@ flowchart LR
 
 | Component | Purpose | Status |
 |-----------|---------|--------|
-| **[[Explore/Pubky Core/Introduction\|Pubky Core]]** | Protocol, homeserver, SDK | ✅ Production |
-| **[[Explore/Technologies/Pubky Ring\|Pubky Ring]]** | Mobile key manager (iOS/Android) | ✅ Production |
-| **[[Explore/Pubky App/Introduction\|Pubky App]]** | Social media demo ([pubky.app](https://pubky.app)) | ✅ Live (MVP) |
-| **[[Explore/Pubky App/Backend/Pubky Nexus\|Pubky Nexus]]** | Social indexing service | ✅ Production |
+| **[[Explore/PubkyCore/Introduction\|Pubky Core]]** | Protocol, homeserver, SDK | ✅ Production |
+| **[[Explore/Technologies/PubkyRing\|Pubky Ring]]** | Mobile key manager (iOS/Android) | ✅ Production |
+| **[[Explore/PubkyApp/Introduction\|Pubky App]]** | Social media demo ([pubky.app](https://pubky.app)) | ✅ Live (MVP) |
+| **[[Explore/PubkyApp/Backend/PubkyNexus\|Pubky Nexus]]** | Social indexing service | ✅ Production |
 | **[[Explore/Technologies/Paykit\|Paykit]]** | Payment protocol | ⚠️ WIP |
-| **[[Explore/Technologies/Pubky Noise\|Pubky Noise]]** | Encrypted communication | ⚠️ WIP |
+| **[[Explore/Technologies/PubkyNoise\|Pubky Noise]]** | Encrypted communication | ⚠️ WIP |
 
 ## Why It Matters
 
@@ -46,15 +46,15 @@ flowchart LR
 
 ## Get Started
 
-- **Users**: Download [[Explore/Technologies/Pubky Ring|Pubky Ring]] → Try [pubky.app](https://pubky.app)
-- **Developers**: Check [[Getting Started|Getting Started Guide]] → Install [[Explore/Pubky Core/SDK|SDK]]
+- **Users**: Download [[Explore/Technologies/PubkyRing|Pubky Ring]] → Try [pubky.app](https://pubky.app)
+- **Developers**: Check [[GettingStarted|Getting Started Guide]] → Install [[Explore/PubkyCore/SDK|SDK]]
 
 ## Learn More
 
 - **[[index|Full Documentation]]**: Complete knowledge base
 - **[[FAQ|FAQ]]**: 63 questions answered
 - **[[Glossary|Glossary]]**: Quick term definitions
-- **[[The vision of Pubky|Vision]]**: Why we're building this
+- **[[TheVisionOfPubky|Vision]]**: Why we're building this
 
 ---
 

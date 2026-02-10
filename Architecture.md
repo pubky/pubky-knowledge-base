@@ -48,10 +48,10 @@ flowchart TB
 
 ### Identity Layer
 
-The foundation of Pubky is cryptographic identity based on **[[Key Pair|key pairs]]**.
+The foundation of Pubky is cryptographic identity based on **[[KeyPair|key pairs]]**.
 
 **Components:**
-- **[[Explore/Technologies/Pubky Ring|Pubky Ring]]**: Mobile app for secure key management
+- **[[Explore/Technologies/PubkyRing|Pubky Ring]]**: Mobile app for secure key management
 - **Key Pairs**: Ed25519 public/private key pairs
 - **Recovery Files**: Encrypted backups for key recovery
 
@@ -75,7 +75,7 @@ The discovery layer enables finding homeservers and resolving identities without
 
 **Components:**
 - **[[0.Introduction|PKARR]]**: Public Key Addressable Resource Records
-- **[[Mainline DHT]]**: Distributed Hash Table (10M+ nodes)
+- **[[MainlineDHT|Mainline DHT]]**: Distributed Hash Table (10M+ nodes)
 - **[[PKDNS]]**: DNS servers for resolving public key domains
 
 **How It Works:**
@@ -163,7 +163,7 @@ flowchart LR
     Agg --> Client[Client App]
 ```
 
-**Use Case**: Social feeds, search, discovery (e.g., [[Explore/Pubky App/Backend/Pubky Nexus|Pubky Nexus]])
+**Use Case**: Social feeds, search, discovery (e.g., [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]])
 
 #### 3. Custom Backend
 
@@ -211,7 +211,7 @@ sequenceDiagram
 
 ### Pubky Core
 
-**[[Explore/Pubky Core/Introduction|Pubky Core]]** provides:
+**[[Explore/PubkyCore/Introduction|Pubky Core]]** provides:
 - Protocol specification
 - Homeserver implementation
 - SDK for all platforms
@@ -222,7 +222,7 @@ sequenceDiagram
 
 ### Pubky Ring
 
-**[[Explore/Technologies/Pubky Ring|Pubky Ring]]** handles:
+**[[Explore/Technologies/PubkyRing|Pubky Ring]]** handles:
 - Key generation and storage
 - App authorization
 - Session management
@@ -232,7 +232,7 @@ sequenceDiagram
 
 ### Pubky Nexus
 
-**[[Explore/Pubky App/Backend/Pubky Nexus|Pubky Nexus]]** provides:
+**[[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]]** provides:
 - Real-time aggregation
 - Social graph indexing
 - Search and discovery
@@ -264,14 +264,14 @@ sequenceDiagram
 
 ### Development Tools
 
-- **[[Explore/Technologies/Pubky Docker|Pubky Docker]]**: Full stack in one command
-- **[[Explore/Technologies/Pubky CLI|Pubky CLI]]**: Command-line homeserver management
-- **[[Explore/Technologies/Pubky Explorer|Pubky Explorer]]**: Web-based data browser
+- **[[Explore/Technologies/PubkyDocker|Pubky Docker]]**: Full stack in one command
+- **[[Explore/Technologies/PubkyCLI|Pubky CLI]]**: Command-line homeserver management
+- **[[Explore/Technologies/PubkyExplorer|Pubky Explorer]]**: Web-based data browser
 
 ### Work in Progress
 
 - **[[Explore/Technologies/Paykit|Paykit]]**: Payment protocol
-- **[[Explore/Technologies/Pubky Noise|Pubky Noise]]**: Encrypted communication
+- **[[Explore/Technologies/PubkyNoise|Pubky Noise]]**: Encrypted communication
 
 ---
 
@@ -394,10 +394,10 @@ Users → Enterprise Homeserver + Custom Aggregator + Private Nexus → Internal
 
 ## See Also
 
-- **[[Getting Started]]**: Get started with Pubky
-- **[[Explore/Pubky Core/Introduction|Pubky Core Overview]]**: Protocol details
-- **[[Explore/Pubky Core/SDK|SDK Documentation]]**: Build applications
-- **[[Explore/Pubky Core/API|API Reference]]**: HTTP API specification
+- **[[GettingStarted|Getting Started]]**: Get started with Pubky
+- **[[Explore/PubkyCore/Introduction|Pubky Core Overview]]**: Protocol details
+- **[[Explore/PubkyCore/SDK|SDK Documentation]]**: Build applications
+- **[[Explore/PubkyCore/API|API Reference]]**: HTTP API specification
 - **[[Comparisons]]**: How Pubky differs from alternatives
 - **[[FAQ]]**: Frequently asked questions
 
