@@ -5,7 +5,7 @@ aliases:
 
 # Pubky Core: Open Protocol for Decentralized Web Applications
 
-![Pubky Core architecture diagram showing the relationship between public key identities, PKARR records on Mainline DHT, homeservers, and client applications](Explore/images/pubky-core.png)
+![Pubky Core architecture diagram showing the relationship between public key identities, PKARR records on Mainline DHT, homeservers, and client applications](Explore/images/pubky-core.svg)
 
 > **An open protocol for per-public-key backends for censorship resistant web applications.**
 

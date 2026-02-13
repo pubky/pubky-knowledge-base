@@ -99,7 +99,7 @@ const example = "like this";
 **Images:**
 ```markdown
 <!-- Always include descriptive alt text -->
-![Pubky Core architecture diagram showing homeservers, PKARR, and DHT](Explore/images/pubky-core.png)
+![Pubky Core architecture diagram showing homeservers, PKARR, and DHT](Explore/images/pubky-core.svg)
 ```
 
 ---
