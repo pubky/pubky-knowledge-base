@@ -18,12 +18,11 @@ The Pubky client is the user-facing application for interacting with the Pubky s
 
 ## Development Status
 
-> **⚠️ Important**: The original client codebase ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app)) is **deprecated** and marked as transitional. A new implementation called **franky** is under development and expected summer 2025.
+The web client is live at [pubky.app](https://pubky.app).
 
 **For Developers**:
 - **Building Compatible Clients**: Use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as the authoritative data model specification
-- **Learning Reference**: Wait for the [franky repository](https://github.com/pubky/franky) to mature; the current codebase is not recommended for learning purposes
-- **Contributing**: Direct contributions to a future-proof codebase should target franky once ready
+- **Contributing**: Contributions welcome at [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app)
 
 Using the library analogy, the Pubky Client is like a personalized research assistant who takes the prepared documents from the librarian ([[Explore/PubkyApp/Backend/Introduction|backend]]) and creates a customized report just for you. This report is designed to be easy to read and understand, with all the relevant information presented in a clear and concise manner.
 
