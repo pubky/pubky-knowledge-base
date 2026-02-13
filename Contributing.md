@@ -20,7 +20,7 @@ Help improve this knowledge base:
 Contribute to Pubky projects:
 - **[[Explore/PubkyCore/Introduction|Pubky Core]]**: Protocol and homeserver
 - **[[Explore/Technologies/PubkyRing|Pubky Ring]]**: Mobile key manager
-- **[[Explore/PubkyApp/Introduction|Pubky App]]**: Social application (Franky)
+- **[[Explore/PubkyApp/Introduction|Pubky App]]**: Social application ([pubky.app](https://pubky.app))
 - **[[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]]**: Indexing service
 - **[[Explore/Technologies/PubkyCLI|Pubky CLI]]**: Command-line tool
 - **[[PKDNS]]**, **[[Homegate]]**, **[[PubkyDocker|Pubky Docker]]**: Infrastructure tools

@@ -89,7 +89,7 @@ The public half of a cryptographic key pair. In Pubky, this serves as your perma
 2. A user's public key identity (e.g., "my pubky is z4e8s...")
 
 **[[Explore/PubkyApp/Introduction|Pubky App]]**
-Social media application demonstrating Pubky Core capabilities. Currently live at [pubky.app](https://pubky.app) as MVP, with next-gen "Franky" client in development.
+Social media application demonstrating Pubky Core capabilities. Live at [pubky.app](https://pubky.app).
 
 **[[Explore/PubkyCLI|Pubky CLI]]**
 Command-line tool for interacting with Pubky homeservers, providing user operations, admin functions, and testing utilities.

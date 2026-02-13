@@ -48,12 +48,16 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 - [[Explore/PubkyCore/API|API Reference]] - RESTful HTTP API specification
 - [[Architecture|Architecture Overview]] - System design and data flow
 - [[Homeserver|Homeserver Documentation]] - Deploy and configure homeservers
+- [[Explore/PubkyCore/SecurityModel|Security Model]] - Threat landscape, trust assumptions, and credible exit
 
 ### Infrastructure
 
 - [[Homegate|Homegate]] - Signup verification service for homeservers (SMS + Lightning)
 - [[PKDNS|PKDNS]] - DNS server for resolving public key domains
 - [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] - Production indexing service
+- [[Explore/Technologies/HTTPRelay|HTTP Relay]] - Auth token forwarding for authentication flows
+- [[Explore/Technologies/PubkyBackup|Pubky Backup]] - Desktop backup for data portability and credible exit
+- [[Explore/Technologies/PubkyModeration|Pubky Moderation]] - Content moderation service
 
 ### Resources
 
@@ -79,9 +83,8 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 ### Current Status
 
 - **Live Application**: [https://pubky.app](https://pubky.app) - Production PWA currently operational
-- **Current Repository**: [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app) - **⚠️ Deprecated** (MVP codebase)
-- **New Development**: [github.com/pubky/franky](https://github.com/pubky/franky) - **Work in Progress** (next-gen client, expected summer 2025)
-- **Data Model Specification**: [pubky-app-specs](https://github.com/pubky/pubky-app-specs) - Formal schema definitions for interoperability
+- **Web Client**: [[Explore/PubkyApp/Client/PubkyApp|pubky.app]] ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app))
+- **Data Model Specification**: [[Explore/PubkyApp/AppSpecs|App Specs]] ([pubky-app-specs](https://github.com/pubky/pubky-app-specs)) - Formal schema definitions for interoperability
 
 ### Backend Infrastructure
 

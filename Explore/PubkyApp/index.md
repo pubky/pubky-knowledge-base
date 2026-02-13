@@ -6,3 +6,4 @@ title: "Pubky App"
 - [[Explore/PubkyApp/AppArchitectures/1.Introduction|App Architectures]]
 - [[Explore/PubkyApp/Backend/Introduction|Backend]]
 - [[Explore/PubkyApp/Client/Introduction|Client]]
+- [[Explore/PubkyApp/AppSpecs|App Specs]]
