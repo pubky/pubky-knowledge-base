@@ -1,199 +1,199 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://docs.pubky.org/Architecture</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.763Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Comparisons</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.763Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Contributing</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.763Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Concepts/Censorship</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.763Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Concepts/CredibleExit</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.763Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Concepts/SemanticSocialGraph</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/AppArchitectures/1.Introduction</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/AppArchitectures/2.ClientHomeserver</loc>
-    <lastmod>2026-02-10T05:49:08.357Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/AppArchitectures/3.GlobalAggregators</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/AppArchitectures/4.CustomBackend</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/AppArchitectures/</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Backend/Aggregator</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Backend/Indexer</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Backend/Introduction</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Backend/PubkyNexus</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Backend/WebServer</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.764Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Bookmarks</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Layouts</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Notifications</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Perspectives</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Posts</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Profiles</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Search</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Tags</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Features/Trends</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Client/Introduction</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/ELI5</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/Introduction</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyApp/</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/API</loc>
-    <lastmod>2026-02-10T05:49:08.358Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Authentication</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.765Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/ELI5</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Homeserver</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Introduction</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Pkarr/0.Introduction</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Pkarr/1.WhyPkarr</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Pkarr/2.GettingStartedWithPkarr</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Pkarr/3.Expectations</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Pkarr/4.Architecture</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/Pkarr/ELI5</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/SDK</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/PubkyCore/</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/DHT</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/DNS</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.766Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/DoH</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/HTTPS</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/Homegate</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/JebPubkyAIBot</loc>
-    <lastmod>2026-02-10T05:49:08.359Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/KeyPair</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/MainlineDHT</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/PKDNS</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/Paykit</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/PubkyCLI</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/PubkyDocker</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/PubkyExplorer</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/PubkyNoise</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/Technologies/PubkyRing</loc>
-    <lastmod>2026-02-10T05:49:08.360Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.767Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Explore/</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/FAQ</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/GettingStarted</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Glossary</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Readme</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/TLDR</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/TheVisionOfPubky</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/Troubleshooting</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url><url>
     <loc>https://docs.pubky.org/</loc>
-    <lastmod>2026-02-10T05:49:08.370Z</lastmod>
+    <lastmod>2026-02-13T10:19:38.778Z</lastmod>
   </url></urlset>

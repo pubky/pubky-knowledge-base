@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="49 34 1004 615" width="1004" height="615" font-family="'Segoe UI', Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+    <marker id="arr-yellow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#EAB308"/>
+    </marker>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.3"/></filter>
+    <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A181C"/><stop offset="100%" stop-color="#241519"/>
+    </linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12231A"/><stop offset="100%" stop-color="#152119"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background (transparent) -->
+
+  <!-- LEFT PANEL: TRADITIONAL WEB ARCHITECTURE -->
+  <rect x="50" y="35" width="510" height="613" rx="20" fill="url(#gl)" stroke="#991B1B" stroke-width="1.5"/>
+  <g transform="translate(-95, 0)">
+    <text x="400" y="73" text-anchor="middle" font-size="22" font-weight="700" fill="#FFF">TRADITIONAL WEB ARCHITECTURE</text>
+    <text x="400" y="98" text-anchor="middle" font-size="16" fill="#FFF" font-weight="700">Institution-controlled</text>
+
+    <!-- User icon -->
+    <circle cx="320" cy="145" r="16" fill="#FCA5A5"/>
+    <path d="M300,187 C300,165 308,161 320,161 C332,161 340,165 340,187" fill="#FCA5A5"/>
+
+    <!-- Identity badge -->
+    <rect x="375" y="126" width="240" height="50" rx="10" fill="#0F172A" stroke="#991B1B" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="495" y="148" text-anchor="middle" font-size="14" fill="#FCA5A5" font-weight="600">Scattered identities</text>
+    <text x="495" y="168" text-anchor="middle" font-size="14" fill="#FCA5A5">(locked inside each platform)</text>
+    <line x1="340" y1="150" x2="370" y2="150" stroke="#991B1B" stroke-width="2"/>
+
+    <!-- User → Web Apps (curved 90° arrows) -->
+    <path d="M298,180 Q265,180 265,223" fill="none" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M342,180 Q535,180 535,223" fill="none" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Web app A -->
+    <rect x="190" y="229" width="150" height="52" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="265" y="256" text-anchor="middle" font-size="14" fill="#CBD5E1" font-weight="700">Web app A</text>
+    <!-- Web app B -->
+    <rect x="460" y="229" width="150" height="52" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="535" y="256" text-anchor="middle" font-size="14" fill="#CBD5E1" font-weight="700">Web app B</text>
+
+    <!-- Apps → Company servers -->
+    <line x1="265" y1="281" x2="265" y2="382" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="535" y1="281" x2="535" y2="382" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- DNS / ICANN -->
+    <rect x="190" y="302" width="420" height="55" rx="12" fill="rgba(15,23,42,0.65)" stroke="#475569" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="400" y="327" text-anchor="middle" font-size="15" fill="#CBD5E1" font-weight="700">DNS / ICANN</text>
+    <text x="400" y="345" text-anchor="middle" font-size="14" fill="#CBD5E1">Rigid, centrally controlled discovery</text>
+
+    <!-- Company A -->
+    <rect x="170" y="402" width="190" height="145" rx="16" fill="#2A1215" stroke="#EF4444" stroke-width="2.5"/>
+    <rect x="175" y="388" width="180" height="30" rx="8" fill="#DC2626"/>
+    <text x="265" y="409" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF" letter-spacing="1">SERVERS  COMPANY  A</text>
+    <rect x="190" y="425" width="150" height="52" rx="10" fill="#0F172A" stroke="#991B1B" stroke-width="1.5"/>
+    <text x="265" y="448" text-anchor="middle" font-size="14" fill="#FCA5A5" font-weight="600">Identity A</text>
+    <text x="265" y="466" text-anchor="middle" font-size="14" fill="#FCA5A5">(bound to Company A)</text>
+    <rect x="190" y="485" width="150" height="52" rx="10" fill="#0F172A" stroke="#991B1B" stroke-width="1.5"/>
+    <text x="265" y="508" text-anchor="middle" font-size="14" fill="#FCA5A5" font-weight="600">Data A</text>
+    <text x="265" y="526" text-anchor="middle" font-size="14" fill="#FCA5A5">(siloed &amp; locked-in)</text>
+
+
+    <!-- No switching indicator -->
+    <text x="400" y="442" text-anchor="middle" font-size="12" fill="#EAB308" font-weight="600">No</text>
+    <text x="400" y="457" text-anchor="middle" font-size="12" fill="#EAB308" font-weight="600">switching</text>
+    <line x1="365" y1="469" x2="435" y2="469" stroke="#EAB308" stroke-width="2" stroke-dasharray="6,3"/>
+    <line x1="393" y1="462" x2="407" y2="476" stroke="#EAB308" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="407" y1="462" x2="393" y2="476" stroke="#EAB308" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Company B -->
+    <rect x="440" y="402" width="190" height="145" rx="16" fill="#2A1215" stroke="#EF4444" stroke-width="2.5"/>
+    <rect x="445" y="388" width="180" height="30" rx="8" fill="#DC2626"/>
+    <text x="535" y="409" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF" letter-spacing="1">SERVERS  COMPANY  B</text>
+    <rect x="460" y="425" width="150" height="52" rx="10" fill="#0F172A" stroke="#991B1B" stroke-width="1.5"/>
+    <text x="535" y="448" text-anchor="middle" font-size="14" fill="#FCA5A5" font-weight="600">Identity B</text>
+    <text x="535" y="466" text-anchor="middle" font-size="14" fill="#FCA5A5">(bound to Company B)</text>
+    <rect x="460" y="485" width="150" height="52" rx="10" fill="#0F172A" stroke="#991B1B" stroke-width="1.5"/>
+    <text x="535" y="508" text-anchor="middle" font-size="14" fill="#FCA5A5" font-weight="600">Data B</text>
+    <text x="535" y="526" text-anchor="middle" font-size="14" fill="#FCA5A5">(siloed &amp; locked-in)</text>
+
+    <!-- Issues -->
+    <circle cx="175" cy="581" r="11" fill="#EF4444"/>
+    <line x1="171" y1="577" x2="179" y2="585" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="179" y1="577" x2="171" y2="585" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="195" y="587" font-size="15" fill="#FFF" font-weight="700">Lock-in</text>
+    <circle cx="405" cy="581" r="11" fill="#EF4444"/>
+    <line x1="401" y1="577" x2="409" y2="585" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="409" y1="577" x2="401" y2="585" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="425" y="587" font-size="15" fill="#FFF" font-weight="700">Censorship possible</text>
+    <circle cx="175" cy="617" r="11" fill="#EF4444"/>
+    <line x1="171" y1="613" x2="179" y2="621" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="179" y1="613" x2="171" y2="621" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="195" y="623" font-size="15" fill="#FFF" font-weight="700">Data access at risk</text>
+    <circle cx="405" cy="617" r="11" fill="#EF4444"/>
+    <line x1="401" y1="613" x2="409" y2="621" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="409" y1="613" x2="401" y2="621" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="425" y="623" font-size="15" fill="#FFF" font-weight="700">Identity bound to company</text>
+  </g>
+
+  <!-- RIGHT PANEL: PUBKY ARCHITECTURE -->
+  <rect x="572" y="35" width="480" height="613" rx="20" fill="url(#gr)" stroke="#065F46" stroke-width="1.5"/>
+  <g transform="translate(-403, 0)">
+    <text x="1215" y="73" text-anchor="middle" font-size="22" font-weight="700" fill="#FFF">PUBKY ARCHITECTURE</text>
+    <text x="1215" y="98" text-anchor="middle" font-size="16" fill="#FFF" font-weight="700">User-controlled</text>
+
+    <!-- User icon -->
+    <circle cx="1145" cy="145" r="16" fill="#2DD4BF"/>
+    <path d="M1125,187 C1125,165 1133,161 1145,161 C1157,161 1165,165 1165,187" fill="#2DD4BF"/>
+
+    <!-- Identity badge -->
+    <rect x="1220" y="126" width="210" height="50" rx="10" fill="#0F172A" stroke="#059669" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="1325" y="148" text-anchor="middle" font-size="14" fill="#6EE7B7" font-weight="600">Your identity (Pubky)</text>
+    <text x="1325" y="168" text-anchor="middle" font-size="14" fill="#34D399">(portable across all apps)</text>
+    <line x1="1165" y1="150" x2="1215" y2="150" stroke="#059669" stroke-width="2"/>
+
+    <!-- User → Web Apps -->
+    <path d="M1125,180 Q1070,180 1070,225" fill="none" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M1165,180 Q1220,180 1220,225" fill="none" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Web app A / B -->
+    <rect x="1000" y="229" width="140" height="52" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="1070" y="256" text-anchor="middle" font-size="14" fill="#CBD5E1" font-weight="700">Web app A</text>
+    <rect x="1150" y="229" width="140" height="52" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="1220" y="256" text-anchor="middle" font-size="14" fill="#CBD5E1" font-weight="700">Web app B</text>
+
+    <!-- App A → Your Homeserver (straight down, drawn before DHT so it overlays) -->
+    <line x1="1070" y1="281" x2="1070" y2="404" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- App B → Your Homeserver (L-shape: down then left into right border) -->
+    <path d="M1220,281 L1220,392 Q1220,426 1186,426" fill="none" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- PKARR / Mainline DHT -->
+    <rect x="1000" y="312" width="430" height="58" rx="12" fill="rgba(15,23,42,0.65)" stroke="#475569" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="1215" y="339" text-anchor="middle" font-size="15" fill="#CBD5E1" font-weight="700">PKARR / Mainline DHT</text>
+    <text x="1215" y="358" text-anchor="middle" font-size="14" fill="#CBD5E1">Censorship-resistant discovery</text>
+
+    <!-- Yellow arrow from PKARR/DHT to Alternative Homeserver -->
+    <line x1="1340" y1="370" x2="1340" y2="404" stroke="#EAB308" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-yellow)"/>
+
+    <!-- Your Homeserver (wide, both app arrows land on it) -->
+    <rect x="1000" y="410" width="180" height="80" rx="12" fill="#0F172A" stroke="#059669" stroke-width="2" filter="url(#sh)"/>
+    <text x="1090" y="456" text-anchor="middle" font-size="14" fill="#6EE7B7" font-weight="600">Your Homeserver</text>
+
+    <!-- Alternative Homeserver (right) -->
+    <rect x="1250" y="410" width="180" height="80" rx="12" fill="#0F172A" stroke="#EAB308" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="1340" y="445" text-anchor="middle" font-size="14" fill="#CBD5E1" font-weight="700">Alternative Homeserver</text>
+    <text x="1340" y="465" text-anchor="middle" font-size="12" fill="#94A3B8">(managed or self-hosted)</text>
+
+    <!-- Easy Switch between homeservers -->
+    <line x1="1180" y1="470" x2="1244" y2="470" stroke="#EAB308" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-yellow)"/>
+    <text x="1215" y="496" text-anchor="middle" font-size="14" fill="#EAB308" font-weight="600">Easy</text>
+    <text x="1215" y="512" text-anchor="middle" font-size="14" fill="#EAB308" font-weight="600">switch</text>
+
+    <!-- Benefits -->
+    <circle cx="1015" cy="581" r="11" fill="#059669"/>
+    <path d="M1010,581 L1013,585 L1021,576" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1035" y="587" font-size="15" fill="#6EE7B7" font-weight="700">No lock-in</text>
+    <circle cx="1225" cy="581" r="11" fill="#059669"/>
+    <path d="M1220,581 L1223,585 L1231,576" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1245" y="587" font-size="15" fill="#6EE7B7" font-weight="700">Discourages censorship</text>
+    <circle cx="1015" cy="617" r="11" fill="#059669"/>
+    <path d="M1010,617 L1013,621 L1021,612" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1035" y="623" font-size="15" fill="#6EE7B7" font-weight="700">User autonomy</text>
+    <circle cx="1225" cy="617" r="11" fill="#059669"/>
+    <path d="M1220,617 L1223,621 L1231,612" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1245" y="623" font-size="15" fill="#6EE7B7" font-weight="700">No walled gardens</text>
+  </g>
+</svg>
