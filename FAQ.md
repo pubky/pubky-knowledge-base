@@ -68,7 +68,7 @@ Yes. You'll need port forwarding or tunneling if behind NAT.
 Use [[PubkyExplorer|Pubky Explorer]] ([explorer.pubky.app](https://explorer.pubky.app)), a web-based file browser for public Pubky data. Enter any public key or path (e.g., `pubky://your-key/pub/pubky.app/profile.json`) to browse files and directories stored on homeservers. Features include keyboard navigation, file preview, directory traversal, and shareable URLs.
 
 **Q18. How can I run the complete Pubky stack locally for development?**  
-Use [[PubkyDocker|Pubky Docker]], a Docker Compose orchestration that runs the entire Pubky Social stack with one command. It includes Pkarr relay, homeserver (with PostgreSQL), Pubky Nexus (with Neo4j and Redis), and the Pubky App frontend—all preconfigured and ready to use. Clone the repository, configure `.env` for testnet or mainnet, and run `docker compose up -d`. Perfect for testing integrations, developing custom frontends, or learning how all components interact. See [[PubkyDocker|Pubky Docker]] for setup instructions.
+Use [[PubkyDocker|Pubky Docker]], a Docker Compose orchestration that runs the entire Pubky Social stack with one command. It includes PKARR relay, homeserver (with PostgreSQL), Pubky Nexus (with Neo4j and Redis), and the Pubky App frontend—all preconfigured and ready to use. Clone the repository, configure `.env` for testnet or mainnet, and run `docker compose up -d`. Perfect for testing integrations, developing custom frontends, or learning how all components interact. See [[PubkyDocker|Pubky Docker]] for setup instructions.
 
 **Q19. When should I use Pubky Docker vs SDK libraries?**  
 Use the SDK libraries ([@synonymdev/pubky](https://www.npmjs.com/package/@synonymdev/pubky) for JavaScript, [pubky](https://crates.io/crates/pubky) for Rust) when building applications that interact with Pubky. Only use [[PubkyDocker|Pubky Docker]] if you need to run the full stack locally to experiment with Pubky Nexus, test custom social frontends, debug cross-component issues, or learn the complete architecture. For most app development, the SDK libraries connected to public infrastructure are simpler and faster.
@@ -132,12 +132,8 @@ Yes! Nexus is open source and can be self-hosted. This allows organizations to r
 **Q35. How does Pubky resist spam?**  
 Via CAPTCHAs, rate-limits, invites, and graph distance rules.
 
-**Q36. How does Paykit fit in?**  
-Paykit is a **payment protocol (work in progress)** built on Pubky that aims to enable payment discovery and coordination across multiple methods (Bitcoin, Lightning, etc.). It's currently being tested through integrations in Bitkit iOS and Android, with planned features including:
-- Direct peer-to-peer payments using Pubky identities
-- Encrypted payment negotiation via Noise Protocol
-- Subscriptions with auto-pay and spending limits
-- Content monetization capabilities (paywalls, tips, micropayments)
+**Q36. How does Paykit fit in?**
+Paykit is a **payment protocol (work in progress)** built on Pubky that aims to enable payment discovery and coordination across multiple methods (Bitcoin, Lightning, etc.). See [[Explore/PubkyApp/Client/Introduction|Client Features]] for the full feature list.
 
 ⚠️ **Note**: Paykit is NOT production-ready and the protocol is subject to significant changes.
 
@@ -194,11 +190,11 @@ Homeservers can implement signup verification to prevent spam while preserving p
 **Q51. How do I ensure my app is compatible with Pubky App?**  
 Follow the [pubky-app-specs](https://github.com/pubky/pubky-app-specs) data model specification. This defines the structure and validation rules for users, posts, tags, bookmarks, follows, and feeds. The spec is available as an [npm package](https://www.npmjs.com/package/pubky-app-specs) (JavaScript/TypeScript) and Rust crates. Note: Currently v0.4.0 in rapid development; v1 will mark the first stable, long-term support version.
 
-**Q52. What's the status of Pubky App development?**  
-The current Pubky App client ([pubky.app](https://pubky.app)) is operational as an MVP but the codebase is deprecated. A next-generation client called **[Franky](https://github.com/pubky/franky)** is under development and expected summer 2025. The new implementation will focus on improved reliability, scalability, and user experience. Developers building compatible clients should use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as the authoritative specification rather than the transitional codebase.
+**Q52. What's the status of Pubky App development?**
+The Pubky App client ([pubky.app](https://pubky.app)) is live and under active development at [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app). Developers building compatible clients should use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) (or the [Rust crate](https://crates.io/crates/pubky-app-specs)) as the authoritative specification.
 
-**Q53. Can I contribute to Pubky App?**  
-The original [pubky-app repository](https://github.com/pubky/pubky-app) is deprecated and no longer accepting code contributions (marked as "dead-end repository" by the team). Bug reports are welcome, but development efforts should focus on the upcoming [Franky repository](https://github.com/pubky/franky) once it's ready for contributions. If you want to build a compatible social client now, use the [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) specification as your foundation.
+**Q53. Can I contribute to Pubky App?**
+Yes! The [pubky-app repository](https://github.com/pubky/pubky-app) is under active development and welcomes contributions. If you want to build a compatible social client, use the [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) specification as your foundation.
 
 ---
 

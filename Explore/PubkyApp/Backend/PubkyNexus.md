@@ -295,7 +295,7 @@ If you're building a social client application to consume the Nexus API:
 
 - **Data Model Specification**: Use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as your authoritative reference for data structures and validation rules
 - **Client Reference**: The current web client at [pubky.app](https://pubky.app) is operational but its [codebase](https://github.com/pubky/pubky-app) is deprecated (not recommended for learning)
-- **Next-Generation Client**: [Franky](https://github.com/pubky/franky) is under development as the production-quality reference implementation (expected summer 2025)
+- **Web App**: [[Explore/PubkyApp/Client/PubkyApp|pubky.app]] ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app)) — the production reference implementation
 - **API Exploration**: Use the [Swagger UI](https://nexus.pubky.app/swagger-ui/) to explore available endpoints and test queries
 
 ## See Also

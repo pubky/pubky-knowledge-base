@@ -10,7 +10,7 @@ aliases:
 
 Pubky Docker orchestrates the following components:
 
-1. **Pkarr Relay** - DHT relay for public key-addressable records
+1. **PKARR Relay** - DHT relay for public key-addressable records
 2. **Pubky Homeserver** - Decentralized data storage instance
 3. **Pubky Nexus** - Social media indexer and aggregator
 4. **Pubky App** - Social media client frontend
@@ -96,7 +96,7 @@ pubky-workspace/
 
 ## Stack Components
 
-### 1. Pkarr Relay (Port 6882)
+### 1. PKARR Relay (Port 6882)
 Local DHT relay for public key-addressable resource records. Enables domain resolution for Pubky identities.
 
 **Configuration**: `pkarr.config.toml`
@@ -168,7 +168,7 @@ The stack uses a custom Docker bridge network (`172.18.0.0/16`) with static IPs:
 
 | Service | IP | External Ports |
 |---------|------|---------------|
-| Pkarr | 172.18.0.2 | 6882 |
+| PKARR | 172.18.0.2 | 6882 |
 | Nexus | 172.18.0.3 | 8080, 8081 |
 | Homeserver | 172.18.0.4 | 6286-6288, 15411-15412 |
 | Neo4j | 172.18.0.5 | 7474, 7687 |
@@ -251,7 +251,7 @@ All data is stored in the `.storage/` directory:
 
 ```
 .storage/
-├── pkarr/          # Pkarr relay cache
+├── pkarr/          # PKARR relay cache
 ├── postgres/       # Homeserver database
 ├── neo4j/          # Nexus graph data
 ├── redis/          # Nexus search index
@@ -324,7 +324,7 @@ The Pubky Docker stack demonstrates the full architecture of a Pubky Social appl
              └──────────┬───────────┘
                         │
                  ┌──────▼───────┐
-                 │ Pkarr Relay  │
+                 │ PKARR Relay  │
                  │ (DHT/DNS)    │
                  └──────────────┘
 ```
