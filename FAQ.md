@@ -21,7 +21,7 @@ Slashtags was a previous Synonym project using Hypercore instead of PKDNS and Ho
 Yes. Under the MIT license. [View on GitHub](https://github.com/pubky/)
 
 **Q5. What is Pubky Core?**  
-[[Explore/PubkyCore/Introduction|Pubky Core]] is the foundational infrastructure for Pubky - an open protocol combining censorship-resistant public key DNS (PKARR) with conventional web technologies. It includes the protocol specification, a production-ready Homeserver implementation, and SDKs in multiple languages (Rust, JavaScript, iOS, Android). See the [[Explore/PubkyCore/Introduction|Pubky Core Overview]] for details.
+[[Explore/PubkyCore/Introduction|Pubky Core]] is the foundational infrastructure for Pubky - an open protocol combining censorship-resistant public-key DNS (PKARR) with conventional web technologies. It includes the protocol specification, a production-ready Homeserver implementation, and SDKs in multiple languages (Rust, JavaScript, iOS, Android). See the [[Explore/PubkyCore/Introduction|Pubky Core Overview]] for details.
 
 **Q6. How do I start building on Pubky?**  
 Install the [[Explore/PubkyCore/SDK|Pubky SDK]] for your platform (Rust: `cargo add pubky`, JavaScript: `npm install @synonymdev/pubky`), follow the [official documentation](https://pubky.github.io/pubky-core/), and explore the [examples in the repository](https://github.com/pubky/pubky-core/tree/main/examples). The SDK provides client libraries for authentication, data storage, and Homeserver interaction.
