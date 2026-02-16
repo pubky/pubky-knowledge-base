@@ -20,7 +20,7 @@ Pubky uses decentralized authentication where users control their own cryptograp
 
 ## User Flow with Pubky Ring
 
-Apps display a QR code, the user scans it with [[PubkyRing|Pubky Ring]], reviews permissions, and approves. The [[HTTPRelay|HTTP Relay]] securely forwards the encrypted AuthToken back to the app, which then exchanges it with the [[Homeserver|homeserver]] for a session.
+Apps display a QR code, the user scans it with [[PubkyRing|Pubky Ring]], reviews permissions, and approves. The [[HTTPRelay|HTTP Relay]] securely forwards the encrypted AuthToken back to the app, which then exchanges it with the [[Homeserver|Homeserver]] for a session.
 
 The full protocol specification is documented in the [pubky-core GitHub repository](https://github.com/pubky/pubky-core/blob/main/docs/AUTH.md).
 

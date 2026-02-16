@@ -11,26 +11,26 @@ Pubky Core aims to minimize trust requirements while remaining practical. The ke
 This is achieved through:
 - Cryptographic identity (keypairs) that users fully control
 - Identity based routing. Knowing identity is enough to locate data
-- Data portability via [[PubkyBackup|Pubky Backup]] (homeserver mirroring planned but not yet implemented)
+- Data portability via [[PubkyBackup|Pubky Backup]] (Homeserver mirroring planned but not yet implemented)
 - Optional data signing to detect tampering (planned for apps that need it)
-- End-to-end encryption for encrypted data (planned; homeserver cannot read)
+- End-to-end encryption for encrypted data (planned; Homeserver cannot read)
 
 ## Trust Philosophy: "It is OK to trust when there is a Credible Exit"
 
 The Pubky security model accepts that some trust is unavoidable in practical systems. Rather than attempting to eliminate all trust (which often leads to unusable systems), the approach is:
 
-1. **Choose Wisely**: Users select their homeserver operator. This is an explicit trust decision, similar to choosing a bank or email provider. Users who want zero trust can self-host.
+1. **Choose Wisely**: Users select their Homeserver operator. This is an explicit trust decision, similar to choosing a bank or email provider. Users who want zero trust can self-host.
 
-2. **Don't Trust Fully**: Mirroring and backups allow users to restore data after detecting misbehavior. If your primary homeserver modifies data or acts maliciously, your mirrors will show discrepancies. Data replication / backup is a first step for maintaining data availability.
+2. **Don't Trust Fully**: Mirroring and backups allow users to restore data after detecting misbehavior. If your primary Homeserver modifies data or acts maliciously, your mirrors will show discrepancies. Data replication / backup is a first step for maintaining data availability.
 
-3. **[[CredibleExit|Credible Exit]]**: The key guarantee is that users can always leave. A misbehaving homeserver cannot hold your identity hostage because:
+3. **[[CredibleExit|Credible Exit]]**: The key guarantee is that users can always leave. A misbehaving Homeserver cannot hold your identity hostage because:
    - Your keypair never leaves your device. [[PubkyRing|Pubky Ring]] is the reference key manager implementation
    - Your data can be backed up and migrated
-   - [[0.Introduction|PKARR]] lets you point your identity to a new homeserver immediately
+   - [[0.Introduction|PKARR]] lets you point your identity to a new Homeserver immediately
 
 ### The Detection Problem
 
-[[CredibleExit|Credible exit]] has a prerequisite: **knowing when to exit**. A malicious homeserver that misbehaves silently (withholding data, tampering, surveillance) can cause harm before the user realizes something is wrong.
+[[CredibleExit|Credible exit]] has a prerequisite: **knowing when to exit**. A malicious Homeserver that misbehaves silently (withholding data, tampering, surveillance) can cause harm before the user realizes something is wrong.
 
 This is the hardest unsolved problem in the security model. Planned mitigations:
 
@@ -48,7 +48,7 @@ The principle: make misbehavior **detectable**, not just **escapable**.
 
 - **Minimal Exposure**: The private key never leaves Ring — apps never see it
 - **Infrequent Use**: Ring is only needed when granting access to a new app
-- **Session Delegation**: After authorization, apps operate with session tokens issued by the homeserver
+- **Session Delegation**: After authorization, apps operate with session tokens issued by the Homeserver
 - **No Recovery**: If you lose both your device and your mnemonic, your identity is permanently lost
 
 This model minimizes the attack surface: even a compromised app cannot steal your identity, only its own session.
@@ -57,9 +57,9 @@ This model minimizes the attack surface: even a compromised app cannot steal you
 
 [[0.Introduction|PKARR]] DNS records are the authoritative source for identity resolution:
 
-- When you update your PKARR record to point to a new homeserver, the old one loses authority immediately
-- Clients that properly resolve PKARR will always find your current homeserver
-- A malicious old homeserver cannot impersonate you after migration
+- When you update your PKARR record to point to a new Homeserver, the old one loses authority immediately
+- Clients that properly resolve PKARR will always find your current Homeserver
+- A malicious old Homeserver cannot impersonate you after migration
 
 This is why credible exit works: identity follows the keys, not the server.
 
@@ -84,7 +84,7 @@ The security model considers three primary threat actors:
 **Note on signing**: Data signing will be optional. Not every use case needs cryptographic verification, and signing adds overhead. Apps can choose whether to sign data based on their trust requirements.
 
 **Mitigation:**
-Users maintain local backups via [[PubkyBackup|Pubky Backup]], ensuring data portability even if the homeserver refuses to cooperate. Homeserver mirroring (slave servers) is planned but not yet implemented.
+Users maintain local backups via [[PubkyBackup|Pubky Backup]], ensuring data portability even if the Homeserver refuses to cooperate. Homeserver mirroring (slave servers) is planned but not yet implemented.
 
 ### Network Attackers
 
@@ -94,7 +94,7 @@ Users maintain local backups via [[PubkyBackup|Pubky Backup]], ensuring data por
 - Replay attacks using captured auth tokens
 
 **Mitigations:**
-- HTTPS for all homeserver communication
+- HTTPS for all Homeserver communication
 - AuthToken timestamps with 45-second validity window (prevents replay)
 - Capability scoping limits damage from compromised tokens
 - Auth tokens encrypted between authenticator and requesting app via [[HTTPRelay|relay]]
@@ -114,35 +114,35 @@ These are intentional design decisions, not oversights:
 
 | Decision | Homeserver Trusted? | Rationale |
 |----------|--------------------| ---------|
-| Session token issuance | Yes | Practical trade-off; keeping Ring's keys isolated means homeserver must issue tokens |
+| Session token issuance | Yes | Practical trade-off; keeping Ring's keys isolated means Homeserver must issue tokens |
 | Capability enforcement | Yes | Homeserver trusted to honor the capabilities Ring authorized |
 | Session revocation | Yes | Homeserver trusted to delete sessions when Ring requests |
-| Key custody | No | Ring is sole key holder; no homeserver recovery path |
-| Identity resolution | No | [[0.Introduction|PKARR]] is authoritative; homeserver cannot claim false identity |
+| Key custody | No | Ring is sole key holder; no Homeserver recovery path |
+| Identity resolution | No | [[0.Introduction|PKARR]] is authoritative; Homeserver cannot claim false identity |
 | Data authenticity | Yes (for now) | Planned: data signing will remove this trust requirement |
 
-**Why trust the homeserver for sessions?**
+**Why trust the Homeserver for sessions?**
 
-The alternative would require Ring to be involved in every operation, which conflicts with keeping keys isolated. By trusting the homeserver for session management:
+The alternative would require Ring to be involved in every operation, which conflicts with keeping keys isolated. By trusting the Homeserver for session management:
 - Ring is only used for initial authorization
 - Apps get standard session tokens they can use without Ring
-- Users can still revoke via Ring, and exit via migration if homeserver misbehaves
+- Users can still revoke via Ring, and exit via migration if Homeserver misbehaves
 
 ### Known Limitations
 
 1. **Session Cookie Collision**: Currently, all sessions share a single authentication cookie. Logging into App B overwrites App A's session. This is a critical bug being addressed via session management rework.
 
-2. **No Data Signing**: Data stored on homeservers is not cryptographically signed. A malicious operator could forge, alter, or delete content without readers detecting it.
+2. **No Data Signing**: Data stored on Homeservers is not cryptographically signed. A malicious operator could forge, alter, or delete content without readers detecting it.
 
 3. **Cloud IP Blocking**: BitTorrent DHT nodes commonly block cloud provider IP ranges. Running pkarr/mainline clients directly in Google Cloud or AWS often fails. The solution is using relays hosted in smaller providers.
 
-4. **Mnemonic Fallback Security Risk**: Users without [[PubkyRing|Pubky Ring]] can authenticate by entering their 12-word mnemonic directly on 3rd party apps. This is a security vulnerability — malicious apps could exfiltrate the mnemonic since users cannot verify that client-side JavaScript actually keeps the mnemonic local. The mnemonic should only ever be entered on trusted infrastructure (e.g. Ring or the user's own homeserver). This limitation is being addressed alongside the session management rework.
+4. **Mnemonic Fallback Security Risk**: Users without [[PubkyRing|Pubky Ring]] can authenticate by entering their 12-word mnemonic directly on 3rd party apps. This is a security vulnerability — malicious apps could exfiltrate the mnemonic since users cannot verify that client-side JavaScript actually keeps the mnemonic local. The mnemonic should only ever be entered on trusted infrastructure (e.g. Ring or the user's own Homeserver). This limitation is being addressed alongside the session management rework.
 
 ## Planned Trust Improvements
 
 ### Data Signing (Optional Feature, Planned 2026)
 
-The [[SDK]] will optionally sign data on behalf of the user before storing it on the homeserver. Readers can verify the signature against the user's public key.
+The [[SDK]] will optionally sign data on behalf of the user before storing it on the Homeserver. Readers can verify the signature against the user's public key.
 
 **After implementation:**
 - Homeserver cannot modify signed data without detection
@@ -153,9 +153,9 @@ The [[SDK]] will optionally sign data on behalf of the user before storing it on
 
 ### Guarded Data (Planned)
 
-Guarded data access control will be enforced by the homeserver, requiring authentication to read. Path conventions are TBD. This is not encryption — the homeserver can still read the data.
+Guarded data access control will be enforced by the Homeserver, requiring authentication to read. Path conventions are TBD. This is not encryption — the Homeserver can still read the data.
 
-**Use case:** Data that should be non-public but where trusting the homeserver is acceptable.
+**Use case:** Data that should be non-public but where trusting the Homeserver is acceptable.
 
 ### Encrypted Data (Planned)
 
@@ -164,13 +164,13 @@ End-to-end encryption for encrypted data. Homeserver stores ciphertext and canno
 **After implementation:**
 - Homeserver sees only encrypted blobs
 - Only authorized parties can decrypt
-- Metadata (access patterns, data sizes) still visible to homeserver
+- Metadata (access patterns, data sizes) still visible to Homeserver
 
 **Quantum Computing Rationale**: The layered approach (encrypted data behind guarded paths) provides defense-in-depth. As quantum computing advances, encryption that is secure today may be cracked in the future. By requiring authentication to access encrypted data, if the encryption is eventually cracked, the access control layer remains as a second barrier.
 
 ### Homeserver Mirroring (Planned, Not Yet Started)
 
-Planned primary-backup architecture where slave homeservers would stay in sync with the master.
+Planned primary-backup architecture where slave Homeservers would stay in sync with the master.
 
 **Benefits (when implemented):**
 - Users could verify their data is properly mirrored
@@ -264,7 +264,7 @@ Even with all planned improvements, some trust remains:
 ### For App Developers
 
 - Request minimal capabilities needed for your app
-- Validate data signatures when reading from homeservers
+- Validate data signatures when reading from Homeservers
 - Don't store sensitive data in unencrypted form
 - Handle auth failures gracefully (sessions can be revoked)
 
@@ -285,27 +285,27 @@ This section shows how [[CredibleExit|credible exit]] works in practice across c
 | Phase | What Happens | User Action |
 |-------|--------------|-------------|
 | Immediate | Data becomes temporarily inaccessible | Wait for recovery or decide to migrate |
-| If prolonged | Use [[PubkyBackup|Pubky Backup]] to restore from local backup | Sign up on a new homeserver |
+| If prolonged | Use [[PubkyBackup|Pubky Backup]] to restore from local backup | Sign up on a new Homeserver |
 | Recovery | Re-upload data, update [[0.Introduction|PKARR]] record | External links automatically resolve to new location |
 
-Your identity (keypair in Ring) is unaffected. The homeserver going down is an inconvenience, not a catastrophe.
+Your identity (keypair in Ring) is unaffected. The Homeserver going down is an inconvenience, not a catastrophe.
 
 ### Scenario: Homeserver Misbehaves
 
 | Misbehavior | Detection | Response |
 |-------------|-----------|----------|
-| Denies service | May be selective. Unless you're the affected reader, detection relies on others reporting it | Migrate to new homeserver |
+| Denies service | May be selective. Unless you're the affected reader, detection relies on others reporting it | Migrate to new Homeserver |
 | Modifies your data | Hard to detect without signing (planned) | Migrate + warn others |
 | Logs access patterns | Inherent to any server model | Accept or self-host |
 | Refuses to delete sessions | Ring can't verify compliance | Migrate + rotate pubky if needed |
 
-Misbehavior triggers migration. The homeserver cannot hold your identity hostage because your keypair never lived there.
+Misbehavior triggers migration. The Homeserver cannot hold your identity hostage because your keypair never lived there.
 
 ### Scenario: DHT Unreachable
 
 | Situation | Impact | Fallback |
 |-----------|--------|----------|
-| Temporary outage | New resolutions fail | Clients use cached homeserver locations |
+| Temporary outage | New resolutions fail | Clients use cached Homeserver locations |
 | Prolonged outage | New users can't discover you | HTTP relays provide alternative resolution |
 | Regional blocking | Varies by location | Multiple relay endpoints in different regions |
 

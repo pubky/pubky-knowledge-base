@@ -14,7 +14,7 @@ pubky.app is a social media-like web application built on top of [[Explore/Pubky
 - **Platform**: Web (Next.js progressive web app)
 - **Status**: Active development
 
-The application follows a local-first architecture where writes commit to local IndexedDB immediately for instant UI feedback, then sync to the [[Homeserver|homeserver]] in the background.
+The application follows a local-first architecture where writes commit to local IndexedDB immediately for instant UI feedback, then sync to the [[Homeserver|Homeserver]] in the background.
 
 ## Tech Stack
 
@@ -23,7 +23,7 @@ The application follows a local-first architecture where writes commit to local 
 - **Zustand** — Global state management
 - **Dexie** — IndexedDB wrapper for local-first persistence
 - **TanStack Query** — Data fetching with caching
-- **@synonymdev/pubky** — WASM [[SDK]] for homeserver communication
+- **@synonymdev/pubky** — WASM [[SDK]] for Homeserver communication
 - **[[AppSpecs|pubky-app-specs]]** — Shared data specifications
 
 ## Key Features
@@ -42,17 +42,17 @@ pubky.app uses a layered architecture with strict separation of concerns:
 | **Controllers** | Entry point for UI actions |
 | **Coordinators** | System-initiated actions (polling, auth changes, TTL) |
 | **Application** | Business logic orchestration |
-| **Services** | IO boundaries (local, homeserver, nexus) |
+| **Services** | IO boundaries (local, Homeserver, nexus) |
 | **Models** | Dexie-based IndexedDB persistence |
 | **Stores** | UI state via Zustand |
 
 ### Data Flow
-1. **Writes** go to [[Homeserver|homeserver]] via [[SDK]]
+1. **Writes** go to [[Homeserver|Homeserver]] via [[SDK]]
 2. Homeserver notifies [[Explore/PubkyApp/Backend/PubkyNexus|Nexus]] of changes
 3. Nexus indexes and aggregates data
 4. **Reads** come from Nexus for performance
 5. Local Dexie cache provides offline access
 
-All user data is stored under `/pub/pubky.app/` on the homeserver following the [[AppSpecs|pubky-app-specs]] schema.
+All user data is stored under `/pub/pubky.app/` on the Homeserver following the [[AppSpecs|pubky-app-specs]] schema.
 
 See the [repository](https://github.com/pubky/pubky-app) for routes, environment configuration, and development setup.

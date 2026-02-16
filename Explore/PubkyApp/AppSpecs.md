@@ -8,7 +8,7 @@ Shared data model specifications for the Pubky social app ecosystem, with [[Expl
 
 ## Overview
 
-`pubky-app-specs` defines the canonical data schemas for social application data stored on Pubky [[Homeserver|homeservers]]. It provides validation rules, serialization logic, and type definitions used by both *Pubky apps* and the [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] indexer to ensure interoperability with [[Explore/PubkyApp/Client/PubkyApp|pubky.app]].
+`pubky-app-specs` defines the canonical data schemas for social application data stored on Pubky [[Homeserver|Homeservers]]. It provides validation rules, serialization logic, and type definitions used by both *Pubky apps* and the [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] indexer to ensure interoperability with [[Explore/PubkyApp/Client/PubkyApp|pubky.app]].
 
 - **Repository**: https://github.com/pubky/pubky-app-specs
 - **License**: MIT
@@ -16,7 +16,7 @@ Shared data model specifications for the Pubky social app ecosystem, with [[Expl
 
 ## Data Models
 
-All data is stored under `/pub/pubky.app/` on the user's homeserver. Key models include:
+All data is stored under `/pub/pubky.app/` on the user's Homeserver. Key models include:
 
 - **PubkyAppUser** — User profile (name, bio, image, links, status)
 - **PubkyAppPost** — Posts with content, kind, parent, embed, attachments

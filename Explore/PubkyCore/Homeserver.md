@@ -33,11 +33,11 @@ Pubky hosts use **PubkyTLS** for transport security (TLS with Raw Public Keys, R
 
 ## User Data Control and Credible Exit
 
-- The current network is being bootstrapped by Synonym's first Homeserver — over time, more independent homeserver operators and Pubky applications are needed for the network to fully decentralize
-- Anyone can run their own homeserver and set their own terms
+- The current network is being bootstrapped by Synonym's first Homeserver — over time, more independent Homeserver operators and Pubky applications are needed for the network to fully decentralize
+- Anyone can run their own Homeserver and set their own terms
 - Homeserver operators can use [[Homegate]] for signup verification, implementing SMS or Lightning Network verification to prevent spam while preserving user privacy
 - For true [[CredibleExit|credible exit]], users should maintain local backups via [[PubkyBackup|Pubky Backup]]. Homeserver mirroring is planned but not yet implemented
-- Users can migrate to a new homeserver at any time by moving their data and updating their [[0.Introduction|PKARR]] record
+- Users can migrate to a new Homeserver at any time by moving their data and updating their [[0.Introduction|PKARR]] record
 
 See [[SecurityModel|Security Model]] for the full trust analysis and failure recovery scenarios.
 
