@@ -55,6 +55,9 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 - [[Homegate|Homegate]] - Signup verification service for Homeservers (SMS + Lightning)
 - [[PKDNS|PKDNS]] - DNS server for resolving public-key domains
 - [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] - Production indexing service
+- [[Explore/Technologies/HTTPRelay|HTTP Relay]] - Auth token forwarding for authentication flows
+- [[Explore/Technologies/PubkyBackup|Pubky Backup]] - Desktop backup for data portability and credible exit
+- [[Explore/Technologies/PubkyModeration|Pubky Moderation]] - Content moderation service
 
 ### Resources
 
