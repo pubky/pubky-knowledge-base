@@ -48,6 +48,7 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 - [[Explore/PubkyCore/API|API Reference]] - RESTful HTTP API specification
 - [[Architecture|Architecture Overview]] - System design and data flow
 - [[Homeserver|Homeserver Documentation]] - Deploy and configure Homeservers
+- [[Explore/PubkyCore/SecurityModel|Security Model]] - Threat landscape, trust assumptions, and credible exit
 
 ### Infrastructure
 
