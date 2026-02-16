@@ -8,7 +8,7 @@ aliases:
 
 ## Overview
 
-Jeb operates as an autonomous agent on the Pubky network, monitoring mentions and providing helpful AI-generated responses. Unlike centralized social media bots that collect user data, Jeb operates transparently on the decentralized Pubky infrastructure, with all interactions stored on [[Homeserver|homeservers]] under user control.
+Jeb operates as an autonomous agent on the Pubky network, monitoring mentions and providing helpful AI-generated responses. Unlike centralized social media bots that collect user data, Jeb operates transparently on the decentralized Pubky infrastructure, with all interactions stored on [[Homeserver|Homeservers]] under user control.
 
 ### Key Characteristics
 
@@ -29,7 +29,7 @@ Jeb can summarize long threads or conversations to help users quickly understand
 
 **How It Works**:
 1. User mentions Jeb in a post with a summary request
-2. Jeb fetches the full thread context from the homeserver
+2. Jeb fetches the full thread context from the Homeserver
 3. AI generates a concise summary with key points
 4. Response includes up to 3 bullet points highlighting main topics
 5. Safety check ensures appropriate content before posting
@@ -679,7 +679,7 @@ Aid researchers:
 
 ### Network Dependencies
 
-- **Homeserver Availability**: Relies on homeserver uptime
+- **Homeserver Availability**: Relies on Homeserver uptime
 - **Nexus API**: Depends on [[PubkyNexus|Pubky Nexus]] for mention polling
 - **Web Search**: Fact-checking requires Brave API access
 - **Redis/PostgreSQL**: Infrastructure dependencies

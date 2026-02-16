@@ -106,8 +106,8 @@ Every user is identified by an Ed25519 public key:
 
 The SDK uses [[0.Introduction|PKARR]] to discover where a user's data is hosted:
 1. Query [[Explore/Technologies/MainlineDHT|Mainline DHT]] for public key
-2. Retrieve PKARR record with homeserver URL
-3. Connect to homeserver via HTTPS
+2. Retrieve PKARR record with Homeserver URL
+3. Connect to Homeserver via HTTPS
 
 ### Storage Paths
 
@@ -532,7 +532,7 @@ The repository includes comprehensive examples:
 
 ### Local Testnet
 
-For development, run a local homeserver:
+For development, run a local Homeserver:
 
 ```bash
 # Clone repository
@@ -684,7 +684,7 @@ try {
 
 3. **Error Handling**: Always handle network errors and retries
 
-4. **Rate Limiting**: Respect homeserver rate limits
+4. **Rate Limiting**: Respect Homeserver rate limits
 
 5. **Data Validation**: Validate data before storing and after retrieving
 

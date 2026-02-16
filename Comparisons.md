@@ -15,7 +15,7 @@ Understanding how Pubky differs from other decentralized and federated protocols
 | **Censorship Resistance** | 🟢 High | 🟡 Medium | 🔴 Low | 🟡 Medium | 🟢 High |
 | **Blockchain Requirement** | ❌ No | ❌ No | ❌ No | ✅ Yes (Optimism) | ❌ No |
 | **Transaction Fees** | ❌ None | ❌ None | ❌ None | ✅ Gas fees | ❌ None |
-| **Always-Online Requirement** | 🟡 Partial (homeservers) | 🟡 Partial (relays) | ❌ No (PDSs) | 🟡 Partial (hubs) | ✅ Yes (for hosting) |
+| **Always-Online Requirement** | 🟡 Partial (Homeservers) | 🟡 Partial (relays) | ❌ No (PDSs) | 🟡 Partial (hubs) | ✅ Yes (for hosting) |
 | **Mobile-Friendly** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | 🟡 Limited |
 | **Data Portability** | ✅ Full | ✅ Full | 🟡 Partial | 🟡 Partial | ✅ Full |
 | **Maturity** | 🚧 Beta | ✅ Production | ✅ Production | ✅ Production | ✅ Production |
@@ -42,7 +42,7 @@ Legend: ✅ Yes | ❌ No | 🟡 Partial | 🟢 High | 🔴 Low | 🚧 Work in Pr
 | **Discovery** | Mainline DHT (15+ years proven) | Relay lists (client-configured) |
 | **Data Structure** | Key-value store (files) | Event stream (signed messages) |
 | **Homeserver Discovery** | Automatic via PKARR → DHT | Manual relay configuration |
-| **Always-Online** | Not required (homeservers) | Relays must stay online |
+| **Always-Online** | Not required (Homeservers) | Relays must stay online |
 | **Semantic Tagging** | Built-in (Semantic Social Graph) | Application-level |
 | **API Protocol** | RESTful HTTP | WebSocket subscriptions |
 | **Scalability** | Proven DHT infrastructure | Relay-dependent |
@@ -77,7 +77,7 @@ Legend: ✅ Yes | ❌ No | 🟡 Partial | 🟢 High | 🔴 Low | 🚧 Work in Pr
 | **Discovery** | Mainline DHT (decentralized) | DID directory (centralized) |
 | **Account Portability** | Automatic (update PKARR) | Requires DID transfer |
 | **Handle System** | Optional vanity names | DNS-based handles required |
-| **Infrastructure Control** | User chooses homeserver | Bluesky PBC controls directory |
+| **Infrastructure Control** | User chooses Homeserver | Bluesky PBC controls directory |
 | **Censorship Resistance** | High (DHT-based) | Low (centralized components) |
 | **Data Format** | Flexible key-value | Lexicon-based schemas |
 | **Current State** | Beta | Production |
@@ -166,13 +166,13 @@ Legend: ✅ Yes | ❌ No | 🟡 Partial | 🟢 High | 🔴 Low | 🚧 Work in Pr
 | **Use Case** | Applications with identity | Content delivery and archival |
 | **Data Model** | Key-value (per user) | Merkle DAG (content) |
 | **Discovery** | Mainline DHT (identity) | IPFS DHT (content) |
-| **Always-Online** | No (homeservers persist) | Yes (to host your content) |
+| **Always-Online** | No (Homeservers persist) | Yes (to host your content) |
 | **Update Mechanism** | Direct (PUT/DELETE) | Republish with new CID |
 
 **Complementary Technologies:**
 Pubky and IPFS can work together:
 - Store large immutable content on IPFS
-- Reference IPFS CIDs in Pubky homeserver data
+- Reference IPFS CIDs in Pubky Homeserver data
 - Use Pubky for identity, IPFS for content delivery
 
 **When to Choose Pubky:**
@@ -217,7 +217,7 @@ Ethereum Address → On-chain Registry → Hubs (P2P) → Apps
 
 | Protocol | Trust Requirement |
 |----------|------------------|
-| **Pubky** | Trust homeserver for availability (not integrity) |
+| **Pubky** | Trust Homeserver for availability (not integrity) |
 | **Nostr** | Trust relays for availability (not integrity) |
 | **Bluesky** | Trust Bluesky PBC for DID directory |
 | **Farcaster** | Trust Optimism L2 and hub operators |
@@ -232,7 +232,7 @@ Ethereum Address → On-chain Registry → Hubs (P2P) → Apps
 **From Nostr:**
 - Export event history
 - Convert to Pubky data format
-- Publish to homeserver
+- Publish to Homeserver
 - Update discovery to PKARR
 
 **From Bluesky:**
@@ -264,7 +264,7 @@ Ethereum Address → On-chain Registry → Hubs (P2P) → Apps
 ## Common Misconceptions
 
 ### "Pubky is just another Nostr"
-**False**: While both use keys for identity, Pubky uses HTTP homeservers and Mainline DHT for discovery, not relays and manual configuration.
+**False**: While both use keys for identity, Pubky uses HTTP Homeservers and Mainline DHT for discovery, not relays and manual configuration.
 
 ### "Bluesky is decentralized like Pubky"
 **Partial**: Bluesky has decentralized data servers but centralized identity (DID directory controlled by Bluesky PBC).

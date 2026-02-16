@@ -7,21 +7,21 @@ Quick reference for terms used throughout the Pubky ecosystem.
 ## A
 
 **Aggregator**
-A service that collects and organizes data from multiple [[Homeserver|homeservers]] to enable search, feeds, and discovery features. See [[Explore/PubkyApp/Backend/Aggregator|Aggregator]].
+A service that collects and organizes data from multiple [[Homeserver|Homeservers]] to enable search, feeds, and discovery features. See [[Explore/PubkyApp/Backend/Aggregator|Aggregator]].
 
 **Authentication**
-The process of proving ownership of a public key through cryptographic signatures, enabling secure access to homeservers without passwords. See [[Authentication|details]].
+The process of proving ownership of a public key through cryptographic signatures, enabling secure access to Homeservers without passwords. See [[Authentication|details]].
 
 ## C
 
 **Capability Token**
-A cryptographically signed token that grants third-party applications limited access to a user's data on their homeserver, similar to OAuth access tokens.
+A cryptographically signed token that grants third-party applications limited access to a user's data on their Homeserver, similar to OAuth access tokens.
 
 **Censorship Resistance**
-The property of being difficult or impossible to block, censor, or control by any single authority. Pubky achieves this through decentralized [[MainlineDHT|Mainline DHT]] and distributed [[Homeserver|homeservers]].
+The property of being difficult or impossible to block, censor, or control by any single authority. Pubky achieves this through decentralized [[MainlineDHT|Mainline DHT]] and distributed [[Homeserver|Homeservers]].
 
 **[[CredibleExit|Credible Exit]]**
-The ability to leave a service provider (homeserver, app, etc.) without losing your data, identity, or social connections. A core principle of Pubky's architecture.
+The ability to leave a service provider (Homeserver, app, etc.) without losing your data, identity, or social connections. A core principle of Pubky's architecture.
 
 ## D
 
@@ -40,12 +40,12 @@ Protocol for encrypting DNS queries using HTTPS, preventing surveillance and tam
 A web server that stores user data in a key-value format. Users can run their own or choose any provider. Data is stored per public key and accessed via HTTP/HTTPS.
 
 **[[Homegate]]**
-A signup verification service for homeservers, providing SMS and Lightning Network payment verification to prevent spam while preserving privacy.
+A signup verification service for Homeservers, providing SMS and Lightning Network payment verification to prevent spam while preserving privacy.
 
 ## I
 
 **Indexer**
-See **Aggregator**. A service that crawls and indexes data from homeservers to provide search and discovery features.
+See **Aggregator**. A service that crawls and indexes data from Homeservers to provide search and discovery features.
 
 ## J
 
@@ -76,7 +76,7 @@ Noise Protocol implementation for encrypted peer-to-peer communication in the Pu
 Payment protocol built on Pubky for payment discovery and coordination across Bitcoin, Lightning, and other methods (work in progress).
 
 **[[0.Introduction|PKARR]]** (Public Key Addressable Resource Records)
-Self-issued, signed DNS-like records published to the Mainline DHT. Each record is tied to a public key and contains information like homeserver locations.
+Self-issued, signed DNS-like records published to the Mainline DHT. Each record is tied to a public key and contains information like Homeserver locations.
 
 **[[PKDNS]]**
 DNS server that resolves public key domains by fetching PKARR records from the Mainline DHT, bridging traditional DNS with decentralized identity.
@@ -92,16 +92,16 @@ The public half of a cryptographic key pair. In Pubky, this serves as your perma
 Social media application demonstrating Pubky Core capabilities. Currently live at [pubky.app](https://pubky.app) as MVP, with next-gen "Franky" client in development.
 
 **[[Explore/PubkyCLI|Pubky CLI]]**
-Command-line tool for interacting with Pubky homeservers, providing user operations, admin functions, and testing utilities.
+Command-line tool for interacting with Pubky Homeservers, providing user operations, admin functions, and testing utilities.
 
 **[[Explore/PubkyCore/Introduction|Pubky Core]]**
-The foundational protocol, homeserver implementation, and SDK for building decentralized applications on Pubky.
+The foundational protocol, Homeserver implementation, and SDK for building decentralized applications on Pubky.
 
 **[[Explore/Technologies/PubkyDocker|Pubky Docker]]**
 Docker Compose orchestration for running the complete Pubky Social stack locally with one command.
 
 **[[Explore/Technologies/PubkyExplorer|Pubky Explorer]]**
-Web-based file browser for exploring public data on Pubky homeservers. Available at [explorer.pubky.app](https://explorer.pubky.app).
+Web-based file browser for exploring public data on Pubky Homeservers. Available at [explorer.pubky.app](https://explorer.pubky.app).
 
 **[[Explore/Technologies/PubkyRing|Pubky Ring]]**
 Mobile key manager app (iOS/Android) for securely managing pubkys, authorizing applications, and handling sessions.
@@ -126,7 +126,7 @@ Identity that is fully controlled by the individual, not dependent on any centra
 A social network where relationships are tagged with meaningful metadata, enabling personalized content filtering, trust-based discovery, and user-controlled feeds.
 
 **Session**
-A time-limited authentication state that allows a client to access a homeserver without repeatedly signing requests with the private key.
+A time-limited authentication state that allows a client to access a Homeserver without repeatedly signing requests with the private key.
 
 ## T
 

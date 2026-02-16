@@ -23,7 +23,7 @@ The orchestration includes all necessary supporting infrastructure (PostgreSQL, 
 - Experimenting with the complete Pubky Social stack
 - Developing or testing Pubky Nexus integrations
 - Building custom social media frontends
-- Testing homeserver configurations
+- Testing Homeserver configurations
 - Learning how all Pubky components interact
 - Debugging cross-component issues
 
@@ -102,7 +102,7 @@ Local DHT relay for public key-addressable resource records. Enables domain reso
 **Configuration**: `pkarr.config.toml`
 
 ### 2. Pubky Homeserver (Ports 6287-6288, 15411-15412)
-Local instance of a Pubky homeserver with PostgreSQL backend.
+Local instance of a Pubky Homeserver with PostgreSQL backend.
 
 **Configuration**: `homeserver.config.toml`
 
@@ -215,7 +215,7 @@ rm -rf .storage/
 ### Testing Homeserver Changes
 
 1. Modify code in `../pubky-core/`
-2. Rebuild homeserver:
+2. Rebuild Homeserver:
 ```bash
 docker compose build homeserver
 docker compose up -d homeserver
@@ -280,7 +280,7 @@ docker compose logs postgres
 
 ### Nexus Can't Connect to Homeserver
 
-Verify homeserver is running and accessible:
+Verify Homeserver is running and accessible:
 ```bash
 curl http://localhost:6287/
 docker compose logs homeserver

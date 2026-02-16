@@ -18,7 +18,7 @@ Help improve this knowledge base:
 ### 2. Code Contributions
 
 Contribute to Pubky projects:
-- **[[Explore/PubkyCore/Introduction|Pubky Core]]**: Protocol and homeserver
+- **[[Explore/PubkyCore/Introduction|Pubky Core]]**: Protocol and Homeserver
 - **[[Explore/Technologies/PubkyRing|Pubky Ring]]**: Mobile key manager
 - **[[Explore/PubkyApp/Introduction|Pubky App]]**: Social application (Franky)
 - **[[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]]**: Indexing service

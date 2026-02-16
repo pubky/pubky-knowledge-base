@@ -4,13 +4,13 @@ aliases:
   - "../Pubky-Core/Homeserver"
 ---
 
-The Pubky network allows multiple, independent data stores, known as "homeservers." This improves [[Censorship|censorship-resistance]] and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden. 
+The Pubky network allows multiple, independent data stores, known as "Homeservers." This improves [[Censorship|censorship-resistance]] and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden. 
 
-Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their homeserver at will by updating their [[0.Introduction|PKARR]] in the [[MainlineDHT|Mainline DHT]]. 
+Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their Homeserver at will by updating their [[0.Introduction|PKARR]] in the [[MainlineDHT|Mainline DHT]]. 
 
 ## Public vs Private Data
 
-Current implementations across Pubky currently only support public, unencrypted data use cases. This does not prevent applications from using encrypted data within homeservers, we simply haven't implemented that set of features in any direct way yet. Feel free to contribute!  
+Current implementations across Pubky currently only support public, unencrypted data use cases. This does not prevent applications from using encrypted data within Homeservers, we simply haven't implemented that set of features in any direct way yet. Feel free to contribute!  
 
 ## Data Retrieval and Synchronization
 
@@ -18,16 +18,16 @@ Current implementations across Pubky currently only support public, unencrypted 
 
 ## Decentralized Storage Architecture
 
-- Homeservers can be operated by individuals, cooperatives, or commercial entities, with the option for anonymous operation, promoting a decentralized and resilient storage ecosystem where users could tune their preferred redundancy while maintaining the benefits of a central homeserver.
+- Homeservers can be operated by individuals, cooperatives, or commercial entities, with the option for anonymous operation, promoting a decentralized and resilient storage ecosystem where users could tune their preferred redundancy while maintaining the benefits of a central Homeserver.
 - We do not yet have any mirroring or replication tools available yet. Feel free to build with us!
 
 ## User Data Control and Credible Exit
 
-- The current network is being bootstrapped by Synonym's first homeserver, which supports key accounts as a service, as well as all services required to operate the [[Explore/PubkyApp/Introduction|pubky App]]. 
+- The current network is being bootstrapped by Synonym's first Homeserver, which supports key accounts as a service, as well as all services required to operate the [[Explore/PubkyApp/Introduction|pubky App]]. 
 - While Synonym is currently not charging fees for homeserving, it is totally possible for anyone to run their own homerserver and require service fees or peer-to-peer micropayments, or any other requirement, to improve data redundancy and competition.
 - Homeserver operators can use [[Homegate]] for signup verification, implementing SMS or Lightning Network verification to prevent spam while preserving user privacy.
-- Synonym does not control who can join or serve data on the network, but in order to truly have a [[CredibleExit|"credible exit"]] the network will need to mature to have more providers of homeservers and Pubky applications.
-- We will also need to make it as easy as possible for people to host their own homeservers, and to host homerserver clouds.
+- Synonym does not control who can join or serve data on the network, but in order to truly have a [[CredibleExit|"credible exit"]] the network will need to mature to have more providers of Homeservers and Pubky applications.
+- We will also need to make it as easy as possible for people to host their own Homeservers, and to host homerserver clouds.
 - We also need to ensure that applications remain performant & reliable as the network fragments.
 
 ## Event Stream

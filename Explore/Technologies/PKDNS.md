@@ -74,7 +74,7 @@ Support for dynamic IP updates:
 - CLI tool for publishing updated A/AAAA records
 - Automated IP detection from multiple providers
 - Periodic republishing to keep records alive on DHT
-- Perfect for home servers and dynamic IP addresses
+- Perfect for Homeservers and dynamic IP addresses
 
 ### Hybrid Resolution
 

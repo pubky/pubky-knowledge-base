@@ -34,7 +34,7 @@ In **Pubky**, Credible Exit is not just an idea—it's built into the architectu
 
 - **Data Portability**: Pubky’s design ensures that all of your data can be easily exported and imported between servers. This keeps your content intact and visible, regardless of where it’s hosted.
 
-> _NOTE_: During Pubky's initial bootstrapping phase, credible exit may not be practically possible until more homeserver providers join. [Synonym](https://synonym.to/) is building tools to make it easy for businesses and users to self-host.
+> _NOTE_: During Pubky's initial bootstrapping phase, credible exit may not be practically possible until more Homeserver providers join. [Synonym](https://synonym.to/) is building tools to make it easy for businesses and users to self-host.
 
 ## Important Aspects of Credible Exit
 

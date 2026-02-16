@@ -8,7 +8,7 @@ Common issues and solutions when working with Pubky.
 
 ### PKARR Record Not Resolving
 
-**Symptom**: Public key domain doesn't resolve, apps can't find homeserver
+**Symptom**: Public key domain doesn't resolve, apps can't find Homeserver
 
 **Common Causes:**
 
@@ -81,7 +81,7 @@ pubky-cli tools verify-pkarr <public-key>
    ```
 
 3. **Homeserver Not Running**
-   - **Solution**: Verify homeserver is running:
+   - **Solution**: Verify Homeserver is running:
    ```bash
    # Check process
    ps aux | grep pubky-homeserver
@@ -247,7 +247,7 @@ docker compose logs neo4j
 
 ### PUT/DELETE Operations Fail
 
-**Symptom**: Can't store or delete data on homeserver
+**Symptom**: Can't store or delete data on Homeserver
 
 **Common Causes:**
 
@@ -265,7 +265,7 @@ docker compose logs neo4j
 
 2. **Data Too Large**
    - Homeserver has size limits (default: ~10MB per file)
-   - **Solution**: Split large data or increase homeserver limit
+   - **Solution**: Split large data or increase Homeserver limit
 
 3. **Rate Limiting**
    - Too many requests in short time
@@ -326,7 +326,7 @@ docker compose logs neo4j
    };
    ```
 
-2. **Cache aggressively**: Store resolved homeserver URLs:
+2. **Cache aggressively**: Store resolved Homeserver URLs:
    ```javascript
    const cache = new Map();
    if (cache.has(publicKey)) {
@@ -341,8 +341,8 @@ docker compose logs neo4j
 **Symptom**: Homeserver operations are slow
 
 **Solutions**:
-1. **Choose geographically close homeserver**
-2. **Check homeserver load**: May be overloaded
+1. **Choose geographically close Homeserver**
+2. **Check Homeserver load**: May be overloaded
 3. **Use CDN**: Cache static data
 4. **Optimize request batching**: Group operations
 
@@ -362,12 +362,12 @@ docker compose logs neo4j
 
 ### "Homeserver not found"
 
-**Causes**: PKARR record has no homeserver entries, DNS resolution failed
+**Causes**: PKARR record has no Homeserver entries, DNS resolution failed
 
 **Solutions**:
-- Verify PKARR record contains homeserver URL
+- Verify PKARR record contains Homeserver URL
 - Check PKDNS is working
-- Test direct homeserver URL access
+- Test direct Homeserver URL access
 
 ### "Session expired"
 
@@ -404,7 +404,7 @@ When reporting bugs, include:
 2. **Steps to reproduce**: Exact sequence that causes the issue
 3. **Error messages**: Full error text and stack traces
 4. **Expected vs actual**: What should happen vs what happens
-5. **Logs**: Relevant logs from homeserver/client
+5. **Logs**: Relevant logs from Homeserver/client
 
 **Example:**
 ```markdown

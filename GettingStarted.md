@@ -53,7 +53,7 @@ Visit **[pubky.app](https://pubky.app)** - a decentralized social media platform
 4. Start posting, following, and exploring!
 
 **What makes it different:**
-- You own your data (stored on homeservers)
+- You own your data (stored on Homeservers)
 - No algorithm controls your feed
 - You can switch to different apps without losing your content
 - True censorship resistance
@@ -134,7 +134,7 @@ This gives you:
 - Pubky Nexus with Neo4j & Redis (port 8000)
 - Pubky App frontend (port 5173)
 
-**Alternative**: Run just a homeserver:
+**Alternative**: Run just a Homeserver:
 ```bash
 git clone https://github.com/pubky/pubky-core
 cd pubky-core/pubky-homeserver
@@ -175,7 +175,7 @@ await pubky.signOut();
 ```
 
 **Key concepts:**
-- Data is stored per public key on homeservers
+- Data is stored per public key on Homeservers
 - Path structure: `/pub/app-name/path` for public data
 - All operations use standard HTTP/HTTPS
 - Authentication via cryptographic signatures
@@ -237,12 +237,12 @@ const posts = await response.json();
 
 1. Set up a server (VPS, cloud, or self-hosted)
 2. Configure HTTPS (required)
-3. Deploy homeserver:
+3. Deploy Homeserver:
    ```bash
    docker build --build-arg TARGETARCH=x86_64 -t pubky:core .
    docker run --network=host -it pubky:core
    ```
-4. Publish homeserver location to PKARR
+4. Publish Homeserver location to PKARR
 5. Configure rate limiting and moderation
 
 📘 **Guide**: [[Homeserver|Homeserver Documentation]]
@@ -277,11 +277,11 @@ Run a [[PKDNS]] server for your users:
 **Q: Do users need to download Pubky Ring to use my app?**
 A: Currently yes for secure key management, though apps can implement their own key storage. Pubky Ring provides the best UX for multi-app identity.
 
-**Q: Can I use Pubky without running my own homeserver?**
-A: Yes! Users can choose any public homeserver provider. You can host your own or use existing providers.
+**Q: Can I use Pubky without running my own Homeserver?**
+A: Yes! Users can choose any public Homeserver provider. You can host your own or use existing providers.
 
 **Q: Is Pubky compatible with Nostr/Bluesky/etc?**
-A: Not directly. Pubky uses a different architecture (homeservers + PKARR vs relays/PDSs). See [[Comparisons]] for details.
+A: Not directly. Pubky uses a different architecture (Homeservers + PKARR vs relays/PDSs). See [[Comparisons]] for details.
 
 **Q: How do I handle user authentication?**
 A: The SDK handles it automatically via signature-based auth. No passwords, OAuth, or tokens needed. See [[Authentication]].
@@ -290,7 +290,7 @@ A: The SDK handles it automatically via signature-based auth. No passwords, OAut
 A: Currently Pubky is optimized for public data. Private/encrypted features are coming via [[Explore/Technologies/PubkyNoise|Pubky Noise]].
 
 **Q: How do I make money?**
-A: Several models work: homeserver hosting, indexing services (like Nexus), premium features, or payments via [[Explore/Technologies/Paykit|Paykit]] (WIP).
+A: Several models work: Homeserver hosting, indexing services (like Nexus), premium features, or payments via [[Explore/Technologies/Paykit|Paykit]] (WIP).
 
 ---
 

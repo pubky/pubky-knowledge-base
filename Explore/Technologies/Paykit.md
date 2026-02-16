@@ -8,7 +8,7 @@ Paykit is a payment protocol (work in progress) built on Pubky that aims to enab
 
 ## Core Concept
 
-Paykit abstracts payment complexity behind a single, static **Pubky public key**. Your public key becomes a universal payment identifier - recipients would discover your available payment methods by querying your [[Homeserver|homeserver]]'s public directory at `/pub/paykit.app/v0/`.
+Paykit abstracts payment complexity behind a single, static **Pubky public key**. Your public key becomes a universal payment identifier - recipients would discover your available payment methods by querying your [[Homeserver|Homeserver]]'s public directory at `/pub/paykit.app/v0/`.
 
 This enables applications where users pay directly to profiles, offering an intuitive experience when multiple payment methods are possible.
 
@@ -17,7 +17,7 @@ This enables applications where users pay directly to profiles, offering an intu
 ### Three-Layer System
 
 1. **Public Directory Layer** (`paykit-lib`)
-   - Publish payment methods to Pubky homeservers
+   - Publish payment methods to Pubky Homeservers
    - Discover methods from other users' public keys
    - Public read access for discovery
 
@@ -122,7 +122,7 @@ Pay directly to profiles using Pubky identity without requesting addresses or in
 ## Relationship to Pubky Core
 
 Paykit is designed as a **layer 2 protocol** on top of Pubky Core:
-- Uses Pubky homeservers for storage
+- Uses Pubky Homeservers for storage
 - Leverages Pubky's public key identity system
 - Integrates with Pubky's DHT-based discovery
 - Extends Pubky with payment-specific functionality

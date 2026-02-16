@@ -43,15 +43,15 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 
 ### Core Documentation
 
-- [[Explore/PubkyCore/Introduction|Pubky Core Overview]] - Protocol, homeserver, and SDK
+- [[Explore/PubkyCore/Introduction|Pubky Core Overview]] - Protocol, Homeserver, and SDK
 - [[Explore/PubkyCore/SDK|SDK Documentation]] - Client libraries (Rust, JavaScript, iOS, Android)
 - [[Explore/PubkyCore/API|API Reference]] - RESTful HTTP API specification
 - [[Architecture|Architecture Overview]] - System design and data flow
-- [[Homeserver|Homeserver Documentation]] - Deploy and configure homeservers
+- [[Homeserver|Homeserver Documentation]] - Deploy and configure Homeservers
 
 ### Infrastructure
 
-- [[Homegate|Homegate]] - Signup verification service for homeservers (SMS + Lightning)
+- [[Homegate|Homegate]] - Signup verification service for Homeservers (SMS + Lightning)
 - [[PKDNS|PKDNS]] - DNS server for resolving public key domains
 - [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] - Production indexing service
 
@@ -67,8 +67,8 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 🛠️ **Pubky Ecosystem Tools** - Utilities for development, debugging, and exploration:
 
 - **[[Explore/Technologies/PubkyDocker|Pubky Docker]]** - One-click Docker stack for running the complete Pubky Social environment locally
-- **[[Explore/Technologies/PubkyExplorer|Pubky Explorer]]** - Web-based file browser for homeserver data ([explorer.pubky.app](https://explorer.pubky.app))
-- **[[Explore/Technologies/PubkyCLI|Pubky CLI]]** - Command-line tool for homeserver management and testing
+- **[[Explore/Technologies/PubkyExplorer|Pubky Explorer]]** - Web-based file browser for Homeserver data ([explorer.pubky.app](https://explorer.pubky.app))
+- **[[Explore/Technologies/PubkyCLI|Pubky CLI]]** - Command-line tool for Homeserver management and testing
 - **PKDNS Digger** - Web-based DNS record lookup tool for PKARR domains ([github.com/pubky/pkdns-digger](https://github.com/pubky/pkdns-digger))
 - **[[JebPubkyAIBot|Jeb AI Bot]]** - AI-powered bot for summaries and fact-checking on Pubky social network
 

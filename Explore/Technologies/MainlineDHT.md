@@ -23,8 +23,8 @@ Pubky uses Mainline DHT as the foundation for [[0.Introduction|PKARR]] (Public K
 When you access a public key domain (e.g., `pubky://o4dksfbqk85ogzdb5osziw6befigbuxmuxkuxq8434q89uj56uyy`):
 1. [[PKDNS]] queries Mainline DHT for that public key
 2. DHT returns signed [[0.Introduction|PKARR]] records
-3. Records contain homeserver URLs and other DNS-style resource records
-4. Your client can now connect to the user's homeserver
+3. Records contain Homeserver URLs and other DNS-style resource records
+4. Your client can now connect to the user's Homeserver
 
 ### Data Lifecycle
 - **Publishing**: Users sign DNS packets and publish to DHT (directly or via relay)

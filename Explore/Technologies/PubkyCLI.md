@@ -4,7 +4,7 @@ aliases:
   - "Pubky-CLI"
 ---
 
-**Pubky CLI** is a command-line tool for interacting with Pubky homeservers. Built in Rust, it provides both user-facing and administrative capabilities for managing homeservers, testing deployments, and automating workflows.
+**Pubky CLI** is a command-line tool for interacting with Pubky Homeservers. Built in Rust, it provides both user-facing and administrative capabilities for managing Homeservers, testing deployments, and automating workflows.
 
 ## Overview
 
@@ -213,7 +213,7 @@ echo "User onboarded successfully!"
 
 ### Local Development
 
-Test homeserver functionality without building custom clients:
+Test Homeserver functionality without building custom clients:
 ```bash
 # Start local homeserver
 cargo run -p pubky-homeserver -- --data-dir ~/.pubky
@@ -224,7 +224,7 @@ pubky-cli admin info
 
 ### Deployment Automation
 
-Script homeserver configuration and user provisioning:
+Script Homeserver configuration and user provisioning:
 ```bash
 # Generate batch signup tokens
 for i in {1..100}; do
