@@ -15,7 +15,7 @@ Nexus serves as the central bridge between Pubky Homeservers and social clients,
 ## Key Features
 
 ### Real-time Social Graph Aggregation
-Nexus continuously ingests events from multiple Pubky Homeservers, building and maintaining a structured social graph in real time. This enables features like:
+Nexus continuously ingests events from multiple Pubky Homeservers, building and maintaining a structured social graph in real-time. This enables features like:
 - Following relationships and friend networks
 - Post interactions (likes, replies, mentions)
 - Tag-based content discovery

@@ -64,7 +64,7 @@ From the PKARR project's perspective, Mainline DHT was chosen because:
 ## Security Considerations
 
 - **Not a Storage Platform**: Records are ephemeral and will be dropped without regular republishing
-- **Not Realtime**: Records are heavily cached; updates may take time to propagate
+- **Not real-time**: Records are heavily cached; updates may take time to propagate
 - **Sybil Resistance**: Implementation includes measures against Vertical Sybil Attacks
 - **Rate Limiting**: Server operators should implement custom rate limiting for DoS protection
 
