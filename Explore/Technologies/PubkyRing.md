@@ -192,7 +192,7 @@ Private keys never leave the secure storage.
 
 ### Onboarding Flow
 1. **Install Pubky Ring** from app store
-2. **Create first identity** - generates Ed25519 keypair
+2. **Create first identity** - generates Ed25519 key pair
 3. **Set up security** - enable biometrics, set PIN
 4. **Backup keys** - secure recovery phrase or encrypted backup
 5. **Connect apps** - authorize Pubky applications
