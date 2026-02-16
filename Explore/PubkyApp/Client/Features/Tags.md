@@ -27,8 +27,8 @@ Both types work the same way: the tagger, the label, and the target (user or pos
 
 ## How Tags Work
 
-1. A user creates a tag by choosing a label and a target (a user profile or a post). The tag is stored on the tagger's own [[Homeservers|homeserver]] as a `PubkyAppTag` record containing the target URI, the label text, and a timestamp.
-2. The [[Indexer|indexer]] (Nexus watcher) detects the new tag event from the homeserver and indexes it into the social graph.
+1. A user creates a tag by choosing a label and a target (a user profile or a post). The tag is stored on the tagger's own [[Homeserver|Homeserver]] as a `PubkyAppTag` record containing the target URI, the label text, and a timestamp.
+2. The [[Indexer|indexer]] (Nexus watcher) detects the new tag event from the Homeserver and indexes it into the social graph.
 3. The tag is recorded as a **TAGGED** relationship in the graph database, connecting the tagger to the target with the label as metadata.
 4. Multiple caches and indexes are updated in parallel: tag counts on the target, tagger lists per label, engagement scores, trending tag rankings, and the tag [[Search|search]] index.
 5. The tag is now queryable through the API — other users and clients can see it, filter by it, and discover content through it.
@@ -64,7 +64,7 @@ Example API calls:
 - Scoped to followers: [`/v0/tags/hot?user_id={pubky}&reach=followers&limit=3`](https://nexus.pubky.app/v0/tags/hot?user_id=ihaqcthsdbk751sxctk849bdr7yz7a934qen5gmpcbwcur49i97y&reach=followers&limit=3)
 - Taggers for a label: [`/v0/tags/taggers/pubky?user_id={pubky}&reach=followers`](https://nexus.pubky.app/v0/tags/taggers/pubky?user_id=ihaqcthsdbk751sxctk849bdr7yz7a934qen5gmpcbwcur49i97y&reach=followers&limit=5)
 
-**User tags** ([source](https://github.com/pubky/pubky-nexus/blob/main/nexus-webapi/src/routes/v0/user/tags.rs)) accept a `viewer_id` and `depth` parameter (1–3) for Web-of-Trust filtering:
+**User tags** ([source](https://github.com/pubky/pubky-nexus/blob/main/nexus-webapi/src/routes/v0/user/tags.rs)) accept a `viewer_id` and `depth` parameter (1–3) for web-of-trust filtering:
 
 - Example: [`/v0/user/{pubky}/tags?viewer_id={pubky}&depth=2`](https://nexus.pubky.app/v0/user/ihaqcthsdbk751sxctk849bdr7yz7a934qen5gmpcbwcur49i97y/tags?viewer_id=operrr8wsbpr3ue9d4qj41ge1kcc6r7fdiy6o3ugjrrhi4y77rdo&depth=2)
 
