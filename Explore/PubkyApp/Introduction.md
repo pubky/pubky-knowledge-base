@@ -17,11 +17,8 @@ The data models and validation rules are formally specified in the [pubky-app-sp
 ### Live Application & Development Status
 
 - **Live Demo**: [https://pubky.app](https://pubky.app) - Production instance currently operational
-- **Current Repository**: [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app) - **⚠️ Deprecated** (MVP codebase, not for learning/contribution)
-- **New Development**: [github.com/pubky/franky](https://github.com/pubky/franky) - **Work in Progress** (next-generation client, expected summer 2025)
+- **Repository**: [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app) — Reference implementation and source code
 - **Build Compatible Clients**: Use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as the authoritative specification
-
-> **Note for Developers**: The original pubky-app repository presented at BTC Prague is deprecated and marked as "very hacky" by the team. If you want to build a compatible social client or learn from production-quality code, start with the [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) specification and wait for the franky repository to mature. The current codebase at pubky-app is transitional and should not be used as a reference.
 
 ## Key aspects
 

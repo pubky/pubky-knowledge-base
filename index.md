@@ -79,9 +79,8 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 ### Current Status
 
 - **Live Application**: [https://pubky.app](https://pubky.app) - Production PWA currently operational
-- **Current Repository**: [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app) - **⚠️ Deprecated** (MVP codebase)
-- **New Development**: [github.com/pubky/franky](https://github.com/pubky/franky) - **Work in Progress** (next-gen client, expected summer 2025)
-- **Data Model Specification**: [pubky-app-specs](https://github.com/pubky/pubky-app-specs) - Formal schema definitions for interoperability
+- **Web Client**: [[Explore/PubkyApp/Client/PubkyApp|pubky.app]] ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app))
+- **Data Model Specification**: [[Explore/PubkyApp/AppSpecs|App Specs]] ([pubky-app-specs](https://github.com/pubky/pubky-app-specs)) - Formal schema definitions for interoperability
 
 ### Backend Infrastructure
 
