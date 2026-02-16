@@ -257,7 +257,7 @@ Use [[Homegate]] to prevent spam:
 **DNS Resolution:**
 
 Run a [[PKDNS]] server for your users:
-- Resolves public key domains
+- Resolves public-key domains
 - Supports traditional DNS
 - DoH/DoT encryption
 

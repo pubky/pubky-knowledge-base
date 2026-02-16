@@ -95,7 +95,7 @@ See [pubky-core-ffi](https://github.com/pubky/pubky-core-ffi) for detailed integ
 
 ## Core Concepts
 
-### Public Key Identity
+### Public-Key Identity
 
 Every user is identified by an Ed25519 public key:
 - 32-byte public key (encoded as z-base-32)

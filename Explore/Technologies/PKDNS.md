@@ -1,10 +1,10 @@
-# PKDNS: Public Key DNS Server
+# PKDNS: Public-Key DNS Server
 
 **PKDNS** is a DNS server that enables self-sovereign and censorship-resistant domain names by resolving [[0.Introduction|PKARR]] (Public Key Addressable Resource Records) hosted on the [[MainlineDHT|Mainline DHT]]. It bridges the gap between traditional DNS infrastructure and public key-based domains, allowing anyone to access the decentralized web using standard DNS protocols.
 
 ## Overview
 
-PKDNS makes public key domains accessible to everyone by acting as a DNS resolver that understands both traditional ICANN domains and PKARR-based public key domains. When you query a public key domain (52-character base32 encoded public key), PKDNS fetches the signed DNS records from the Mainline DHT, verifies the signature, and returns them to your browser or application—just like traditional DNS.
+PKDNS makes public-key domains accessible to everyone by acting as a DNS resolver that understands both traditional ICANN domains and PKARR-based public-key domains. When you query a public-key domain (52-character base32 encoded public key), PKDNS fetches the signed DNS records from the Mainline DHT, verifies the signature, and returns them to your browser or application—just like traditional DNS.
 
 ### Key Innovation
 
@@ -20,15 +20,15 @@ Instead of relying on ICANN registrars and centralized name servers, PKDNS enabl
 ### Resolution Flow
 
 1. **User queries domain**: Browser or app requests `7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy`
-2. **PKDNS recognizes format**: Identifies 52-character base32 as a public key domain
+2. **PKDNS recognizes format**: Identifies 52-character base32 as a public-key domain
 3. **DHT lookup**: Queries the Mainline DHT for PKARR records associated with that public key
 4. **Signature verification**: Validates that records were signed by the private key holder
 5. **Cache and return**: Caches the verified records and returns DNS response to client
 6. **ICANN fallback**: For traditional domains like `example.com`, forwards to upstream DNS (default: 8.8.8.8)
 
-### Public Key Domain Format
+### Public-Key Domain Format
 
-Public key domains use base32-encoded Ed25519 public keys:
+Public-key domains use base32-encoded Ed25519 public keys:
 - **Length**: 52 characters (z-base-32 encoding)
 - **Example**: `7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy`
 - **Subdomains**: Support standard subdomain syntax (e.g., `blog.7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy`)
@@ -78,8 +78,8 @@ Support for dynamic IP updates:
 
 ### Hybrid Resolution
 
-Seamlessly resolves both public key domains and traditional domains:
-- Public key domains (52 chars) → DHT lookup
+Seamlessly resolves both public-key domains and traditional domains:
+- Public-key domains (52 chars) → DHT lookup
 - ICANN domains → Upstream DNS fallback
 - Configurable upstream DNS server
 - No special client configuration needed
@@ -191,14 +191,14 @@ See [sample-config.toml](https://github.com/pubky/pkdns/blob/master/server/sampl
 
 Test that PKDNS is working correctly:
 
-#### Verify Public Key Domain Resolution
+#### Verify Public-Key Domain Resolution
 
 ```bash
 # Replace SERVER_IP with your PKDNS server IP (127.0.0.1 for local)
 nslookup 7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy SERVER_IP
 ```
 
-**Expected output**: IP address(es) for the public key domain
+**Expected output**: IP address(es) for the public-key domain
 
 #### Verify ICANN Domain Fallback
 
@@ -214,11 +214,11 @@ Navigate to: [http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy/](http
 
 **Expected**: Website loads successfully
 
-> **Tip**: Always add `./` at the end of public key domain URLs, otherwise browsers may search instead of resolve.
+> **Tip**: Always add `./` at the end of public-key domain URLs, otherwise browsers may search instead of resolve.
 
-## Publishing Your Own Public Key Domain
+## Publishing Your Own Public-Key Domain
 
-To publish a website on a public key domain:
+To publish a website on a public-key domain:
 
 ### Generate Key Pair
 
@@ -387,7 +387,7 @@ Currently supports only: A, AAAA, TXT, CNAME, MX
 ### Browser Trailing Slash
 
 Browsers may search instead of resolve domains:
-- Always append `./` to public key domains in URL bar
+- Always append `./` to public-key domains in URL bar
 - Example: `http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy./`
 - Not needed for bookmarks or links
 
@@ -458,7 +458,7 @@ pkdns -f 1.1.1.1:53  # Cloudflare DNS
 
 - **[pkarr](https://github.com/pubky/pkarr)**: Core PKARR library and specification
 - **[pkdns-digger](https://github.com/pubky/pkdns-digger)**: Web-based DNS record lookup tool for PKARR/PKDNS
-- **[pkdns-vanity](https://github.com/jphastings/pkdns-vanity)**: Generate vanity public key domains
+- **[pkdns-vanity](https://github.com/jphastings/pkdns-vanity)**: Generate vanity public-key domains
 - **[awesome-pubky](https://github.com/aljazceru/awesome-pubky)**: Curated list of Pubky resources
 
 ## See Also

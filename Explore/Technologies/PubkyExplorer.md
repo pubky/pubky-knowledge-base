@@ -15,7 +15,7 @@ Pubky Explorer makes it easy to browse the public data stored across the Pubky n
 ### Key Features
 
 - **Zero Installation**: Runs entirely in the browser, no downloads required
-- **Public Key Navigation**: Enter any 52-character public key to browse their data
+- **Public-Key Navigation**: Enter any 52-character public key to browse their data
 - **Directory Traversal**: Navigate through nested directories like a traditional file browser
 - **File Preview**: View file contents directly in the browser (text, JSON, images)
 - **Keyboard Navigation**: Full keyboard shortcuts for efficient browsing

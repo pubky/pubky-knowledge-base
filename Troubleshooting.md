@@ -8,7 +8,7 @@ Common issues and solutions when working with Pubky.
 
 ### PKARR Record Not Resolving
 
-**Symptom**: Public key domain doesn't resolve, apps can't find Homeserver
+**Symptom**: Public-key domain doesn't resolve, apps can't find Homeserver
 
 **Common Causes:**
 
@@ -91,7 +91,7 @@ pubky-cli tools verify-pkarr <public-key>
    ```
 
 4. **PKDNS Resolution Failure**
-   - Browser can't resolve public key domain
+   - Browser can't resolve public-key domain
    - **Solution**: Use PKDNS-enabled resolver or DoH:
    ```javascript
    // In browser, use full HTTPS URL

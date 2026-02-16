@@ -52,7 +52,7 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 ### Infrastructure
 
 - [[Homegate|Homegate]] - Signup verification service for Homeservers (SMS + Lightning)
-- [[PKDNS|PKDNS]] - DNS server for resolving public key domains
+- [[PKDNS|PKDNS]] - DNS server for resolving public-key domains
 - [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] - Production indexing service
 
 ### Resources

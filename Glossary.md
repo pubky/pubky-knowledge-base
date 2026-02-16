@@ -29,7 +29,7 @@ The ability to leave a service provider (Homeserver, app, etc.) without losing y
 A decentralized key-value storage system distributed across many nodes. Pubky uses [[MainlineDHT|Mainline DHT]] for storing [[PKARR]] records.
 
 **[[DNS|Domain Name System (DNS)]]**
-Traditional system for translating domain names to IP addresses. [[PKDNS]] extends this to support public key domains.
+Traditional system for translating domain names to IP addresses. [[PKDNS]] extends this to support public-key domains.
 
 **[[DoH|DNS over HTTPS (DoH)]]**
 Protocol for encrypting DNS queries using HTTPS, preventing surveillance and tampering.
@@ -79,14 +79,14 @@ Payment protocol built on Pubky for payment discovery and coordination across Bi
 Self-issued, signed DNS-like records published to the Mainline DHT. Each record is tied to a public key and contains information like Homeserver locations.
 
 **[[PKDNS]]**
-DNS server that resolves public key domains by fetching PKARR records from the Mainline DHT, bridging traditional DNS with decentralized identity.
+DNS server that resolves public-key domains by fetching PKARR records from the Mainline DHT, bridging traditional DNS with decentralized identity.
 
 **Public Key**
 The public half of a cryptographic key pair. In Pubky, this serves as your permanent, self-sovereign identity (often called a "pubky").
 
 **Pubky**
 1. The decentralized web protocol and ecosystem
-2. A user's public key identity (e.g., "my pubky is z4e8s...")
+2. A user's public-key identity (e.g., "my pubky is z4e8s...")
 
 **[[Explore/PubkyApp/Introduction|Pubky App]]**
 Social media application demonstrating Pubky Core capabilities. Currently live at [pubky.app](https://pubky.app) as MVP, with next-gen "Franky" client in development.

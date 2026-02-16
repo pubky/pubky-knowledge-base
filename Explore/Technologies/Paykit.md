@@ -123,7 +123,7 @@ Pay directly to profiles using Pubky identity without requesting addresses or in
 
 Paykit is designed as a **layer 2 protocol** on top of Pubky Core:
 - Uses Pubky Homeservers for storage
-- Leverages Pubky's public key identity system
+- Leverages Pubky's public-key identity system
 - Integrates with Pubky's DHT-based discovery
 - Extends Pubky with payment-specific functionality
 

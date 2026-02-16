@@ -3,7 +3,7 @@
 ## Overview & Philosophy
 
 **Q1. What is Pubky, and why was it developed?**  
-Pubky is a new kind of web built on public key domains instead of usernames or rented accounts. Your public key becomes your self-sovereign domain. Pubky uses PKDNS, which runs on the Mainline DHT.
+Pubky is a new kind of web built on public-key domains instead of usernames or rented accounts. Your public key becomes your self-sovereign domain. Pubky uses PKDNS, which runs on the Mainline DHT.
 
 Pubky introduces a semantic social graph driven by tags and trust, not ads and opaque feeds.  
 It was created to counter:
@@ -34,7 +34,7 @@ Install the [[Explore/PubkyCore/SDK|Pubky SDK]] for your platform (Rust: `cargo 
 "Public Key Addressable Resource Records" your signed DNS-like records published on the DHT.
 
 **Q8. What is PKDNS?**  
-[[PKDNS]] is a DNS server that resolves public key domains by fetching [[0.Introduction|PKARR]] records from the [[MainlineDHT|Mainline DHT]]. It enables self-sovereign, censorship-resistant domain names while still supporting traditional ICANN domains. Anyone can run a PKDNS server or use public instances to access the decentralized web. See [[PKDNS]] for setup guides and publishing instructions.
+[[PKDNS]] is a DNS server that resolves public-key domains by fetching [[0.Introduction|PKARR]] records from the [[MainlineDHT|Mainline DHT]]. It enables self-sovereign, censorship-resistant domain names while still supporting traditional ICANN domains. Anyone can run a PKDNS server or use public instances to access the decentralized web. See [[PKDNS]] for setup guides and publishing instructions.
 
 **Q9. How does Pubky compare to DNS?**  
 Pubky replaces ICANN with your public key. You publish and resolve records yourself.
