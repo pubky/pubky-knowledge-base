@@ -4,18 +4,18 @@ aliases:
   - "Pubky-Explorer"
 ---
 
-**Pubky Explorer** is a web-based file browser for exploring public data stored on [[Homeserver|Pubky homeservers]]. It provides an intuitive interface for navigating the decentralized file system, previewing files, and sharing direct links to specific content—all without requiring authentication or installation.
+**Pubky Explorer** is a web-based file browser for exploring public data stored on [[Homeserver|Pubky Homeservers]]. It provides an intuitive interface for navigating the decentralized file system, previewing files, and sharing direct links to specific content—all without requiring authentication or installation.
 
 **Live Application**: [https://explorer.pubky.app](https://explorer.pubky.app)
 
 ## Overview
 
-Pubky Explorer makes it easy to browse the public data stored across the Pubky network. Unlike traditional file explorers that require local access, Pubky Explorer operates entirely in the browser, fetching data directly from homeservers using the [[Explore/PubkyCore/SDK|Pubky SDK]].
+Pubky Explorer makes it easy to browse the public data stored across the Pubky network. Unlike traditional file explorers that require local access, Pubky Explorer operates entirely in the browser, fetching data directly from Homeservers using the [[Explore/PubkyCore/SDK|Pubky SDK]].
 
 ### Key Features
 
 - **Zero Installation**: Runs entirely in the browser, no downloads required
-- **Public Key Navigation**: Enter any 52-character public key to browse their data
+- **Public-Key Navigation**: Enter any 52-character public key to browse their data
 - **Directory Traversal**: Navigate through nested directories like a traditional file browser
 - **File Preview**: View file contents directly in the browser (text, JSON, images)
 - **Keyboard Navigation**: Full keyboard shortcuts for efficient browsing
@@ -28,8 +28,8 @@ Pubky Explorer makes it easy to browse the public data stored across the Pubky n
 
 Pubky Explorer uses the [[Explore/PubkyCore/SDK|Pubky SDK]] to:
 
-1. **Resolve Public Keys**: Convert public keys to homeserver URLs via [[0.Introduction|PKARR]]
-2. **List Directories**: Fetch directory contents from homeservers
+1. **Resolve Public Keys**: Convert public keys to Homeserver URLs via [[0.Introduction|PKARR]]
+2. **List Directories**: Fetch directory contents from Homeservers
 3. **Fetch Files**: Retrieve individual files for preview
 4. **Display Content**: Render files appropriately based on content type
 
@@ -164,7 +164,7 @@ Study the Pubky ecosystem:
 
 **Client-Side Only**:
 - No backend server required
-- All data fetched directly from homeservers
+- All data fetched directly from Homeservers
 - Privacy-preserving (no tracking)
 - Censorship-resistant (no proxy)
 
@@ -273,22 +273,22 @@ Deploy to any static hosting service:
 
 - **No Analytics**: Zero tracking by default
 - **No Cookies**: Stateless operation
-- **No Server**: Direct homeserver connections
+- **No Server**: Direct Homeserver connections
 - **Client-Side**: All computation in browser
 - **No Data Collection**: Nothing stored externally
 
 ### Security Considerations
 
-- **Public Data Only**: Only displays public homeserver data
+- **Public Data Only**: Only displays public Homeserver data
 - **No Authentication**: Cannot access private data
 - **Read-Only**: Cannot modify or upload data
-- **CORS Limitations**: Subject to homeserver CORS policies
+- **CORS Limitations**: Subject to Homeserver CORS policies
 - **Browser Sandbox**: Runs in browser security context
 
 ### Data Visibility
 
 **What Explorer Can See**:
-- Public directories on homeservers
+- Public directories on Homeservers
 - Files with read permissions
 - Metadata (file sizes, structure)
 
@@ -305,14 +305,14 @@ Deploy to any static hosting service:
 - **Many Files**: Extremely large directories may be slow
 - **Binary Files**: Limited preview support for binary formats
 - **Recursive Depth**: Deep nesting may impact performance
-- **Network Speed**: Limited by homeserver response times
+- **Network Speed**: Limited by Homeserver response times
 
 ### Functional Limitations
 
 - **Read-Only**: No upload or edit capabilities
 - **No Authentication**: Cannot access private data
 - **Public Data**: Only works with publicly readable content
-- **CORS Dependent**: Requires homeserver CORS support
+- **CORS Dependent**: Requires Homeserver CORS support
 - **Single Homeserver**: No multi-homeserver aggregation
 
 ## Future Enhancements

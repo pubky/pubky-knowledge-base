@@ -4,25 +4,25 @@ aliases:
   - "../../Pubky-App/Backend/Pubky-Nexus"
 ---
 
-**Pubky Nexus** is the production-grade indexing and aggregation service that powers Pubky App's social features. It transforms decentralized data from multiple [[Homeserver|homeservers]] into a high-performance social graph API, enabling real-time social media experiences at scale.
+**Pubky Nexus** is the production-grade indexing and aggregation service that powers Pubky App's social features. It transforms decentralized data from multiple [[Homeserver|Homeservers]] into a high-performance social graph API, enabling real-time social media experiences at scale.
 
 ## Overview
 
-Nexus serves as the central bridge between Pubky homeservers and social clients, implementing the [[Aggregator|aggregator]], [[Indexer|indexer]], and [[WebServer|web server]] components of the [[4.CustomBackend|custom backend architecture]]. By aggregating events from homeservers into a rich social graph, Nexus provides the infrastructure needed for features like feeds, search, recommendations, and real-time notifications.
+Nexus serves as the central bridge between Pubky Homeservers and social clients, implementing the [[Aggregator|aggregator]], [[Indexer|indexer]], and [[WebServer|web server]] components of the [[4.CustomBackend|custom backend architecture]]. By aggregating events from Homeservers into a rich social graph, Nexus provides the infrastructure needed for features like feeds, search, recommendations, and real-time notifications.
 
 > ⚠️ **Note**: The Nexus API is currently in active development. The service uses the `/v0` route prefix to indicate API instability, and breaking changes may occur as the system evolves toward stability.
 
 ## Key Features
 
 ### Real-time Social Graph Aggregation
-Nexus continuously ingests events from multiple Pubky homeservers, building and maintaining a structured social graph in real time. This enables features like:
+Nexus continuously ingests events from multiple Pubky Homeservers, building and maintaining a structured social graph in real-time. This enables features like:
 - Following relationships and friend networks
 - Post interactions (likes, replies, mentions)
 - Tag-based content discovery
 - User muting and moderation
 
 ### Full-Content Indexing
-Rather than requiring clients to locate and query individual homeservers for content, Nexus indexes and serves content directly. This dramatically improves latency and user experience while still maintaining the decentralized nature of the underlying data. Clients can optionally verify content authenticity directly with homeservers when needed.
+Rather than requiring clients to locate and query individual Homeservers for content, Nexus indexes and serves content directly. This dramatically improves latency and user experience while still maintaining the decentralized nature of the underlying data. Clients can optionally verify content authenticity directly with Homeservers when needed.
 
 ### High Performance & Scalability
 Built in Rust with carefully optimized data structures, Nexus is designed for speed:
@@ -33,7 +33,7 @@ Built in Rust with carefully optimized data structures, Nexus is designed for sp
 
 ### Social Semantic Graph (SSG)
 Nexus supports Social Semantic Graph-based interactions, enabling:
-- Web-of-trust relationship mapping
+- web-of-trust relationship mapping
 - Content filtering based on social connections
 - Personalized feed ranking and recommendations
 - Community detection and trust inference
@@ -58,8 +58,8 @@ Nexus is composed of several specialized components working together:
 
 ### Components
 
-1. **nexus-watcher**: The event aggregator that monitors Pubky homeservers
-   - Subscribes to homeserver event streams
+1. **nexus-watcher**: The event aggregator that monitors Pubky Homeservers
+   - Subscribes to Homeserver event streams
    - Filters and validates incoming events
    - Translates events into social graph updates
    - Handles retry logic for failed operations
@@ -84,7 +84,7 @@ Nexus is composed of several specialized components working together:
 
 ### Data Flow
 
-1. **Event Ingestion**: The watcher monitors multiple homeservers, receiving events as they occur (new posts, follows, likes, etc.)
+1. **Event Ingestion**: The watcher monitors multiple Homeservers, receiving events as they occur (new posts, follows, likes, etc.)
 
 2. **Event Processing**: Events are validated, filtered based on configured rules, and transformed into graph operations
 
@@ -245,7 +245,7 @@ Nexus enables a variety of social features for applications built on Pubky:
 ### Self-Hosted Instance
 Organizations can run their own Nexus instance with custom:
 - Content filtering and moderation policies
-- Event source selection (which homeservers to index)
+- Event source selection (which Homeservers to index)
 - Caching strategies and database configuration
 - API rate limits and access controls
 
@@ -258,13 +258,13 @@ The Pubky team operates public instances:
 Clients can use a combination of:
 - Public Nexus instances for general discovery
 - Private instances for specialized communities
-- Direct homeserver queries for verification
+- Direct Homeserver queries for verification
 
 ## Future Enhancements
 
 The Nexus roadmap includes several planned improvements:
 
-- **Light-weight mode**: Return homeserver URIs instead of full content
+- **Light-weight mode**: Return Homeserver URIs instead of full content
 - **Federation protocols**: Inter-Nexus communication for global discovery
 - **Advanced ML models**: Improved recommendation algorithms
 - **Real-time WebSocket API**: Push-based updates for clients

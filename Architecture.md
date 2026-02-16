@@ -71,12 +71,12 @@ The foundation of Pubky is cryptographic identity based on **[[KeyPair|key pairs
 
 ### Discovery Layer
 
-The discovery layer enables finding homeservers and resolving identities without central servers.
+The discovery layer enables finding Homeservers and resolving identities without central servers.
 
 **Components:**
 - **[[0.Introduction|PKARR]]**: Public Key Addressable Resource Records
 - **[[MainlineDHT|Mainline DHT]]**: Distributed Hash Table (10M+ nodes)
-- **[[PKDNS]]**: DNS servers for resolving public key domains
+- **[[PKDNS]]**: DNS servers for resolving public-key domains
 
 **How It Works:**
 
@@ -102,7 +102,7 @@ sequenceDiagram
 - Decentralized discovery (no central directory)
 - Censorship resistant (15+ years proven infrastructure)
 - Self-published (users control their records)
-- Updateable (switch homeservers anytime)
+- Updateable (switch Homeservers anytime)
 
 ---
 
@@ -125,9 +125,9 @@ flowchart LR
 ```
 
 **Key Properties:**
-- **User Choice**: Pick any homeserver or run your own
+- **User Choice**: Pick any Homeserver or run your own
 - **Data Ownership**: You control your data
-- **Portability**: Switch homeservers without losing data
+- **Portability**: Switch Homeservers without losing data
 - **Persistence Backends**: Files, LMDB, PostgreSQL, or SQL
 
 **API Operations:**
@@ -140,7 +140,7 @@ flowchart LR
 
 ### Application Layer
 
-Applications consume data from homeservers, either directly or through aggregation services.
+Applications consume data from Homeservers, either directly or through aggregation services.
 
 **Architecture Patterns:**
 
@@ -241,7 +241,7 @@ sequenceDiagram
 ### PKDNS
 
 **[[PKDNS]]** enables:
-- Public key domain resolution
+- Public-key domain resolution
 - DNS-over-HTTPS support
 - Traditional ICANN domain support
 - Self-hosted or public instances
@@ -265,7 +265,7 @@ sequenceDiagram
 ### Development Tools
 
 - **[[Explore/Technologies/PubkyDocker|Pubky Docker]]**: Full stack in one command
-- **[[Explore/Technologies/PubkyCLI|Pubky CLI]]**: Command-line homeserver management
+- **[[Explore/Technologies/PubkyCLI|Pubky CLI]]**: Command-line Homeserver management
 - **[[Explore/Technologies/PubkyExplorer|Pubky Explorer]]**: Web-based data browser
 
 ### Work in Progress
@@ -295,7 +295,7 @@ See [[Authentication]] for the full authentication flow.
 **What you trust:**
 - ✅ Mathematics (cryptography)
 - ✅ Your own keys
-- ⚠️ Your homeserver for availability (not integrity)
+- ⚠️ Your Homeserver for availability (not integrity)
 
 **What you DON'T trust:**
 - ❌ Central authorities
@@ -332,7 +332,7 @@ See [[Authentication]] for the full authentication flow.
 | Aspect | Traditional | Pubky |
 |--------|-------------|-------|
 | Identity | Username@service | Public key (permanent) |
-| Data Storage | Company servers | User-chosen homeservers |
+| Data Storage | Company servers | User-chosen Homeservers |
 | Portability | Locked-in | Full portability |
 | Censorship | Easy | Very difficult |
 

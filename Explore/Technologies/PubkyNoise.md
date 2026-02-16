@@ -61,7 +61,7 @@ This three-step handshake provides:
 
 **Integration:**
 - Derives encryption keys from Pubky [[KeyPair|Ed25519 identities]]
-- Publishes Noise endpoints to [[Homeserver|homeserver]] directories
+- Publishes Noise endpoints to [[Homeserver|Homeserver]] directories
 - Automatic peer discovery via Pubky public keys
 - Compatible with [[Paykit|Paykit]] payment protocol
 
@@ -103,7 +103,7 @@ While not yet implemented, Pubky Noise could support:
 
 ### Endpoint Discovery
 
-Noise endpoints are published to homeservers at:
+Noise endpoints are published to Homeservers at:
 ```
 /pub/paykit.app/v0/noise
 ```
@@ -200,7 +200,7 @@ Messages are length-prefixed and encrypted in sequence, maintaining order and pr
 
 Pubky Noise is a **communication layer** for Pubky:
 - Uses Pubky identity system (Ed25519 keys)
-- Publishes endpoints to [[Homeserver|homeservers]]
+- Publishes endpoints to [[Homeserver|Homeservers]]
 - Integrates with Pubky discovery mechanisms
 - Enables private peer-to-peer protocols on top of public Pubky infrastructure
 

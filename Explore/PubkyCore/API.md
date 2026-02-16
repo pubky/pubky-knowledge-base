@@ -5,11 +5,11 @@ aliases:
 
 # Pubky Core API Reference
 
-The [[Introduction|Pubky Core]] protocol defines a RESTful HTTP API for storing and retrieving data on [[Homeserver|homeservers]]. This document describes the complete API specification.
+The [[Introduction|Pubky Core]] protocol defines a RESTful HTTP API for storing and retrieving data on [[Homeserver|Homeservers]]. This document describes the complete API specification.
 
 ## Base URL
 
-All API endpoints are relative to the homeserver base URL:
+All API endpoints are relative to the Homeserver base URL:
 
 ```
 https://homeserver.example.com

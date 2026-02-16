@@ -5,7 +5,7 @@ aliases:
 
 # Pubky Core: Open Protocol for Decentralized Web Applications
 
-![Pubky Core architecture diagram showing the relationship between public key identities, PKARR records on Mainline DHT, homeservers, and client applications](Explore/images/pubky-core.svg)
+![Pubky Core architecture diagram showing the relationship between public-key identities, PKARR records on Mainline DHT, Homeservers, and client applications](Explore/images/pubky-core.svg)
 
 > **An open protocol for per-public-key backends for censorship resistant web applications.**
 
@@ -53,16 +53,16 @@ Client libraries for developers:
 ## Core Concepts
 
 ### [[Homeserver|Homeserver]]
-Decentralized data storage nodes that host user data. Each user can choose their homeserver or run their own. Data is stored per public key, and users can migrate between homeservers by updating their [[0.Introduction|PKARR]] record.
+Decentralized data storage nodes that host user data. Each user can choose their Homeserver or run their own. Data is stored per public key, and users can migrate between Homeservers by updating their [[0.Introduction|PKARR]] record.
 
 ### [[0.Introduction|PKARR]]
-Self-issued public keys that function as sovereign, publicly addressable domains. PKARR records published to the [[Explore/Technologies/MainlineDHT|Mainline DHT]] point to homeserver locations, enabling decentralized discovery.
+Self-issued public keys that function as sovereign, publicly addressable domains. PKARR records published to the [[Explore/Technologies/MainlineDHT|Mainline DHT]] point to Homeserver locations, enabling decentralized discovery.
 
 ### [[Authentication]]
 Users grant apps scoped access to their data on the [[Homeserver|Homeserver]]. Authentication is decentralized - users control their own cryptographic keys with no central identity providers.
 
 ### [[CredibleExit|Credible Exit]]
-Pubky Core's distributed architecture provides user autonomy through credible exit between interchangeable components. Users can switch homeservers, applications, or identity managers without losing their data or social graph.
+Pubky Core's distributed architecture provides user autonomy through credible exit between interchangeable components. Users can switch Homeservers, applications, or identity managers without losing their data or social graph.
 
 ## Key Features
 
@@ -98,12 +98,12 @@ Pubky Core's distributed architecture provides user autonomy through credible ex
 [[1.Introduction|Pubky App Architectures]] can be very diverse:
 
 1. **[[2.ClientHomeserver|Simple Client-Homeserver]]**
-   - Web client connects directly to a single homeserver
+   - Web client connects directly to a single Homeserver
    - User data storage and retrieval
    - Authentication and sessions
 
 2. **[[3.GlobalAggregators|Global Aggregators]]**
-   - Aggregate data from many homeservers
+   - Aggregate data from many Homeservers
    - Provide discovery and search
    - Enable social features
 
@@ -263,7 +263,7 @@ For [Synonym](https://synonym.to/) as lead of this project, the goal is to:
 - ✅ Scalable storage
 
 **vs. P2P Only:**
-- ✅ Always available (homeservers)
+- ✅ Always available (Homeservers)
 - ✅ Fast access
 - ✅ Mobile-friendly
 - ✅ Familiar HTTP APIs
@@ -285,7 +285,7 @@ For [Synonym](https://synonym.to/) as lead of this project, the goal is to:
 
 **Needs Community:**
 - Mirroring and replication tools
-- More homeserver providers
+- More Homeserver providers
 - Application examples
 - Integration libraries
 - Documentation improvements

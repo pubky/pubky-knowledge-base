@@ -1,10 +1,10 @@
 # Homegate: Homeserver Signup Gatekeeping Service
 
-**Homegate** is a backend service that manages and controls signups for [[Homeserver|Pubky Homeservers]]. It provides verification mechanisms to prevent spam and abuse while preserving user privacy, implementing both SMS verification and Lightning Network payment verification for homeserver access.
+**Homegate** is a backend service that manages and controls signups for [[Homeserver|Pubky Homeservers]]. It provides verification mechanisms to prevent spam and abuse while preserving user privacy, implementing both SMS verification and Lightning Network payment verification for Homeserver access.
 
 ## Overview
 
-When operating a public homeserver, spam prevention is critical. Homegate acts as a gatekeeper, requiring users to prove their authenticity before gaining access to create accounts on a homeserver. Unlike traditional centralized signup systems, Homegate is designed to:
+When operating a public Homeserver, spam prevention is critical. Homegate acts as a gatekeeper, requiring users to prove their authenticity before gaining access to create accounts on a Homeserver. Unlike traditional centralized signup systems, Homegate is designed to:
 
 - **Prevent spam**: Rate-limit signups per phone number or require economic commitment via Lightning payments
 - **Preserve privacy**: Use cryptographic hashing (Argon2id with Blake3 pepper) to protect phone number privacy
@@ -13,7 +13,7 @@ When operating a public homeserver, spam prevention is critical. Homegate acts a
 
 ### Use Case
 
-Homegate solves the problem expressed in [[FAQ#Q37]]: "How do users join Pubky App? Via invite codes from homeservers. Prevents spam while preserving privacy."
+Homegate solves the problem expressed in [[FAQ#Q37]]: "How do users join Pubky App? Via invite codes from Homeservers. Prevents spam while preserving privacy."
 
 While the FAQ mentions "invite codes," Homegate implements a more sophisticated system using:
 1. **SMS verification**: Send a code to a phone number, verify ownership
@@ -87,7 +87,7 @@ Users verify phone number ownership by receiving and entering a verification cod
 
 #### Rate Limits
 
-Configurable per homeserver deployment:
+Configurable per Homeserver deployment:
 - **Weekly limit**: `HG_MAX_SMS_VERIFICATIONS_PER_WEEK` (default: 2)
 - **Annual limit**: `HG_MAX_SMS_VERIFICATIONS_PER_YEAR` (default: 4)
 
@@ -110,7 +110,7 @@ Phone numbers are **never stored in plaintext**:
 
 Multiple `send_code` requests for the same phone number reuse the existing Prelude session:
 - Prevents SMS flooding
-- Reduces costs for homeserver operators
+- Reduces costs for Homeserver operators
 - User can request code resend without creating new session
 
 ### Lightning Network Verification
@@ -140,7 +140,7 @@ Users verify economic commitment by paying a Lightning Network invoice.
 
 #### Payment Amounts
 
-Configurable by homeserver operator:
+Configurable by Homeserver operator:
 - **Minimum amount**: Prevent dust attacks
 - **Default amount**: Balance between accessibility and spam prevention
 - **Custom amounts**: Allow users to pay more for priority, donations, etc.
@@ -376,10 +376,10 @@ Homegate is designed to integrate with [[Homeserver|Pubky Homeserver]] signup fl
 
 ### Typical Integration
 
-1. **User initiates signup** on homeserver web interface
+1. **User initiates signup** on Homeserver web interface
 2. **Homeserver redirects** to Homegate verification flow
 3. **User completes verification** (SMS or Lightning)
-4. **Homegate returns success** to homeserver
+4. **Homegate returns success** to Homeserver
 5. **Homeserver creates account** using [[Explore/PubkyCore/SDK|Pubky Core SDK]]
 
 ### Verification Token Flow
@@ -398,8 +398,8 @@ After successful verification, Homegate can issue a signed token:
 - Isolated user base
 
 **Shared Homegate**:
-- Multiple homeservers share one Homegate instance
-- Centralized rate limiting across homeservers
+- Multiple Homeservers share one Homegate instance
+- Centralized rate limiting across Homeservers
 - Reduced operational overhead
 - Shared anti-spam database
 
@@ -437,18 +437,18 @@ Test structure:
 
 ### Public Homeserver Operation
 
-Run a public homeserver with spam protection:
+Run a public Homeserver with spam protection:
 - Require SMS verification for all signups
 - Rate limit accounts per phone number
 - Preserve user privacy with hashed identifiers
 
 ### Lightning-Gated Community
 
-Create a homeserver requiring payment for access:
+Create a Homeserver requiring payment for access:
 - Set minimum Lightning payment amount
 - Immediate verification upon payment
 - No personal information required
-- Donations support homeserver operation
+- Donations support Homeserver operation
 
 ### Hybrid Verification
 
@@ -459,14 +459,14 @@ Offer users a choice:
 
 ### Regional Homeserver
 
-Operate a homeserver for specific region:
+Operate a Homeserver for specific region:
 - SMS verification validates phone number locality
 - Rate limits prevent cross-border spam
 - Lightning fallback for international users
 
 ### Development/Testing
 
-Run a homeserver for development:
+Run a Homeserver for development:
 - Low Lightning payment amounts (1 sat)
 - Relaxed SMS rate limits
 - Easy cleanup between test runs
@@ -564,7 +564,7 @@ Run a homeserver for development:
 - **Phone number recycling**: Old numbers may be reassigned
 - **VoIP numbers**: May not receive SMS
 - **Rate limit bypass**: Users with multiple phone numbers
-- **Cost**: SMS fees add up for high-volume homeservers
+- **Cost**: SMS fees add up for high-volume Homeservers
 
 ### Lightning Network Verification
 
@@ -605,7 +605,7 @@ Potential improvements for Homegate:
 
 ## See Also
 
-- [[Homeserver]] - Pubky homeserver documentation
+- [[Homeserver]] - Pubky Homeserver documentation
 - [[Explore/PubkyCore/Introduction|Pubky Core]] - Core protocol and SDK
 - [[FAQ#Q37]] - How users join Pubky App
 - [[Censorship]] - Censorship resistance principles

@@ -23,7 +23,7 @@ The Pubky App is a user-friendly platform that showcases the capabilities of Pub
 **Social Tagging:** Users can tag posts, files, links, and even peers with meaningful labels. This enriches the semantic content of the network.
 Customizable Feeds: By utilizing tags and weighted relationships, users control what appears in their feeds, ensuring content relevance.
 **Peer Tagging:** Assign semantic tags to peers, influencing how their content is weighted and displayed.
-**Web of Relevance:** Move beyond the traditional Web-of-Trust paradigm to a network where relevance and context drive interactions.
+**Web of Relevance:** Move beyond the traditional web-of-trust paradigm to a network where relevance and context drive interactions.
 
 ### How Pubky Applies Decentralized Networking and Social Graphing
 Pubky combines decentralized identity, semantic social tagging, and weighted relationships into a cohesive system that offers unparalleled user control and personalization.

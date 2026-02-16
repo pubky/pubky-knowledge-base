@@ -20,11 +20,11 @@ Pubky uses Mainline DHT as the foundation for [[0.Introduction|PKARR]] (Public K
 ## How Pubky Uses Mainline DHT
 
 ### Identity Resolution
-When you access a public key domain (e.g., `pubky://o4dksfbqk85ogzdb5osziw6befigbuxmuxkuxq8434q89uj56uyy`):
+When you access a public-key domain (e.g., `pubky://o4dksfbqk85ogzdb5osziw6befigbuxmuxkuxq8434q89uj56uyy`):
 1. [[PKDNS]] queries Mainline DHT for that public key
 2. DHT returns signed [[0.Introduction|PKARR]] records
-3. Records contain homeserver URLs and other DNS-style resource records
-4. Your client can now connect to the user's homeserver
+3. Records contain Homeserver URLs and other DNS-style resource records
+4. Your client can now connect to the user's Homeserver
 
 ### Data Lifecycle
 - **Publishing**: Users sign DNS packets and publish to DHT (directly or via relay)
@@ -48,8 +48,8 @@ Pubky's Mainline DHT client is implemented in Rust with:
 ## Applications
 
 - **BitTorrent Network**: Mainline DHT adds tracker capabilities to each peer in the BitTorrent network, enhancing its resilience and reducing dependency on centralized trackers.
-- **Pubky Identity System**: Enables self-sovereign public key domains without DNS registrars
-- **[[PKDNS]]**: DNS resolution for public key domains via DHT lookups
+- **Pubky Identity System**: Enables self-sovereign public-key domains without DNS registrars
+- **[[PKDNS]]**: DNS resolution for public-key domains via DHT lookups
 - **Peer-to-Peer File Sharing**: Beyond BitTorrent, DHTs like Mainline are used for instant messaging, name resolution, and other peer-to-peer applications.
 
 ## Why Mainline DHT?
@@ -64,7 +64,7 @@ From the PKARR project's perspective, Mainline DHT was chosen because:
 ## Security Considerations
 
 - **Not a Storage Platform**: Records are ephemeral and will be dropped without regular republishing
-- **Not Realtime**: Records are heavily cached; updates may take time to propagate
+- **Not real-time**: Records are heavily cached; updates may take time to propagate
 - **Sybil Resistance**: Implementation includes measures against Vertical Sybil Attacks
 - **Rate Limiting**: Server operators should implement custom rate limiting for DoS protection
 
@@ -79,5 +79,5 @@ From the PKARR project's perspective, Mainline DHT was chosen because:
 ## Related Documentation
 
 - [[0.Introduction|PKARR]] - Public Key Addressable Resource Records built on Mainline DHT
-- [[PKDNS]] - DNS server that resolves public key domains via DHT queries
+- [[PKDNS]] - DNS server that resolves public-key domains via DHT queries
 - [[DHT]] - General Distributed Hash Table concepts

@@ -31,7 +31,7 @@ Using the library analogy, the Pubky Client is like a personalized research assi
 
 - Pubky client uses the open [[Explore/PubkyCore/Introduction|Pubky Core]] for nearly all features, allowing users to avoid censorship by choosing self-hosting or alternate hosts without losing followers or integrity. 
 
-- Pubky also includes support for **[[Paykit|paykit]]**, an open payment protocol (work in progress) for coordinating payments among peers supporting various methods. This allows users to potentially create payment flows for familiar experiences.
+- Pubky also includes support for **[[Paykit|Paykit]]**, an open payment protocol (work in progress) for coordinating payments among peers supporting various methods. This allows users to potentially create payment flows for familiar experiences.
 
 ⚠️ **Note**: Paykit is currently **work in progress** and not production-ready. Integrations in Bitkit (iOS and Android) serve as testbeds for protocol development, not production features. The protocol specification, security model, and implementation are subject to significant changes.
 

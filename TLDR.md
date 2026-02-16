@@ -5,7 +5,7 @@
 ## What It Is
 
 - **Your Identity = Your Key**: No usernames, no accounts. Your public key is your permanent identity.
-- **Your Data, Your Choice**: Store data on any homeserver you choose. Switch anytime without losing anything.
+- **Your Data, Your Choice**: Store data on any Homeserver you choose. Switch anytime without losing anything.
 - **Censorship Resistant**: Built on the Mainline DHT (15+ years proven, 10M+ nodes). No single authority can block you.
 - **No Blockchain**: Fast, free operations using standard web technologies (HTTP/HTTPS).
 
@@ -21,15 +21,15 @@ flowchart LR
 ```
 
 1. Generate a cryptographic key pair (your identity)
-2. Publish a PKARR record to the DHT (points to your homeserver)
-3. Store your data on any homeserver
+2. Publish a PKARR record to the DHT (points to your Homeserver)
+3. Store your data on any Homeserver
 4. Apps discover and access your data via your public key
 
 ## Key Components
 
 | Component | Purpose | Status |
 |-----------|---------|--------|
-| **[[Explore/PubkyCore/Introduction\|Pubky Core]]** | Protocol, homeserver, SDK | ✅ Production |
+| **[[Explore/PubkyCore/Introduction\|Pubky Core]]** | Protocol, Homeserver, SDK | ✅ Production |
 | **[[Explore/Technologies/PubkyRing\|Pubky Ring]]** | Mobile key manager (iOS/Android) | ✅ Production |
 | **[[Explore/PubkyApp/Introduction\|Pubky App]]** | Social media demo ([pubky.app](https://pubky.app)) | ✅ Live (MVP) |
 | **[[Explore/PubkyApp/Backend/PubkyNexus\|Pubky Nexus]]** | Social indexing service | ✅ Production |
