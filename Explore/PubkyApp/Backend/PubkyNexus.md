@@ -33,7 +33,7 @@ Built in Rust with carefully optimized data structures, Nexus is designed for sp
 
 ### Social Semantic Graph (SSG)
 Nexus supports Social Semantic Graph-based interactions, enabling:
-- Web-of-trust relationship mapping
+- web-of-trust relationship mapping
 - Content filtering based on social connections
 - Personalized feed ranking and recommendations
 - Community detection and trust inference
