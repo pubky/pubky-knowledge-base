@@ -133,7 +133,7 @@ Yes! Nexus is open source and can be self-hosted. This allows organizations to r
 Via CAPTCHAs, rate-limits, invites, and graph distance rules.
 
 **Q36. How does Paykit fit in?**
-Paykit is a **payment protocol (work in progress)** built on Pubky that aims to enable payment discovery and coordination across multiple methods (Bitcoin, Lightning, etc.). See [[Explore/PubkyApp/Client/Introduction|Client Features]] for the full feature list.
+Paykit is a **payment protocol (work in progress)** built on Pubky that aims to enable payment discovery and coordination across multiple methods (Bitcoin, Lightning, etc.). See [[Explore/PubkyApps/ReferenceApp/Introduction|pubky.app Features]] for the full feature list.
 
 ⚠️ **Note**: Paykit is NOT production-ready and the protocol is subject to significant changes.
 

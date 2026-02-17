@@ -163,7 +163,7 @@ flowchart LR
     Agg --> Client[Client App]
 ```
 
-**Use Case**: Social feeds, search, discovery (e.g., [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]])
+**Use Case**: Social feeds, search, discovery (e.g., [[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus|Pubky Nexus]])
 
 #### 3. Custom Backend
 
@@ -232,7 +232,7 @@ sequenceDiagram
 
 ### Pubky Nexus
 
-**[[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]]** provides:
+**[[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus|Pubky Nexus]]** provides:
 - Real-time aggregation
 - Social graph indexing
 - Search and discovery

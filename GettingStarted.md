@@ -203,7 +203,7 @@ Learn from working examples:
 
 **Use Pubky Nexus for Social Features:**
 
-If building a social app, leverage [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] for:
+If building a social app, leverage [[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus|Pubky Nexus]] for:
 - Real-time feeds and timelines
 - Search and discovery
 - User recommendations

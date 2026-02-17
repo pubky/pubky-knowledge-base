@@ -1,6 +1,7 @@
 ---
 aliases:
   - "../../../Pubky-App/Client/Features/Notifications"
+  - "Explore/PubkyApp/Client/Features/Notifications"
 ---
 
 Pubky client tracks various event or activities the user may be interested in, and provides relevant notifications for interactions and other relevant activity to the user. Notifications are a way to keep you informed about what's happening in the app, even when you're not actively browsing your timeline.

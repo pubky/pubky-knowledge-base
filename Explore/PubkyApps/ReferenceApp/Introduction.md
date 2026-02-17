@@ -2,31 +2,32 @@
 title: "Introduction"
 aliases:
   - "../../Pubky-App/Client/Introduction"
+  - "Explore/PubkyApp/Client/Introduction"
 ---
 
-# Pubky Client
+# Reference App: pubky.app
 
-![pubkey-client](Explore/images/pubky-header.png)
+![pubky.app header](Explore/images/pubky-header.png)
 
-The Pubky client is the user-facing application for interacting with the Pubky social network. It is available as a progressive web app (PWA) and will eventually support desktop applications.
+[pubky.app](https://pubky.app) is the reference implementation of a Pubky App — a user-facing social media application for interacting with the Pubky network. It is available as a progressive web app (PWA) and will eventually support desktop applications.
 
 ## Current Implementation
 
 - **Live Application**: [pubky.app](https://pubky.app) - Production PWA currently operational
-- **Backend**: Powered by [[PubkyNexus|Pubky Nexus]] indexing service using Synonym hosted infrastructure
+- **Indexing & Aggregation**: Powered by [[PubkyNexus|Pubky Nexus]] indexing service using Synonym hosted infrastructure
 ## Development Status
 
-The web client is live at [pubky.app](https://pubky.app).
+pubky.app is live at [pubky.app](https://pubky.app).
 
 **For Developers**:
-- **Building Compatible Clients**: Use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as the authoritative data model specification
+- **Building Compatible Apps**: Use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as the authoritative data model specification
 - **Contributing**: Contributions welcome at [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app)
 
-Using the library analogy, the Pubky Client is like a personalized research assistant who takes the prepared documents from the librarian ([[Explore/PubkyApp/Backend/Introduction|backend]]) and creates a customized report just for you. This report is designed to be easy to read and understand, with all the relevant information presented in a clear and concise manner.
+Using the library analogy, pubky.app is like a personalized research assistant who takes the prepared documents from the librarian ([[Explore/PubkyApps/IndexingAndAggregation/Introduction|Indexing & Aggregation layer]]) and creates a customized report just for you. This report is designed to be easy to read and understand, with all the relevant information presented in a clear and concise manner.
 
 - Users are able to take control of the data and exit the Synonym hosted services and run their own without hampering discoverability ([[CredibleExit|credible exit]]).
 
-- Pubky client uses the open [[Explore/PubkyCore/Introduction|Pubky Core]] for nearly all features, allowing users to avoid censorship by choosing self-hosting or alternate hosts without losing followers or integrity. 
+- pubky.app uses the open [[Explore/PubkyCore/Introduction|Pubky Core]] for nearly all features, allowing users to avoid censorship by choosing self-hosting or alternate hosts without losing followers or integrity.
 
 - Pubky also includes support for **[[Paykit|Paykit]]**, an open payment protocol (work in progress) for coordinating payments among peers supporting various methods. This allows users to potentially create payment flows for familiar experiences.
 
@@ -39,7 +40,6 @@ Using the library analogy, the Pubky Client is like a personalized research assi
 - **Subscriptions**: Cryptographically signed recurring payment agreements
 - **Zero custody**: Users always control their keys and funds
 
-Future Pubky app versions may leverage Paykit once it reaches production readiness to enable peer-to-peer data markets, creator monetization, and value exchange throughout the ecosystem.
+Future versions of pubky.app may leverage Paykit once it reaches production readiness to enable peer-to-peer data markets, creator monetization, and value exchange throughout the ecosystem.
 
 - Communities facilitate moderation and discovery around shared interests.
-

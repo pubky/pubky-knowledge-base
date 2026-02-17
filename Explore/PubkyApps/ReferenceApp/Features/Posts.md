@@ -1,6 +1,7 @@
 ---
 aliases:
   - "../../../Pubky-App/Client/Features/Posts"
+  - "Explore/PubkyApp/Client/Features/Posts"
 ---
 
 In Pubky client, a **post** is a message that a user publishes on the platform. Posts are the core content and they can contain a variety of information, including:

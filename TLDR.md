@@ -31,8 +31,8 @@ flowchart LR
 |-----------|---------|--------|
 | **[[Explore/PubkyCore/Introduction\|Pubky Core]]** | Protocol, Homeserver, SDK | ✅ Production |
 | **[[Explore/Technologies/PubkyRing\|Pubky Ring]]** | Mobile key manager (iOS/Android) | ✅ Production |
-| **[[Explore/PubkyApp/Introduction\|Pubky App]]** | Social media demo ([pubky.app](https://pubky.app)) | ✅ Live (MVP) |
-| **[[Explore/PubkyApp/Backend/PubkyNexus\|Pubky Nexus]]** | Social indexing service | ✅ Production |
+| **[[Explore/PubkyApps/Introduction\|Pubky Apps]]** | Social media platform ([pubky.app](https://pubky.app)) | ✅ Live (MVP) |
+| **[[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus\|Pubky Nexus]]** | Social indexing service | ✅ Production |
 | **[[Explore/Technologies/Paykit\|Paykit]]** | Payment protocol | ⚠️ WIP |
 | **[[Explore/Technologies/PubkyNoise\|Pubky Noise]]** | Encrypted communication | ⚠️ WIP |
 
