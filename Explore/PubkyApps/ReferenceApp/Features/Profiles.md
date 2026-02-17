@@ -4,7 +4,7 @@ aliases:
   - "Explore/PubkyApp/Client/Features/Profiles"
 ---
 
-In Pubky client, a **profile** refers to a user's personal page on the app, which displays their information, posts, and other content. A Pubky profile is a unique identity that represents a public key.
+In Pubky.app, a **profile** refers to a user's personal page on the app, which displays their information, posts, and other content. A Pubky profile is a unique identity that represents a public key.
 
 Here are some key components of a Pubky profile:
 
