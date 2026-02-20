@@ -11,7 +11,7 @@ Pubky Core aims to minimize trust requirements while remaining practical. The ke
 This is achieved through:
 - Cryptographic identity (keypairs) that users fully control
 - Identity based routing. Knowing identity is enough to locate data
-- Data portability via [[PubkyBackup|Pubky Backup]] (homeserver mirroring planned but not yet implemented)
+- Data portability via Pubky Backup (homeserver mirroring planned but not yet implemented)
 - Optional data signing to detect tampering (planned for apps that need it)
 - End-to-end encryption for encrypted data (planned; homeserver cannot read)
 
@@ -84,7 +84,7 @@ The security model considers three primary threat actors:
 **Note on signing**: Data signing will be optional. Not every use case needs cryptographic verification, and signing adds overhead. Apps can choose whether to sign data based on their trust requirements.
 
 **Mitigation:**
-Users maintain local backups via [[PubkyBackup|Pubky Backup]], ensuring data portability even if the homeserver refuses to cooperate. Homeserver mirroring (slave servers) is planned but not yet implemented.
+Users maintain local backups via Pubky Backup, ensuring data portability even if the homeserver refuses to cooperate. Homeserver mirroring (slave servers) is planned but not yet implemented.
 
 ### Network Attackers
 
@@ -177,7 +177,7 @@ Planned primary-backup architecture where slave homeservers would stay in sync w
 - Users could switch to backup if primary misbehaves
 - [[Censorship|Censorship]] would become detectable and escapable, reducing the incentive to attempt it
 
-**Current Status**: This feature is a concept only — implementation has not started. Currently, users should use [[PubkyBackup|Pubky Backup]] to maintain local copies of their data.
+**Current Status**: This feature is a concept only — implementation has not started. Currently, users should use Pubky Backup to maintain local copies of their data.
 
 ## Transport Security
 
@@ -243,7 +243,7 @@ Even with all planned improvements, some trust remains:
 
 ### Residual Risks
 
-1. **Availability**: Homeservers can deny service. Currently mitigated by [[PubkyBackup|Pubky Backup]] for data portability. Homeserver mirroring (planned) would allow seamless switching.
+1. **Availability**: Homeservers can deny service. Currently mitigated by Pubky Backup for data portability. Homeserver mirroring (planned) would allow seamless switching.
 
 2. **Metadata Leakage**: Homeservers see who accesses what data, timing patterns, data sizes. This is inherent to any server-based system.
 
@@ -258,7 +258,7 @@ Even with all planned improvements, some trust remains:
 - Keep your 12-word recovery phrase secure and backed up (each pubky has its own phrase)
 - Loss of mnemonic = permanent loss of that identity (by design, no recovery)
 - Review capability requests carefully before approving in [[PubkyRing|Pubky Ring]]
-- Use [[PubkyBackup|Pubky Backup]] to maintain local copies of your data
+- Use Pubky Backup to maintain local copies of your data
 - Homeserver mirroring is not yet available — backups are currently your credible exit path
 
 ### For App Developers
@@ -285,7 +285,7 @@ This section shows how [[CredibleExit|credible exit]] works in practice across c
 | Phase | What Happens | User Action |
 |-------|--------------|-------------|
 | Immediate | Data becomes temporarily inaccessible | Wait for recovery or decide to migrate |
-| If prolonged | Use [[PubkyBackup|Pubky Backup]] to restore from local backup | Sign up on a new homeserver |
+| If prolonged | Use Pubky Backup to restore from local backup | Sign up on a new homeserver |
 | Recovery | Re-upload data, update [[0.Introduction|PKARR]] record | External links automatically resolve to new location |
 
 Your identity (keypair in Ring) is unaffected. The homeserver going down is an inconvenience, not a catastrophe.
