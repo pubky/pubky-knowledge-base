@@ -95,7 +95,7 @@ Users maintain local backups via Pubky Backup, ensuring data portability even if
 
 **Mitigations:**
 - HTTPS for all homeserver communication
-- AuthToken timestamps with 45-second validity window (prevents replay)
+- AuthToken timestamps with 3-minute validity window (prevents replay)
 - Capability scoping limits damage from compromised tokens
 - Auth tokens encrypted between authenticator and requesting app via [[HTTPRelay|relay]]
 
@@ -209,7 +209,7 @@ AuthToken = signature(64) + namespace(10) + version(1) + timestamp(8) + pubky(32
 
 **Security Properties:**
 - **Namespace**: "PUBKY:AUTH" prevents cross-protocol replay
-- **Timestamp**: Must be within 45-second window (prevents replay)
+- **Timestamp**: Must be within 3-minute window (prevents replay)
 - **Signature**: Ed25519 over message bytes (authenticity)
 - **Capabilities**: Scoped permissions limit damage from compromise
 
