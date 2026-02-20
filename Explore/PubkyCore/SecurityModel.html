@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Security Model | Pubky Core</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter Tight&amp;family=Inter Tight:wght@400;700&amp;family=Inter Tight:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="Security Model"/><meta property="og:description" content="This document describes the security model, threat landscape, and trust assumptions in the Pubky Core platform. Understanding these is essential for both operators and application developers building on the platform."/><meta property="og:image" content="https://docs.pubky.org/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/favicon.svg"/><meta name="description" content="This document describes the security model, threat landscape, and trust assumptions in the Pubky Core platform. Understanding these is essential for both operators and application developers building on the platform."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="Explore/PubkyCore/SecurityModel"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><a href="/"><img style="margin:0px;" src="/static/pubky-core-logo.webp" width="209" height="44"/></a><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabindex="0" aria-labelledby="title desc" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><title id="title">Search</title><desc id="desc">Search</desc><path opacity="0.2" d="M9.06213 15.625C12.6865 15.625 15.6246 12.6869 15.6246 9.0625C15.6246 5.43813 12.6865 2.5 9.06213 2.5C5.43777 2.5 2.49963 5.43813 2.49963 9.0625C2.49963 12.6869 5.43777 15.625 9.06213 15.625Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.06213 3.125C5.78294 3.125 3.12463 5.78331 3.12463 9.0625C3.12463 12.3417 5.78294 15 9.06213 15C12.3413 15 14.9996 12.3417 14.9996 9.0625C14.9996 5.78331 12.3413 3.125 9.06213 3.125ZM1.87463 9.0625C1.87463 5.09295 5.09259 1.875 9.06213 1.875C13.0317 1.875 16.2496 5.09295 16.2496 9.0625C16.2496 13.032 13.0317 16.25 9.06213 16.25C5.09259 16.25 1.87463 13.032 1.87463 9.0625Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M13.2603 13.2612C13.5044 13.0171 13.9001 13.0171 14.1442 13.2612L17.9411 17.0581C18.1852 17.3022 18.1852 17.6979 17.9411 17.942C17.6971 18.1861 17.3013 18.1861 17.0572 17.942L13.2603 14.1451C13.0163 13.901 13.0163 13.5053 13.2603 13.2612Z" fill="white"></path></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><div class="explorer desktop-only"><div type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[{&quot;path&quot;:&quot;Explore&quot;,&quot;collapsed&quot;:false},{&quot;path&quot;:&quot;Explore/Concepts&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/PubkyApp&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/PubkyApp/AppArchitectures&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/PubkyApp/Backend&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/PubkyApp/Client&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/PubkyApp/Client/Features&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/PubkyCore&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/PubkyCore/Pkarr&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Explore/Technologies&quot;,&quot;collapsed&quot;:true}]"></div><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li style="margin-bottom:10px;"><a href="../../Architecture" data-for="Architecture">Architecture</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Comparisons" data-for="Comparisons">Comparisons</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Contributing" data-for="Contributing">Contributing</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore"><button class="folder-button"><span class="folder-title">Explore</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer open"><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore"><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Concepts"><button class="folder-button"><span class="folder-title">Concepts</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Concepts"><li style="margin-bottom:10px;"><a href="../../Explore/Concepts/Censorship" data-for="Explore/Concepts/Censorship">Censorship</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Concepts/CredibleExit" data-for="Explore/Concepts/CredibleExit">Credible Exit</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Concepts/SemanticSocialGraph" data-for="Explore/Concepts/SemanticSocialGraph">Semantic Social Graph</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/PubkyApp"><button class="folder-button"><span class="folder-title">Pubky App</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/PubkyApp"><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Introduction" data-for="Explore/PubkyApp/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/ELI5" data-for="Explore/PubkyApp/ELI5">ELI5</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/PubkyApp/AppArchitectures"><button class="folder-button"><span class="folder-title">App Architectures</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/PubkyApp/AppArchitectures"><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/AppArchitectures/1.Introduction" data-for="Explore/PubkyApp/AppArchitectures/1.Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/AppArchitectures/2.ClientHomeserver" data-for="Explore/PubkyApp/AppArchitectures/2.ClientHomeserver">Client - Homeserver</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/AppArchitectures/3.GlobalAggregators" data-for="Explore/PubkyApp/AppArchitectures/3.GlobalAggregators">Global Aggregators</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/AppArchitectures/4.CustomBackend" data-for="Explore/PubkyApp/AppArchitectures/4.CustomBackend">Custom Backend</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/PubkyApp/Backend"><button class="folder-button"><span class="folder-title">Backend</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/PubkyApp/Backend"><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Backend/Introduction" data-for="Explore/PubkyApp/Backend/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Backend/Aggregator" data-for="Explore/PubkyApp/Backend/Aggregator">Aggregator</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Backend/Indexer" data-for="Explore/PubkyApp/Backend/Indexer">Indexer</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Backend/PubkyNexus" data-for="Explore/PubkyApp/Backend/PubkyNexus">Pubky Nexus</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Backend/WebServer" data-for="Explore/PubkyApp/Backend/WebServer">Web Server</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/PubkyApp/Client"><button class="folder-button"><span class="folder-title">Client</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/PubkyApp/Client"><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Introduction" data-for="Explore/PubkyApp/Client/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/PubkyApp/Client/Features"><button class="folder-button"><span class="folder-title">Features</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/PubkyApp/Client/Features"><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Bookmarks" data-for="Explore/PubkyApp/Client/Features/Bookmarks">Bookmarks</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Layouts" data-for="Explore/PubkyApp/Client/Features/Layouts">Layouts</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Notifications" data-for="Explore/PubkyApp/Client/Features/Notifications">Notifications</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Perspectives" data-for="Explore/PubkyApp/Client/Features/Perspectives">Perspectives</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Posts" data-for="Explore/PubkyApp/Client/Features/Posts">Posts</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Profiles" data-for="Explore/PubkyApp/Client/Features/Profiles">Profiles</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Search" data-for="Explore/PubkyApp/Client/Features/Search">Search</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Tags" data-for="Explore/PubkyApp/Client/Features/Tags">Tags</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyApp/Client/Features/Trends" data-for="Explore/PubkyApp/Client/Features/Trends">Trends</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li></ul></div></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/PubkyCore"><button class="folder-button"><span class="folder-title">Pubky Core</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/PubkyCore"><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Introduction" data-for="Explore/PubkyCore/Introduction">Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/ELI5" data-for="Explore/PubkyCore/ELI5">ELI5</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/API" data-for="Explore/PubkyCore/API">API</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Authentication" data-for="Explore/PubkyCore/Authentication">Authentication</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Homeserver" data-for="Explore/PubkyCore/Homeserver">Homeserver</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/PubkyCore/Pkarr"><button class="folder-button"><span class="folder-title">Pkarr</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/PubkyCore/Pkarr"><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Pkarr/ELI5" data-for="Explore/PubkyCore/Pkarr/ELI5">ELI5</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Pkarr/0.Introduction" data-for="Explore/PubkyCore/Pkarr/0.Introduction">0.Introduction</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Pkarr/1.WhyPkarr" data-for="Explore/PubkyCore/Pkarr/1.WhyPkarr">Why PKARR?</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Pkarr/2.GettingStartedWithPkarr" data-for="Explore/PubkyCore/Pkarr/2.GettingStartedWithPkarr">Getting Started with PKARR</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Pkarr/3.Expectations" data-for="Explore/PubkyCore/Pkarr/3.Expectations">3.Expectations</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/Pkarr/4.Architecture" data-for="Explore/PubkyCore/Pkarr/4.Architecture">4.Architecture</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/SDK" data-for="Explore/PubkyCore/SDK">SDK</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/PubkyCore/SecurityModel" data-for="Explore/PubkyCore/SecurityModel">Security Model</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li><div style="margin-bottom:10px;" class="folder-container"><div data-folderpath="Explore/Technologies"><button class="folder-button"><span class="folder-title">Technologies</span></button></div><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Explore/Technologies"><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/DHT" data-for="Explore/Technologies/DHT">DHT</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/DNS" data-for="Explore/Technologies/DNS">DNS</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/DoH" data-for="Explore/Technologies/DoH">DoH</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/Homegate" data-for="Explore/Technologies/Homegate">Homegate</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/HTTPS" data-for="Explore/Technologies/HTTPS">HTTPS</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/JebPubkyAIBot" data-for="Explore/Technologies/JebPubkyAIBot">Jeb: Pubky AI Bot</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/KeyPair" data-for="Explore/Technologies/KeyPair">Key Pair</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/MainlineDHT" data-for="Explore/Technologies/MainlineDHT">Mainline DHT</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/Paykit" data-for="Explore/Technologies/Paykit">Paykit</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/PKDNS" data-for="Explore/Technologies/PKDNS">PKDNS</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/PubkyCLI" data-for="Explore/Technologies/PubkyCLI">Pubky CLI</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/PubkyDocker" data-for="Explore/Technologies/PubkyDocker">Pubky Docker</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/PubkyExplorer" data-for="Explore/Technologies/PubkyExplorer">Pubky Explorer</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/PubkyNoise" data-for="Explore/Technologies/PubkyNoise">Pubky Noise</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Explore/Technologies/PubkyRing" data-for="Explore/Technologies/PubkyRing">Pubky Ring</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li></ul></div></li><li style="margin-bottom:10px;"><a href="../../FAQ" data-for="FAQ">FAQ</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../GettingStarted" data-for="GettingStarted">Getting Started</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Glossary" data-for="Glossary">Glossary</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><div style="border:none;border-top:0.1px solid white;opacity:0.2;margin-top:10px;margin-bottom:30px;"></div><li style="margin-bottom:10px;"><a href="../../Readme" data-for="Readme">Readme</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../TheVisionOfPubky" data-for="TheVisionOfPubky">The Vision of Pubky</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../TLDR" data-for="TLDR">TLDR</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li><li style="margin-bottom:10px;"><a href="../../Troubleshooting" data-for="Troubleshooting">Troubleshooting</a><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon-fixed"><polyline points="6 9 12 15 18 9"></polyline></svg></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Explore/">Explore</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Explore/PubkyCore/">Pubky Core</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Security Model</a></div></nav><h1 class="article-title">Security Model</h1><p show-comma="true" class="content-meta"><span>Feb 20, 2026</span><span>11 min read</span></p></div></div><article class="popover-hint"><p>This document describes the security model, threat landscape, and trust assumptions in the Pubky Core platform. Understanding these is essential for both operators and application developers building on the platform.</p>
+<h2 id="design-philosophy">Design Philosophy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#design-philosophy" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Pubky Core aims to minimize trust requirements while remaining practical. The key principle is: <strong>users should have a credible exit from misbehaving actors</strong> without losing their identity or data.</p>
+<p>This is achieved through:</p>
+<ul>
+<li>Cryptographic identity (keypairs) that users fully control</li>
+<li>Identity based routing. Knowing identity is enough to locate data</li>
+<li>Data portability via Pubky Backup (homeserver mirroring planned but not yet implemented)</li>
+<li>Optional data signing to detect tampering (planned for apps that need it)</li>
+<li>End-to-end encryption for encrypted data (planned; homeserver cannot read)</li>
+</ul>
+<h2 id="trust-philosophy-it-is-ok-to-trust-when-there-is-a-credible-exit">Trust Philosophy: “It is OK to trust when there is a Credible Exit”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trust-philosophy-it-is-ok-to-trust-when-there-is-a-credible-exit" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The Pubky security model accepts that some trust is unavoidable in practical systems. Rather than attempting to eliminate all trust (which often leads to unusable systems), the approach is:</p>
+<ol>
+<li>
+<p><strong>Choose Wisely</strong>: Users select their homeserver operator. This is an explicit trust decision, similar to choosing a bank or email provider. Users CAN run their own homeservers if they don’t trust anyone.</p>
+</li>
+<li>
+<p><strong>Don’t Trust Fully</strong>: Mirroring and backups allow users to restore data after detecting misbehavior. If your primary homeserver modifies data or acts maliciously, your mirrors will show discrepancies. Data replication / backup is a first step for maintaining data availability.</p>
+</li>
+<li>
+<p><strong><a href="../../Explore/Concepts/CredibleExit" class="internal alias" data-slug="Explore/Concepts/CredibleExit">Credible Exit</a></strong>: The key guarantee is that users can always leave. A misbehaving homeserver cannot hold your identity hostage because:</p>
+<ul>
+<li>Your keypair never leaves your device. <a href="../../Explore/Technologies/PubkyRing" class="internal alias" data-slug="Explore/Technologies/PubkyRing">Pubky Ring</a> is the reference key manager implementation</li>
+<li>Your data can be backed up and migrated</li>
+<li><a href="../../Explore/PubkyCore/Pkarr/0.Introduction" class="internal alias" data-slug="Explore/PubkyCore/Pkarr/0.Introduction">PKARR</a> lets you point your identity to a new homeserver immediately</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-detection-problem">The Detection Problem<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-detection-problem" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../Explore/Concepts/CredibleExit" class="internal alias" data-slug="Explore/Concepts/CredibleExit">Credible exit</a> has a prerequisite: <strong>knowing when to exit</strong>. A malicious homeserver that misbehaves silently (withholding data, tampering, surveillance) can cause harm before the user realizes something is wrong.</p>
+<p>This is the hardest unsolved problem in the security model. Planned mitigations:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Detection Method</th><th>How It Helps</th></tr></thead><tbody><tr><td>Mirroring with cross-checks</td><td>Primary and mirror disagree → problem detected</td></tr><tr><td>Client-side verification</td><td>User’s device periodically verifies its own data</td></tr><tr><td>Reputation signals</td><td>Community feedback surfaces bad actors</td></tr></tbody></table></div>
+<p>The principle: make misbehavior <strong>detectable</strong>, not just <strong>escapable</strong>.</p>
+<h3 id="cold-key-philosophy">Cold Key Philosophy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cold-key-philosophy" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../Explore/Technologies/PubkyRing" class="internal alias" data-slug="Explore/Technologies/PubkyRing">Pubky Ring</a> keeps identity keys isolated from third-party apps:</p>
+<ul>
+<li><strong>Minimal Exposure</strong>: The private key never leaves Ring — apps never see it</li>
+<li><strong>Infrequent Use</strong>: Ring is only needed when granting access to a new app</li>
+<li><strong>Session Delegation</strong>: After authorization, apps operate with session tokens issued by the homeserver</li>
+<li><strong>No Recovery</strong>: If you lose both your device and your mnemonic, your identity is permanently lost</li>
+</ul>
+<p>This model minimizes the attack surface: even a compromised app cannot steal your identity, only its own session.</p>
+<h3 id="pkarr-as-source-of-truth">PKARR as Source of Truth<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pkarr-as-source-of-truth" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../Explore/PubkyCore/Pkarr/0.Introduction" class="internal alias" data-slug="Explore/PubkyCore/Pkarr/0.Introduction">PKARR</a> DNS records are the authoritative source for identity resolution:</p>
+<ul>
+<li>When you update your PKARR record to point to a new homeserver, the old one loses authority immediately</li>
+<li>Clients that properly resolve PKARR will always find your current homeserver</li>
+<li>A malicious old homeserver cannot impersonate you after migration</li>
+</ul>
+<p>This is why credible exit works: identity follows the keys, not the server.</p>
+<h2 id="threat-actors">Threat Actors<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#threat-actors" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The security model considers three primary threat actors:</p>
+<h3 id="homeserver-operators">Homeserver Operators<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#homeserver-operators" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Current Capabilities:</strong></p>
+<ul>
+<li>Can read all user data (public and private)</li>
+<li>Can tamper with user data without detection</li>
+<li>Can deny service (refuse to serve data)</li>
+<li>Can log access patterns (who reads what)</li>
+</ul>
+<p><strong>After Planned Improvements:</strong></p>
+<ul>
+<li>Cannot read encrypted data</li>
+<li>Cannot modify signed data without detection (for apps using signing)</li>
+<li>Can still deny service (availability attacks)</li>
+<li>Can still observe metadata (access patterns)</li>
+</ul>
+<p><strong>Note on signing</strong>: Data signing will be optional. Not every use case needs cryptographic verification, and signing adds overhead. Apps can choose whether to sign data based on their trust requirements.</p>
+<p><strong>Mitigation:</strong>
+Users maintain local backups via Pubky Backup, ensuring data portability even if the homeserver refuses to cooperate. Homeserver mirroring (slave servers) is planned but not yet implemented.</p>
+<h3 id="network-attackers">Network Attackers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#network-attackers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Threats:</strong></p>
+<ul>
+<li>Man-in-the-middle attacks on unencrypted connections</li>
+<li>Eavesdropping on network traffic</li>
+<li>Replay attacks using captured auth tokens</li>
+</ul>
+<p><strong>Mitigations:</strong></p>
+<ul>
+<li>HTTPS for all homeserver communication</li>
+<li>AuthToken timestamps with 3-minute validity window (prevents replay)</li>
+<li>Capability scoping limits damage from compromised tokens</li>
+<li>Auth tokens encrypted between authenticator and requesting app via <a href="../../HTTPRelay" class="internal alias" data-slug="HTTPRelay">relay</a></li>
+</ul>
+<h3 id="dht-attackers">DHT Attackers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dht-attackers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The Mainline DHT is subject to known attack vectors (Sybil attacks, eclipse attacks, denial of service). These are mitigated by the <a href="https://www.bittorrent.org/beps/bep_0042.html" class="external">BEP42<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> security extension and the sheer scale of the network (10M+ nodes). For detailed analysis, see:</p>
+<ul>
+<li><a href="https://medium.com/pubky/mainline-dht-censorship-explained-b62763db39cb" class="external">Mainline DHT — Censorship Resistance Explained<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://inria.hal.science/inria-00577043/document" class="external">BitTorrent’s Mainline DHT Security Assessment (INRIA)<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://ieeexplore.ieee.org/document/6503215/" class="external">Real-world Sybil Attacks in BitTorrent Mainline DHT (IEEE)<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<p>Pubky adds additional resilience through multiple relay fallbacks and periodic republishing of records.</p>
+<h3 id="design-trade-offs">Design Trade-offs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#design-trade-offs" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>These are intentional design decisions, not oversights:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Decision</th><th>Homeserver Trusted?</th><th>Rationale</th></tr></thead><tbody><tr><td>Session token issuance</td><td>Yes</td><td>Practical trade-off; keeping Ring’s keys isolated means homeserver must issue tokens</td></tr><tr><td>Capability enforcement</td><td>Yes</td><td>Homeserver trusted to honor the capabilities Ring authorized</td></tr><tr><td>Session revocation</td><td>Yes</td><td>Homeserver trusted to delete sessions when Ring requests</td></tr><tr><td>Key custody</td><td>No</td><td>Ring is sole key holder; no homeserver recovery path</td></tr><tr><td>Identity resolution</td><td>No</td><td><a href="../../Explore/PubkyCore/Pkarr/0.Introduction" class="internal alias" data-slug="Explore/PubkyCore/Pkarr/0.Introduction">PKARR</a> is authoritative; homeserver cannot claim false identity</td></tr><tr><td>Data authenticity</td><td>Yes (for now)</td><td>Planned: data signing will remove this trust requirement</td></tr></tbody></table></div>
+<p><strong>Why trust the homeserver for sessions?</strong></p>
+<p>The alternative would require Ring to be involved in every operation, which conflicts with keeping keys isolated. By trusting the homeserver for session management:</p>
+<ul>
+<li>Ring is only used for initial authorization</li>
+<li>Apps get standard session tokens they can use without Ring</li>
+<li>Users can still revoke via Ring, and exit via migration if homeserver misbehaves</li>
+</ul>
+<h3 id="known-limitations">Known Limitations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#known-limitations" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p><strong>Session Cookie Collision</strong>: Currently, all sessions share a single authentication cookie. Logging into App B overwrites App A’s session. This is a critical bug being addressed via session management rework.</p>
+</li>
+<li>
+<p><strong>No Data Signing</strong>: Data stored on homeservers is not cryptographically signed. A malicious operator could forge, alter, or delete content without readers detecting it.</p>
+</li>
+<li>
+<p><strong>Cloud IP Blocking</strong>: BitTorrent DHT nodes commonly block cloud provider IP ranges. Running pkarr/mainline clients directly in Google Cloud or AWS often fails. The solution is using relays hosted in smaller providers.</p>
+</li>
+<li>
+<p><strong>Mnemonic Fallback Security Risk</strong>: Users without <a href="../../Explore/Technologies/PubkyRing" class="internal alias" data-slug="Explore/Technologies/PubkyRing">Pubky Ring</a> can authenticate by entering their 12-word mnemonic directly on 3rd party apps. This is a security vulnerability — malicious apps could exfiltrate the mnemonic since users cannot verify that client-side JavaScript actually keeps the mnemonic local. The mnemonic should only ever be entered on trusted infrastructure (e.g. Ring or the user’s own homeserver). This limitation is being addressed alongside the session management rework.</p>
+</li>
+</ol>
+<h2 id="planned-trust-improvements">Planned Trust Improvements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#planned-trust-improvements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="data-signing-optional-feature-planned-2026">Data Signing (Optional Feature, Planned 2026)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-signing-optional-feature-planned-2026" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The <a href="../../Explore/PubkyCore/SDK" class="internal" data-slug="Explore/PubkyCore/SDK">SDK</a> will optionally sign data on behalf of the user before storing it on the homeserver. Readers can verify the signature against the user’s public key.</p>
+<p><strong>After implementation:</strong></p>
+<ul>
+<li>Homeserver cannot modify signed data without detection</li>
+<li>Readers have proof of authorship for signed content</li>
+<li>Tampering is cryptographically detectable</li>
+</ul>
+<p><strong>Important</strong>: Signing will be optional per-app. Not every use case requires cryptographic verification of data integrity, and signing adds storage and processing overhead.</p>
+<h3 id="guarded-data-planned">Guarded Data (Planned)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#guarded-data-planned" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Guarded data access control will be enforced by the homeserver, requiring authentication to read. Path conventions are TBD. This is not encryption — the homeserver can still read the data.</p>
+<p><strong>Use case:</strong> Data that should be non-public but where trusting the homeserver is acceptable.</p>
+<h3 id="encrypted-data-planned">Encrypted Data (Planned)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#encrypted-data-planned" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>End-to-end encryption for encrypted data. Homeserver stores ciphertext and cannot read the content.</p>
+<p><strong>After implementation:</strong></p>
+<ul>
+<li>Homeserver sees only encrypted blobs</li>
+<li>Only authorized parties can decrypt</li>
+<li>Metadata (access patterns, data sizes) still visible to homeserver</li>
+</ul>
+<p><strong>Quantum Computing Rationale</strong>: The layered approach (encrypted data behind guarded paths) provides defense-in-depth. As quantum computing advances, encryption that is secure today may be cracked in the future. By requiring authentication to access encrypted data, if the encryption is eventually cracked, the access control layer remains as a second barrier.</p>
+<h3 id="homeserver-mirroring-planned-not-yet-started">Homeserver Mirroring (Planned, Not Yet Started)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#homeserver-mirroring-planned-not-yet-started" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Planned primary-backup architecture where slave homeservers would stay in sync with the master.</p>
+<p><strong>Benefits (when implemented):</strong></p>
+<ul>
+<li>Users could verify their data is properly mirrored</li>
+<li>Users could switch to backup if primary misbehaves</li>
+<li><a href="../../Explore/Concepts/Censorship" class="internal" data-slug="Explore/Concepts/Censorship">Censorship</a> would become detectable and escapable, reducing the incentive to attempt it</li>
+</ul>
+<p><strong>Current Status</strong>: This feature is a concept only — implementation has not started. Currently, users should use Pubky Backup to maintain local copies of their data.</p>
+<h2 id="transport-security">Transport Security<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transport-security" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="pubky-tls-rfc-7250-raw-public-keys">Pubky TLS (RFC 7250 Raw Public Keys)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pubky-tls-rfc-7250-raw-public-keys" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>For connections to Pubky hosts (addresses like <code>_pubky.&lt;z32></code>), the <a href="../../Explore/PubkyCore/SDK" class="internal" data-slug="Explore/PubkyCore/SDK">SDK</a> uses <strong>PubkyTLS</strong> — TLS with Raw Public Keys as defined in RFC 7250. This removes the need for Certificate Authority chains when connecting to Pubky hosts.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>The server’s public key is known in advance (it’s part of the URL/address)</li>
+<li>TLS handshake uses the raw Ed25519 public key instead of an X.509 certificate</li>
+<li>The SDK verifies the connection against the expected public key directly</li>
+<li>No CA trust chain required — the public key IS the identity</li>
+</ul>
+<p><strong>Platform behavior:</strong></p>
+<ul>
+<li><strong>Native (Rust)</strong>: Full PubkyTLS support with raw public key verification</li>
+<li><strong>WASM/Browser</strong>: Uses standard HTTPS through a relay (browsers don’t support raw public key TLS)</li>
+</ul>
+<p><strong>ICANN hosts</strong> (regular domains) continue to use standard X.509 TLS with CA verification.</p>
+<h2 id="authentication-security">Authentication Security<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authentication-security" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="authtoken-design">AuthToken Design<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authtoken-design" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The auth protocol uses time-limited, capability-scoped tokens:</p>
+<pre><code>AuthToken = signature(64) + namespace(10) + version(1) + timestamp(8) + pubky(32) + capabilities
+</code></pre>
+<p><strong>Security Properties:</strong></p>
+<ul>
+<li><strong>Namespace</strong>: “PUBKY:AUTH” prevents cross-protocol replay</li>
+<li><strong>Timestamp</strong>: Must be within 3-minute window (prevents replay)</li>
+<li><strong>Signature</strong>: Ed25519 over message bytes (authenticity)</li>
+<li><strong>Capabilities</strong>: Scoped permissions limit damage from compromise</li>
+</ul>
+<h3 id="capability-scoping">Capability Scoping<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#capability-scoping" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Capabilities follow the principle of least privilege:</p>
+<pre><code>/pub/my-app/:rw       # Read+write to specific directory only
+/pub/file.txt:r       # Read-only single file
+/:rw                  # Root access (avoid when possible)
+</code></pre>
+<p>Apps should request minimal capabilities. Users can review requests in <a href="../../Explore/Technologies/PubkyRing" class="internal alias" data-slug="Explore/Technologies/PubkyRing">Pubky Ring</a> before approval.</p>
+<h3 id="relay-security">Relay Security<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#relay-security" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The <a href="../../HTTPRelay" class="internal alias" data-slug="HTTPRelay">HTTP Relay</a> encrypts tokens between the authenticator (<a href="../../Explore/Technologies/PubkyRing" class="internal alias" data-slug="Explore/Technologies/PubkyRing">Pubky Ring</a>) and the requesting app using a shared <code>client_secret</code>, preventing relay operators from capturing valid auth tokens. See <a href="../../HTTPRelay" class="internal alias" data-slug="HTTPRelay">HTTP Relay</a> for the full flow.</p>
+<h2 id="trust-surface-after-all-improvements">Trust Surface After All Improvements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trust-surface-after-all-improvements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Even with all planned improvements, some trust remains:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Aspect</th><th>Trust Required</th><th>Notes</th></tr></thead><tbody><tr><td>Data integrity</td><td>App’s choice</td><td>Signed data is verifiable; signing is optional</td></tr><tr><td>Data confidentiality</td><td>None (encrypted)</td><td>E2E encryption for encrypted data</td></tr><tr><td>Data availability</td><td>Full trust</td><td>Homeserver can still deny service</td></tr><tr><td>Metadata</td><td>Full trust</td><td>Homeserver sees access patterns</td></tr><tr><td>Key management</td><td>User responsibility</td><td>Lost keys = lost identity (by design)</td></tr></tbody></table></div>
+<h3 id="residual-risks">Residual Risks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#residual-risks" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p><strong>Availability</strong>: Homeservers can deny service. Currently mitigated by Pubky Backup for data portability. Homeserver mirroring (planned) would allow seamless switching.</p>
+</li>
+<li>
+<p><strong>Metadata Leakage</strong>: Homeservers see who accesses what data, timing patterns, data sizes. This is inherent to any server-based system.</p>
+</li>
+<li>
+<p><strong>Key Loss</strong>: Users are responsible for their 12-word mnemonic phrase. Loss means permanent loss of that identity.</p>
+</li>
+<li>
+<p><strong>Key Compromise</strong>: If an attacker obtains a user’s private key, they control the identity. Mitigated by secure storage in device keychains.</p>
+</li>
+</ol>
+<h2 id="recommendations">Recommendations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#recommendations" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="for-users">For Users<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#for-users" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Keep your 12-word recovery phrase secure and backed up (each pubky has its own phrase)</li>
+<li>Loss of mnemonic = permanent loss of that identity (by design, no recovery)</li>
+<li>Review capability requests carefully before approving in <a href="../../Explore/Technologies/PubkyRing" class="internal alias" data-slug="Explore/Technologies/PubkyRing">Pubky Ring</a></li>
+<li>Use Pubky Backup to maintain local copies of your data</li>
+<li>Homeserver mirroring is not yet available — backups are currently your credible exit path</li>
+</ul>
+<h3 id="for-app-developers">For App Developers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#for-app-developers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Request minimal capabilities needed for your app</li>
+<li>Validate data signatures when reading from homeservers</li>
+<li>Don’t store sensitive data in unencrypted form</li>
+<li>Handle auth failures gracefully (sessions can be revoked)</li>
+</ul>
+<h3 id="for-homeserver-operators">For Homeserver Operators<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#for-homeserver-operators" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Run TLS/HTTPS for all connections</li>
+<li>Monitor for anomalous access patterns</li>
+<li>Implement rate limiting to prevent abuse</li>
+<li>Keep software updated for security patches</li>
+<li>Consider running relays in non-cloud environments for DHT access</li>
+</ul>
+<h2 id="failure-scenarios-and-recovery">Failure Scenarios and Recovery<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#failure-scenarios-and-recovery" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This section shows how <a href="../../Explore/Concepts/CredibleExit" class="internal alias" data-slug="Explore/Concepts/CredibleExit">credible exit</a> works in practice across common failure modes.</p>
+<h3 id="scenario-homeserver-goes-down">Scenario: Homeserver Goes Down<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scenario-homeserver-goes-down" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Phase</th><th>What Happens</th><th>User Action</th></tr></thead><tbody><tr><td>Immediate</td><td>Data becomes temporarily inaccessible</td><td>Wait for recovery or decide to migrate</td></tr><tr><td>If prolonged</td><td>Use Pubky Backup to restore from local backup</td><td>Sign up on a new homeserver</td></tr><tr><td>Recovery</td><td>Re-upload data, update <a href="../../Explore/PubkyCore/Pkarr/0.Introduction" class="internal alias" data-slug="Explore/PubkyCore/Pkarr/0.Introduction">PKARR</a> record</td><td>External links automatically resolve to new location</td></tr></tbody></table></div>
+<p>Your identity (keypair in Ring) is unaffected. The homeserver going down is an inconvenience, not a catastrophe.</p>
+<h3 id="scenario-homeserver-misbehaves">Scenario: Homeserver Misbehaves<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scenario-homeserver-misbehaves" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Misbehavior</th><th>Detection</th><th>Response</th></tr></thead><tbody><tr><td>Denies service</td><td>May be selective. Unless you’re the affected reader, detection relies on others reporting it</td><td>Migrate to new homeserver</td></tr><tr><td>Modifies your data</td><td>Hard to detect without signing (planned)</td><td>Migrate + warn others</td></tr><tr><td>Logs access patterns</td><td>Inherent to any server model</td><td>Accept or self-host</td></tr><tr><td>Refuses to delete sessions</td><td>Ring can’t verify compliance</td><td>Migrate + rotate pubky if needed</td></tr></tbody></table></div>
+<p>Misbehavior triggers migration. The homeserver cannot hold your identity hostage because your keypair never lived there.</p>
+<h3 id="scenario-dht-unreachable">Scenario: DHT Unreachable<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scenario-dht-unreachable" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Situation</th><th>Impact</th><th>Fallback</th></tr></thead><tbody><tr><td>Temporary outage</td><td>New resolutions fail</td><td>Clients use cached homeserver locations</td></tr><tr><td>Prolonged outage</td><td>New users can’t discover you</td><td>HTTP relays provide alternative resolution</td></tr><tr><td>Regional blocking</td><td>Varies by location</td><td>Multiple relay endpoints in different regions</td></tr></tbody></table></div>
+<p>The DHT is resilient (10M+ nodes, 15+ years running), but even if parts fail, cached data and relays provide continuity.</p>
+<h3 id="scenario-mnemonic-leaked">Scenario: Mnemonic Leaked<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scenario-mnemonic-leaked" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Consequence</th><th>Mitigation</th></tr></thead><tbody><tr><td>Attacker can impersonate you</td><td>Create a new pubky immediately</td></tr><tr><td>Attacker can access your sessions</td><td>Revoke all sessions via Ring (if you still have access)</td></tr><tr><td>Attacker can read your private data</td><td>Migrate to new pubky, re-establish relationships</td></tr><tr><td>Old pubky is compromised forever</td><td>No recovery — this is by design (like Bitcoin)</td></tr></tbody></table></div>
+<p>Mnemonic leakage is catastrophic for that identity. The system doesn’t try to recover compromised keys — you create a new identity and move on. This is the trade-off for self-custody.</p>
+<h3 id="recovery-pattern">Recovery Pattern<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#recovery-pattern" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Across all failure scenarios, the same pattern applies:</p>
+<ol>
+<li><strong>Identity survives</strong> — Your keypair is separate from any infrastructure</li>
+<li><strong>Data can be recovered</strong> — Via backups or (planned) mirroring</li>
+<li><strong>Exit is always possible</strong> — <a href="../../Explore/PubkyCore/Pkarr/0.Introduction" class="internal alias" data-slug="Explore/PubkyCore/Pkarr/0.Introduction">PKARR</a> lets you point your identity elsewhere</li>
+<li><strong>Damage is contained</strong> — One failure doesn’t cascade to your entire digital life</li>
+</ol></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div style="overflow-y:auto;max-height:40vh;" class="toc desktop-only"><button type="button" id="toc" class><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#design-philosophy" data-for="design-philosophy">Design Philosophy</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#trust-philosophy-it-is-ok-to-trust-when-there-is-a-credible-exit" data-for="trust-philosophy-it-is-ok-to-trust-when-there-is-a-credible-exit">Trust Philosophy: “It is OK to trust when there is a Credible Exit”</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#the-detection-problem" data-for="the-detection-problem">The Detection Problem</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#cold-key-philosophy" data-for="cold-key-philosophy">Cold Key Philosophy</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#pkarr-as-source-of-truth" data-for="pkarr-as-source-of-truth">PKARR as Source of Truth</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#threat-actors" data-for="threat-actors">Threat Actors</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#homeserver-operators" data-for="homeserver-operators">Homeserver Operators</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#network-attackers" data-for="network-attackers">Network Attackers</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#dht-attackers" data-for="dht-attackers">DHT Attackers</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#design-trade-offs" data-for="design-trade-offs">Design Trade-offs</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#known-limitations" data-for="known-limitations">Known Limitations</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#planned-trust-improvements" data-for="planned-trust-improvements">Planned Trust Improvements</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#data-signing-optional-feature-planned-2026" data-for="data-signing-optional-feature-planned-2026">Data Signing (Optional Feature, Planned 2026)</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#guarded-data-planned" data-for="guarded-data-planned">Guarded Data (Planned)</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#encrypted-data-planned" data-for="encrypted-data-planned">Encrypted Data (Planned)</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#homeserver-mirroring-planned-not-yet-started" data-for="homeserver-mirroring-planned-not-yet-started">Homeserver Mirroring (Planned, Not Yet Started)</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#transport-security" data-for="transport-security">Transport Security</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#pubky-tls-rfc-7250-raw-public-keys" data-for="pubky-tls-rfc-7250-raw-public-keys">Pubky TLS (RFC 7250 Raw Public Keys)</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#authentication-security" data-for="authentication-security">Authentication Security</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#authtoken-design" data-for="authtoken-design">AuthToken Design</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#capability-scoping" data-for="capability-scoping">Capability Scoping</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#relay-security" data-for="relay-security">Relay Security</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#trust-surface-after-all-improvements" data-for="trust-surface-after-all-improvements">Trust Surface After All Improvements</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#residual-risks" data-for="residual-risks">Residual Risks</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#recommendations" data-for="recommendations">Recommendations</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#for-users" data-for="for-users">For Users</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#for-app-developers" data-for="for-app-developers">For App Developers</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#for-homeserver-operators" data-for="for-homeserver-operators">For Homeserver Operators</a></li><li class="depth-0"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#failure-scenarios-and-recovery" data-for="failure-scenarios-and-recovery">Failure Scenarios and Recovery</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#scenario-homeserver-goes-down" data-for="scenario-homeserver-goes-down">Scenario: Homeserver Goes Down</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#scenario-homeserver-misbehaves" data-for="scenario-homeserver-misbehaves">Scenario: Homeserver Misbehaves</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#scenario-dht-unreachable" data-for="scenario-dht-unreachable">Scenario: DHT Unreachable</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#scenario-mnemonic-leaked" data-for="scenario-mnemonic-leaked">Scenario: Mnemonic Leaked</a></li><li class="depth-1"><a style="font-size:17px;line-height:22px;letter-spacing:0.4px;font-weight:600;" href="#recovery-pattern" data-for="recovery-pattern">Recovery Pattern</a></li></ul></div></div></div></div><footer class><div style="border:none;border-top:0.1px solid white;width:100%;margin-top:100px;margin-bottom:35px;opacity:0.7;"></div><ul><li><a style="color:white;font-weight:400;font-size:17px;" href="https://synonym.to">Synonym</a></li><li><a style="color:white;font-weight:400;font-size:17px;" href="https://github.com/pubky/pubky-knowledge-base">GitHub</a></li><li><a style="color:white;font-weight:400;font-size:17px;" href="https://t.me/pubkychat">Telegram</a></li></ul></footer><div style="background-image:url('/static/bg.png');background-size:cover;background-position:center;pointer-events:none;position:fixed;top:0px;left:0px;right:0px;bottom:0px;width:100%;height:100%;z-index:-1;"></div><div style="background-image:url('/static/bg-2.png');background-size:cover;background-position:center;pointer-events:none;position:fixed;top:0px;left:0px;right:0px;bottom:0px;width:100%;height:100%;z-index:-1;"></div><div style="background-image:url('/static/bg-3.png');background-size:cover;background-position:left;background-repeat:no-repeat;position:fixed;pointer-events:none;right:0px;bottom:0px;width:100%;height:100%;max-height:20%;max-width:20%;z-index:0;"></div></div></body><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="../../postscript.js" type="module"></script></html>
