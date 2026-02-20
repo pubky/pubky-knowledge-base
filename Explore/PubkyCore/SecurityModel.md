@@ -19,7 +19,7 @@ This is achieved through:
 
 The Pubky security model accepts that some trust is unavoidable in practical systems. Rather than attempting to eliminate all trust (which often leads to unusable systems), the approach is:
 
-1. **Choose Wisely**: Users select their homeserver operator. This is an explicit trust decision, similar to choosing a bank or email provider. Users who want zero trust can self-host.
+1. **Choose Wisely**: Users select their homeserver operator. This is an explicit trust decision, similar to choosing a bank or email provider. Users CAN run their own homeservers if they don't trust anyone.
 
 2. **Don't Trust Fully**: Mirroring and backups allow users to restore data after detecting misbehavior. If your primary homeserver modifies data or acts maliciously, your mirrors will show discrepancies. Data replication / backup is a first step for maintaining data availability.
 
