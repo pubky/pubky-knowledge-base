@@ -1,6 +1,7 @@
 ---
 aliases:
   - "../../Pubky-App/Backend/Aggregator"
+  - "Explore/PubkyApp/Backend/Aggregator"
 ---
 
 ## Pubky Aggregators

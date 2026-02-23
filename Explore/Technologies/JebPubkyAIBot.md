@@ -4,7 +4,7 @@ aliases:
   - "Jeb---Pubky-AI-Bot"
 ---
 
-**Jeb** is an AI-powered bot for the [[Explore/PubkyApp/Introduction|Pubky]] decentralized social network. Affectionately named "Jeb," this bot automatically responds to mentions with intelligent summaries, fact-checking, and other AI-powered capabilities, demonstrating how AI can enhance decentralized social experiences without compromising user sovereignty.
+**Jeb** is an AI-powered bot for the [[Explore/PubkyApps/Introduction|Pubky]] decentralized social network. Affectionately named "Jeb," this bot automatically responds to mentions with intelligent summaries, fact-checking, and other AI-powered capabilities, demonstrating how AI can enhance decentralized social experiences without compromising user sovereignty.
 
 ## Overview
 
@@ -742,7 +742,7 @@ Potential improvements for Jeb:
 
 ## See Also
 
-- [[Explore/PubkyApp/Introduction|Pubky App]] - Social network where Jeb operates
+- [[Explore/PubkyApps/Introduction|Pubky App]] - Social network where Jeb operates
 - [[PubkyNexus|Pubky Nexus]] - Backend API for mention polling
 - [[Explore/PubkyCore/SDK|Pubky SDK]] - SDK used for posting replies
 - [[Homeserver]] - Where Jeb's posts are stored

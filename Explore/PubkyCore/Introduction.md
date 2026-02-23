@@ -97,8 +97,8 @@ Pubky Core's distributed architecture provides user autonomy through credible ex
 
 [[1.Introduction|Pubky App Architectures]] can be very diverse:
 
-1. **[[2.ClientHomeserver|Simple Client-Homeserver]]**
-   - Web client connects directly to a single Homeserver
+1. **[[2.ClientHomeserver|Homeserver-only]]**
+   - Application connects directly to a single Homeserver
    - User data storage and retrieval
    - Authentication and sessions
 
@@ -183,7 +183,7 @@ See [[Homeserver|Homeserver Documentation]] for configuration and deployment.
 ## Use Cases
 
 ### Social Applications
-- Decentralized social networks ([[Explore/PubkyApp/Introduction|Pubky App]])
+- Decentralized social networks ([[Explore/PubkyApps/Introduction|Pubky Apps]])
 - Blogging platforms
 - Comment systems
 - Forums and communities
@@ -212,7 +212,7 @@ See [[Homeserver|Homeserver Documentation]] for configuration and deployment.
 - Open-source contributors
 - Privacy-focused services
 
-**[[Explore/PubkyApp/Introduction|Pubky App]] is made for:**
+**[[Explore/PubkyApps/Introduction|Pubky Apps]] is made for:**
 - Users interested in social media and online publishing
 - People wanting control over their data
 - Users seeking alternatives to Big Tech platforms
@@ -295,7 +295,7 @@ For [Synonym](https://synonym.to/) as lead of this project, the goal is to:
 - **[[Explore/Technologies/PubkyRing|Pubky Ring]]**: Identity manager app
 - **[[Explore/Technologies/Paykit|Paykit]]**: Payment protocol (WIP)
 - **[[Explore/Technologies/PubkyNoise|Pubky Noise]]**: Encrypted communication (WIP)
-- **[[Explore/PubkyApp/Introduction|Pubky App]]**: Social media application
+- **[[Explore/PubkyApps/Introduction|Pubky Apps]]**: Social media application
 
 ---
 

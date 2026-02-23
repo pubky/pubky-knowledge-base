@@ -2,6 +2,7 @@
 title: "Web Server"
 aliases:
   - "../../Pubky-App/Backend/Web-Server"
+  - "Explore/PubkyApp/Backend/WebServer"
 ---
 
 The system comprises a suite of **backend services** that orchestrate the integration of **data feeds**, **search functionality**, and **user interface configurations**. The system provides a unified platform for data ingestion, processing, and presentation, enabling seamless interactions between the frontend and backend components. 

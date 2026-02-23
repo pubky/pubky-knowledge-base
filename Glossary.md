@@ -7,7 +7,7 @@ Quick reference for terms used throughout the Pubky ecosystem.
 ## A
 
 **Aggregator**
-A service that collects and organizes data from multiple [[Homeserver|Homeservers]] to enable search, feeds, and discovery features. See [[Explore/PubkyApp/Backend/Aggregator|Aggregator]].
+A service that collects and organizes data from multiple [[Homeserver|Homeservers]] to enable search, feeds, and discovery features. See [[Explore/PubkyApps/IndexingAndAggregation/Aggregator|Aggregator]].
 
 **Authentication**
 The process of proving ownership of a public key through cryptographic signatures, enabling secure access to Homeservers without passwords. See [[Authentication|details]].
@@ -64,7 +64,7 @@ The Distributed Hash Table used by BitTorrent, with 10+ million nodes globally. 
 
 ## N
 
-**[[Explore/PubkyApp/Backend/PubkyNexus|Nexus]]** (Pubky Nexus)
+**[[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus|Nexus]]** (Pubky Nexus)
 Production-grade indexing and aggregation service for Pubky App. Provides high-performance social graph API, search, and real-time notifications.
 
 **[[Explore/Technologies/PubkyNoise|Noise]]** (Pubky Noise)
@@ -88,8 +88,8 @@ The public half of a cryptographic key pair. In Pubky, this serves as your perma
 1. The decentralized web protocol and ecosystem
 2. A user's public-key identity (e.g., "my pubky is z4e8s...")
 
-**[[Explore/PubkyApp/Introduction|Pubky App]]**
-Social media application demonstrating Pubky Core capabilities. Live at [pubky.app](https://pubky.app).
+**[[Explore/PubkyApps/Introduction|Pubky Apps]]**
+Applications built on the Pubky protocol. The flagship example is [pubky.app](https://pubky.app), a decentralized social media platform.
 
 **[[Explore/PubkyCLI|Pubky CLI]]**
 Command-line tool for interacting with Pubky Homeservers, providing user operations, admin functions, and testing utilities.

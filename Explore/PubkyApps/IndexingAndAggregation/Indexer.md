@@ -1,6 +1,7 @@
 ---
 aliases:
   - "../../Pubky-App/Backend/Indexer"
+  - "Explore/PubkyApp/Backend/Indexer"
 ---
 
 The Indexer is a specialized component that plays a crucial role in the system by normalizing and transforming the aggregated data from multiple [[Homeserver|Homeservers]] into a unified view. This enables cross-data store search, queries, and discovery, allowing users to access and analyze data from various sources in a seamless and efficient manner.

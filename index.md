@@ -4,7 +4,7 @@ title: "Pubky Knowledge Base"
 
 ## Welcome to the Pubky Knowledge Base
 
-This is a knowledge base for the Pubky platform, which includes [[Explore/PubkyCore/Introduction|Pubky Core]], [[0.Introduction|PKARR]] and [[Explore/PubkyApp/Introduction|Pubky App]]. These documents are a work in progress, much like Pubky's protocols and applications!
+This is a knowledge base for the Pubky platform, which includes [[Explore/PubkyCore/Introduction|Pubky Core]], [[0.Introduction|PKARR]] and [[Explore/PubkyApps/Introduction|Pubky Apps]]. These documents are a work in progress, much like Pubky's protocols and applications!
 
 ## What is Pubky?
 
@@ -54,7 +54,7 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 
 - [[Homegate|Homegate]] - Signup verification service for Homeservers (SMS + Lightning)
 - [[PKDNS|PKDNS]] - DNS server for resolving public-key domains
-- [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]] - Production indexing service
+- [[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus|Pubky Nexus]] - Production indexing service
 
 ### Resources
 
@@ -73,21 +73,21 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 - **PKDNS Digger** - Web-based DNS record lookup tool for PKARR domains ([github.com/pubky/pkdns-digger](https://github.com/pubky/pkdns-digger))
 - **[[JebPubkyAIBot|Jeb AI Bot]]** - AI-powered bot for summaries and fact-checking on Pubky social network
 
-## Pubky App: Social Application
+## Pubky Apps: Social Application
 
-**[[Explore/PubkyApp/Introduction|Pubky App]]** is a decentralized social media application built on Pubky Core.
+**[[Explore/PubkyApps/Introduction|pubky.app]]** is a decentralized social media application built on Pubky Core.
 
 ### Current Status
 
 - **Live Application**: [https://pubky.app](https://pubky.app) - Production PWA currently operational
-- **Web Client**: [[Explore/PubkyApp/Client/PubkyApp|pubky.app]] ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app))
-- **Data Model Specification**: [[Explore/PubkyApp/AppSpecs|App Specs]] ([pubky-app-specs](https://github.com/pubky/pubky-app-specs)) - Formal schema definitions for interoperability
+- **Web App**: [[Explore/PubkyApps/ReferenceApp/Introduction|pubky.app]] ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app))
+- **Data Model Specification**: [pubky-app-specs](https://github.com/pubky/pubky-app-specs) - Formal schema definitions for interoperability
 
-### Backend Infrastructure
+### Indexing & Aggregation
 
-🚀 **[[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]]** is the production indexing and aggregation service that powers Pubky App's social features.
+🚀 **[[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus|Pubky Nexus]]** is the production indexing and aggregation service that powers pubky.app's social features.
 
-- [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus Overview]] - Real-time social graph aggregation and high-performance API
+- [[Explore/PubkyApps/IndexingAndAggregation/PubkyNexus|Pubky Nexus Overview]] - Real-time social graph aggregation and high-performance API
 - [Official Repository](https://github.com/pubky/pubky-nexus) - Open source Rust implementation
 - [Live API](https://nexus.pubky.app/swagger-ui/) - Production REST API with Swagger UI
 - [Staging API](https://nexus.staging.pubky.app/swagger-ui/) - Latest development version

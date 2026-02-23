@@ -23,7 +23,7 @@ Current implementations across Pubky currently only support public, unencrypted 
 
 ## User Data Control and Credible Exit
 
-- The current network is being bootstrapped by Synonym's first Homeserver, which supports key accounts as a service, as well as all services required to operate the [[Explore/PubkyApp/Introduction|pubky App]]. 
+- The current network is being bootstrapped by Synonym's first Homeserver, which supports key accounts as a service, as well as all services required to operate the [[Explore/PubkyApps/Introduction|pubky.app]]. 
 - While Synonym is currently not charging fees for homeserving, it is totally possible for anyone to run their own homerserver and require service fees or peer-to-peer micropayments, or any other requirement, to improve data redundancy and competition.
 - Homeserver operators can use [[Homegate]] for signup verification, implementing SMS or Lightning Network verification to prevent spam while preserving user privacy.
 - Synonym does not control who can join or serve data on the network, but in order to truly have a [[CredibleExit|"credible exit"]] the network will need to mature to have more providers of Homeservers and Pubky applications.

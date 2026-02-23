@@ -1,6 +1,7 @@
 ---
 aliases:
   - "../../../Pubky-App/Client/Features/Search"
+  - "Explore/PubkyApp/Client/Features/Search"
 ---
 
 While Tags & Filters are the primary sorting tools, the app also provides limited traditional search capabilities.

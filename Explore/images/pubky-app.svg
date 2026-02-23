@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="48 38 702 534" width="702" height="534"
+     font-family="'Segoe UI', Arial, Helvetica, sans-serif">
+
+  <defs>
+    <filter id="sh">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+    <marker id="arr-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2DD4BF"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#EAB308"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A78BFA"/>
+    </marker>
+  </defs>
+
+  <!-- Background (transparent) -->
+
+  <!-- ==================== TITLE ==================== -->
+  <text x="385" y="58" text-anchor="middle" fill="#FFF" font-size="22" font-weight="700" letter-spacing="2">PUBKY APP COMPONENTS</text>
+
+  <!-- ==================== BACKEND STACK ==================== -->
+
+  <!-- Nexus brace spanning Indexer + Aggregator -->
+  <path d="M318,92 C310,92 308,97 308,107 L308,165 C308,172 303,175 296,175 C303,175 308,178 308,185 L308,248 C308,253 310,258 318,258" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+  <text x="278" y="175" text-anchor="middle" fill="#94A3B8" font-size="18" font-weight="700" transform="rotate(-90,278,175)">Nexus</text>
+
+  <!-- Indexer: y=88, h=72, bottom=160 -->
+  <g filter="url(#sh)">
+    <rect x="330" y="88" width="330" height="72" rx="10" fill="#0F172A" stroke="#A78BFA" stroke-width="1.2"/>
+    <g transform="translate(350,103)">
+      <circle cx="5" cy="5" r="3.5" fill="none" stroke="#A78BFA" stroke-width="1.2"/>
+      <circle cx="25" cy="2" r="3.5" fill="none" stroke="#A78BFA" stroke-width="1.2"/>
+      <circle cx="30" cy="22" r="3.5" fill="none" stroke="#A78BFA" stroke-width="1.2"/>
+      <circle cx="10" cy="25" r="3.5" fill="none" stroke="#A78BFA" stroke-width="1.2"/>
+      <circle cx="18" cy="14" r="3.5" fill="none" stroke="#A78BFA" stroke-width="1.2"/>
+      <line x1="5" y1="5" x2="18" y2="14" stroke="#A78BFA" stroke-width="0.8"/>
+      <line x1="25" y1="2" x2="18" y2="14" stroke="#A78BFA" stroke-width="0.8"/>
+      <line x1="30" y1="22" x2="18" y2="14" stroke="#A78BFA" stroke-width="0.8"/>
+      <line x1="10" y1="25" x2="18" y2="14" stroke="#A78BFA" stroke-width="0.8"/>
+      <line x1="5" y1="5" x2="25" y2="2" stroke="#A78BFA" stroke-width="0.6" opacity="0.5"/>
+    </g>
+    <text x="395" y="113" fill="#FFF" font-size="16" font-weight="700">Indexer</text>
+    <text x="395" y="131" fill="#C4B5FD" font-size="12">Indexed &amp; queryable data</text>
+    <text x="395" y="149" fill="#94A3B8" font-size="11" font-style="italic">e.g. social graphs, search</text>
+  </g>
+
+  <!-- Aggregator -> Indexer (gap=40px: 160–200) -->
+  <line x1="495" y1="198" x2="495" y2="162" stroke="#94A3B8" stroke-width="1" marker-end="url(#arr-gray)"/>
+  <text x="508" y="184" fill="#94A3B8" font-size="11" font-style="italic">optional</text>
+
+  <!-- Aggregator: y=200, h=62, bottom=262 -->
+  <g filter="url(#sh)">
+    <rect x="330" y="200" width="330" height="62" rx="10" fill="#0F172A" stroke="#EAB308" stroke-width="1.2"/>
+    <g transform="translate(350,215)">
+      <line x1="0" y1="0" x2="15" y2="15" stroke="#EAB308" stroke-width="1.2"/>
+      <line x1="30" y1="0" x2="15" y2="15" stroke="#EAB308" stroke-width="1.2"/>
+      <line x1="15" y1="0" x2="15" y2="15" stroke="#EAB308" stroke-width="1.2"/>
+      <line x1="15" y1="15" x2="15" y2="30" stroke="#EAB308" stroke-width="1.5"/>
+      <path d="M10,25 L15,32 L20,25" fill="none" stroke="#EAB308" stroke-width="1.2" stroke-linejoin="round"/>
+      <circle cx="0" cy="0" r="2.5" fill="#EAB308"/>
+      <circle cx="15" cy="0" r="2.5" fill="#EAB308"/>
+      <circle cx="30" cy="0" r="2.5" fill="#EAB308"/>
+    </g>
+    <text x="395" y="225" fill="#FFF" font-size="16" font-weight="700">Aggregator</text>
+    <text x="395" y="243" fill="#EAB308" font-size="12">Collects data from multiple homeservers</text>
+  </g>
+
+  <!-- Homeservers -> Aggregator (gap=40px: 262–302) -->
+  <line x1="495" y1="300" x2="495" y2="264" stroke="#94A3B8" stroke-width="1" marker-end="url(#arr-gray)"/>
+  <text x="508" y="286" fill="#94A3B8" font-size="11" font-style="italic">optional</text>
+
+  <!-- Homeservers: y=302, h=95, bottom=397 -->
+  <g filter="url(#sh)">
+    <rect x="330" y="302" width="330" height="95" rx="10" fill="#0F172A" stroke="#2DD4BF" stroke-width="1.2"/>
+    <text x="495" y="322" text-anchor="middle" fill="#FFF" font-size="16" font-weight="700">Homeservers</text>
+
+    <!-- User's HS (green, leftmost — write target) -->
+    <g>
+      <rect x="345" y="332" width="80" height="50" rx="6" fill="#0B1120" stroke="#059669" stroke-width="1"/>
+      <path d="M376,350 L385,341 L394,350 L392,350 L392,362 L378,362 L378,350 Z" fill="none" stroke="#059669" stroke-width="0.8" stroke-linejoin="round"/>
+      <text x="385" y="376" text-anchor="middle" fill="#059669" font-size="10" font-weight="600">User's HS</text>
+    </g>
+    <!-- HS B -->
+    <g>
+      <rect x="455" y="332" width="80" height="50" rx="6" fill="#0B1120" stroke="#2DD4BF" stroke-width="0.8"/>
+      <path d="M486,350 L495,341 L504,350 L502,350 L502,362 L488,362 L488,350 Z" fill="none" stroke="#2DD4BF" stroke-width="0.8" stroke-linejoin="round"/>
+      <text x="495" y="376" text-anchor="middle" fill="#2DD4BF" font-size="10">HS B</text>
+    </g>
+    <!-- HS C -->
+    <g>
+      <rect x="565" y="332" width="80" height="50" rx="6" fill="#0B1120" stroke="#2DD4BF" stroke-width="0.8"/>
+      <path d="M596,350 L605,341 L614,350 L612,350 L612,362 L598,362 L598,350 Z" fill="none" stroke="#2DD4BF" stroke-width="0.8" stroke-linejoin="round"/>
+      <text x="605" y="376" text-anchor="middle" fill="#2DD4BF" font-size="10">HS C</text>
+    </g>
+  </g>
+
+  <!-- Webserver: y=302, h=75, bottom=377 -->
+  <g filter="url(#sh)">
+    <rect x="60" y="302" width="240" height="75" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.2"/>
+    <g transform="translate(90,312)">
+      <rect x="0" y="0" width="30" height="8" rx="2" fill="none" stroke="#475569" stroke-width="1.2"/>
+      <rect x="0" y="12" width="30" height="8" rx="2" fill="none" stroke="#475569" stroke-width="1.2"/>
+      <rect x="0" y="24" width="30" height="8" rx="2" fill="none" stroke="#475569" stroke-width="1.2"/>
+      <circle cx="24" cy="4" r="2" fill="#059669"/>
+      <circle cx="24" cy="16" r="2" fill="#059669"/>
+      <circle cx="24" cy="28" r="2" fill="#475569"/>
+    </g>
+    <text x="130" y="325" fill="#FFF" font-size="16" font-weight="700">Webserver</text>
+    <text x="130" y="345" fill="#94A3B8" font-size="12">Serves application code only</text>
+    <text x="130" y="363" fill="#94A3B8" font-size="11" font-style="italic">(future: part of Homeserver)</text>
+  </g>
+
+  <!-- ==================== FRONTEND ==================== -->
+
+  <!-- Pubky App: y=480, h=75, bottom=555 -->
+  <g filter="url(#sh)">
+    <rect x="370" y="480" width="300" height="75" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <g transform="translate(385,501)">
+      <rect x="0" y="0" width="34" height="26" rx="3" fill="none" stroke="#38BDF8" stroke-width="1.2"/>
+      <line x1="0" y1="8" x2="34" y2="8" stroke="#38BDF8" stroke-width="0.8"/>
+      <circle cx="6" cy="4" r="1.5" fill="#EF4444"/>
+      <circle cx="12" cy="4" r="1.5" fill="#EAB308"/>
+      <circle cx="18" cy="4" r="1.5" fill="#38BDF8"/>
+      <rect x="4" y="12" width="26" height="2" rx="1" fill="#38BDF8" opacity="0.4"/>
+      <rect x="4" y="17" width="18" height="2" rx="1" fill="#38BDF8" opacity="0.3"/>
+    </g>
+    <text x="428" y="514" fill="#FFF" font-size="16" font-weight="700">Pubky App</text>
+    <text x="428" y="531" fill="#94A3B8" font-size="11">Reads data from HS <tspan font-weight="700" text-decoration="underline">or</tspan> Aggregator <tspan font-weight="700" text-decoration="underline">or</tspan> Indexer</text>
+  </g>
+
+  <!-- ==================== SERVE ARROW ==================== -->
+
+  <path d="M180,377 L180,417 C180,517 180,517 300,517 L370,517" fill="none" stroke="#475569" stroke-width="1.2" marker-end="url(#arr-gray)"/>
+  <text x="167" y="438" text-anchor="end" fill="#94A3B8" font-size="14" font-weight="700">NO DATA</text>
+  <text x="167" y="454" text-anchor="end" fill="#94A3B8" font-size="10">just serves code</text>
+
+  <!-- ==================== LABELS ==================== -->
+
+  <text x="370" y="438" text-anchor="end" fill="#059669" font-size="14" font-weight="700">WRITE</text>
+  <text x="370" y="454" text-anchor="end" fill="#6EE7B7" font-size="10">always directly to HS</text>
+
+  <!-- ==================== ARROWS ==================== -->
+
+  <!-- GREEN WRITE: Pubky App -> User's HS (vertical, leftmost) -->
+  <line x1="385" y1="480" x2="385" y2="384" stroke="#059669" stroke-width="1.5" marker-end="url(#arr-green)"/>
+
+  <!-- TEAL READ: Homeservers -> Pubky App (straight down from gap between HS B and HS C) -->
+  <line x1="550" y1="399" x2="550" y2="480" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arr-teal)"/>
+  <text x="537" y="443" text-anchor="end" fill="#2DD4BF" font-size="14" font-weight="700">READ</text>
+  <text x="537" y="456" text-anchor="end" fill="#2DD4BF" font-size="10">from Homeservers</text>
+
+  <!-- AMBER READ: Aggregator -> Pubky App (wraps right at x=700) -->
+  <path d="M660,232 C685,232 700,246 700,268 L700,485 C700,510 685,510 670,510" fill="none" stroke="#EAB308" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arr-amber)"/>
+  <text x="687" y="443" text-anchor="end" fill="#EAB308" font-size="14" font-weight="700">READ</text>
+  <text x="687" y="456" text-anchor="end" fill="#EAB308" font-size="10">from Aggregator</text>
+
+  <!-- PURPLE READ: Indexer -> Pubky App (wraps right at x=730) -->
+  <path d="M660,120 C695,120 730,130 730,155 L730,490 C730,535 700,535 670,535" fill="none" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arr-purple)"/>
+  <text x="680" y="555" fill="#A78BFA" font-size="14" font-weight="700">READ</text>
+  <text x="680" y="568" fill="#A78BFA" font-size="10">from Indexer</text>
+
+</svg>

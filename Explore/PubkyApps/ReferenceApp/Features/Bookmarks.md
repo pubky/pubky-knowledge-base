@@ -1,6 +1,7 @@
 ---
 aliases:
   - "../../../Pubky-App/Client/Features/Bookmarks"
+  - "Explore/PubkyApp/Client/Features/Bookmarks"
 ---
 
 Bookmarks are a feature that allows you to privately save post for later reference. Here are some ways you can use bookmarks:

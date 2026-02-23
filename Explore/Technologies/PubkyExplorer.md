@@ -334,7 +334,7 @@ Potential improvements for Pubky Explorer:
 
 - **[[Explore/PubkyCore/SDK|Pubky SDK]]**: Underlying data access library
 - **[[PKDNS]]**: DNS resolution for public keys (used by SDK)
-- **[[Explore/PubkyApp/Introduction|Pubky App]]**: Social application using same data structures
+- **[[Explore/PubkyApps/Introduction|pubky.app]]**: Social application using same data structures
 - **[pubky-app-specs](https://github.com/pubky/pubky-app-specs)**: Data model specifications
 - **[[PubkyNexus|Pubky Nexus]]**: Backend for aggregated views (Explorer shows raw data)
 

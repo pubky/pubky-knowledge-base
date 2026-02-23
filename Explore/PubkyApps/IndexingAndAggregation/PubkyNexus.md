@@ -2,6 +2,7 @@
 title: "Pubky Nexus"
 aliases:
   - "../../Pubky-App/Backend/Pubky-Nexus"
+  - "Explore/PubkyApp/Backend/PubkyNexus"
 ---
 
 **Pubky Nexus** is the production-grade indexing and aggregation service that powers Pubky App's social features. It transforms decentralized data from multiple [[Homeserver|Homeservers]] into a high-performance social graph API, enabling real-time social media experiences at scale.
@@ -294,7 +295,7 @@ All contributions should include tests and benchmarks where applicable.
 If you're building a social client application to consume the Nexus API:
 
 - **Data Model Specification**: Use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as your authoritative reference for data structures and validation rules
-- **Web App**: [[Explore/PubkyApp/Client/PubkyApp|pubky.app]] ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app)) — the production reference implementation
+- **Web App**: [[Explore/PubkyApps/ReferenceApp/Introduction|pubky.app]] ([github.com/pubky/pubky-app](https://github.com/pubky/pubky-app)) — the production reference implementation
 - **API Exploration**: Use the [Swagger UI](https://nexus.pubky.app/swagger-ui/) to explore available endpoints and test queries
 
 ## See Also
