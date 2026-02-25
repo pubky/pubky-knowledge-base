@@ -33,9 +33,9 @@ The application follows a local-first architecture where writes commit to local 
 - **QR Code Authentication** via [[PubkyRing|Pubky Ring]]
 - **Offline support** — PWA with service worker caching and local-first writes
 
-## Architecture
+## Codebase Structure
 
-pubky.app uses a layered architecture with strict separation of concerns:
+The codebase is organized in layers with strict separation of concerns:
 
 | Layer | Responsibility |
 |-------|----------------|
