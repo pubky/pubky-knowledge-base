@@ -8,7 +8,7 @@ Web portal for the Pubky ecosystem — a publisher and social feed for the decen
 
 ## Overview
 
-pubky.app is a social media-like web application built on top of [[Explore/PubkyCore/Introduction|Pubky Core]]. It serves as the flagship example of how to build applications using the Pubky [[SDK]] for authentication and data storage, combined with [[Explore/PubkyApp/Backend/PubkyNexus|Nexus]] for fast social feeds.
+pubky.app is a social media-like web application built on top of [[Explore/PubkyCore/Introduction|Pubky Core]]. It serves as the flagship example of how to build applications using the Pubky [[SDK]] for authentication and data storage, combined with [[Explore/PubkyApp/Backend/PubkyNexus|Nexus]] for data [[Explore/PubkyApp/Backend/Aggregator|aggregation]] and [[Explore/PubkyApp/Backend/Indexer|indexing]], turning distributed data into fast-loading feeds and a navigable social graph.
 
 - **GitHub**: https://github.com/pubky/pubky-app
 - **Platform**: Web (Next.js progressive web app)
