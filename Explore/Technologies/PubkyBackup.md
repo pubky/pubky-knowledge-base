@@ -4,6 +4,8 @@ title: "Pubky Backup"
 
 Desktop backup application for Pubky users to maintain local copies of all their published data from their [[Homeserver|homeserver]].
 
+> **Note:** This tool is under active development. Behaviour and features may change.
+
 - **GitHub**: https://github.com/pubky/pubky-backup
 - **Platforms**: Linux, macOS, Windows
 
