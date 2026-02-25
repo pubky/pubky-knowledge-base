@@ -55,14 +55,6 @@ async fn main() {
 
 Apps can specify a custom relay URL via the [[SDK]].
 
-## Known Issues
-
-### Mobile Browser Background Timeout
-
-On mobile browsers, HTTP long-poll connections get cut when the app is backgrounded (e.g., when user switches to camera to scan QR), causing login to hang or fail intermittently.
-
-**Proposed fix**: Reduce long-poll timeout to 25 seconds maximum with continuous client retry. This is a top priority fix.
-
 ## Related Components
 
 - **[[PubkyRing|Pubky Ring]]**: The authenticator that sends tokens through the relay
