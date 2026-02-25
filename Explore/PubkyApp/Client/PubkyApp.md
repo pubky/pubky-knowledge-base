@@ -48,7 +48,7 @@ pubky.app uses a layered architecture with strict separation of concerns:
 
 ### Data Flow
 1. **Writes** go to [[Homeserver|homeserver]] via [[SDK]]
-2. Homeserver notifies [[Explore/PubkyApp/Backend/PubkyNexus|Nexus]] of changes
+2. [[Explore/PubkyApp/Backend/PubkyNexus|Nexus]] polls [[Homeserver|homeserver]] for changes via the `/events/` endpoint
 3. Nexus indexes and aggregates data
 4. **Reads** come from Nexus for performance
 5. Local Dexie cache provides offline access
