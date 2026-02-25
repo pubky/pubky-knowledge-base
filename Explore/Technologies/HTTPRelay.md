@@ -4,7 +4,7 @@ title: "HTTP Relay"
 
 HTTP relay service for forwarding encrypted AuthTokens during Pubky [[Authentication|authentication]] flows. Implements the [httprelay.io](https://httprelay.io/) link channel specification.
 
-- **Location**: [`pubky-core/http-relay/`](https://github.com/pubky/pubky-core/tree/main/http-relay)
+- **GitHub**: [`pubky/http-relay`](https://github.com/pubky/http-relay)
 - **License**: MIT
 - **Language**: Rust
 
@@ -31,10 +31,26 @@ See the [pubky-core GitHub docs](https://github.com/pubky/pubky-core/blob/main/d
 
 ## Self-Hosting
 
-The relay is designed to be self-hostable for reduced latency, privacy, and reliability:
+The relay is designed to be self-hostable for reduced latency, privacy, and reliability. Use the [`http-relay`](https://github.com/pubky/http-relay) crate as a dependency in your Rust project:
 
-```bash
-cargo run -p http-relay
+```rust
+#[tokio::main]
+async fn main() {
+    let http_relay = http_relay::HttpRelay::builder()
+        .http_port(15412)
+        .run()
+        .await
+        .unwrap();
+
+    println!(
+        "Running http relay {}",
+        http_relay.local_link_url().as_str()
+    );
+
+    tokio::signal::ctrl_c().await.unwrap();
+
+    http_relay.shutdown().await.unwrap();
+}
 ```
 
 Apps can specify a custom relay URL via the [[SDK]].
