@@ -34,7 +34,9 @@ The [[HTTPRelay|HTTP Relay]] encrypts tokens between the authenticator and the r
 
 2. **No Key Delegation**: AuthToken must be signed by the user's main key.
 
-3. **Key management software must be trusted**: [[PubkyRing|Pubky Ring]] keeps keys out of third-party apps, but apps that handle keys directly must be fully trusted.
+## Trust Assumptions
+
+**Key management software must be trusted**: [[PubkyRing|Pubky Ring]] keeps keys out of third-party apps, but apps that handle keys directly must be fully trusted. This is inherent to any self-custody system.
 
 ## Session Management Rework (Planned)
 
