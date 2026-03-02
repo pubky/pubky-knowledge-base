@@ -42,7 +42,7 @@ See [[SecurityModel|Security Model]] for the full trust analysis and failure rec
 
 ## Running a Homeserver
 
-> **Note:** Production deployment guides are not yet available. Easy deployment packages (Umbrel, apt, docker, start9) are planned.
+> **Note:** Production deployment guides are not yet available. Easy deployment packages (Umbrel, apt, docker, start9) are under development.
 
 For local development and testing:
 
