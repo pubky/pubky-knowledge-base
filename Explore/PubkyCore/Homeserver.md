@@ -22,10 +22,9 @@ Current implementations only support public, unencrypted data. Encrypted data an
 
 Homeservers expose event streams for clients to sync data changes:
 
-- `GET /events/` — Paginated event feed (cursor-based, 1000 events per batch)
-- `GET /events-stream` — Server-Sent Events (SSE) real-time stream
+- `GET /events-stream` — SSE real-time stream with user and path filters. Primary event API, used by clients to subscribe to specific users on third-party homeservers without processing unwanted traffic
+- `GET /events/` — Legacy paginated event feed for all users on the homeserver (cursor-based, 1000 events per batch)
 
-Used by clients like [[PubkyBackup|Pubky Backup]] to stay in sync. Note: the SSE broadcast channel is per-instance, so horizontal scaling requires architectural changes (e.g., Redis pub/sub).
 
 ## Transport Security
 
