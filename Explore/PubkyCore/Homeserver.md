@@ -23,7 +23,7 @@ Current implementations only support public, unencrypted data. Encrypted data an
 Homeservers expose event streams for clients to sync data changes:
 
 - `GET /events-stream` — SSE real-time stream with user and path filters. Primary event API, used by clients to subscribe to specific users on third-party homeservers without processing unwanted traffic
-- `GET /events/` — Legacy paginated event feed for all users on the homeserver (cursor-based, 1000 events per batch)
+- `GET /events/` — Paginated event feed for all users on the homeserver (cursor-based, 1000 events per batch)
 
 
 ## Transport Security
