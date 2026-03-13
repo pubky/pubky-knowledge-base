@@ -4,32 +4,56 @@ aliases:
   - "../Pubky-Core/Homeserver"
 ---
 
-The Pubky network allows multiple, independent data stores, known as "Homeservers." This improves [[Censorship|censorship-resistance]] and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden. 
+The Pubky network allows multiple, independent data stores, known as "Homeservers." This improves [[Censorship|censorship-resistance]] and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden.
 
-Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their Homeserver at will by updating their [[0.Introduction|PKARR]] in the [[MainlineDHT|Mainline DHT]]. 
+Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their Homeserver at will by updating their [[0.Introduction|PKARR]] record in the [[MainlineDHT|Mainline DHT]].
+
+## Architecture
+
+The Homeserver implementation consists of several components: the main HTTP API server (supporting both ICANN HTTP and Pubky TLS), an admin server, a Prometheus metrics server, and republishers that keep user and server keys alive on the DHT.
+
+See the [repository](https://github.com/pubky/pubky-core/tree/main/pubky-homeserver) for API details and configuration.
 
 ## Public vs Private Data
 
-Current implementations across Pubky currently only support public, unencrypted data use cases. This does not prevent applications from using encrypted data within Homeservers, we simply haven't implemented that set of features in any direct way yet. Feel free to contribute!  
-
-## Data Retrieval and Synchronization
-
-- **API**: Any service can access data through a RESTful API 
-
-## Decentralized Storage Architecture
-
-- Homeservers can be operated by individuals, cooperatives, or commercial entities, with the option for anonymous operation, promoting a decentralized and resilient storage ecosystem where users could tune their preferred redundancy while maintaining the benefits of a central Homeserver.
-- We do not yet have any mirroring or replication tools available yet. Feel free to build with us!
-
-## User Data Control and Credible Exit
-
-- The current network is being bootstrapped by Synonym's first Homeserver, which supports key accounts as a service, as well as all services required to operate the [[Explore/PubkyApp/Introduction|pubky App]]. 
-- While Synonym is currently not charging fees for homeserving, it is totally possible for anyone to run their own homerserver and require service fees or peer-to-peer micropayments, or any other requirement, to improve data redundancy and competition.
-- Homeserver operators can use [[Homegate]] for signup verification, implementing SMS or Lightning Network verification to prevent spam while preserving user privacy.
-- Synonym does not control who can join or serve data on the network, but in order to truly have a [[CredibleExit|"credible exit"]] the network will need to mature to have more providers of Homeservers and Pubky applications.
-- We will also need to make it as easy as possible for people to host their own Homeservers, and to host homerserver clouds.
-- We also need to ensure that applications remain performant & reliable as the network fragments.
+Current implementations only support public, unencrypted data. Encrypted data and guarded (access-controlled) data are planned — see [[SecurityModel|Security Model]] for the trust implications.
 
 ## Event Stream
 
-Homeservers expose `/events/` and `/events-stream` endpoints for indexers/aggregators to sync data changes using cursor-based pagination.
+Homeservers expose event streams for clients to sync data changes:
+
+- `GET /events-stream` — SSE real-time stream with user and path filters. Primary event API, used by clients to subscribe to specific users on third-party homeservers without processing unwanted traffic
+- `GET /events/` — Paginated event feed for all users on the homeserver (cursor-based, 1000 events per batch)
+
+
+## Transport Security
+
+Homeservers expose two endpoints: a PubkyTLS endpoint (TLS with Raw Public Keys, RFC 7250) and an ICANN HTTP endpoint intended to sit behind a reverse proxy with standard X.509 TLS.
+
+Native Pubky clients connect via PubkyTLS; browsers and legacy clients connect via the ICANN domain. See [[SecurityModel#Transport Security|Transport Security]] for details.
+
+## User Data Control and Credible Exit
+
+- The current network is being bootstrapped by Synonym's first Homeserver — over time, more independent Homeserver operators and Pubky applications are needed for the network to fully decentralize
+- Anyone can run their own Homeserver and set their own terms
+- Homeserver operators can use [[Homegate]] for signup verification, implementing SMS or Lightning Network verification to prevent spam while preserving user privacy
+- For true [[CredibleExit|credible exit]], users should maintain local backups via [[PubkyBackup|Pubky Backup]]. Homeserver mirroring is planned but not yet implemented
+- Users can migrate to a new Homeserver at any time by moving their data and updating their [[0.Introduction|PKARR]] record
+
+See [[SecurityModel|Security Model]] for the full trust analysis and failure recovery scenarios.
+
+## Running a Homeserver
+
+> **Note:** Production deployment guides are not yet available. Easy deployment packages (Umbrel, apt, docker, start9) are under development.
+
+For local development and testing:
+
+```bash
+cargo run -p pubky-homeserver
+```
+
+To spin up an ephemeral testnet:
+
+```bash
+cargo run -p pubky-testnet
+```
