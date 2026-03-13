@@ -193,7 +193,7 @@ For connections to Pubky hosts (addresses like `_pubky.<z32>`), the [[SDK]] uses
 
 **Platform behavior:**
 - **Native (Rust)**: Full PubkyTLS support with raw public key verification
-- **WASM/Browser**: Uses standard HTTPS through a relay (browsers don't support raw public key TLS)
+- **WASM/Browser**: Uses standard HTTPS fallback (browsers don't support raw public key TLS)
 
 **ICANN hosts** (regular domains) continue to use standard X.509 TLS with CA verification.
 

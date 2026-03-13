@@ -28,7 +28,9 @@ Homeservers expose event streams for clients to sync data changes:
 
 ## Transport Security
 
-Pubky hosts use **PubkyTLS** for transport security (TLS with Raw Public Keys, RFC 7250). ICANN hosts use standard X.509 TLS. See [[SecurityModel|Security Model]] for details.
+Homeservers expose two endpoints: a PubkyTLS endpoint (TLS with Raw Public Keys, RFC 7250) and an ICANN HTTP endpoint intended to sit behind a reverse proxy with standard X.509 TLS.
+
+Native Pubky clients connect via PubkyTLS; browsers and legacy clients connect via the ICANN domain. See [[SecurityModel#Transport Security|Transport Security]] for details.
 
 ## User Data Control and Credible Exit
 
