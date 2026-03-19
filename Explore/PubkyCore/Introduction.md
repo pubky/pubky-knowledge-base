@@ -281,6 +281,7 @@ For [Synonym](https://synonym.to/) as lead of this project, the goal is to:
 
 **Active Development:**
 - 🚧 Mobile native bindings (iOS/Android)
+- 🚧 [[Explore/Technologies/Paykit|Paykit]] support
 - 🚧 Replication and mirroring tools
 - 🚧 Privacy features (encrypted data)
 
