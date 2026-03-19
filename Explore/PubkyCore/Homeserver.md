@@ -76,5 +76,3 @@ let testnet = EphemeralTestnetBuilder::new()
     .build()
     .await?;
 ```
-
-There is also a `Testnet::new_unseeded()` method for creating a testnet without pre-seeded data.
