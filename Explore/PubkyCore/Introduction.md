@@ -275,11 +275,11 @@ For [Synonym](https://synonym.to/) as lead of this project, the goal is to:
 - ✅ Rust SDK mature
 - ✅ JavaScript/WASM bindings stable
 - ✅ Authentication system complete
+- ✅ Event streaming SDK (SSE-based, single and multi-user)
 - ✅ Multiple persistence backends
 
 **Active Development:**
 - 🚧 Mobile native bindings (iOS/Android)
-- 🚧 Event streaming enhancements
 - 🚧 Replication and mirroring tools
 - 🚧 Privacy features (encrypted data)
 

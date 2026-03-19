@@ -527,6 +527,7 @@ The repository includes comprehensive examples:
 - [4-storage](https://github.com/pubky/pubky-core/tree/main/examples/rust/4-storage) - CRUD operations
 - [5-request](https://github.com/pubky/pubky-core/tree/main/examples/rust/5-request) - Authorization
 - [6-auth_flow_signup](https://github.com/pubky/pubky-core/tree/main/examples/rust/6-auth_flow_signup) - Full signup flow
+- [7-events_stream](https://github.com/pubky/pubky-core/tree/main/examples/rust/7-events_stream) - SSE event streaming
 
 ## Testing
 
@@ -570,6 +571,85 @@ cargo test
 ```
 
 ## Advanced Features
+
+### Event Streaming
+
+The SDK provides a builder API for subscribing to real-time homeserver events via SSE. See [[API#Event Streaming]] for the underlying HTTP endpoint.
+
+**Rust — Single user:**
+```rust
+use pubky::{Pubky, PublicKey, EventType};
+use futures_util::StreamExt;
+
+let pubky = Pubky::new()?;
+let user = PublicKey::try_from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo").unwrap();
+
+let mut stream = pubky.event_stream_for_user(&user, None)
+    .live()
+    .subscribe()
+    .await?;
+
+while let Some(result) = stream.next().await {
+    let event = result?;
+    println!("{}: {} (cursor: {})", event.event_type, event.resource, event.cursor);
+}
+```
+
+**Rust — Multiple users on the same homeserver:**
+```rust
+use pubky::{Pubky, PublicKey, EventCursor};
+use futures_util::StreamExt;
+
+let pubky = Pubky::new()?;
+let user1 = PublicKey::try_from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo").unwrap();
+let user2 = PublicKey::try_from("pxnu33x7jtpx9ar1ytsi4yxbp6a5o36gwhffs8zoxmbuptici1jy").unwrap();
+
+let homeserver = pubky.get_homeserver_of(&user1).await.unwrap();
+
+let mut stream = pubky.event_stream_for(&homeserver)
+    .add_users([(&user1, None), (&user2, Some(EventCursor::new(100)))])?
+    .live()
+    .limit(100)
+    .path("/pub/")
+    .subscribe()
+    .await?;
+
+while let Some(result) = stream.next().await {
+    let event = result?;
+    println!("{}: {}", event.event_type, event.resource);
+}
+```
+
+**JavaScript:**
+```javascript
+const user = PublicKey.from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo");
+
+const stream = await pubky.eventStreamForUser(user, null)
+    .live()
+    .subscribe();
+
+for await (const event of stream) {
+    console.log(`${event.eventType}: ${event.resource.path}`);
+    // event.eventType: "PUT" or "DEL"
+    // event.cursor: string (for pagination/resumption)
+    // event.contentHash: base64 string (PUT only) or undefined
+}
+```
+
+**Builder options:**
+- `.live()` — After historical events, keep streaming new events in real-time
+- `.reverse()` — Deliver events newest-first (cannot combine with `live`)
+- `.limit(n)` — Maximum events to receive before closing
+- `.path("/pub/...")` — Filter events by path prefix
+- `.add_users([(pubkey, cursor), ...])` — Subscribe to multiple users (up to 50)
+
+**Key types:**
+- `EventStreamBuilder` — Fluent builder for configuring subscriptions
+- `Event` — A single event with `event_type`, `resource`, and `cursor`
+- `EventCursor` — A `u64` identifier used for resuming streams from a position
+- `EventType` — Either `Put` (with Blake3 `content_hash`) or `Delete`
+
+See the [7-events_stream example](https://github.com/pubky/pubky-core/tree/main/examples/rust/7-events_stream) for a complete CLI tool.
 
 ### Session Management
 
