@@ -137,6 +137,8 @@ const pubky = new Pubky();
 
 ### Sign Up (Create Account on Homeserver)
 
+For gated homeservers, obtain a signup token via [[Homegate]] first. Pass `None`/`null` only for open homeservers or local testnets.
+
 **Rust:**
 ```rust
 use pubky::{Pubky, Keypair, PublicKey};
@@ -146,13 +148,13 @@ let keypair = Keypair::random();
 let homeserver = PublicKey::try_from("8pinxxgqs41n4aididenw5apqp1urfmzdztr8jt4abrkdn435ewo").unwrap();
 
 let signer = pubky.signer(keypair);
-let session = signer.signup(&homeserver, None).await?;
+let session = signer.signup(&homeserver, signup_token.as_deref()).await?;
 ```
 
 **JavaScript:**
 ```javascript
 const signer = pubky.signer(keypair);
-const session = await signer.signup(homeserverPk, null);
+const session = await signer.signup(homeserverPk, signupToken);
 ```
 
 ### Sign In (Existing User)
@@ -442,8 +444,8 @@ async function storeProfile() {
     const keypair = Keypair.random();
     const signer = pubky.signer(keypair);
 
-    // Sign up at a homeserver
-    const session = await signer.signup(homeserverPk, null);
+    // Sign up at a homeserver (null token for open/testnet homeservers)
+    const session = await signer.signup(homeserverPk, signupToken);
     console.log(`Public Key: ${signer.publicKey.z32()}`);
 
     // Store profile (following pubky-app-specs format)

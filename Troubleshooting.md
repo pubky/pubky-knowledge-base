@@ -126,19 +126,13 @@ See [[Authentication]] for how Pubky authentication works.
 
 2. **Wrong Passphrase**
    - Recovery file passphrase is incorrect
-   - **Solution**: Verify passphrase, use correct one:
-   ```javascript
-   const pubky = await Pubky.fromRecoveryFile(
-     './recovery.file',
-     'correct-passphrase'
-   );
-   ```
+   - **Solution**: Verify passphrase, use correct one
 
 3. **Session Expired**
    - Sessions have TTL (typically 24 hours)
    - **Solution**: Sign in again:
    ```javascript
-   await pubky.signIn();
+   const session = await signer.signin();
    ```
 
 4. **Clock Skew**
@@ -155,14 +149,9 @@ See [[Authentication]] for how Pubky authentication works.
 **Debug Authentication:**
 
 ```javascript
-// Check current session
-const session = await pubky.session();
-console.log('Session valid:', session.valid);
-console.log('Expires:', new Date(session.expiresAt));
-
 // Force re-authentication
-await pubky.signOut();
-await pubky.signIn();
+await session.signout();
+const newSession = await signer.signin();
 ```
 
 ---
@@ -256,11 +245,11 @@ docker compose logs neo4j
    - **Solution**: Use correct path format:
    ```javascript
    // ✅ Correct
-   await pubky.put('/pub/myapp/data.json', data);
-   
-   // ❌ Wrong
-   await pubky.put('data.json', data);
-   await pubky.put('/myapp/data.json', data);
+   await session.storage.putText('/pub/myapp/data.json', data);
+
+   // ❌ Wrong — path must start with /pub/
+   await session.storage.putText('data.json', data);
+   await session.storage.putText('/myapp/data.json', data);
    ```
 
 2. **Data Too Large**
@@ -271,10 +260,10 @@ docker compose logs neo4j
    - Too many requests in short time
    - **Solution**: Implement backoff:
    ```javascript
-   async function putWithRetry(path, data, retries = 3) {
+   async function putWithRetry(session, path, data, retries = 3) {
      for (let i = 0; i < retries; i++) {
        try {
-         return await pubky.put(path, data);
+         return await session.storage.putText(path, data);
        } catch (e) {
          if (e.status === 429) {
            await new Promise(r => setTimeout(r, 1000 * (i + 1)));
@@ -410,11 +399,11 @@ When reporting bugs, include:
 ```markdown
 ## Environment
 - OS: macOS 14.2
-- SDK: @synonymdev/pubky@0.6.0
+- SDK: @synonymdev/pubky@0.7.0
 - Browser: Chrome 120
 
 ## Steps to Reproduce
-1. Call `await pubky.put('/pub/test/file.json', data)`
+1. Call `await session.storage.putText('/pub/test/file.json', data)`
 2. Observe error
 
 ## Error Message

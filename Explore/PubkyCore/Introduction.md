@@ -149,7 +149,7 @@ import { Pubky, Keypair } from '@synonymdev/pubky';
 const pubky = new Pubky();
 const signer = pubky.signer(Keypair.random());
 
-// Sign up at a homeserver
+// Sign up (pass signup token for gated homeservers, null for open/testnet)
 const session = await signer.signup(homeserverPk, null);
 
 // Store data

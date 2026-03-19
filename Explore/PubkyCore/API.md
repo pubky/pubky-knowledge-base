@@ -434,32 +434,10 @@ All errors follow a consistent format:
 
 ## Best Practices
 
-### Efficient List Operations
-
-**Paginate large datasets:**
-```javascript
-async function getAllPosts(client, publicKey) {
-    const allPosts = [];
-    let cursor = null;
-    
-    do {
-        const response = await client.list(
-            `pubky://${publicKey}/pub/myapp/posts/`,
-            { limit: 100, cursor }
-        );
-        
-        allPosts.push(...response.entries);
-        cursor = response.cursor;
-    } while (response.has_more);
-    
-    return allPosts;
-}
-```
-
 ### Optimize Storage
 
 **Store structured data efficiently:**
-```javascript
+```
 // Good: Separate entries for each post
 PUT /pub/myapp/posts/001  (small JSON)
 PUT /pub/myapp/posts/002  (small JSON)
@@ -469,18 +447,16 @@ PUT /pub/myapp/posts/003  (small JSON)
 PUT /pub/myapp/all_posts  (large JSON array)
 ```
 
-### Handle Errors Gracefully
+### Handle Rate Limits
 
 ```javascript
-async function robustPut(client, path, data) {
-    const maxRetries = 3;
-    
-    for (let i = 0; i < maxRetries; i++) {
+async function putWithRetry(session, path, data, retries = 3) {
+    for (let i = 0; i < retries; i++) {
         try {
-            return await client.put(path, data);
+            return await session.storage.putText(path, data);
         } catch (error) {
-            if (error.code === 'rate_limit_exceeded') {
-                await sleep(error.retryAfter * 1000);
+            if (error.status === 429) {
+                await new Promise(r => setTimeout(r, 1000 * (i + 1)));
                 continue;
             }
             throw error;
