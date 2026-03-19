@@ -301,6 +301,30 @@ GET /events/?cursor=<event_cursor>&limit=1000
 
 Returns up to 1000 events per batch. Use the returned cursor to paginate through the full history.
 
+## Signup Token Validation
+
+Homeservers that require signup tokens (via [[Homegate]]) expose an endpoint to check token validity.
+
+### GET /signup_tokens/{token}
+
+Check whether a signup token is valid, used, or unknown.
+
+**Response (200 OK):**
+```json
+{
+  "status": "valid",
+  "created_at": "2025-03-18T12:00:00Z"
+}
+```
+
+**Status values:** `valid` (unused), `used` (already redeemed)
+
+**Error Responses:**
+- `400 Bad Request`: Missing or invalid token format, or homeserver does not require signup tokens
+- `404 Not Found`: Token does not exist
+
+**Rate Limiting:** This endpoint is rate-limited to 10 requests per IP per minute by default.
+
 ## Admin Endpoints
 
 Homeserver administrators can access management endpoints:
