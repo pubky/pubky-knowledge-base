@@ -146,32 +146,33 @@ cargo run
 **Quick Example (JavaScript):**
 
 ```javascript
-import { Pubky } from '@synonymdev/pubky';
+import { Pubky, Keypair } from '@synonymdev/pubky';
 
-// Create client
-const pubky = await Pubky.create();
+// Create client and signer
+const pubky = new Pubky();
+const signer = pubky.signer(Keypair.random());
 
-// Generate a new identity (signup)
-const { publicKey, secretKey } = await pubky.signUp();
-console.log('Your pubky:', publicKey);
+// Sign up at a homeserver
+const session = await signer.signup(homeserverPk, null);
+console.log('Your pubky:', signer.publicKey.z32());
 
 // Store data
-await pubky.put('/pub/myapp/profile', JSON.stringify({
+await session.storage.putJson('/pub/myapp/profile', {
   name: "Alice",
   bio: "Building on Pubky!",
   avatar: "https://example.com/avatar.jpg"
-}));
+});
 
 // Retrieve data
-const profile = await pubky.get('/pub/myapp/profile');
-console.log('Profile:', JSON.parse(profile));
+const profile = await session.storage.getJson('/pub/myapp/profile');
+console.log('Profile:', profile);
 
 // List directory
-const files = await pubky.list('/pub/myapp/');
+const files = await session.storage.list('/pub/myapp/');
 console.log('Files:', files);
 
 // Sign out
-await pubky.signOut();
+await session.signout();
 ```
 
 **Key concepts:**

@@ -143,22 +143,23 @@ npm install @synonymdev/pubky
 
 **Quick Example (JavaScript):**
 ```javascript
-import { Pubky } from '@synonymdev/pubky';
+import { Pubky, Keypair } from '@synonymdev/pubky';
 
-// Create client
-const pubky = await Pubky.create();
+// Create client and signer
+const pubky = new Pubky();
+const signer = pubky.signer(Keypair.random());
 
-// Sign up (generates keypair)
-const { publicKey, secretKey } = await pubky.signUp();
+// Sign up at a homeserver
+const session = await signer.signup(homeserverPk, null);
 
 // Store data
-await pubky.put(`/pub/myapp/profile`, JSON.stringify({
+await session.storage.putJson("/pub/myapp/profile", {
   name: "Alice",
   bio: "Decentralized and loving it!"
-}));
+});
 
 // Retrieve data
-const profile = await pubky.get(`/pub/myapp/profile`);
+const profile = await session.storage.getJson("/pub/myapp/profile");
 ```
 
 See [[Explore/PubkyCore/SDK|SDK Documentation]] for complete guides.
