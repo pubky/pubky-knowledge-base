@@ -246,30 +246,84 @@ When a request is made:
 3. Verify operation is allowed
 4. Execute or deny request
 
-## Event Streaming (Future)
+## Event Streaming
 
-Subscribe to real-time updates on data changes.
+Subscribe to real-time updates on data changes via Server-Sent Events (SSE). Two endpoints serve different use cases:
+
+### GET /events-stream — Real-Time SSE Stream
+
+The primary event API. Clients subscribe to specific users on a homeserver without processing unwanted traffic.
 
 **Request:**
 ```http
-GET /events?paths=/pub/myapp/&since=1704067200
-Authorization: Bearer session_abc123...
+GET /events-stream?user=<z32_pubkey>&user=<z32_pubkey>:<cursor>&limit=100&live=true&path=/pub/
 ```
+
+**Query Parameters:**
+- `user` (required, repeatable): User public key in z32 format. Append `:<cursor>` to resume from a position (e.g. `user=abc123:42`). Up to 50 users per request
+- `limit` (optional): Maximum events before closing (1–65535). Without limit and `live=false`, all historical events are sent then the stream closes
+- `live` (optional): When `true`, delivers all historical events first, then streams new events in real-time. Cannot combine with `reverse`
+- `reverse` (optional): When `true`, delivers events newest-first then closes. Cannot combine with `live`
+- `path` (optional): Filter events by path prefix (e.g. `/pub/pubky.app/`)
 
 **Response (Server-Sent Events):**
 ```http
 HTTP/1.1 200 OK
 Content-Type: text/event-stream
 
-event: created
-data: {"path":"/pub/myapp/posts/003","size":256,"timestamp":1704067400}
+event: PUT
+data: pubky://o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo/pub/posts/003
+data: cursor: 42
+data: content_hash: AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE=
 
-event: updated
-data: {"path":"/pub/myapp/profile","size":512,"timestamp":1704067500}
-
-event: deleted
-data: {"path":"/pub/myapp/temp","timestamp":1704067600}
+event: DEL
+data: pubky://o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo/pub/temp
+data: cursor: 43
 ```
+
+**Event Types:**
+- `PUT`: Data was created or updated. Includes a `content_hash` (base64-encoded Blake3 hash)
+- `DEL`: Data was deleted
+
+**SSE Data Format** (one `data:` line per field):
+1. First line: full `pubky://` resource URL
+2. `cursor: <u64>` — event ID for pagination/resumption
+3. `content_hash: <base64>` — 32-byte Blake3 hash (PUT events only)
+
+### GET /events/ — Paginated Event Feed
+
+Paginated feed of all events across all users on the homeserver. Intended for indexers and aggregators like [[Explore/PubkyApp/Backend/PubkyNexus|Pubky Nexus]].
+
+**Request:**
+```http
+GET /events/?cursor=<event_cursor>&limit=1000
+```
+
+Returns up to 1000 events per batch. Use the returned cursor to paginate through the full history.
+
+## Signup Token Validation
+
+Homeservers that require signup tokens (via [[Homegate]]) expose an endpoint to check token validity.
+
+### GET /signup_tokens/{token}
+
+Check whether a signup token is valid, used, or unknown.
+
+**Response (200 OK):**
+```json
+{
+  "status": "valid",
+  "created_at": "2025-03-18T12:00:00Z"
+}
+```
+
+**Status values:** `valid` (unused), `used` (already redeemed)
+
+**Error Responses:**
+- `400 Bad Request`: Missing or invalid token format, or homeserver does not require signup tokens
+- `404 Not Found`: Token does not exist
+
+**Rate Limiting:** This endpoint is rate-limited to 10 requests per IP per minute by default.
 
 ## Admin Endpoints
 
@@ -380,32 +434,10 @@ All errors follow a consistent format:
 
 ## Best Practices
 
-### Efficient List Operations
-
-**Paginate large datasets:**
-```javascript
-async function getAllPosts(client, publicKey) {
-    const allPosts = [];
-    let cursor = null;
-    
-    do {
-        const response = await client.list(
-            `pubky://${publicKey}/pub/myapp/posts/`,
-            { limit: 100, cursor }
-        );
-        
-        allPosts.push(...response.entries);
-        cursor = response.cursor;
-    } while (response.has_more);
-    
-    return allPosts;
-}
-```
-
 ### Optimize Storage
 
 **Store structured data efficiently:**
-```javascript
+```
 // Good: Separate entries for each post
 PUT /pub/myapp/posts/001  (small JSON)
 PUT /pub/myapp/posts/002  (small JSON)
@@ -415,18 +447,16 @@ PUT /pub/myapp/posts/003  (small JSON)
 PUT /pub/myapp/all_posts  (large JSON array)
 ```
 
-### Handle Errors Gracefully
+### Handle Rate Limits
 
 ```javascript
-async function robustPut(client, path, data) {
-    const maxRetries = 3;
-    
-    for (let i = 0; i < maxRetries; i++) {
+async function putWithRetry(session, path, data, retries = 3) {
+    for (let i = 0; i < retries; i++) {
         try {
-            return await client.put(path, data);
+            return await session.storage.putText(path, data);
         } catch (error) {
-            if (error.code === 'rate_limit_exceeded') {
-                await sleep(error.retryAfter * 1000);
+            if (error.status === 429) { // Too Many Requests
+                await new Promise(r => setTimeout(r, 1000 * (i + 1)));
                 continue;
             }
             throw error;

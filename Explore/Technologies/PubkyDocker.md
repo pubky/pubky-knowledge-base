@@ -158,7 +158,7 @@ POSTGRES_DB=homeserver
 NEXT_PUBLIC_HOMESERVER=8pinxxgqs41n4aididenw5apqp1urfmzdztr8jt4abrkdn435ewo
 NEXT_PUBLIC_NEXUS=http://localhost:8080
 NEXT_PUBLIC_TESTNET=true
-HTTP_RELAY=http://localhost:15412/link/
+HTTP_RELAY=http://localhost:15412/inbox/
 NEXT_PUBLIC_PKARR_RELAYS=["https://pkarr.pubky.app","https://pkarr.pubky.org"]
 ```
 

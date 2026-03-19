@@ -57,3 +57,22 @@ To spin up an ephemeral testnet:
 ```bash
 cargo run -p pubky-testnet
 ```
+
+### Embedded Postgres
+
+Since v0.7.0, the testnet supports an optional embedded Postgres mode via the `embedded-postgres` feature flag. This allows fully self-contained test environments without requiring an external database:
+
+```bash
+cargo run -p pubky-testnet --features embedded-postgres
+```
+
+The examples use embedded Postgres by default. For programmatic use:
+
+```rust
+use pubky_testnet::EphemeralTestnetBuilder;
+
+let testnet = EphemeralTestnetBuilder::new()
+    .with_embedded_postgres()
+    .build()
+    .await?;
+```

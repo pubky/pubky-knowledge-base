@@ -123,137 +123,151 @@ Data is organized in a hierarchical namespace:
 
 **Rust:**
 ```rust
-use pubky::PubkyClient;
+use pubky::Pubky;
 
-let client = PubkyClient::new()?;
+let pubky = Pubky::new()?;
 ```
 
 **JavaScript:**
 ```javascript
 import { Pubky } from '@synonymdev/pubky';
 
-const pubky = await Pubky.create();
+const pubky = new Pubky();
 ```
 
-### Sign Up (Generate Identity)
+### Sign Up (Create Account on Homeserver)
+
+For gated homeservers, obtain a signup token via [[Homegate]] first. Pass `None`/`null` only for open homeservers or local testnets.
 
 **Rust:**
 ```rust
-let keypair = client.signup()?;
-let public_key = keypair.public_key();
-let secret_key = keypair.secret_key();
+use pubky::{Pubky, Keypair, PublicKey};
+
+let pubky = Pubky::new()?;
+let keypair = Keypair::random();
+let homeserver = PublicKey::try_from("8pinxxgqs41n4aididenw5apqp1urfmzdztr8jt4abrkdn435ewo").unwrap();
+
+let signer = pubky.signer(keypair);
+let session = signer.signup(&homeserver, signup_token.as_deref()).await?;
 ```
 
 **JavaScript:**
 ```javascript
-const { publicKey, secretKey } = await pubky.signUp();
+const signer = pubky.signer(keypair);
+const session = await signer.signup(homeserverPk, signupToken);
 ```
 
-### Sign In (Load Existing Identity)
+### Sign In (Existing User)
 
 **Rust:**
 ```rust
-let secret_key = SecretKey::from_bytes(&secret_bytes)?;
-client.signin(secret_key)?;
+let signer = pubky.signer(keypair);
+let session = signer.signin().await?;
 ```
 
 **JavaScript:**
 ```javascript
-await pubky.signIn(secretKey);
+const signer = pubky.signer(keypair);
+const session = await signer.signin();
 ```
 
 ### Store Data (PUT)
 
 **Rust:**
 ```rust
-client.put(
+session.storage().put(
     "/pub/myapp/profile",
-    &serde_json::to_vec(&profile)?
+    serde_json::to_string(&profile)?
 ).await?;
 ```
 
 **JavaScript:**
 ```javascript
-await pubky.put(
-    "/pub/myapp/profile",
-    JSON.stringify(profile)
-);
+await session.storage.putJson("/pub/myapp/profile", profile);
 ```
 
 ### Retrieve Data (GET)
 
 **Rust:**
 ```rust
-let data = client.get("/pub/myapp/profile").await?;
-let profile: Profile = serde_json::from_slice(&data)?;
+let resp = session.storage().get("/pub/myapp/profile").await?;
+let text = resp.text().await?;
 ```
 
 **JavaScript:**
 ```javascript
-const data = await pubky.get("/pub/myapp/profile");
-const profile = JSON.parse(data);
+const profile = await session.storage.getJson("/pub/myapp/profile");
 ```
 
 ### Delete Data (DELETE)
 
 **Rust:**
 ```rust
-client.delete("/pub/myapp/profile").await?;
+session.storage().delete("/pub/myapp/profile").await?;
 ```
 
 **JavaScript:**
 ```javascript
-await pubky.delete("/pub/myapp/profile");
+await session.storage.delete("/pub/myapp/profile");
 ```
 
 ### List Data (Pagination)
 
 **Rust:**
 ```rust
-let entries = client.list(
-    "/pub/myapp/posts/",
-    Some(ListOptions {
-        limit: Some(20),
-        cursor: None,
-        reverse: false,
-    })
-).await?;
+let entries = session.storage().list("/pub/myapp/posts/")?
+    .limit(20)
+    .reverse(true)
+    .send()
+    .await?;
 
 for entry in entries {
-    println!("{}: {} bytes", entry.key, entry.size);
+    println!("{}", entry);
 }
 ```
 
 **JavaScript:**
 ```javascript
-const entries = await pubky.list("/pub/myapp/posts/", {
-    limit: 20,
-    reverse: false
-});
+const entries = await session.storage.list("/pub/myapp/posts/", null, false, 20);
 
-for (const entry of entries) {
-    console.log(`${entry.key}: ${entry.size} bytes`);
+for (const url of entries) {
+    console.log(url);
 }
+```
+
+### Public Read (Unauthenticated)
+
+Read another user's public data without a session:
+
+**Rust:**
+```rust
+let resp = pubky.public_storage()
+    .get(format!("{}/pub/myapp/profile", user_public_key))
+    .await?;
+let text = resp.text().await?;
+```
+
+**JavaScript:**
+```javascript
+const text = await pubky.publicStorage
+    .getText(`${userPk}/pub/myapp/profile`);
 ```
 
 ## Authentication Flows
 
 ### Third-Party Authorization
 
-Pubky Core supports OAuth-style authorization for third-party apps:
+Pubky Core supports OAuth-style authorization for third-party apps via the `pubkyauth://` protocol:
 
 ```rust
-// App requests authorization
-let auth_url = client.request_authorization(
-    "https://myapp.com/callback",
-    vec!["read:/pub/", "write:/pub/myapp/"]
-)?;
+use pubky::{Pubky, Capabilities, AuthFlowKind};
 
-// User approves in [[Explore/Technologies/PubkyRing|Pubky Ring]]
-// Callback receives session token
+let pubky = Pubky::new()?;
+let caps = Capabilities::default();
+let flow = pubky.start_auth_flow(&caps, AuthFlowKind::signin())?;
 
-// App uses token for requests
-client.set_session_token(token)?;
+// Display flow.authorization_url() as QR code for Pubky Ring to scan
+let session = flow.await_approval().await?;
 ```
 
 See [[Authentication]] for the full authentication flow.
@@ -423,43 +437,32 @@ const savedProfile = JSON.parse(getRes.value);
 ### Simple Profile Storage
 
 ```javascript
-import { Pubky } from '@synonymdev/pubky';
+import { Pubky, Keypair } from '@synonymdev/pubky';
 
 async function storeProfile() {
-    const pubky = await Pubky.create();
-    
-    // Generate identity
-    const { publicKey, secretKey } = await pubky.signUp();
-    console.log(`Public Key: ${publicKey}`);
-    
-    // Sign in
-    await pubky.signIn(secretKey);
-    
+    const pubky = new Pubky();
+    const keypair = Keypair.random();
+    const signer = pubky.signer(keypair);
+
+    // Sign up at a homeserver (null token for open/testnet homeservers)
+    const session = await signer.signup(homeserverPk, signupToken);
+    console.log(`Public Key: ${signer.publicKey.z32()}`);
+
     // Store profile (following pubky-app-specs format)
     const profile = {
         name: "Alice",
         bio: "Building on Pubky",
         image: "pubky://user_id/pub/pubky.app/files/0000000000000",
-        links: [
-            {
-                title: "GitHub",
-                url: "https://github.com/alice"
-            }
-        ],
+        links: [{ title: "GitHub", url: "https://github.com/alice" }],
         status: "Exploring decentralized tech."
     };
-    
+
     // Store at standard pubky-app location
-    await pubky.put(
-        "/pub/pubky.app/profile.json",
-        JSON.stringify(profile)
-    );
-    
+    await session.storage.putJson("/pub/pubky.app/profile.json", profile);
     console.log("Profile stored!");
-    
+
     // Retrieve profile
-    const data = await pubky.get("/pub/pubky.app/profile.json");
-    const retrieved = JSON.parse(data);
+    const retrieved = await session.storage.getJson("/pub/pubky.app/profile.json");
     console.log("Retrieved:", retrieved);
 }
 ```
@@ -469,7 +472,7 @@ async function storeProfile() {
 ### Social Feed Application
 
 ```rust
-use pubky::{PubkyClient, ListOptions};
+use pubky::{Pubky, Keypair, PubkySession, PubkyResource};
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
@@ -479,30 +482,31 @@ struct Post {
     author: String,
 }
 
-async fn publish_post(client: &PubkyClient, post: &Post) -> anyhow::Result<()> {
+async fn publish_post(session: &PubkySession, post: &Post) -> anyhow::Result<()> {
     let post_id = post.timestamp.to_string();
     let path = format!("/pub/social/posts/{}", post_id);
-    
-    client.put(&path, &serde_json::to_vec(post)?).await?;
+
+    session.storage().put(&path, serde_json::to_string(post)?).await?;
     Ok(())
 }
 
-async fn get_feed(client: &PubkyClient, public_key: &str) -> anyhow::Result<Vec<Post>> {
-    let path = format!("pubky://{}/pub/social/posts/", public_key);
-    
-    let entries = client.list(&path, Some(ListOptions {
-        limit: Some(50),
-        reverse: true, // Newest first
-        cursor: None,
-    })).await?;
-    
+async fn get_feed(pubky: &Pubky, public_key: &str) -> anyhow::Result<Vec<Post>> {
+    let path = format!("{}/pub/social/posts/", public_key);
+
+    let entries: Vec<PubkyResource> = pubky.public_storage()
+        .list(path)?
+        .limit(50)
+        .reverse(true)
+        .send()
+        .await?;
+
     let mut posts = Vec::new();
     for entry in entries {
-        let data = client.get(&entry.key).await?;
-        let post: Post = serde_json::from_slice(&data)?;
+        let resp = pubky.public_storage().get(entry.to_string()).await?;
+        let post: Post = serde_json::from_slice(&resp.bytes().await?)?;
         posts.push(post);
     }
-    
+
     Ok(posts)
 }
 ```
@@ -527,6 +531,7 @@ The repository includes comprehensive examples:
 - [4-storage](https://github.com/pubky/pubky-core/tree/main/examples/rust/4-storage) - CRUD operations
 - [5-request](https://github.com/pubky/pubky-core/tree/main/examples/rust/5-request) - Authorization
 - [6-auth_flow_signup](https://github.com/pubky/pubky-core/tree/main/examples/rust/6-auth_flow_signup) - Full signup flow
+- [7-events_stream](https://github.com/pubky/pubky-core/tree/main/examples/rust/7-events_stream) - SSE event streaming
 
 ## Testing
 
@@ -571,44 +576,114 @@ cargo test
 
 ## Advanced Features
 
-### Session Management
+### Event Streaming
 
+The SDK provides a builder API for subscribing to real-time homeserver events via SSE. See [[API#Event Streaming]] for the underlying HTTP endpoint.
+
+**Rust — Single user:**
 ```rust
-// Create session with capabilities
-let session = client.create_session(vec![
-    "read:/pub/",
-    "write:/pub/myapp/"
-])?;
+use pubky::{Pubky, PublicKey, EventType};
+use futures_util::StreamExt;
 
-// Use session token
-client.set_session_token(session.token)?;
+let pubky = Pubky::new()?;
+let user = PublicKey::try_from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo").unwrap();
 
-// Refresh session
-client.refresh_session().await?;
+let mut stream = pubky.event_stream_for_user(&user, None)
+    .live()
+    .subscribe()
+    .await?;
+
+while let Some(result) = stream.next().await {
+    let event = result?;
+    println!("{}: {} (cursor: {})", event.event_type, event.resource, event.cursor);
+}
 ```
 
-### Recovery Files
+**Rust — Multiple users on the same homeserver:**
+```rust
+use pubky::{Pubky, PublicKey, EventCursor};
+use futures_util::StreamExt;
+
+let pubky = Pubky::new()?;
+let user1 = PublicKey::try_from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo").unwrap();
+let user2 = PublicKey::try_from("pxnu33x7jtpx9ar1ytsi4yxbp6a5o36gwhffs8zoxmbuptici1jy").unwrap();
+
+let homeserver = pubky.get_homeserver_of(&user1).await.unwrap();
+
+let mut stream = pubky.event_stream_for(&homeserver)
+    .add_users([(&user1, None), (&user2, Some(EventCursor::new(100)))])?
+    .live()
+    .limit(100)
+    .path("/pub/")
+    .subscribe()
+    .await?;
+
+while let Some(result) = stream.next().await {
+    let event = result?;
+    println!("{}: {}", event.event_type, event.resource);
+}
+```
+
+**JavaScript:**
+```javascript
+const user = PublicKey.from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo");
+
+const stream = await pubky.eventStreamForUser(user, null)
+    .live()
+    .subscribe();
+
+for await (const event of stream) {
+    console.log(`${event.eventType}: ${event.resource.path}`);
+    // event.eventType: "PUT" or "DEL"
+    // event.cursor: string (for pagination/resumption)
+    // event.contentHash: base64 string (PUT only) or undefined
+}
+```
+
+**Builder options:**
+- `.live()` — After historical events, keep streaming new events in real-time
+- `.reverse()` — Deliver events newest-first (cannot combine with `live`)
+- `.limit(n)` — Maximum events to receive before closing
+- `.path("/pub/...")` — Filter events by path prefix
+- `.add_users([(pubkey, cursor), ...])` — Subscribe to multiple users (up to 50)
+
+**Key types:**
+- `EventStreamBuilder` — Fluent builder for configuring subscriptions
+- `Event` — A single event with `event_type`, `resource`, and `cursor`
+- `EventCursor` — A `u64` identifier used for resuming streams from a position
+- `EventType` — Either `Put` (with Blake3 `content_hash`) or `Delete`
+
+See the [7-events_stream example](https://github.com/pubky/pubky-core/tree/main/examples/rust/7-events_stream) for a complete CLI tool.
+
+### Session Management
+
+Sessions are created via the `Signer` and provide scoped storage access:
 
 ```rust
-// Export recovery file (encrypted)
-let recovery_data = client.export_recovery("password")?;
-std::fs::write("recovery.dat", recovery_data)?;
+use pubky::{Pubky, Keypair};
 
-// Import recovery file
-let recovery_data = std::fs::read("recovery.dat")?;
-client.import_recovery(&recovery_data, "password")?;
+let pubky = Pubky::new()?;
+let signer = pubky.signer(Keypair::random());
+
+// Sign in returns a session
+let session = signer.signin().await?;
+
+// Session info
+println!("User: {}", session.info().public_key());
+
+// Sign out invalidates the session
+session.signout().await?;
 ```
 
 ### Multiple Identities
 
 ```rust
-let client1 = PubkyClient::new()?;
-client1.signin(secret_key_1)?;
+let pubky = Pubky::new()?;
 
-let client2 = PubkyClient::new()?;
-client2.signin(secret_key_2)?;
+let session1 = pubky.signer(keypair_1).signin().await?;
+let session2 = pubky.signer(keypair_2).signin().await?;
 
-// Each client maintains separate identity
+// Each session maintains a separate identity
 ```
 
 ## Platform-Specific Notes
@@ -647,12 +722,10 @@ client.put(
 
 **Rust:**
 ```rust
-use pubky::PubkyError;
+use pubky::Error;
 
-match client.get("/pub/myapp/data").await {
-    Ok(data) => println!("Retrieved: {:?}", data),
-    Err(PubkyError::NotFound) => println!("Data not found"),
-    Err(PubkyError::Unauthorized) => println!("Not authorized"),
+match session.storage().get("/pub/myapp/data").await {
+    Ok(resp) => println!("Retrieved: {}", resp.text().await?),
     Err(e) => eprintln!("Error: {}", e),
 }
 ```
@@ -660,16 +733,11 @@ match client.get("/pub/myapp/data").await {
 **JavaScript:**
 ```javascript
 try {
-    const data = await pubky.get("/pub/myapp/data");
-    console.log("Retrieved:", data);
+    const text = await session.storage.getText("/pub/myapp/data");
+    console.log("Retrieved:", text);
 } catch (error) {
-    if (error.code === 'NOT_FOUND') {
-        console.log("Data not found");
-    } else if (error.code === 'UNAUTHORIZED') {
-        console.log("Not authorized");
-    } else {
-        console.error("Error:", error.message);
-    }
+    // error.name: "RequestError", "AuthenticationError", "ValidationError", etc.
+    console.error(`${error.name}: ${error.message}`);
 }
 ```
 
