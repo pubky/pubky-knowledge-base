@@ -455,7 +455,7 @@ async function putWithRetry(session, path, data, retries = 3) {
         try {
             return await session.storage.putText(path, data);
         } catch (error) {
-            if (error.status === 429) {
+            if (error.status === 429) { // Too Many Requests
                 await new Promise(r => setTimeout(r, 1000 * (i + 1)));
                 continue;
             }

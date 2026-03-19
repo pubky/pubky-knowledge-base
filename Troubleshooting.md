@@ -265,7 +265,7 @@ docker compose logs neo4j
        try {
          return await session.storage.putText(path, data);
        } catch (e) {
-         if (e.status === 429) {
+         if (e.status === 429) { // Too Many Requests
            await new Promise(r => setTimeout(r, 1000 * (i + 1)));
          } else throw e;
        }
