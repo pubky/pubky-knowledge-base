@@ -26,7 +26,7 @@ The Pubky security model accepts that some trust is unavoidable in practical sys
 3. **[[CredibleExit|Credible Exit]]**: The key guarantee is that users can always leave. A misbehaving homeserver cannot hold your identity hostage because:
    - Your keypair never leaves your device. [[PubkyRing|Pubky Ring]] is the reference key manager implementation
    - Your data can be backed up and migrated
-   - [[0.Introduction|PKARR]] lets you point your identity to a new homeserver immediately
+   - [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] lets you point your identity to a new homeserver immediately
 
 ### The Detection Problem
 
@@ -55,7 +55,7 @@ This model minimizes the attack surface: even a compromised app cannot steal you
 
 ### PKARR as Source of Truth
 
-[[0.Introduction|PKARR]] DNS records are the authoritative source for identity resolution:
+[[Explore/PubkyCore/Pkarr/Introduction|PKARR]] DNS records are the authoritative source for identity resolution:
 
 - When you update your PKARR record to point to a new homeserver, the old one loses authority immediately
 - Clients that properly resolve PKARR will always find your current homeserver
@@ -118,7 +118,7 @@ These are intentional design decisions, not oversights:
 | Capability enforcement | Yes | Homeserver trusted to honor the capabilities Ring authorized |
 | Session revocation | Yes | Homeserver trusted to delete sessions when Ring requests |
 | Key custody | No | Ring is sole key holder; no homeserver recovery path |
-| Identity resolution | No | [[0.Introduction|PKARR]] is authoritative; homeserver cannot claim false identity |
+| Identity resolution | No | [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] is authoritative; homeserver cannot claim false identity |
 | Data authenticity | Yes (for now) | Planned: data signing will remove this trust requirement |
 
 **Why trust the homeserver for sessions?**
@@ -286,7 +286,7 @@ This section shows how [[CredibleExit|credible exit]] works in practice across c
 |-------|--------------|-------------|
 | Immediate | Data becomes temporarily inaccessible | Wait for recovery or decide to migrate |
 | If prolonged | Use [[PubkyBackup|Pubky Backup]] to restore from local backup | Sign up on a new homeserver |
-| Recovery | Re-upload data, update [[0.Introduction|PKARR]] record | External links automatically resolve to new location |
+| Recovery | Re-upload data, update [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] record | External links automatically resolve to new location |
 
 Your identity (keypair in Ring) is unaffected. The homeserver going down is an inconvenience, not a catastrophe.
 
@@ -328,5 +328,5 @@ Across all failure scenarios, the same pattern applies:
 
 1. **Identity survives** — Your keypair is separate from any infrastructure
 2. **Data can be recovered** — Via backups or (planned) mirroring
-3. **Exit is always possible** — [[0.Introduction|PKARR]] lets you point your identity elsewhere
+3. **Exit is always possible** — [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] lets you point your identity elsewhere
 4. **Damage is contained** — One failure doesn't cascade to your entire digital life

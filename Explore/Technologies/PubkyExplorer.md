@@ -28,7 +28,7 @@ Pubky Explorer makes it easy to browse the public data stored across the Pubky n
 
 Pubky Explorer uses the [[Explore/PubkyCore/SDK|Pubky SDK]] to:
 
-1. **Resolve Public Keys**: Convert public keys to Homeserver URLs via [[0.Introduction|PKARR]]
+1. **Resolve Public Keys**: Convert public keys to Homeserver URLs via [[Explore/PubkyCore/Pkarr/Introduction|PKARR]]
 2. **List Directories**: Fetch directory contents from Homeservers
 3. **Fetch Files**: Retrieve individual files for preview
 4. **Display Content**: Render files appropriately based on content type
@@ -350,6 +350,6 @@ Potential improvements for Pubky Explorer:
 - [[Homeserver]] - Data storage explained
 - [[Explore/PubkyCore/SDK|Pubky Core SDK]] - How data access works
 - [[Explore/PubkyCore/API|Pubky Core API]] - Homeserver HTTP API
-- [[0.Introduction|PKARR]] - Public key resolution
+- [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] - Public key resolution
 - [[FAQ#Q14a]] - FAQ entry about exploring data
 

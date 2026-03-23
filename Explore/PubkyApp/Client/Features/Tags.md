@@ -3,7 +3,7 @@ aliases:
   - "../../../Pubky-App/Client/Features/Tags"
 ---
 
-Tags are free-text labels that any user can publicly assign to **users** or **[[Posts|posts]]**. They are a core building block of the [[Semantic Social Graph|Semantic Social Graph]], turning everyday social interactions into structured, queryable metadata that powers discovery, filtering, and personalized feeds.
+Tags are free-text labels that any user can publicly assign to **users** or **[[Posts|posts]]**. They are a core building block of the [[SemanticSocialGraph|Semantic Social Graph]], turning everyday social interactions into structured, queryable metadata that powers discovery, filtering, and personalized feeds.
 
 Unlike traditional hashtags where only an author labels their own content, Pubky tags can be applied **by anyone** — you can tag your own profile and posts, and others can tag them too — making them a form of collaborative, crowd-sourced annotation.
 

@@ -5,7 +5,7 @@ aliases:
 
 # Pubky Core API Reference
 
-The [[Introduction|Pubky Core]] protocol defines a RESTful HTTP API for storing and retrieving data on [[Homeserver|Homeservers]]. This document describes the complete API specification.
+The [[Explore/PubkyCore/Introduction|Pubky Core]] protocol defines a RESTful HTTP API for storing and retrieving data on [[Homeserver|Homeservers]]. This document describes the complete API specification.
 
 ## Base URL
 
@@ -15,7 +15,7 @@ All API endpoints are relative to the Homeserver base URL:
 https://homeserver.example.com
 ```
 
-Homeserver URLs are discovered via [[0.Introduction|PKARR]] records published to the [[Explore/Technologies/MainlineDHT|Mainline DHT]].
+Homeserver URLs are discovered via [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] records published to the [[Explore/Technologies/MainlineDHT|Mainline DHT]].
 
 ## Authentication
 
@@ -467,7 +467,7 @@ async function putWithRetry(session, path, data, retries = 3) {
 
 ## Resources
 
-- **[[Introduction|Pubky Core Overview]]**: Main documentation
+- **[[Explore/PubkyCore/Introduction|Pubky Core Overview]]**: Main documentation
 - **[[SDK|SDK Documentation]]**: Client libraries
 - **[[Homeserver|Homeserver Documentation]]**: Server setup
 - **Official Docs**: [pubky.github.io/pubky-core](https://pubky.github.io/pubky-core/)
