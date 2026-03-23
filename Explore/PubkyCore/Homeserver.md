@@ -6,7 +6,7 @@ aliases:
 
 The Pubky network allows multiple, independent data stores, known as "Homeservers." This improves [[Censorship|censorship-resistance]] and prevents any single entity from controlling the flow of information, or locking people & data in as a walled garden.
 
-Homeservers are meant to represent a primary place to retrieve data from a specific [[0.Introduction|PKARR]] public key, but the user can redefine the location of their Homeserver at will by updating their [[0.Introduction|PKARR]] record in the [[MainlineDHT|Mainline DHT]].
+Homeservers are meant to represent a primary place to retrieve data from a specific [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] public key, but the user can redefine the location of their Homeserver at will by updating their [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] record in the [[MainlineDHT|Mainline DHT]].
 
 ## Architecture
 
@@ -38,7 +38,7 @@ Native Pubky clients connect via PubkyTLS; browsers and legacy clients connect v
 - Anyone can run their own Homeserver and set their own terms
 - Homeserver operators can use [[Homegate]] for signup verification, implementing SMS or Lightning Network verification to prevent spam while preserving user privacy
 - For true [[CredibleExit|credible exit]], users should maintain local backups via [[PubkyBackup|Pubky Backup]]. Homeserver mirroring is planned but not yet implemented
-- Users can migrate to a new Homeserver at any time by moving their data and updating their [[0.Introduction|PKARR]] record
+- Users can migrate to a new Homeserver at any time by moving their data and updating their [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] record
 
 See [[SecurityModel|Security Model]] for the full trust analysis and failure recovery scenarios.
 

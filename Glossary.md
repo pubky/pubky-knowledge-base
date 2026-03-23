@@ -26,7 +26,7 @@ The ability to leave a service provider (Homeserver, app, etc.) without losing y
 ## D
 
 **[[DHT|Distributed Hash Table (DHT)]]**
-A decentralized key-value storage system distributed across many nodes. Pubky uses [[MainlineDHT|Mainline DHT]] for storing [[PKARR]] records.
+A decentralized key-value storage system distributed across many nodes. Pubky uses [[MainlineDHT|Mainline DHT]] for storing [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] records.
 
 **[[DNS|Domain Name System (DNS)]]**
 Traditional system for translating domain names to IP addresses. [[PKDNS]] extends this to support public-key domains.
@@ -60,7 +60,7 @@ A pair of cryptographic keys (public and private) used for identity, authenticat
 ## M
 
 **[[MainlineDHT|Mainline DHT]]**
-The Distributed Hash Table used by BitTorrent, with 10+ million nodes globally. Pubky uses it to store [[PKARR]] records, providing censorship-resistant discovery.
+The Distributed Hash Table used by BitTorrent, with 10+ million nodes globally. Pubky uses it to store [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] records, providing censorship-resistant discovery.
 
 ## N
 
@@ -75,7 +75,7 @@ Noise Protocol implementation for encrypted peer-to-peer communication in the Pu
 **[[Explore/Technologies/Paykit|Paykit]]**
 Payment protocol built on Pubky for payment discovery and coordination across Bitcoin, Lightning, and other methods (work in progress).
 
-**[[0.Introduction|PKARR]]** (Public Key Addressable Resource Records)
+**[[Explore/PubkyCore/Pkarr/Introduction|PKARR]]** (Public Key Addressable Resource Records)
 Self-issued, signed DNS-like records published to the Mainline DHT. Each record is tied to a public key and contains information like Homeserver locations.
 
 **[[PKDNS]]**

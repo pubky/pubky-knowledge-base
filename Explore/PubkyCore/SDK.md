@@ -5,7 +5,7 @@ aliases:
 
 # Pubky SDK: Client Libraries for Decentralized Applications
 
-The Pubky SDK provides client libraries for building applications on [[Introduction|Pubky Core]]. Available in multiple languages with consistent APIs across platforms.
+The Pubky SDK provides client libraries for building applications on [[Explore/PubkyCore/Introduction|Pubky Core]]. Available in multiple languages with consistent APIs across platforms.
 
 ## Supported Platforms
 
@@ -104,7 +104,7 @@ Every user is identified by an Ed25519 public key:
 
 ### Homeserver Discovery
 
-The SDK uses [[0.Introduction|PKARR]] to discover where a user's data is hosted:
+The SDK uses [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] to discover where a user's data is hosted:
 1. Query [[Explore/Technologies/MainlineDHT|Mainline DHT]] for public key
 2. Retrieve PKARR record with Homeserver URL
 3. Connect to Homeserver via HTTPS
@@ -767,7 +767,7 @@ try {
 - **React Native Repository**: [github.com/pubky/react-native-pubky](https://github.com/pubky/react-native-pubky)
 - **iOS/Android FFI**: [github.com/pubky/pubky-core-ffi](https://github.com/pubky/pubky-core-ffi) - Native bindings via UniFFI
 - **Examples**: [github.com/pubky/pubky-core/tree/main/examples](https://github.com/pubky/pubky-core/tree/main/examples)
-- **[[Introduction|Pubky Core Overview]]**: Main documentation
+- **[[Explore/PubkyCore/Introduction|Pubky Core Overview]]**: Main documentation
 - **[[API|API Reference]]**: HTTP API specification
 
 ---

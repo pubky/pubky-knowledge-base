@@ -1,6 +1,6 @@
 ---
 aliases:
-  - "../../Pubky-Core/Pkarr/0.Introduction"
+  - "../../Pubky-Core/Pkarr/Introduction"
 ---
 
 ## Public-Key Addressable Resource Records
@@ -24,7 +24,7 @@ The core idea is to streamline the process of publishing and resolving resource 
 3. **Fallback for Existing Applications**: Applications unaware of PKARR can make normal [[DNS]] Queries over [[HTTPS]] (DoH) to PKARR servers, ensuring accessibility.
 4. **Caching and Republishing**: Both clients and PKARR servers cache records extensively to improve scalability. The [[DHT]] drops records after a few hours, necessitating periodic republishing to keep records alive.
 
-For more technical details on PKARR's architecture and how it works, refer to the [[4.Architecture|architecture]] note.
+For more technical details on PKARR's architecture and how it works, refer to the [[Explore/PubkyCore/Pkarr/4.Architecture|architecture]] note.
 
 ## Getting Started
 

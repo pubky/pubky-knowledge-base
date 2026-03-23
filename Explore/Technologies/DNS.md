@@ -61,7 +61,7 @@ Traditional DNS has fundamental limitations:
 - **True ownership**: You control your identity and domain through cryptographic keys
 - **Privacy**: No centralized entity tracks your DNS queries
 
-PKDNS bridges the gap between traditional DNS and the decentralized web, enabling [[0.Introduction|PKARR]] records to function as domains while maintaining compatibility with existing infrastructure.
+PKDNS bridges the gap between traditional DNS and the decentralized web, enabling [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] records to function as domains while maintaining compatibility with existing infrastructure.
 
 ## Security Considerations
 
@@ -91,7 +91,7 @@ PKDNS provides superior security through:
 
 Pubky uses DNS technology in innovative ways:
 
-1. **[[PKDNS]]**: DNS server that resolves public-key domains from [[0.Introduction|PKARR]] records
+1. **[[PKDNS]]**: DNS server that resolves public-key domains from [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] records
 2. **Hybrid approach**: Supports both traditional ICANN domains and public-key domains
 3. **[[DoH]] integration**: Provides encrypted DNS resolution
 4. **Homeserver discovery**: PKARR records contain DNS-like entries pointing to [[Homeserver|Homeservers]]
@@ -99,7 +99,7 @@ Pubky uses DNS technology in innovative ways:
 ## See Also
 
 - **[[PKDNS]]**: Public-key DNS implementation
-- **[[0.Introduction|PKARR]]**: Public key addressable resource records
+- **[[Explore/PubkyCore/Pkarr/Introduction|PKARR]]**: Public key addressable resource records
 - **[[MainlineDHT|Mainline DHT]]**: Distributed hash table powering PKDNS
 - **[[DoH]]**: DNS over HTTPS for encrypted queries
 - **[[HTTPS]]**: Secure HTTP protocol

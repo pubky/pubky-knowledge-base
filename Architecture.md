@@ -74,7 +74,7 @@ The foundation of Pubky is cryptographic identity based on **[[KeyPair|key pairs
 The discovery layer enables finding Homeservers and resolving identities without central servers.
 
 **Components:**
-- **[[0.Introduction|PKARR]]**: Public Key Addressable Resource Records
+- **[[Explore/PubkyCore/Pkarr/Introduction|PKARR]]**: Public Key Addressable Resource Records
 - **[[MainlineDHT|Mainline DHT]]**: Distributed Hash Table (10M+ nodes)
 - **[[PKDNS]]**: DNS servers for resolving public-key domains
 

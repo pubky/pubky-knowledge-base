@@ -4,13 +4,13 @@ title: "Pubky Knowledge Base"
 
 ## Welcome to the Pubky Knowledge Base
 
-This is a knowledge base for the Pubky platform, which includes [[Explore/PubkyCore/Introduction|Pubky Core]], [[0.Introduction|PKARR]] and [[Explore/PubkyApp/Introduction|Pubky App]]. These documents are a work in progress, much like Pubky's protocols and applications!
+This is a knowledge base for the Pubky platform, which includes [[Explore/PubkyCore/Introduction|Pubky Core]], [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] and [[Explore/PubkyApp/Introduction|Pubky App]]. These documents are a work in progress, much like Pubky's protocols and applications!
 
 ## What is Pubky?
 
 Pubky attempts to unlock the web by realizing our vision for a key-based, self-regulating web that puts users in control.
 
-So far, Pubky does this by combining practical decentralized routing & identity ([[0.Introduction|PKARR]]), with simple interoperable hosting ([[Homeserver|Homeservers]]) that allow for [[Censorship|censorship]] resistance and a [[CredibleExit|credible exit]], as well as a publishing application, Pubky App, that facilitates the creation of a [[SemanticSocialGraph|Semantic Social Graph]], which can be used for filtering, discovery, matching and coordination.
+So far, Pubky does this by combining practical decentralized routing & identity ([[Explore/PubkyCore/Pkarr/Introduction|PKARR]]), with simple interoperable hosting ([[Homeserver|Homeservers]]) that allow for [[Censorship|censorship]] resistance and a [[CredibleExit|credible exit]], as well as a publishing application, Pubky App, that facilitates the creation of a [[SemanticSocialGraph|Semantic Social Graph]], which can be used for filtering, discovery, matching and coordination.
 
 Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky]]
 
@@ -102,7 +102,7 @@ Understand the fundamental ideas behind Pubky:
 - **[[SemanticSocialGraph|Semantic Social Graph]]** - Tagged relationships and user-controlled filtering
 - **[[Censorship|Censorship Resistance]]** - Why centralized platforms fail
 - **[[CredibleExit|Credible Exit]]** - Freedom to switch providers without losing data
-- **[[0.Introduction|PKARR]]** - Public key addressable resource records
+- **[[Explore/PubkyCore/Pkarr/Introduction|PKARR]]** - Public key addressable resource records
 - **[[MainlineDHT|Mainline DHT]]** - Distributed hash table for discovery
 
 ## Work in Progress: Payment Protocol

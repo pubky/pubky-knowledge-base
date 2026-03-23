@@ -7,5 +7,5 @@ title: "Pubky Core"
 - [[Explore/PubkyCore/SDK|SDK]]
 - [[Explore/PubkyCore/Authentication|Authentication]]
 - [[Explore/PubkyCore/Homeserver|Homeserver]]
-- [[Explore/PubkyCore/Pkarr/0.Introduction|PKARR]]
+- [[Explore/PubkyCore/Pkarr/Introduction|PKARR]]
 - [[Explore/PubkyCore/SecurityModel|Security Model]]

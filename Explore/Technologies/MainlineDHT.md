@@ -6,7 +6,7 @@ aliases:
 
 Mainline [[DHT]] is a standard Distributed Hash Table (DHT) implementation widely used in the BitTorrent network, based on the [Kademlia](https://en.wikipedia.org/wiki/Kademlia) protocol. This decentralized system allows for efficient data storage and retrieval across a vast network of nodes, making it highly resilient and scalable.
 
-Pubky uses Mainline DHT as the foundation for [[0.Introduction|PKARR]] (Public Key Addressable Resource Records), enabling decentralized identity and discovery without central authorities.
+Pubky uses Mainline DHT as the foundation for [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] (Public Key Addressable Resource Records), enabling decentralized identity and discovery without central authorities.
 
 ## Key Features
 
@@ -22,7 +22,7 @@ Pubky uses Mainline DHT as the foundation for [[0.Introduction|PKARR]] (Public K
 ### Identity Resolution
 When you access a public-key domain (e.g., `pubky://o4dksfbqk85ogzdb5osziw6befigbuxmuxkuxq8434q89uj56uyy`):
 1. [[PKDNS]] queries Mainline DHT for that public key
-2. DHT returns signed [[0.Introduction|PKARR]] records
+2. DHT returns signed [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] records
 3. Records contain Homeserver URLs and other DNS-style resource records
 4. Your client can now connect to the user's Homeserver
 
@@ -78,6 +78,6 @@ From the PKARR project's perspective, Mainline DHT was chosen because:
 
 ## Related Documentation
 
-- [[0.Introduction|PKARR]] - Public Key Addressable Resource Records built on Mainline DHT
+- [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] - Public Key Addressable Resource Records built on Mainline DHT
 - [[PKDNS]] - DNS server that resolves public-key domains via DHT queries
 - [[DHT]] - General Distributed Hash Table concepts

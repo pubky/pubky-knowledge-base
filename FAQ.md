@@ -34,7 +34,7 @@ Install the [[Explore/PubkyCore/SDK|Pubky SDK]] for your platform (Rust: `cargo 
 "Public Key Addressable Resource Records" your signed DNS-like records published on the DHT.
 
 **Q8. What is PKDNS?**  
-[[PKDNS]] is a DNS server that resolves public-key domains by fetching [[0.Introduction|PKARR]] records from the [[MainlineDHT|Mainline DHT]]. It enables self-sovereign, censorship-resistant domain names while still supporting traditional ICANN domains. Anyone can run a PKDNS server or use public instances to access the decentralized web. See [[PKDNS]] for setup guides and publishing instructions.
+[[PKDNS]] is a DNS server that resolves public-key domains by fetching [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] records from the [[MainlineDHT|Mainline DHT]]. It enables self-sovereign, censorship-resistant domain names while still supporting traditional ICANN domains. Anyone can run a PKDNS server or use public instances to access the decentralized web. See [[PKDNS]] for setup guides and publishing instructions.
 
 **Q9. How does Pubky compare to DNS?**  
 Pubky replaces ICANN with your public key. You publish and resolve records yourself.

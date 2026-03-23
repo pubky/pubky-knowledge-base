@@ -11,7 +11,7 @@ aliases:
 
 ## Overview
 
-Pubky Core combines a [censorship-resistant public-key-based alternative to DNS](https://github.com/pubky/pkarr) ([[0.Introduction|PKARR]]) with conventional, tried-and-tested web technologies. This keeps users in control of their identities and data while enabling developers to build software with the availability of web apps, without the costs of managing a central database.
+Pubky Core combines a [censorship-resistant public-key-based alternative to DNS](https://github.com/pubky/pkarr) ([[Explore/PubkyCore/Pkarr/Introduction|PKARR]]) with conventional, tried-and-tested web technologies. This keeps users in control of their identities and data while enabling developers to build software with the availability of web apps, without the costs of managing a central database.
 
 **The Core Philosophy:**
 > "The Web, long centralized, must decentralize; Long decentralized, must centralize."
@@ -31,7 +31,7 @@ The open protocol that defines:
 - Public key-based authentication
 - Capability-based authorization
 - Key-value storage semantics
-- Homeserver discovery via [[0.Introduction|PKARR]]
+- Homeserver discovery via [[Explore/PubkyCore/Pkarr/Introduction|PKARR]]
 - RESTful API standards
 
 ### 2. Homeserver Implementation
@@ -39,7 +39,7 @@ A production-ready server application that:
 - Hosts user data in key-value stores
 - Provides RESTful HTTP API
 - Handles authentication and sessions
-- Publishes to [[0.Introduction|PKARR]] for discovery
+- Publishes to [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] for discovery
 - Supports multiple persistence backends (Files, LMDB, SQL)
 - Includes admin and metrics endpoints
 
@@ -53,9 +53,9 @@ Client libraries for developers:
 ## Core Concepts
 
 ### [[Homeserver|Homeserver]]
-Decentralized data storage nodes that host user data. Each user can choose their Homeserver or run their own. Data is stored per public key, and users can migrate between Homeservers by updating their [[0.Introduction|PKARR]] record.
+Decentralized data storage nodes that host user data. Each user can choose their Homeserver or run their own. Data is stored per public key, and users can migrate between Homeservers by updating their [[Explore/PubkyCore/Pkarr/Introduction|PKARR]] record.
 
-### [[0.Introduction|PKARR]]
+### [[Explore/PubkyCore/Pkarr/Introduction|PKARR]]
 Self-issued public keys that function as sovereign, publicly addressable domains. PKARR records published to the [[Explore/Technologies/MainlineDHT|Mainline DHT]] point to Homeserver locations, enabling decentralized discovery.
 
 ### [[Authentication]]
