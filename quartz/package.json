@@ -13,7 +13,9 @@
   },
   "scripts": {
     "docs": "npx quartz build --serve -d ..",
-    "build": "npx quartz build -d ..",
+    "build": "node ../scripts/generate-redirects.mjs .. public",
+    "build:quartz": "npx quartz build -d ..",
+    "check:redirects": "node ../scripts/check-redirects.mjs ..",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
