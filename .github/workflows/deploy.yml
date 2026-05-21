@@ -1,4 +1,4 @@
-name: Build and Deploy Quartz Site
+name: Build and Deploy Redirect Site
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           cd quartz
           npm install
 
-      - name: Build site
+      - name: Build redirect site
         run: |
           cd quartz
           npm run build

@@ -1,7 +1,11 @@
 # Pubky Knowledge Base
 
-[![Documentation Status](https://img.shields.io/badge/docs-live-success)](https://pubky.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+> [!WARNING]
+> This repository is being retired and will be archived soon. The current Pubky documentation lives at [pubky.org](https://pubky.org/) and is maintained in [github.com/pubky/pubky-knowledge-base-v2](https://github.com/pubky/pubky-knowledge-base-v2).
+>
+> This repository has been reduced to a redirect-only build that sends requests for old `docs.pubky.org` pages to their new `pubky.org` locations. Keep the `docs.pubky.org` DNS record in place while those redirects are needed; when the repository is archived and the compatibility window ends, remove the DNS record for `docs.pubky.org`.
 
 Welcome to the Pubky Knowledge base - we are excited to have you here!
 
@@ -18,6 +22,7 @@ We kindly ask you to help us improve this documentation for a clearer, more accu
 ### Quick Fixes
 
 For typos, broken links, or small improvements:
+
 1. Fork this repository
 2. Make your changes
 3. Submit a pull request
@@ -25,6 +30,7 @@ For typos, broken links, or small improvements:
 ### Larger Contributions
 
 For new pages or significant changes:
+
 1. Open an issue to discuss your plans first
 2. Follow the [[Contributing]] guide
 3. Test locally before submitting
@@ -62,7 +68,7 @@ cd quartz
 npm run build
 ```
 
-Output will be in `quartz/public/` directory.
+Output will be in `quartz/public/` directory. `npm run build` generates the redirect-only GitHub Pages site from `scripts/generate-redirects.mjs`.
 
 ## 🔗 Related Resources
 
